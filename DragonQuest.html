@@ -278,7 +278,7 @@ Or if you dare...
 
 You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/else&gt;&gt;
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="" position="861,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
 
 &lt;&lt;set $villageDamage to 1&gt;&gt;
@@ -289,11 +289,11 @@ You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endi
 With the guardhouse destroyed as well as their supplies, you have little to fear from the rest of this village. You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage. &lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;However, that blacksmith is supplying some weapons still...&lt;&lt;endif&gt;&gt;
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/else&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
 
 The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/else&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="907,762">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a princess, and how the more the guards fought, the further she could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the princess. These guards did not deserve any measure of success, and the fact that princess had made it out brought your blood to a boil. 
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="907,762">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a princess, and how the more the guards fought, the further she could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the princess. These guards did not deserve any measure of success, and the fact that princess had made it out brought your blood to a boil. 
 
 You swiftly find the royal caravan which you determine contains the princess.
 [[Kidnap her|Kidnap]]
@@ -430,7 +430,7 @@ Yes... Let the reign of $playerName begin...
 
 The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/else&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
 
 [[Attack Village]]
 
@@ -460,30 +460,30 @@ What shall you do?
 [[Claws|Claw Ogre]] (Slashing)
 [[Breath attack|Breath Ogre]] 
 ==Tail attack (Bludgeoning)== //You are too young to use your tail effectively.//</tw-passagedata><tw-passagedata pid="52" name="Bite Ogre" tags="" position="2469,750">The ogre swipes at you with its club!
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;
-&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. &lt;&lt;$set $ogreDamage to random(2,3)&gt;&gt;You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;&lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 You attempt to bite the ogre, but its large size makes it diffcult to get a proper bite onto. It doesn&#x27;t even seem to mind much that it has a few fangs in it.
 &lt;&lt;set $ogreHP to $ogreHP - 1&gt;&gt;
 
 &lt;&lt;if $ogreHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;[[Attack Again|Ogre Fight]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ogreHP &lt;= 0 &amp;&amp; $plyaerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Claw Ogre" tags="" position="2619,750">The ogre swipes at you with its club!
+&lt;&lt;if $ogreHP &lt;= 0 &amp;&amp; $playerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Claw Ogre" tags="" position="2619,750">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;
-&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. &lt;&lt;$set $ogreDamage to random(2,3)&gt;&gt;You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 You claw at the ogre, slashing into its thick hide. It is tougher than you expected and you are unable to get too many successful hits in.
 &lt;&lt;set $ogreHP to $ogreHP - 2&gt;&gt;
 &lt;&lt;if $ogreHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;[[Attack Again|Ogre Fight]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ogreHP &lt;= 0 &amp;&amp; $plyaerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Breath Ogre" tags="" position="2769,750">The ogre swipes at you with its club!
+&lt;&lt;if $ogreHP &lt;= 0 &amp;&amp; $playerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Breath Ogre" tags="" position="2769,750">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;
-&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. &lt;&lt;$set $ogreDamage to random(2,3)&gt;&gt;You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $hit &gt;= 14&gt;&gt;The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 You breathe bright red flames, scorching the ogre, enveloping it in flames. Little living material can withstand the breath of a dragon.
 &lt;&lt;set $ogreHP to $ogreHP - 3&gt;&gt;
 &lt;&lt;if $ogreHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;[[Attack Again|Ogre Fight]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $plyaerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;The ogre looks weakened. [[Finish it|Ogre Defeat]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Ogre Defeat" tags="" position="2600,373">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
 
 You smile with relief, but then grow worried as the light within the cave shrinks, the rubble piling up onto the entrance. Looks like you&#x27;ll need to find another way out.
