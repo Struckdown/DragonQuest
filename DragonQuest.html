@@ -134,7 +134,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -175,6 +177,7 @@ Titania, the Deceiver: “Wake up $playerName! You have much work to do today. D
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
+
 -[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While, that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
 -[[Fly to Farms|Go to Farms]]
@@ -190,7 +193,7 @@ How do you feel about this?
 &lt;&lt;set $morality to $morality - 5&gt;&gt;
 -[[Now that the farms have been burnt, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="8" name="Doing My Job" tags="" position="908,287">As $heshe descended upon the farms, $heshe saw the humans begin to run. $HeShe was a force of nature. $HeShe knew this, as long as $heshe remained mindful of not overstepping, $heshe had complete control of the situation. This is the way the world worked. $HeShe was a dragon,  and they were not. This mere association made them no different then the deer $heshe would sometimes hunt. Both put up the same lack of resistance. $HeShe would grab as much livestock as possible, without starving any of the survivors when they returned of course. They still needed something to collect tribute from after all.
 &lt;&lt;set $morality to $morality + 2&gt;&gt;
--[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1221.6666666666665,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;
+-[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1221,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;
   $playerName returned home with bloody claws and hunks of flesh still stuck to $hisher teeth. $HisHer Father greeted $himher with a broad smile.
 	  Jörmungandr, Dwarfs Bane: “Any more blood on those claws of yours, and I’ll have to call you ‘$playerName, the Butcher’. You have done well $sondaughter, a true dragon in the making!”
 	  $playerName: “The farmers were of no challenge Father, the task was as easy as you said.”
@@ -204,9 +207,11 @@ How do you feel about this?
 			  $playerName: “Father I don’t think that it makes a difference…”
 			  Jörmungandr, Dwarfs Bane: “SILENCE! You have had your time to talk. Everyday they see you fly out and turn tail, they will tell tails of your softness. How the $sondaughter of Titania, the Deceiver and Jörmungandr, Dwarfs Bane runs from HUMANS!”
 			  Jörmungandr, Dwarfs Bane: “You will destroy their village, and you will do so by yourself. To disobey this command, will be the last thing you ever do. Make sure to leave some alive, so that they can tell proper tales of your destruction, and right the wrongs of your many cowardly acts. Now begone, and do not let me see you until the task is complete!”
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 
-&lt;&lt;if not visited(&quot;Attack Village&quot;)&gt;&gt;[[Begin Village Attack]]&lt;&lt;endif&gt;&gt;
+&lt;&lt;if not visited(&quot;Attack Village&quot;)&gt;&gt;\
+[[Begin Village Attack]]
+&lt;&lt;endif&gt;&gt;\
 [[Run Away]]</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.
 
 &lt;img src=&quot;file:assets/male_dragon.jpg&quot; width =&quot;270&quot; height =&quot;190&quot; alt=&quot;m&quot;/&gt;&lt;img src=&quot;assets/female_dragon.jpg&quot; width =&quot;270&quot; height =&quot;190&quot; alt=&quot;f&quot;/&gt;</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="425,145">The colour of $playerName&#x27;s scales were:
@@ -277,24 +282,25 @@ You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endi
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="" position="861,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
-
-&lt;&lt;set $villageDamage to 1&gt;&gt;
-&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;
-&lt;&lt;set $villageDamage to 2&gt;&gt;
-&lt;&lt;endif&gt;&gt;
-
+&lt;&lt;set $villageDamage to 1&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;&lt;&lt;set $villageDamage to 2&gt;&gt;&lt;&lt;endif&gt;&gt;
 With the guardhouse destroyed as well as their supplies, you have little to fear from the rest of this village. You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage. &lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;However, that blacksmith is supplying some weapons still...&lt;&lt;endif&gt;&gt;
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;\
+[[Back to center of town|Attack Village]]
+&lt;&lt;else&gt;&gt;\
+[[You don&#x27;t feel so good...|Village Defeat]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
 
 The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="907,762">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further she could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
 
 You swiftly find the royal caravan which you determine contains the $princeprincess.
-&lt;&lt;if $gender is &quot;m&quot;&gt;&gt;[[Kidnap him|Kidnap]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $gender is &quot;f&quot;&gt;&gt;[[Kidnap her|Kidnap]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $gender is &quot;m&quot;&gt;&gt;\
+[[Kidnap him|Kidnap]]
+&lt;&lt;else if $gender is &quot;f&quot;&gt;&gt;\
+[[Kidnap her|Kidnap]]
+&lt;&lt;endif&gt;&gt;\
 [[Murder|Murder]]</tw-passagedata><tw-passagedata pid="18" name="Kidnap" tags="" position="1027,858">You collapse onto the caravan, ripping off the roof effortlessly and pick up a well dressed figure, terror in $hisher eyes. You carry them off, the commonfolk around you shouting curses but powerless to stop you.
 
 What will you do with your prisoner?
@@ -319,7 +325,7 @@ Delicious. Humans always made a great crunch as bones snapped. Perhaps you shoul
 
 With your satisfaction of imposing your dominance upon the people, you head back to the village to finish destroying it for your pleasure.
 
-[[Continue Destroying village]]</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1215.6666666666667,917.6666666666666">&lt;&lt;if $ransom == 1&gt;&gt;
+[[Continue Destroying village]]</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1215,917">&lt;&lt;if $ransom == 1&gt;&gt;
 The humans apparently both have treasure to part with you, as well as the desire to save their fellow man. You eagerly await as they pile bits and pieces of gold at you feet. It&#x27;s a little pitiful, but they are a small village and every dragon has its beginnings somewhere.
 	[[Time to go home|Return Home(Victory)]]
 
@@ -330,13 +336,11 @@ Unsuccessful ransom,
 	[[Retreat with important person]]
 	[[Retreat by yourself]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923.6666666666667,1261.3333333333333">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
+</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923,1261">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
 
 &lt;&lt;linkreplace &quot;Old Building&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/linkreplace&gt;&gt;
-
 &lt;&lt;linkreplace &quot;Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/linkreplace&gt;&gt;
-
-[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1286.3333333333333,1203.6666666666667">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1286,1203">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
 
 [[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1530,1207">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
 
@@ -359,7 +363,7 @@ You swoop down to investigate the sound...
 [[Continue|Found chained ancient dragon]]</tw-passagedata><tw-passagedata pid="29" name="Travel to Forest" tags="" position="1853,367">Now that you&#x27;re near the forest, which part of the woods should you search first? You friend could be out hunting or could be home near the central part of the woods. 
 
 [[Found Faerie Dragon]]
-[[Stay Around Edge of Forest]]</tw-passagedata><tw-passagedata pid="30" name="Retreat by yourself" tags="" position="1477.6666666666667,890.6666666666666">[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="31" name="Banished by Parents" tags="" position="1778,944">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
+[[Stay Around Edge of Forest]]</tw-passagedata><tw-passagedata pid="30" name="Retreat by yourself" tags="" position="1477,890">[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="31" name="Banished by Parents" tags="" position="1778,944">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
 
 Nontheless, this does mean you are free. Free to pursue whatever adventure you wish.
 
@@ -371,8 +375,8 @@ Descending down, you find a cave nearby.
 
 The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
-&lt;&lt;set $playerHP to 8&gt;&gt;
-&lt;&lt;set $ogreHP to 5&gt;&gt;
+&lt;&lt;set $playerHP to 8&gt;&gt;\
+&lt;&lt;set $ogreHP to 5&gt;&gt;\
 [[Bring it on Ogre|Ogre Fight]]</tw-passagedata><tw-passagedata pid="34" name="Found chained ancient dragon" tags="" position="2037,101">You see a massive dragon chained to the environment. The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
@@ -423,15 +427,13 @@ Talon: “Please Foxglove, you have been my only friend, how can I help?”
 Foxglove: “ You have to go to a cave in the...deepwood, it is very… dangerous…, there you will find a...glowing mushroom that cures many ailments.”
 Talon: “I will leave at once, hang on friend!”
 
-	[[Cave Entrance]]</tw-passagedata><tw-passagedata pid="44" name="Find Treasure" tags="" position="3559.6666666666665,256">[[Old Age]]</tw-passagedata><tw-passagedata pid="45" name="Attack village for cure" tags="" position="3554.6666666666665,378.66666666666663">[[Old Age]]</tw-passagedata><tw-passagedata pid="46" name="Save important person" tags="" position="3554.6666666666665,146">[[Old Age]]</tw-passagedata><tw-passagedata pid="47" name="Old Age" tags="" position="3813,496">You establish this $volcanoswamp as your home. Here is where you will live. This is where the people will come to pay tribute, where the orcs will speak of in hushed voices. This is your territory now. This belongs to you, and you will take all that lives here. All will serve, or they will perish.
+	[[Cave Entrance]]</tw-passagedata><tw-passagedata pid="44" name="Find Treasure" tags="" position="3559,256">[[Old Age]]</tw-passagedata><tw-passagedata pid="45" name="Attack village for cure" tags="" position="3554,378">[[Old Age]]</tw-passagedata><tw-passagedata pid="46" name="Save important person" tags="" position="3554,146">[[Old Age]]</tw-passagedata><tw-passagedata pid="47" name="Old Age" tags="" position="3813,496">You establish this $volcanoswamp as your home. Here is where you will live. This is where the people will come to pay tribute, where the orcs will speak of in hushed voices. This is your territory now. This belongs to you, and you will take all that lives here. All will serve, or they will perish.
 
 Yes... Let the reign of $playerName begin...
 
 (End of Demo - Eventually there will be an adult dragon stage)</tw-passagedata><tw-passagedata pid="48" name="Blacksmith" tags="" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
-
-&lt;&lt;set $villageDamage to 1&gt;&gt;
-&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have gotten a ballista pointed at you.&lt;&lt;endif&gt;&gt;
-
+&lt;&lt;set $villageDamage to 1&gt;&gt;\
+&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have gotten a ballista pointed at you.&lt;&lt;endif&gt;&gt;
 The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
@@ -548,16 +550,17 @@ Your remaining health: $playerHP
 [[Return to cave center|Hub Room]]
 &lt;&lt;if $treasureGot is true&gt;&gt;[[Exiting Cave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Insert Gem" tags="" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance.
 &lt;&lt;set $puzzleComplete to true&gt;&gt;
-[[Continue|Gem Puzzle]]</tw-passagedata><tw-passagedata pid="65" name="Village Defeat" tags="" position="502.3333333333333,552.6666666666666">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
+[[Continue|Gem Puzzle]]</tw-passagedata><tw-passagedata pid="65" name="Village Defeat" tags="" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
 
 Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, with an incredible urge to sleep forever. Yes, that would be good. Unending sleep... You barely open your eyes briefly and see silhouettes in front of you, not entirely sure what they are. It doesn&#x27;t matter now... Sleep sounds good. Eternal sleep sounds better. You close your eyes one last time. Never to open them again.
 
 [Game Over]
-(Hint: Read the village for clues and try to figure out what order you shuold attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="66" name="Return Home(Victory)" tags="" position="1481.3333333333333,371.9999999999999">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;)&gt;&gt;
+(Hint: Read the village for clues and try to figure out what order you shuold attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="66" name="Return Home(Victory)" tags="" position="1481,371">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;)&gt;&gt;\
 You successfully conquered the village! Your parents tell you to go to a cave for adventure.
+
 	[[Cave Entrance]]
 &lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="67" name="Return Home(Defeat)" tags="" position="1307.6666666666665,463.9999999999998">Your parents are upset at you. They banish you.
+</tw-passagedata><tw-passagedata pid="67" name="Return Home(Defeat)" tags="" position="1307,463">Your parents are upset at you. They banish you.
 
 [[Banished by Parents]]</tw-passagedata><tw-passagedata pid="68" name="Poison Death" tags="" position="3118,565">Double-click this passage to edit it.</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
