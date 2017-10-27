@@ -102,7 +102,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="DragonQuest" startnode="37" creator="Twine" creator-version="2.1.3" ifid="3FD75EA6-C2DB-4817-9601-88209BC71C16" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="DragonQuest" startnode="1" creator="Twine" creator-version="2.1.3" ifid="3FD75EA6-C2DB-4817-9601-88209BC71C16" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
 
 
 
@@ -163,7 +165,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</script><tw-passagedata pid="1" name="Main Menu" tags="" position="160,125">Welcome to DragonQuest.
+
+
+</script><tw-passagedata pid="1" name="Main Menu" tags="" position="160,124">Welcome to DragonQuest.
 
 Created by CD Projekt Blue.
 
@@ -171,7 +175,12 @@ Created by CD Projekt Blue.
 
 -[[Let the game begin.|Intro]]
 
-&lt;&lt;set $morality to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="150,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarfs Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;.
+&lt;&lt;set $morality to 0&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="150,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarfs Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;.
 [[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="554,157">Your scales are $playerColour
 Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
@@ -181,8 +190,7 @@ $playerName: “Yes Mother, I shall make haste!”
 -[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While, that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
 -[[Fly to Farms|Go to Farms]]
--[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,299">&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
+-[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,299">&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
 $playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village, with any horses they could get a hold of.
 
 How do you feel about this?
@@ -221,6 +229,11 @@ How do you feel about this?
 &lt;&lt;link &quot;Golden Yellow&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;yellow&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Emerald Green&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;green&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
+&lt;img src=&quot;assets/image/blue/blue_2.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;blueDragon&quot;/&gt;
+&lt;img src=&quot;assets/image/red/red_1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;redDragon&quot;/&gt;
+&lt;img src=&quot;assets/image/black/black_2.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;blackDragon&quot;/&gt;
+&lt;img src=&quot;assets/image/yellow/yellow_1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;yellowDragon&quot;/&gt;
+&lt;img src=&quot;assets/image/green/green_1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;greenDragon&quot;/&gt;
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;
   &lt;&lt;set $heshe to &quot;he&quot;&gt;&gt;
   &lt;&lt;set $HeShe to &quot;He&quot;&gt;&gt;
@@ -300,7 +313,9 @@ You swiftly find the royal caravan which you determine contains the $princeprinc
 &lt;&lt;else if $gender is &quot;f&quot;&gt;&gt;\
 [[Kidnap her|Kidnap]]
 &lt;&lt;endif&gt;&gt;\
-[[Murder|Murder]]</tw-passagedata><tw-passagedata pid="18" name="Kidnap" tags="" position="1027,858">You collapse onto the caravan, ripping off the roof effortlessly and pick up a well dressed figure, terror in $hisher eyes. You carry them off, the commonfolk around you shouting curses but powerless to stop you.
+[[Murder|Murder]]
+
+&lt;img src=&quot;assets/image/attack/env_1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;fleeingVillagers&quot;/&gt;</tw-passagedata><tw-passagedata pid="18" name="Kidnap" tags="" position="1027,858">You collapse onto the caravan, ripping off the roof effortlessly and pick up a well dressed figure, terror in $hisher eyes. You carry them off, the commonfolk around you shouting curses but powerless to stop you.
 
 What will you do with your prisoner?
 
@@ -339,38 +354,46 @@ Unsuccessful ransom,
 
 &lt;&lt;linkreplace &quot;Old Building&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;linkreplace &quot;Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/linkreplace&gt;&gt;
-[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1359.3333333333333,1163">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1359,1163">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1498.3333333333333,1173.6666666666667">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1498,1173">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="" position="1628,1177.3333333333333">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="" position="1628,1177">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="" position="1832.3333333333333,31">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="" position="1832,31">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
 
 &lt;&lt;set $volcanoswamp to &quot;volcano&quot;&gt;&gt;
-[[Approach the Dragon|Found chained ancient dragon]]</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="" position="1825.3333333333333,158">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
+[[Approach the Dragon|Found chained ancient dragon]]
+
+&lt;&lt;audio &quot;bgm_volcano&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="" position="1825,158">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
 &lt;&lt;set $volcanoswamp to &quot;swamp&quot;&gt;&gt;
-[[Approach Dragon|Found chained ancient dragon]]</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="" position="1321.6666666666667,800">[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="" position="1723,765.6666666666666">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
+[[Approach Dragon|Found chained ancient dragon]]
+
+&lt;img src=&quot;assets/image/environment/env_1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="" position="1321,800">[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="" position="1723,765">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
 
 Nontheless, this does mean you are free. Free to pursue whatever adventure you wish.
 
-[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="" position="1942.6666666666665,792.6666666666666">While flying around for several days, you decide that perhaps it is time to explore a cave or something of interest.
+[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="" position="1942,792">While flying around for several days, you decide that perhaps it is time to explore a cave or something of interest.
 
 Descending down, you find a cave nearby.
 
-[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2328,345.6666666666666">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is an ogre ahead of you. Prepare for mortal combat!
+[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2328,345">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is an ogre ahead of you. Prepare for mortal combat!
 
 The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
 &lt;&lt;set $playerHP to 8&gt;&gt;\
 &lt;&lt;set $ogreHP to 5&gt;&gt;\
-[[Bring it on Ogre|Ogre Fight]]</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
+[[Bring it on Ogre|Ogre Fight]]
+
+&lt;&lt;audio &quot;bgm_volcano&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
 
 [[Taunt the Dragon|Taunt]] - Its chained up anyways
 [[Free the Dragon|Free]] - Those chains don&#x27;t look like they&#x27;re going to hold...
-[[Flee]] - Let&#x27;s pretend this didn&#x27;t happen.</tw-passagedata><tw-passagedata pid="34" name="Taunt" tags="" position="2212,33">You take some satisfaction in rattling out a few insults that you got from your brother at the chained dragon.
+[[Flee]] - Let&#x27;s pretend this didn&#x27;t happen.
+
+&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&lt;img src=&quot;assets/image/black/black_5.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;ancientDragon&quot;/&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Taunt" tags="" position="2212,33">You take some satisfaction in rattling out a few insults that you got from your brother at the chained dragon.
 
 &quot;You have small scales. Barely a lizard.&quot;
 &quot;Those teeth couldn&#x27;t even hurt a dwarf.&quot;
@@ -395,12 +418,12 @@ The chains shake violently but it looks like it is not enough to break the creat
 
 You decide to explore elsewhere to see if you can find anything else of interest. After a short while...
 
-[[You find a cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="37" name="Stay Around Edge of Forest" tags="" position="1511.333333333333,435.9999999999999">While flying to the cave mentioned by Foxglove, you quickly find a group of humans carrying weapons moving around. They seem to have noticed you but they are at quite a distance still.
+[[You find a cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="37" name="Stay Around Edge of Forest" tags="" position="1511,435">While flying to the cave mentioned by Foxglove, you quickly find a group of humans carrying weapons moving around. They seem to have noticed you but they are at quite a distance still.
 
 	[[Befriend]] - You could try and talk with them...
 	[[Hide and Follow]] - Or you could feign not to have seen them and follow them...
 	[[Burn Them]] - Or end their fates now.
-	[[Ignore Them|Cave Entrance]]</tw-passagedata><tw-passagedata pid="38" name="Befriend" tags="" position="1806.3333333333333,415.33333333333337">The humans look scared as you descend upon them
+	[[Ignore Them|Cave Entrance]]</tw-passagedata><tw-passagedata pid="38" name="Befriend" tags="" position="1806,415">The humans look scared as you descend upon them
 
 Human: “Stop or we&#x27;ll shoot!”
 
@@ -414,14 +437,14 @@ Human: “If you don’t mind we will show you the way and then come back here. 
 
 Talon: “Very well…”
 
-[[Follow the humans to the cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="39" name="Hide and Follow" tags="" position="1776,655.6666666666666">You stealthily follow the humans, keeping them in your sights. You feel your stomach fill with dread as they finally arrive and congregate around Foxglove’s tree. There you see them laughing and hunching over the body of your now dead friend. 
+[[Follow the humans to the cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="39" name="Hide and Follow" tags="" position="1776,655">You stealthily follow the humans, keeping them in your sights. You feel your stomach fill with dread as they finally arrive and congregate around Foxglove’s tree. There you see them laughing and hunching over the body of your now dead friend. 
 
-	[[Burn Them]]</tw-passagedata><tw-passagedata pid="40" name="Burn Them" tags="" position="1810.6666666666665,522.6666666666665">The human rangers begin screaming in anguish as your flame consumes their bodies. They were little match for the torrent of flame you unleashed. 
+	[[Burn Them]]</tw-passagedata><tw-passagedata pid="40" name="Burn Them" tags="" position="1810,522">The human rangers begin screaming in anguish as your flame consumes their bodies. They were little match for the torrent of flame you unleashed. 
 
 The dead body of your friend lies by the tree in which he lived, surrounded by the burnt corpses of the humans. You decided too...
 	
 [[Cremeate]]
-[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="" position="1729,275.33333333333326">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
+[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="" position="1729,275">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
 	
 Foxglove: “Hey...Talon, ...lookin good buddy…”
 	
@@ -446,7 +469,7 @@ The villagers fight back, dealing $villageDamage to you.
 
 
 &lt;&lt;set $playerHP to 8&gt;&gt;
-&lt;&lt;set $villageDamage to 3&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3397,515.3333333333333">Now with the treasure in your claws, you feel satisfied. 
+&lt;&lt;set $villageDamage to 3&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3397,515">Now with the treasure in your claws, you feel satisfied. 
 
 &lt;&lt;if visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;) || visited(&quot;Ransom&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You fly away burdened by the last few days, in search for a new home. 
 
@@ -454,20 +477,20 @@ The villagers fight back, dealing $villageDamage to you.
 You race back to the human rangers giving them the cure for the Princess. They try to thank you but you quickly take off in the direction of Foxglove.
 
 You fly as fast you can back to Foxglove’s tree. You find him gasping for breath. You feed him the mushrooms as you feel his last breath almost escape his body. You fear for a moment that your friend is dead. After a few moments you see his little chest expand as breath rushes back in him. 
-		Foxglove: “You… did Talon...thank you...please do not stray to far… I must ask you... to nurse me back to health.”
+		Foxglove: “You… did $playerName...thank you...please do not stray to far… I must ask you... to nurse me back to health.”
 		
-		Talon: “Anything for you friend, this will be my new home for the time being.”
+		$playerName: “Anything for you friend, this will be my new home for the time being.”
 	
 	[[Care for Foxglove|Save Foxglove]]
 &lt;&lt;else&gt;&gt;
 You fly as fast you can back to Foxglove’s tree. You find him gasping for breath. You feed him the mushrooms as you feel his last breath almost escape his body. You fear for a moment that your friend is dead. After a few moments you see his little chest expand as breath rushes back in him. 
 		
-		Foxglove: “You… did Talon...thank you...please do not stray to far… I must ask you... to nurse me back to health.”
+		Foxglove: “You… did playerName...thank you...please do not stray to far… I must ask you... to nurse me back to health.”
 		
-		Talon: “Anything for you friend, this will be my new home for the time being.”
+		$playerName: “Anything for you friend, this will be my new home for the time being.”
 	
 	[[Care for Foxglove|Save Foxglove]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="" position="2493,483.3333333333333">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="" position="2493,483">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
 Your current health: $playerHP
 What shall you do?
@@ -475,7 +498,7 @@ What shall you do?
 [[Bite Attack|Bite Ogre]] (Piercing)
 [[Claws|Claw Ogre]] (Slashing)
 [[Breath attack|Breath Ogre]] 
-==Tail attack (Bludgeoning)== //You are too young to use your tail effectively.//</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="" position="2302.3333333333335,650">The ogre swipes at you with its club!
+==Tail attack (Bludgeoning)== //You are too young to use your tail effectively.//</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="" position="2302,650">The ogre swipes at you with its club!
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;&lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
@@ -487,7 +510,7 @@ You attempt to bite the ogre, but its large size makes it diffcult to get a prop
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483.9999999999995,619.9999999999999">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
@@ -499,7 +522,7 @@ You claw at the ogre, slashing into its thick hide. It is tougher than you expec
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="" position="2654,633.3333333333333">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="" position="2654,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
@@ -511,7 +534,7 @@ You breathe bright red flames, scorching the ogre, enveloping it in flames. Litt
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="" position="2488.333333333333,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="" position="2488,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
 
 You smile with relief, but then grow worried as the light within the cave shrinks, the rubble piling up onto the entrance. Looks like you&#x27;ll need to find another way out.
 
@@ -519,7 +542,7 @@ You smile with relief, but then grow worried as the light within the cave shrink
 
 &lt;&lt;set $puzzleComplete to false&gt;&gt;
 &lt;&lt;set $treasureGot to false&gt;&gt;
-</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="" position="2482.9999999999995,769.6666666666666">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
+</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="" position="2482,769">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
 
 GAME OVER.
 
@@ -528,7 +551,9 @@ GAME OVER.
 [[Go North|Treasure Room]]
 [[Go East|Poison Puzzle]]
 [[Go South|Gem Puzzle]]
-[[Go to cave entrance|Collapsed Cave Entrance]]</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2814,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the pearl in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
+[[Go to cave entrance|Collapsed Cave Entrance]]
+
+&lt;img src=&quot;assets/image/environment/env_8.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2814,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the pearl in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
 &lt;&lt;else&gt;&gt;You see a magnificant pile of treasure before you in this room. Golden coins, trinkets, jewels and gems all sit in the center of the room. As well, you can see a beautiful white pearl sitting in the center of it all. That must be important. However, the path is walled off by a series of large spikes protruding from the walls and ceiling. You can&#x27;t seem to move them.&lt;&lt;endif&gt;&gt;
 
 [[Return back to main room|Hub Room]]</tw-passagedata><tw-passagedata pid="53" name="Poison Puzzle" tags="" position="2982,354">You see words written on a statue:
@@ -537,16 +562,15 @@ I can fly yet have no wings,
 I beat down mountains, I conquer kings,
 At once three different things am I,
 As a continuous, whole I cannot die.
-	
 &lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\
+
 Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 
-&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Leaves|Wrong Guess]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Water|Wrong Guess]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Time|Correct Guess]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Wind|Wrong Guess]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Leaves|Wrong Guess]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Water|Wrong Guess]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Time|Correct Guess]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Wind|Wrong Guess]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;
 [[Return to main room|Hub Room]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2819,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
@@ -569,7 +593,7 @@ Your remaining health: $playerHP
 [[Look at the statue again|Poison Puzzle]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Correct Guess" tags="" position="3117,242">A small red gem comes out of the statue. You take hold of it.
 
-[[Continue|Poison Puzzle]]</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="" position="3123.333333333333,736.3333333333333">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked.&lt;&lt;/if&gt;&gt;\
+[[Continue|Poison Puzzle]]</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="" position="3123,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked.&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
 &lt;&lt;/if&gt;&gt;\
 
@@ -579,7 +603,7 @@ Ancalagon: “You mewling wyrm...I have found you again. Snooping around one of 
 	-[[Taunt Again]]
 	-[[Forgiveness]]
 &lt;&lt;elseif visited(&quot;Free&quot;)&gt;&gt;\
-Ancalagon: “Ahhh, so we meet again little Talon. It is your good fortune that you spared me the extra ten minutes of freeing myself from those chains. Had you not, you would have been dead already. It appears you have found your way into my little stash. Consider it your reward, now go lest I change my mind…”
+Ancalagon: “Ahhh, so we meet again little $playerName. It is your good fortune that you spared me the extra ten minutes of freeing myself from those chains. Had you not, you would have been dead already. It appears you have found your way into my little stash. Consider it your reward, now go lest I change my mind…”
 	
 	[[Exit Cave]]
 &lt;&lt;elseif visited(&quot;Flee&quot;)&gt;&gt;\
@@ -599,24 +623,25 @@ Ancalagon: “What do we have here? A little dragon such as yourself so far from
 Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, with an incredible urge to sleep forever. Yes, that would be good. Unending sleep... You barely open your eyes briefly and see silhouettes in front of you, not entirely sure what they are. It doesn&#x27;t matter now... Sleep sounds good. Eternal sleep sounds better. You close your eyes one last time. Never to open them again.
 
 [Game Over]
-(Hint: Read the village for clues and try to figure out what order you shuold attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="" position="1959.3333333333335,944.3333333333334">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;)&gt;&gt;\
+(Hint: Read the village for clues and try to figure out what order you shuold attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="" position="1959,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;)&gt;&gt;\
 You successfully conquered the village! Your parents tell you to go to a cave for adventure.
 
 	[[Cave Entrance]]
 &lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="61" name="Return Home(Defeat)" tags="" position="1472,756.3333333333334">Your parents are upset at you. They banish you.
+</tw-passagedata><tw-passagedata pid="61" name="Return Home(Defeat)" tags="" position="1472,756">Your parents are upset at you. They banish you.
 
-[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="" position="3048.333333333333,886.3333333333333">Talon: “Seeing as I am about to die, I shall taunt you a second time. Your mother was but a lizard, and your father smelt of elderberries!”
+[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="" position="3048,886">Talon: “Seeing as I am about to die, I shall taunt you a second time. Your mother was but a lizard, and your father smelt of elderberries!”
 
 His eyes flash in anger, and before you could utter another word you see his maw open and a torrent of hailfire erupts around you. Your ashes are swept away by the breath of Ancalagon, the Apocalypse. 
 
-GAME OVER!</tw-passagedata><tw-passagedata pid="63" name="Forgiveness" tags="" position="3198.333333333333,886.3333333333333">Talon: “Please let me leave, I promise I meant no ill will. Had I known this was yours I would never come here in the first place.”
+GAME OVER!
+(Hint: Perhaps taunting powerful looking dragons is not the wisest decision?)</tw-passagedata><tw-passagedata pid="63" name="Forgiveness" tags="" position="3198,886">$playerName: “Please let me leave, I promise I meant no ill will. Had I known this was yours I would never come here in the first place.”
 
-Ancalagon: “Hmmm, it would be a shame to kill a dragon so young. Regardless of how cowardly you are. Leave and do not return, and take those god awful mushrooms with you, the stink up the entire place.”
+Ancalagon: “Hmmm, it would be a shame to kill a dragon so young. Regardless of how cowardly you are. Leave and do not return, and take those god awful mushrooms with you, they stink up the entire place.”
 
-[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="" position="3543.6666666666665,362.00000000000006">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.</tw-passagedata><tw-passagedata pid="65" name="Cremeate" tags="" position="1969.3333333333333,585.9999999999999">Dragons are the fleshy incarnation of fire itself, it is only appropriate that you return your friend to the fire from which his soul had came. You gently breathe fire onto his now limp body, watching as he turned not ash, but rather the fairy dust the would emanate from his wings. Even in death he was beautiful.
+[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="" position="3543,362">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.</tw-passagedata><tw-passagedata pid="65" name="Cremeate" tags="" position="1969,585">Dragons are the fleshy incarnation of fire itself, it is only appropriate that you return your friend to the fire from which his soul had came. You gently breathe fire onto his now limp body, watching as he turned not ash, but rather the fairy dust the would emanate from his wings. Even in death he was beautiful.
 
-[[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="" position="1973.9999999999998,472.66666666666646">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
+[[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
 
 [[Continue to Cave|Cave Entrance]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
