@@ -177,14 +177,14 @@ Created by CD Projekt Blue.
 
 &lt;img src=&quot;assets/Picture1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
 
--[[Let the game begin.|Intro]]
+[[Let the game begin.|Intro]]
 
 &lt;&lt;set $morality to 0&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="151,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;.
+&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="151,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
 [[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="554,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
@@ -192,8 +192,8 @@ $playerName: “Yes Mother, I shall make haste!”
 
 [[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While, that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
--[[Fly to Farms|Go to Farms]]
--[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village, with any horses they could get a hold of.
+[[Fly to Farms|Go to Farms]]
+[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village, with any horses they could get a hold of.
 
 How do you feel about this?
 [[You take joy in killing the helpless humans|Evil Bastard]]
@@ -259,7 +259,7 @@ How do you feel about this?
   &lt;&lt;set $sondaughter to &quot;daughter&quot;&gt;&gt;
   &lt;&lt;set $mastermistress to &quot;mistress&quot;&gt;&gt;
   &lt;&lt;set $princeprincess to &quot;princess&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="" position="1045,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="" position="1045,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt; Pitiful looking guards from the Guard House fire arrows and bolts at you, trying to break your dragonhide.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited(&quot;Granary&quot;)&gt;&gt;Some peasants gather food from the granary, holding onto whatever they can. At least one is holding a crossbow though.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;The blacksmith is handing out weapons to various peasants which in turn are turning around trying to fire at you.
@@ -273,7 +273,6 @@ Attack:
 	&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;Farms&quot;) and visited(&quot;Guard House&quot;) and visited(&quot;Granary&quot;) and visited(&quot;Blacksmith&quot;)&gt;&gt;
 	[[Attack Fleeing Villagers]]
 	&lt;&lt;endif&gt;&gt;
-	
 	[[Flee from the Battle|Run Away]]
 </tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="" position="1476,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
 	Old Man: “Greetings, young $mastermistress $playerName! What brings you to our humble village, nothing bad I hope?”
@@ -349,7 +348,7 @@ With your satisfaction of imposing your dominance upon the people, you head back
 [[Continue Destroying village]]
 
 &lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1215,917">&lt;&lt;if $ransom == 1&gt;&gt;The humans apparently both have treasure to part with you, as well as the desire to save their fellow man. You eagerly await as they pile bits and pieces of gold at you feet. It&#x27;s a little pitiful, but they are a small village and every dragon has its beginnings somewhere.
-	[[Time to go home|Return Home(Victory)]] &lt;&lt;set $prisonerHeld to false&gt;&gt;&lt;&lt;else&gt;&gt;Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your Prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].
+	[[Time to go home|Return Home(Victory)]] &lt;&lt;set $prisonerHeld to false&gt;&gt;&lt;&lt;else&gt;&gt;Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923,1261">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
 
@@ -475,7 +474,7 @@ The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP to 8&gt;&gt;
 &lt;&lt;set $villageDamage to 3&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3399,515">Now with the treasure in your claws, you feel satisfied. 
 
-&lt;&lt;if visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;) || visited(&quot;Ransom&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You fly away burdened by the last few days, in search for a new home. 
+&lt;&lt;if visited (&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;) || visited(&quot;Ransom&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You fly away burdened by the last few days, in search for a new home. 
 
 &lt;&lt;elseif visited(&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Befriend&quot;)&gt;&gt;\
 You race back to the human rangers giving them the cure for the Princess. They try to thank you but you quickly take off in the direction of Foxglove.
@@ -486,7 +485,7 @@ You fly as fast you can back to Foxglove’s tree. You find him gasping for brea
 		$playerName: “Anything for you friend, this will be my new home for the time being.”
 	
 	[[Care for Foxglove|Save Foxglove]]
-&lt;&lt;else&gt;&gt;
+&lt;&lt;elseif visited(&quot;Found Faerie Dragon&quot;)&gt;&gt;
 You fly as fast you can back to Foxglove’s tree. You find him gasping for breath. You feed him the mushrooms as you feel his last breath almost escape his body. You fear for a moment that your friend is dead. After a few moments you see his little chest expand as breath rushes back in him. 
 		
 		Foxglove: “You… did $playerName...thank you...please do not stray to far… I must ask you... to nurse me back to health.”
@@ -494,6 +493,9 @@ You fly as fast you can back to Foxglove’s tree. You find him gasping for brea
 		$playerName: “Anything for you friend, this will be my new home for the time being.”
 	
 	[[Care for Foxglove|Save Foxglove]]
+&lt;&lt;else&gt;&gt;
+You leave the cave carrying your treasure. With your success, you feel it&#x27;s appropriate to go seek out a place to live, a place to establish as your territory.
+(End of Demo, tune in again to find out what happens next!)
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="" position="2493,483">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
 Your current health: $playerHP
@@ -505,7 +507,7 @@ What shall you do?
 ==Tail attack (Bludgeoning)== //You are too young to use your tail effectively.//</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="" position="2302,650">The ogre swipes at you with its club!
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;&lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
+The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
 
 You attempt to bite the ogre, but its large size makes it diffcult to get a proper bite onto. It doesn&#x27;t even seem to mind much that it has a few fangs in it.
 &lt;&lt;set $ogreHP to $ogreHP - 1&gt;&gt;
@@ -517,7 +519,7 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
+The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
 
 You claw at the ogre, slashing into its thick hide. It is tougher than you expected and you are unable to get too many successful hits in.
 &lt;&lt;set $ogreHP to $ogreHP - 2&gt;&gt;
@@ -529,7 +531,7 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="" position="2654,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;/if&gt;&gt;\
+The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
 
 You breathe bright red flames, scorching the ogre, enveloping it in flames. Little living material can withstand the breath of a dragon.
 &lt;&lt;set $ogreHP to $ogreHP - 3&gt;&gt;
@@ -550,12 +552,13 @@ You smile with relief, but then grow worried as the light within the cave shrink
 
 GAME OVER.
 
-(Hint: Consider the weakness of an ogre and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="51" name="Hub Room" tags="" position="2800,362">In this central room, you can see a series of different routes to go down.
+(Hint: Consider the weakness of an ogre and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="51" name="Hub Room" tags="" position="2800,362">You enter into a central seeming room. There is a large pool of water in the middle of the cavern as well as several different exits out of the room.
 
-[[Go North|Treasure Room]]
-[[Go East|Poison Puzzle]]
-[[Go South|Gem Puzzle]]
-[[Go to cave entrance|Collapsed Cave Entrance]]
+[[To the north|Treasure Room]], you can see a twisting path that slants off to the side.
+[[To the east|Poison Puzzle]], stalagmites and stalactites primarily lie in the way.
+[[To the south|Gem Puzzle]], you can see a raised cave opening, but nothing you will struggle to reach.
+
+Alternatively, you could [[return to the cave entrance|Collapsed Cave Entrance]]
 
 &lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2814,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the pearl in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
 &lt;&lt;else&gt;&gt;You see a magnificant pile of treasure before you in this room. Golden coins, trinkets, jewels and gems all sit in the center of the room. As well, you can see a beautiful white pearl sitting in the center of it all. That must be important. However, the path is walled off by a series of large spikes protruding from the walls and ceiling. You can&#x27;t seem to move them.&lt;&lt;endif&gt;&gt;
@@ -574,6 +577,7 @@ Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Water|Wrong Guess]]
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Time|Correct Guess]]
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Wind|Wrong Guess]]
+
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;
 
 [[Return to main room|Hub Room]]
@@ -582,11 +586,11 @@ You can see three gems lined up into little sockets with the fourth socket missi
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
 
--[[Insert Gem]]\
+[[Insert Gem]]\
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; visited (&quot;Insert Gem&quot;)&gt;&gt;\ 
 The four gems glow brightly, resting with the wall.
 &lt;&lt;/if&gt;&gt;
--[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="" position="3118,415">A puft of poison squirts at you from the status.
+[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="" position="3118,415">A puft of poison squirts at you from the status.
 &lt;&lt;set $playerHP to $playerHP -2&gt;&gt;\
 
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Poison sprays all over your body. The acrid stench fills the room, as you lose feeling throughout your body. Your blurry vision soon fades to black as you drift into the grim embrace of death... Oops.
