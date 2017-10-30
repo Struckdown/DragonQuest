@@ -1,4 +1,5 @@
 # DragonQuest
+# By Shardul Shah, Ceegan Hale, Boris Fleysher, Aditya Parihar, Charles Zhai, Wang Dong
  STS 350 - DragonQuest project.
  
  The usage of this game is not for profit, nor shall this game be officially published. It is strictly for educational purposes.
