@@ -143,6 +143,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -179,11 +180,12 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</script><tw-passagedata pid="1" name="Main Menu" tags="" position="160,124">Welcome to DragonQuest.
+
+</script><tw-passagedata pid="1" name="Main Menu" tags="" position="161,124">Welcome to DragonQuest.
 
 Created by CD Projekt Blue.
 
-&lt;img src=&quot;assets/Picture1.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
+&lt;img src=&quot;assets/image/TitleDragon.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
 
 [[Let the game begin.|Intro]]
 
@@ -193,6 +195,9 @@ Created by CD Projekt Blue.
 
 &lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_swamplands&quot; &quot;assets/Swamplands.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="151,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
 [[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="554,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
@@ -304,7 +309,8 @@ Or if you dare...
 You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="" position="861,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
+
+&lt;img src=&quot;assets/image/attack/BurningFarm.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningFarm&quot;/&gt;</tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="" position="861,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
 &lt;&lt;set $villageDamage to 1&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;&lt;&lt;set $villageDamage to 2&gt;&gt;&lt;&lt;endif&gt;&gt;
 With the guardhouse destroyed as well as their supplies, you have little to fear from the rest of this village. You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage. &lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;However, that blacksmith is supplying some weapons still...&lt;&lt;endif&gt;&gt;
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
@@ -312,11 +318,15 @@ With the guardhouse destroyed as well as their supplies, you have little to fear
 [[Back to center of town|Attack Village]]
 &lt;&lt;else&gt;&gt;\
 [[You don&#x27;t feel so good...|Village Defeat]]
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
+&lt;&lt;/if&gt;&gt;\
+
+&lt;img src=&quot;assets/image/attack/BurningGuardhouse.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningGuardhouse&quot;/&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
 
 The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="910,765">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
+
+&lt;img src=&quot;assets/image/attack/BurningGranary.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningGranary&quot;/&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="910,765">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
 
 You swiftly find the royal caravan which you determine contains the $princeprincess.
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;\
@@ -377,9 +387,13 @@ With your satisfaction of imposing your dominance upon the people, you head back
 &lt;&lt;set $volcanoswamp to &quot;volcano&quot;&gt;&gt;
 [[Approach the Dragon|Found chained ancient dragon]]
 
-&lt;&lt;audio &quot;bgm_volcano&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="" position="1825,159">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
+&lt;&lt;audio &quot;bgm_volcano&quot; loop play&gt;&gt;
+
+&lt;img src=&quot;assets/image/Volcano.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;Volcano&quot;/&gt;</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="" position="1825,159">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
 &lt;&lt;set $volcanoswamp to &quot;swamp&quot;&gt;&gt;
 [[Approach Dragon|Found chained ancient dragon]]
+
+&lt;&lt;audio &quot;bgm_swamplands&quot; loop play&gt;&gt;
 
 &lt;img src=&quot;assets/image/environment/env_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="" position="1321,800">[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="" position="1723,765">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
 
@@ -389,7 +403,7 @@ Nontheless, this does mean you are free. Free to pursue whatever adventure you w
 
 Descending down, you find a cave nearby.
 
-[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2328,345">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
+[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2329,345">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
 
 The thick skinned two-headed ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
@@ -400,6 +414,10 @@ The thick skinned two-headed ogre looks angry at you for invading its territory.
 [[Bring it on Ogre|Ogre Fight]]
 
 &lt;&lt;audio &quot;bgm_volcano&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;bgm_swamplands&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;bgm_faerieDragon&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;
+
 &lt;img src=&quot;assets/image/twoHeadedOgre.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;twoHeadedOgre&quot;/&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
@@ -473,18 +491,26 @@ Foxglove: “ You have to go to a cave in the...deepwood, it is very… dangerou
 
 $playerName: “I will leave at once, hang on friend!”
 
-	[[Head for Cave|Stay Around Edge of Forest]]</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
+	[[Head for Cave|Stay Around Edge of Forest]]
+
+&lt;img src=&quot;assets/image/environment/Forest.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;Forest&quot;/&gt;
+
+&lt;&lt;audio &quot;bgm_faerieDragon&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
 &lt;&lt;set $villageDamage to 1&gt;&gt;\
 &lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have gotten a ballista pointed at you.&lt;&lt;endif&gt;&gt;
 The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
+
+&lt;img src=&quot;assets/image/attack/BurningBlacksmith.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningBlacksmith&quot;/&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
 
 [[Attack Village]]
 
 
 &lt;&lt;set $playerHP to 8&gt;&gt;
-&lt;&lt;set $villageDamage to 3&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3387,592">Now with the treasure in your claws, you feel satisfied. 
+&lt;&lt;set $villageDamage to 3&gt;&gt;
+
+&lt;&lt;audio &quot;bgm_villageAttack&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3387,592">Now with the treasure in your claws, you feel satisfied. 
 
 &lt;&lt;if visited (&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You leave, burdened by the last few days, in search for a new home. 
 
@@ -582,7 +608,9 @@ Alternatively, you could [[return to the cave entrance|Collapsed Cave Entrance]]
 &lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2814,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the mushrooms in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
 &lt;&lt;else&gt;&gt;You see a magnificant pile of treasure before you in this room. Golden coins, trinkets, jewels and gems all sit in the center of the room. As well, you can see a beautiful white pearl sitting in the center of it all. That must be important. However, the path is walled off by a series of large spikes protruding from the walls and ceiling. You can&#x27;t seem to move them.&lt;&lt;endif&gt;&gt;
 
-[[Return back to main room|Hub Room]]</tw-passagedata><tw-passagedata pid="53" name="Poison Puzzle" tags="" position="2984,355">You see words written on a statue:
+[[Return back to main room|Hub Room]]
+
+&lt;img src=&quot;assets/image/CaveTreasure.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;CaveTreasure&quot;/&gt;</tw-passagedata><tw-passagedata pid="53" name="Poison Puzzle" tags="" position="2984,355">You see words written on a statue:
 
 I can fly yet have no wings,
 I beat down mountains, I conquer kings,
@@ -600,7 +628,9 @@ Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;
 
 [[Return to main room|Hub Room]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2819,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+
+&lt;img src=&quot;assets/image/PoisonStatue.jpg&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2819,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
@@ -788,7 +818,9 @@ Attack:
 	A large crack of thunder streaks across the battlefield. A massive giant covered in crackling lightning emerges from where the bolt of lightning lands.
 	[[Storm Giant Fight]]
 	&lt;&lt;endif&gt;&gt;
-	[[Flee from the Battle|War Flee]]</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="" position="5124,498">You attack the warlocks. You plunge headfirst into their ranks, tearing apart the various acolytes. You can see fel flames bask your body and pain surges through your body. You tear into the orc warlock that seemed to have cast the spell and her magic flickers out as your jaws snap around her body, her green glowing eyes fade out. 
+	[[Flee from the Battle|War Flee]]
+	
+&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="" position="5125,498">You attack the warlocks. You plunge headfirst into their ranks, tearing apart the various acolytes. You can see fel flames bask your body and pain surges through your body. You tear into the orc warlock that seemed to have cast the spell and her magic flickers out as your jaws snap around her body, her green glowing eyes fade out. 
 
 The remainder of this attacking group begins to flee in various directions, abandoning their ranks. They will be of no further threat.
 
@@ -799,7 +831,8 @@ You take $warDamage points of damage.
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $warDamage to $warDamage - 11&gt;&gt;
-</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="" position="5105,651">You attack the charging berserkers and direwolves. They attempt to reach you with their greataxes, roaring orcish insults at you. Unfortunately for the orcs, you are a mighty dragon. &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, direwolves falling over, some almost unrecognizable. Your fearful presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
+
+&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="" position="5105,651">You attack the charging berserkers and direwolves. They attempt to reach you with their greataxes, roaring orcish insults at you. Unfortunately for the orcs, you are a mighty dragon. &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, direwolves falling over, some almost unrecognizable. Your fearful presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
 &lt;&lt;if not visited (&quot;Right Army&quot;)&gt;&gt;The elite battalion attacks you with their arches. You&#x27;re not certain if they do more friendly damage or not, but they are too reckless to care. Orcs fall down all around the place, even ones you have&#x27;t hurt yet.&lt;&lt;/if&gt;&gt;
@@ -808,7 +841,8 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $warDamage to $warDamage-2&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="" position="5109,787">You attack the elite squadron with the commander and archers. The various orcs move around preparing to flank you. For a moment, arrows blot out the sun but your tough scales deflect the majority of them. Orcs wielding greataxes charge towards you but you throw many of them off to the side with a fierce swipe of your tail. You continue tearing into the orcs and soon despite the commands of the commanders, this group of orcs is fleeing. This group is no longer of concern.
+&lt;&lt;set $warDamage to $warDamage-2&gt;&gt;
+&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="" position="5109,787">You attack the elite squadron with the commander and archers. The various orcs move around preparing to flank you. For a moment, arrows blot out the sun but your tough scales deflect the majority of them. Orcs wielding greataxes charge towards you but you throw many of them off to the side with a fierce swipe of your tail. You continue tearing into the orcs and soon despite the commands of the commanders, this group of orcs is fleeing. This group is no longer of concern.
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
 
@@ -816,7 +850,8 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $warDamage to $warDamage-7&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee" tags="" position="4873,445">You flee. This is beyond you and you have no interest in any of this. You return to your lair with your prisoner. Let the kingdom crumble, but so long as you have your prisoner and your cavern, you will continue to live satisfactorily.
+&lt;&lt;set $warDamage to $warDamage-7&gt;&gt;
+&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee" tags="" position="4873,445">You flee. This is beyond you and you have no interest in any of this. You return to your lair with your prisoner. Let the kingdom crumble, but so long as you have your prisoner and your cavern, you will continue to live satisfactorily.
 
 Game end:
 $playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom crumbled under the attack of the orcs. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName went on to live quitely, taking from others when necessary but was never known world wide.</tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="" position="5328,633">The Storm Giant stands before you, orcs standing by its feet. The giant towers over you, its blue skin pulsating with energy. It holds a massive bolt of lightning as its weapon. 
@@ -827,7 +862,9 @@ What shall you do?
 [[Bite Attack|Bite Storm Giant]] (Piercing)
 [[Claws|Claw Storm Giant]] (Slashing)
 [[Breath attack|Breath Storm Giant]] 
-[[Tail attack|Tail Storm Giant]] (Bludgeoning)</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="" position="5061,364">You are struck into the ground as the orcs surge onto you. Their savageness is too much for you to overcome as you struggle to stand up. Orcs continue to swarm onto you, beating you into the ground. Before long, your wings are dismembered, and despite your efforts to destroy as many orcs as possible using your breathe attacks and your talons, you are overrun. Your last minutes are filled with rage, lashing out at anything and everything that is near you, but you slowly lose strength, the world growing dark.
+[[Tail attack|Tail Storm Giant]] (Bludgeoning)
+
+&lt;img src=&quot;assets/image/StormGiant.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;StormGiant&quot;/&gt;</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="" position="5061,364">You are struck into the ground as the orcs surge onto you. Their savageness is too much for you to overcome as you struggle to stand up. Orcs continue to swarm onto you, beating you into the ground. Before long, your wings are dismembered, and despite your efforts to destroy as many orcs as possible using your breathe attacks and your talons, you are overrun. Your last minutes are filled with rage, lashing out at anything and everything that is near you, but you slowly lose strength, the world growing dark.
 
 Game over.
 (Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="" position="5593,824">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
@@ -889,12 +926,14 @@ You swing your tail at the Storm Giant, but its large size makes it difficult to
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant falls onto its knees. Perhaps that was the blow you needed. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="" position="4685,651">You can see the human battlements nearby, their fortifications already damaged by the siege engines of the orc army. 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="" position="4686,651">You can see the human battlements nearby, their fortifications already damaged by the siege engines of the orc army. 
 
 Let the [[fighting|War Attack]] begin!
 
 &lt;&lt;set $warDamage to 20&gt;&gt;
-&lt;&lt;set $stormGiantHP to 100&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Growing Up" tags="" position="3603,264">Romance branch?</tw-passagedata><tw-passagedata pid="92" name="Growing Up (Solo)" tags="" position="3654,1287">**Decades later**
+&lt;&lt;set $stormGiantHP to 100&gt;&gt;
+
+&lt;img src=&quot;assets/image/OrcSiegeEngine.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcSiegeEngine&quot;/&gt;</tw-passagedata><tw-passagedata pid="91" name="Growing Up" tags="" position="3603,264">Romance branch?</tw-passagedata><tw-passagedata pid="92" name="Growing Up (Solo)" tags="" position="3654,1287">**Decades later**
 
 (Fighting dragons branch)</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
