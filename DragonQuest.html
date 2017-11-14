@@ -149,7 +149,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1068,7 +1070,6 @@ Prisoner: &quot;You&#x27;ll never be able to defeat him. He cannot be killed. Me
 
 You know the wizard will come for you anyways
 [[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="97" name="Preparation" tags="" position="4724,1488">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If the wizard is coming, then you must prepare.
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
 Health: $playerHP/$maxPlayerHP
 Gold: $gold (+$goldProduction per day)
 Days till wizard arrives: $daysLeft
@@ -1110,6 +1111,7 @@ You take $damageTaken points of damage.
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldGained&gt;&gt;
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="" position="5053,1452">&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;
 &lt;&lt;if $dungeonReward is 1&gt;&gt;
 &lt;&lt;set $increaseHP to random(15, 20)&gt;&gt;
@@ -1138,20 +1140,21 @@ You take $damageTaken points of damage!
 [[Preparation Death]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="" position="5000,1602">What level of trap would you like to set up?
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="" position="5001,1602">What level of trap would you like to set up?
 Current Gold: $gold
-&lt;&lt;if $gold &gt; 1000&gt;&gt;
+&lt;&lt;if $gold &gt;= 1000&gt;&gt;
 [[Simple Trap]] (Costs 1000 gold)
 &lt;&lt;else&gt;&gt;
 ==Simple Trap (Costs 1000 gold)==
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $gold &gt; 5000&gt;&gt;
+&lt;&lt;if $gold &gt;= 5000&gt;&gt;
 [[Dangerous Trap]] (Costs 5000 gold)
 &lt;&lt;else&gt;&gt;
 ==Dangerous Trap (Costs 5000 gold)==
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $gold &gt; 10000&gt;&gt;
+&lt;&lt;if $gold &gt;= 10000&gt;&gt;
 [[Deadly Trap]] (Costs 10000 gold)
 &lt;&lt;else&gt;&gt;
 ==Deadly Trap (Costs 10000 gold)==
@@ -1166,19 +1169,22 @@ You recover $recoveredHP points of health.
 &lt;&lt;if $playerHP &gt; $maxPlayerHP&gt;&gt;
 &lt;&lt;set $playerHP to $maxPlayerHP&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
+
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
 
 [[Continue|Preparation]]
 
 &lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
-&lt;&lt;if $trapSet is 1&gt;&gt;
+&lt;&lt;if $trapSet is 1&gt;&gt;/
 You set up a boulder trap!
-&lt;&lt;elseif $trapSet is 2&gt;&gt;
+&lt;&lt;elseif $trapSet is 2&gt;&gt;/
 You set up a spike trap!
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;/
 You set up a flame trap!&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -1186,7 +1192,9 @@ You set up a flame trap!&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 1000&gt;&gt;
 
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="" position="5239,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+[[Continue|Preparation]]
+
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="" position="5240,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;
 You set up a trap where rocks will fall from the roof and kill anyone below.
 &lt;&lt;elseif $trapSet is 2&gt;&gt;
@@ -1199,7 +1207,9 @@ You set up a fake floor over a pit of vipers.
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 5000&gt;&gt;
 
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+[[Continue|Preparation]]
+
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;
 You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth.
 &lt;&lt;elseif $trapSet is 2&gt;&gt;
@@ -1213,7 +1223,9 @@ You set up a fake floor over a pit of lava.
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 10000&gt;&gt;
 
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="" position="4793,1114">You die while preparing. Oops.
+[[Continue|Preparation]]
+
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="" position="4793,1114">You die while preparing. Oops.
 
 Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="" position="5236,2275">Stratavarious Kane arrives.
 
