@@ -146,7 +146,13 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
 
 
 
@@ -212,7 +218,7 @@ Created by CD Projekt Blue.
 &lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="151,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania, the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
-[[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="554,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
+[[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
@@ -687,7 +693,7 @@ Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 [[Return to main room|Hub Room]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/PoisonStatue.png&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2820.6666666666665,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
+&lt;img src=&quot;assets/image/PoisonStatue.png&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2820,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
@@ -696,7 +702,7 @@ You can see three gems lined up into little sockets with the fourth socket missi
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; visited (&quot;Insert Gem&quot;)&gt;&gt;\ 
 The four gems glow brightly, resting within the wall.
 &lt;&lt;/if&gt;&gt;
-[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="" position="3119.6666666666665,415">A puft of poison squirts at you from the status.
+[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="" position="3119,415">A puft of poison squirts at you from the status.
 &lt;&lt;set $playerHP to $playerHP -2&gt;&gt;\
 
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Poison sprays all over your body. The acrid stench fills the room, as you lose feeling throughout your body. Your blurry vision soon fades to black as you drift into the grim embrace of death... Oops.
@@ -838,21 +844,27 @@ You shall make your home in the $forestName.
 &lt;&lt;set $home to &quot;forest&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-With your prisoner bound to you, the next few years would certainly be interesting.
+The prisoner would make for some entertainment, perhaps retiring to a secluded location would do you well for a few years.
 
-[[Prisoner Befriends You]]
-[[Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="" position="3970,568">--20 years later--
+Do you let the prisoner befriend you?
+[[Certainly, it is only a matter of time|Prisoner Befriends You]]
+[[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="" position="3970,568">--20 years later--
 
-The years go by and you eventually become fond of your prisoner. $HeShe has been with you for over twenty years now. You&#x27;ve fought off several rescue attempts, several valient knights. Lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
+As the years pass by, you grow more trusting of your prisoner. $HeShe had several opportunities to try and run, but $heshe never took them, in a way they seemed to be happy with you. You would make each other laugh, and despite your gruff demeanor, you had grown fond of them. There had been countless attempts made by valient knights to rescue $himher. All had been easily dispatched, lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The past twenty years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
 
-Over the years, $princeprincess has asked for freedom, and you have refused $himher everytime. You don&#x27;t wish to be lonely afterall. $HeShe is your only friend, as you have pushed away all the others. You have not seen your family in years. Not that they matter anyways.
+Over the years, the $princeprincess has asked for freedom, and you have refused $himher everytime. You don&#x27;t wish to be lonely afterall. $HeShe is your only friend, as you have pushed away all the others. You have not seen your family in years. Not that they matter anyways.
 
-One day a small army comes to your doorstep. You can see they have sent a small group forward, carrying a banner and a white flag, likely looking to talk. You grin with satisfaction at the chance to exert your dominance. The $princeprincess recognizes the banner as the kingdom $heshe was a part of and begs you to at least hear their request. 
+One day you wake to hear the clamor of armor and swords being drawn. You sigh, it seems as though more men had come to die. As you make your way out, you see that a group of perhaps a hundred men all heavily armored had come to your doorstep. They send forward about twenty or so men, one of which was carrying a white flag. As if that would deter you from roasting them in their precious armor. You grin with satisfaction at the chance to exert your dominance. The $princeprincess recognizes the emblem on the soldiers armor, and pleads you to not incinerate these men on the spot. 
 
 [[Listen|Listen to Army]]
-[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="" position="3970,1011">Fight Kingdom branch</tw-passagedata><tw-passagedata pid="72" name="Listen to Army" tags="" position="4167,668">The army begs you to save their kingdom, that the orcs are coming and that their kingdom will be destroyed by the orcs.
+[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="" position="3948,1001">You hold onto the $princeprincess for years but never become friends with them.
 
-Looking to the $princeprincess with doubt in your mind, you decide to aid this kingdom.
+[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="72" name="Listen to Army" tags="" position="4167,668">$princeprincess: &quot;Please $playerName, I beg you, do not slay them before hearing what they have to say.&quot;
+
+Soldier: &quot;Oh great $playerName, my mena nd I have travelled far from our kingdom to ask for your help! A host of orcs gathers outside the borders of our kingdom, the host is too large for use to beat back. They are also led by the storm giant, Brokki, the Bane of Dragons. Surely if you do not wish to help us out of the goodness of your heart, then perhaps the prospect of such a challenge would entice you?&quot;
+
+
+Looking to the $princeprincess with doubt in your mind. You feel a pang of pity. You had kept $princeprincess captive for twenty years, perhaps it was time to pay their service, with one of your own.
 
 The troops suggest that you return with them to the kingdom to listen to their knowledge of the impending attack and then attack together.
 
@@ -861,12 +873,17 @@ What would you do?
 [[Return With Them]]
 
 Alternatively, you&#x27;re an independant dragon who has no need for support from others.
-[[Attack by yourself]]</tw-passagedata><tw-passagedata pid="73" name="Deny Prisoner Request" tags="" position="4114,938">Fight Kingdom Branch</tw-passagedata><tw-passagedata pid="74" name="Return With Them" tags="" position="4458,613">You return with the army to the kingdom&#x27;s capital where you listen to the
-council that has gathered.
+[[Attack by yourself]]</tw-passagedata><tw-passagedata pid="73" name="Deny Prisoner Request" tags="" position="4116,939">You are a mighty dragon, no one can tell you what to do. You destroy the army before you, attacking them despite the white flag they hold.
+
+(Fill in)
+
+[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="74" name="Return With Them" tags="" position="4458,613">You to the capital and circle overhead the panicking civilians for a few minutes. The guards of course had orders to not shoot, as if it would have mattered anyways. You make sure to land with all the force you could muster in the middle of the city square. Dozens of merchants watched as their carts and wagons were flung across the square and smashed into splinters of wood. $princeprincess looks overjoyed to see home for the first time in over twenty years. You could feel $princeprincess tears on your scaled back. 
+
+King Joffrey: &quot;Mighty $playerName, we thank you for coming to help the kingdom, my spymaster Edric will relay to you all the information his scouts have gathered.&quot; 
 
 They outline several things about the orc army.
 
-First of all, the orcs have access to several ogres, trolls and there have been rumors of a Storm Giant, a creature that has not been seen in decades.
+First of all, the orcs have access to several ogres, and trolls. All of which were being led by the mighty storm giant Brokki, the Bane of Dragons. 
 
 As well, the orcs are unlikely to have a complex strategy, but previous reports from other kingdoms the orcs have destroyed suggest the same tactic will be used. The orcs will split into three attacking groups with siege weaponry in each group.
 
@@ -876,9 +893,9 @@ The central group will contain the brunt of the attack, with orc berserkers and 
 
 The third group will contain the elite guard as well as the orc commander. They have a group of archers as well, and may be able to injure you.
 
-[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="75" name="Attack by yourself" tags="" position="4455,797">&quot;Bah, I have no need for pitiful humans and their stratagies. I shall meet the foe on the battlefield!&quot;
+[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="75" name="Attack by yourself" tags="" position="4455,797">$playerName: &quot;Save your information! You dare insult my power by thinking I would need your help. I could whsiper but a lick off flame, and all of you would turn to charcoal. I shall confront them by myself, and immortalize my name in myth and legend. Tell your children you insignifcant worm, tell them you had the honor of speaking with $playerName.&quot;
 
-You leave and soon spot the approaching army. War has come.
+You take off, the force of your wings sending the soldiers flying back in a heap. They watch as you begin to fly North. After a few hours you spot the horde of orcs, already attacking the human battlements with their primitive siege engines. They had organized themselves into three large masses, and within these masses you see trolls and ogres accompanying the scores of orcs. At the back you see the towering frame of a blue giant.
 
 [[Begin War Attack]]</tw-passagedata><tw-passagedata pid="76" name="War Attack" tags="" position="4875,634">&lt;&lt;if not visited(&quot;Left Army&quot;)&gt;&gt;Warlocks can be seen hurling spells at the castle defenses.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Central Army&quot;)&gt;&gt; Orc berserkers and direwolves surge forward.
@@ -895,9 +912,9 @@ Attack:
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|War Flee (Solitary End)]]
 	
-&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="" position="5125,498">You attack the warlocks. You plunge headfirst into their ranks, tearing apart the various acolytes. You can see fel flames bask your body and pain surges through your body. You tear into the orc warlock that seemed to have cast the spell and her magic flickers out as your jaws snap around her body, her green glowing eyes fade out. 
+&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="" position="5125,498">You attack the warlocks. Plunging headfirst into their ranks, you tear apart the various acolytes. Fel flames bask your body and you feel the sharp pangs of pain. You spot the warlock leading the others against you, and bathe her in your searing fire. You watch as her ashes are swept away in the wind. 
 
-The remainder of this attacking group begins to flee in various directions, abandoning their ranks. They will be of no further threat.
+The remaining warlocks begin to flee, clearly the one you had just dispatched was of some importance.
 
 &lt;&lt;if not visited (&quot;Right Army&quot;)&gt;&gt;The elite battalion attacks you with their arches. You&#x27;re not certain if they do more friendly damage or not, but they are too reckless to care. Warlocks and acolytes fall down all around the place, even ones you have&#x27;t hurt yet.&lt;&lt;/if&gt;&gt;
 
@@ -906,7 +923,9 @@ The remainder of this attacking group begins to flee in various directions, aban
 You take $warDamage points of damage.
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="" position="5105,651">You attack the charging berserkers and direwolves. They attempt to reach you with their greataxes, roaring orcish insults at you. Unfortunately for the orcs, you are a mighty dragon. &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, direwolves falling over, some almost unrecognizable. Your fearful presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
+&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="" position="5105,651">You attack the charging berserkers and trolls. They swing at you with all their might, and while they do provide you with an ample amount of scratches, not even the strongest can pierce you skin with any authority.
+
+ &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, trolls falling over, some almost unrecognizable. Your terrifying presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
 &lt;&lt;if not visited (&quot;Right Army&quot;)&gt;&gt;The elite battalion attacks you with their arches. You&#x27;re not certain if they do more friendly damage or not, but they are too reckless to care. Orcs fall down all around the place, even ones you have&#x27;t hurt yet.&lt;&lt;/if&gt;&gt;
@@ -916,7 +935,8 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="" position="5109,787">You attack the elite squadron with the commander and archers. The various orcs move around preparing to flank you. For a moment, arrows blot out the sun but your tough scales deflect the majority of them. Orcs wielding greataxes charge towards you but you throw many of them off to the side with a fierce swipe of your tail. You continue tearing into the orcs and soon despite the commands of the commanders, this group of orcs is fleeing. This group is no longer of concern.
+&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="" position="5109,787">You attack the orcs clad in crimson armor, among them stand a multitude of archers. An orc chieftain barks orders for the archers to shoot at you. You watch as their arrows blot out the faint winter sun, but your arrows deflect most of them. Any that do manage to catch provide you with short yet sharp pangs of pain. The crimson armored orcs charge but are met with the brunt of your tail swipe. The commander collapses to his knees, but can&#x27;t utter any cries of mercy as you launch him into the air with the swing of your tail. Any orcs left watch the lifeless body of their commander splatter against a rock, and proceed to run. 
+
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $warDamage to $warDamage-7&gt;&gt;
@@ -924,10 +944,11 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="" position="4873,445">You flee. This is beyond you and you have no interest in any of this. You return to your lair with your prisoner. Let the kingdom crumble, but so long as you have your prisoner and your cavern, you will continue to live satisfactorily.
+&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="" position="4873,445">The battle was too much. You had let down $princeprincess, they would watch as their kingdom collapsed and burned at the hands of Brokki&#x27;s horde. All your boasts and pride had amounted to nothing. Your name would forever be remembered in tandem with the defeat you suffered at the hands of Brokki. You return to your home, and lie their listening quietly to the weeping $princeprincess.
 
 Game end:
-$playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom crumbled under the attack of the orcs. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName went on to live quitely, taking from others when necessary but was never known world wide.</tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="" position="5328,633">The Storm Giant stands before you, orcs standing by its feet. The giant towers over you, its blue skin pulsating with energy. It holds a massive bolt of lightning as its weapon. 
+$playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom had been wiped out by the orcs, who had now moved onto other conquests. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName would attack whenever the boredom crippled $hisher will to live. $playerName live out the rest of $hisher days knowing that no one would ever speak of $playerName in high regard ever again.  </tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="" position="5328,633">Brokki, the Bane of Dragons stands over thirty feet high. The orcs around his feet look like ants. His body rippled with muscle, and you see bolts of electricity crackle all over him. In his hand he holds a bolt of lightning, which had no doubt brought the lives of many dragons to a crashing halt.
+
 
 Your current health: $playerHP
 What shall you do?
@@ -937,7 +958,8 @@ What shall you do?
 [[Breath attack|Breath Storm Giant]] 
 [[Tail attack|Tail Storm Giant]] (Bludgeoning)
 
-&lt;img src=&quot;assets/image/StormGiant.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;StormGiant&quot;/&gt;</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="" position="5061,364">You are struck into the ground as the orcs surge onto you. Their savageness is too much for you to overcome as you struggle to stand up. Orcs continue to swarm onto you, beating you into the ground. Before long, your wings are dismembered, and despite your efforts to destroy as many orcs as possible using your breathe attacks and your talons, you are overrun. Your last minutes are filled with rage, lashing out at anything and everything that is near you, but you slowly lose strength, the world growing dark.
+&lt;img src=&quot;assets/image/StormGiant.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;StormGiant&quot;/&gt;</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="" position="5061,364">You crash into the ground, sending chunks of rock and soild into the orcs. Seeing your impact, the orcs surge towards you. Their numbers are too great, and the viciously begin to stab and hack at your limbs. You lose feeling in your wings, and slowly your vision begins to fade. You breathe fire into their ranks, killing hundreds, but still more surge forward. The chance to kill a dragon proving all the motivation they need. Your life begins to fade, and your last moments are filled with rage, but it all eventually leads to the impending darkness.
+
 
 Game over.
 (Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="" position="5593,824">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
@@ -978,21 +1000,24 @@ The Storm Giant looks bloodied and its actions are slowing. [[Finish it|Storm Gi
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="" position="5366,270">As you manuever around, your scales cracked, and your head spinning, you look around to see the Storm Giant charging at you. You are too slow to move out of the way as it collides with you, smashing you into a nearby siege engine. Orcs swarm onto you like cockroaches. You continue to fight, but the Storm Giant picks you up in its hands and rips your wings off, one at a time. You lunge at it, using all your might and strength, but the creature grabs you by your jaws, and rips your mouth apart. You lose all sensation as the world goes black, your mind and body beyond repair.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="" position="5366,270">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
+
 
 GAME OVER.
 
-(Hint: Consider the weakness of a Storm Giant and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="87" name="Storm Giant Defeat" tags="" position="5832,609">With a final charge, you leap onto the Storm Giant, crashing it into the ground, lighting bolts dancing around its body. You bite at its throat and locking your teeth, you bite off a large chunk, blood blue splattering everywhere. The Storm Giant&#x27;s flailing slows down as the blue skin slowly fades to gray, and you emerge victorious.
+(Hint: Consider the weakness of a Storm Giant and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="87" name="Storm Giant Defeat" tags="" position="5832,609">You see Brokki wavering, his movement sluggish, and his head reeling. You charge into him, knocking him down to one knee. He looks up at you expecting to see flames envelope his body. Instead you swoop down and bite his his throat. You feel jolts of electricity as your teeth dig into his skin. His breath becomes wet gurgle, and you rip out his throat. His blue blood sprays onto your body, as he slumps into the ground crushing many of the retreating orcs. 
 
-The remaining orcs look terrified that you have slain the Storm Giant, and begin retreating.
+&lt;&lt;set $playerName to $playerName + &quot;, Protector of Mankind&quot;&gt;&gt;
+
+Any orc left alive flees, and you watch them do so. They will spread the tale of what happened here. How Brokki, the Bane of Dragons was slain by $playerName.
 
 Time to let the kingdom know that it has been [[saved|Kingdom Saved Ending]] by a dragon.
 
-&lt;&lt;set $playerName to $playerName + &quot;, Protector of Mankind&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="88" name="Kingdom Saved Ending" tags="" position="6051,644">You return to the kingdom, your scales covered in the blood of your foes. You are hailed by the people and granted many treasures.
+
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="88" name="Kingdom Saved Ending" tags="" position="6051,644">You return to the kingdom victorious. The people praise your name as loud as they can. The kingsom had been saved. You look around and see $princeprincess standing next to the king and queen. $princeprincess cries with joy, as you bask in the glory of the people. To them you were the greatest dragon that had ever lived. 
 
 -------------------------------------------------------------
-Game complete, you are victorious! You release your prisoner to the kingdom. With the mighty orc armies defeated and scattered, and the kingdom granting you many treasures, you live out the rest of your life protecting this kingdom as they continue to serve you, and eventually in many of their eyes, you become a god to them.
+Game complete, you are victorious! You release your prisoner to the kingdom. With the mighty orc armies defeated and scattered, and the kingdom granting you many treasures, you live out the rest of your life protecting this kingdom as they continue to serve you. In their tongue you were &#x27;Fahdon&#x27;. Friend.
 
 $playerName would forever be remembered in the eyes of man as a legend.</tw-passagedata><tw-passagedata pid="89" name="Tail Storm Giant" tags="" position="5578,1045">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
@@ -1006,7 +1031,7 @@ You swing your tail at the Storm Giant, but its large size makes it difficult to
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant falls onto its knees. Perhaps that was the blow you needed. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="" position="4686,651">You can see the human battlements nearby, their fortifications already damaged by the siege engines of the orc army. 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="" position="4686,651">The human battlements have already been severely damaged. Humans and orcs alike cower as you fly by. The clamor and roar of battle drown out all your inhibitions. 
 
 Let the [[fighting|War Attack]] begin!
 
@@ -1017,7 +1042,265 @@ Let the [[fighting|War Attack]] begin!
 
 &lt;&lt;audio &quot;bgm_orcAttack&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Growing Up" tags="" position="3603,264">Romance branch?</tw-passagedata><tw-passagedata pid="92" name="Growing Up (Solo)" tags="" position="3634,1291">**Decades later**
 
-(Fighting dragons branch)</tw-passagedata></tw-storydata></div>
+(Fighting dragons branch)</tw-passagedata><tw-passagedata pid="93" name="The Wizard" tags="" position="4151,1112">One day, the $princeprincess claims to have received a vision that a mighty wizard will come and save $himher. $HeShe foolishly informs you of this information. A wizard... Perhaps that will do as a challenge...
+
+[[Tell me more|Tell Me More]]</tw-passagedata><tw-passagedata pid="94" name="Tell Me More" tags="" position="4246,1276">&quot;This wizard, his name is Stratavarious Kane. No one knows where he comes from. He&#x27;s a little crazy but it looks like my kingdom has finally decided you must be stopped. This wizard has been master of the academy for decades. I once met him playing Dragonchess. Have you ever played Dragonchess? He&#x27;s excellent at the game. I heard rumors that he runs the Dragonchess club just so he can have the satisfaction of destroying the other club members at the game.&quot;
+
+$playerName: &quot;Interesting... And where might I find this wizard?&quot;
+
+Prisoner: &quot;You&#x27;ll never be able to defeat him. He cannot be killed. Men and orcs alike have tried. For your own safety, you should just let me go and perhaps he will spare you.&quot;
+
+[[Release Prisoner]]
+[[I fear no wizard|I Fear No Wizard]]
+
+&lt;&lt;set $gold to 1000&gt;&gt;
+&lt;&lt;set $goldProduction to 0&gt;&gt;
+&lt;&lt;set $daysLeft to 14&gt;&gt;
+&lt;&lt;set $playerHP to 80&gt;&gt;
+&lt;&lt;set $maxPlayerHP to 80&gt;&gt;
+&lt;&lt;set $trapsSet to 0&gt;&gt;
+&lt;&lt;set $greaterHealthPotions to 0&gt;&gt;
+&lt;&lt;set $protection to 0&gt;&gt;
+
+&lt;&lt;set $wizardHP to 120&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="I Fear No Wizard" tags="" position="4482,1363">You hold onto your prisoner. Let the wizard come.
+
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="" position="4283,1496">You release your prisoner.
+
+You know the wizard will come for you anyways
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="97" name="Preparation" tags="" position="4724,1488">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If the wizard is coming, then you must prepare.
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
+Health: $playerHP/$maxPlayerHP
+Gold: $gold (+$goldProduction per day)
+Days till wizard arrives: $daysLeft
+
+Select an action (costs 1 day):
+[[Raid village for gold|Raid Village]]
+[[Enslave a nearby village|Enslave Village]] (Produces gold)
+[[Explore nearby dungeon|Explore Dungeon]]
+[[Set up traps|Set Traps]]
+[[Rest and Heal]]
+
+[[Finish preparation|Finish Preparation]] (Wizard arrives immediately)
+
+Or you could be a cowardly dragon and flee
+[[Flee From Wizard]]
+
+&lt;&lt;else&gt;&gt;
+The wizard has come, prepare for battle!
+[[Finish Preparation]]
+
+Or cowardly flee.
+[[Flee From Wizard]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Flee From Wizard" tags="" position="4574,1084">You flee from the wizard. You get a sad ending, where you lose all respect and are constantly on the run from this crazy wizard who never tires of you for some reason.
+
+Game Over
+(Hint: While abandoning your home is a valid but dissatisfying option, are you really a dragon if you will not defend all that you have?)</tw-passagedata><tw-passagedata pid="99" name="Finish Preparation" tags="" position="4723,1972">Now that you are ready, let the fighting begin!
+
+First, the wizard must navigate your dungeon and any traps you have set up.
+[[Traps!|Wizard Traps]]</tw-passagedata><tw-passagedata pid="100" name="Raid Village" tags="" position="4943,1176">You raid the village.
+&lt;&lt;set $goldGained to 500*random(2, 4)&gt;&gt;
+You gain $goldGained pieces of gold!
+&lt;&lt;set $damageTaken to random(3, 10)&gt;&gt;
+You take $damageTaken points of damage.
+&lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;
+[[Continue|Preparation]]
+&lt;&lt;else&gt;&gt;
+[[Your injuries are too severe...|Preparation Death]]
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $gold to $gold + $goldGained&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="" position="5053,1452">&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;
+&lt;&lt;if $dungeonReward is 1&gt;&gt;
+&lt;&lt;set $increaseHP to random(15, 20)&gt;&gt;
+You get &lt;&lt;print either(&quot;an Amulet of Health&quot;, &quot;a Staff of Life&quot;, &quot;a Stone of Fortitude&quot;)&gt;&gt;
+Your maximum HP increases by $increaseHP!
+&lt;&lt;set $playerHP to $playerHP + $increaseHP&gt;&gt;
+&lt;&lt;set $maxPlayerHP to $maxPlayerHP + $increaseHP&gt;&gt;
+
+&lt;&lt;elseif $dungeonReward is 2&gt;&gt;
+You get &lt;&lt;print either(&quot;an Amulet of Protection&quot;, &quot;Ring of Protection&quot;)&gt;&gt;
+You will take 3 less points of damage from the wizard!
+&lt;&lt;set $protection to $protection + 3&gt;&gt;
+&lt;&lt;else&gt;&gt;
+You get a potion of greater recovery!
+This can be used to heal 30 hitpoints!
+&lt;&lt;set $greaterHealthPotions to $greaterHealthPotions + 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $damageTaken to random(10, 20)&gt;&gt;
+You take $damageTaken points of damage!
+&lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;
+
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;
+[[Continue|Preparation]]
+&lt;&lt;else&gt;&gt;
+[[Preparation Death]]
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="" position="5000,1602">What level of trap would you like to set up?
+Current Gold: $gold
+&lt;&lt;if $gold &gt; 1000&gt;&gt;
+[[Simple Trap]] (Costs 1000 gold)
+&lt;&lt;else&gt;&gt;
+==Simple Trap (Costs 1000 gold)==
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $gold &gt; 5000&gt;&gt;
+[[Dangerous Trap]] (Costs 5000 gold)
+&lt;&lt;else&gt;&gt;
+==Dangerous Trap (Costs 5000 gold)==
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $gold &gt; 10000&gt;&gt;
+[[Deadly Trap]] (Costs 10000 gold)
+&lt;&lt;else&gt;&gt;
+==Deadly Trap (Costs 10000 gold)==
+&lt;&lt;/if&gt;&gt;
+
+[[I changed my mind|Preparation]]</tw-passagedata><tw-passagedata pid="103" name="Rest and Heal" tags="" position="4932,1747">You heal your wounds through rest.
+&lt;&lt;set $recoveredHP to random(10, 20)&gt;&gt;
+You recover $recoveredHP points of health.
+&lt;&lt;set $playerHP to $playerHP + $recoveredHP&gt;&gt;
+[[Continue|Preparation]]
+
+&lt;&lt;if $playerHP &gt; $maxPlayerHP&gt;&gt;
+&lt;&lt;set $playerHP to $maxPlayerHP&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
+&lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
+They will produce $newGoldProduction gold per day.
+
+[[Continue|Preparation]]
+
+&lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;if $trapSet is 1&gt;&gt;
+You set up a boulder trap!
+&lt;&lt;elseif $trapSet is 2&gt;&gt;
+You set up a spike trap!
+&lt;&lt;else&gt;&gt;
+You set up a flame trap!&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $trapsSet to $trapsSet + 1&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
+&lt;&lt;set $gold to $gold - 1000&gt;&gt;
+
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="" position="5239,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;if $trapSet is 1&gt;&gt;
+You set up a trap where rocks will fall from the roof and kill anyone below.
+&lt;&lt;elseif $trapSet is 2&gt;&gt;
+You set up a fake treasure chest which is actually a mimic in disguise.
+&lt;&lt;else&gt;&gt;
+You set up a fake floor over a pit of vipers.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $trapsSet to $trapsSet + 6&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
+&lt;&lt;set $gold to $gold - 5000&gt;&gt;
+
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;if $trapSet is 1&gt;&gt;
+You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth.
+&lt;&lt;elseif $trapSet is 2&gt;&gt;
+You set up a dragon statue with a disintegration trap that activates and fires at any trespassers.
+&lt;&lt;else&gt;&gt;
+You set up a fake floor over a pit of lava.
+&lt;&lt;/if&gt;&gt;
+
+
+&lt;&lt;set $trapsSet to $trapsSet + 13&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
+&lt;&lt;set $gold to $gold - 10000&gt;&gt;
+
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="" position="4793,1114">You die while preparing. Oops.
+
+Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="" position="5236,2275">Stratavarious Kane arrives.
+
+Your current health: $playerHP / $maxPlayerHP
+What shall you do?
+
+[[Bite Attack|Bite Wizard]] (Piercing)
+[[Claws|Claw Wizard]] (Slashing)
+[[Breath attack|Breath Wizard]] 
+[[Tail attack|Tail Wizard]] (Bludgeoning)
+
+&lt;&lt;if $greaterHealthPotions &gt; 0&gt;&gt;
+[[Drink Greater Health Potion|Heal Potion]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="" position="5471,1997">The wizard attacks with magic!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+You bite the wizard. Your teeth easily sink into him before he teleports a short distance away.
+&lt;&lt;set $wizardHP to $wizardHP - 20&gt;&gt;
+&lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The wizard looks weakened. [[Finish him|Wizard Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="" position="5552,2175">The wizard attacks with magic!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+You claw the wizard but his robes seem particular difficult to slash through.
+&lt;&lt;set $wizardHP to $wizardHP - 10&gt;&gt;
+&lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The wizard looks weakened. [[Finish him|Wizard Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="" position="5535,2325">The wizard attacks with magic!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+You breath $breathAttack at the wizard. He casts some sort of spell and it seems like he absorbs the majority of it without taking much damage.
+&lt;&lt;set $wizardHP to $wizardHP - 5&gt;&gt;
+&lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The wizard looks weakened. [[Finish him|Wizard Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="" position="5483,2463">The wizard attacks with magic!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+You swipe your tail at the wizard unexpectedly, catching him offguard and sending him flying across the room.
+&lt;&lt;set $wizardHP to $wizardHP - 25&gt;&gt;
+&lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The wizard looks weakened. [[Finish him|Wizard Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Heal Potion" tags="" position="5308,2582">The wizard attacks with magic!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+You drink a healing potion.
+You recover 30 hitpoints!
+&lt;&lt;set $playerHP to $playerHP + 30&gt;&gt;
+
+[[Continue|Wizard Fight]]</tw-passagedata><tw-passagedata pid="115" name="Wizard Wins" tags="" position="5971,2107">The wizard kills you.
+
+Game Over
+(Hint: Consider your preparation stage and how to best optimize what you can do to fight the wizard)</tw-passagedata><tw-passagedata pid="116" name="Wizard Loses" tags="" position="5882,2505">You defeat the wizard!
+
+[[Wizard Epilogue]]
+
+&lt;&lt;set $playerName to $playerName + &quot;, The Powerful&quot;&gt;&gt;
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="117" name="Wizard Epilogue" tags="" position="6070,2556">Victory, you won the game!
+
+Here is the epilogue! Stuff happens, you&#x27;re happy!</tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="" position="4860,2100">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 5*$trapsSet&gt;&gt;
+The wizard gets hurt by the traps! He takes $damage points of damage!
+&lt;&lt;set $wizardHP to $wizardHP - $damage&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Too bad you don&#x27;t have any traps set up. He easily navigates to you.
+&lt;&lt;/if&gt;&gt;
+[[Wizard Fight]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){if(0===arguments.length)throw new Error("_random called with insufficient parameters");var e=void 0,t=void 0;if(1===arguments.length?(e=0,t=arguments[0]):(e=arguments[0],t=arguments[1]),e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e,t,r){var n=t,a=r;return 2===arguments.length&&(a=n,n=0),Array.isArray(e)?e.random(n,a):e.hasOwnProperty("length")?[].concat(_toConsumableArray(e)).random(n,a):void 0}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),Array.prototype.splice.call(this,_random(n,a),1)[0]}}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),this[_random(n,a)]}}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0!==e){for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1)),n=[this[r],this[t]];this[t]=n[0],this[r]=n[1]}return this}}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e={userAgent:navigator.userAgent.toLowerCase()};return e.isGecko=navigator&&"Gecko"===navigator.product&&!/webkit|trident/.test(e.userAgent),e.isIE=/msie|trident/.test(e.userAgent)&&!e.userAgent.includes("opera"),e.ieVersion=function(){var t=/(?:msie\s+|rv:)(\d{1,2}\.\d)/.exec(e.userAgent);return t?Number([1]):0}(),e.isOpera=e.userAgent.includes("opera")||e.userAgent.includes(" opr/"),e.operaVersion=function(){var t=new RegExp((/applewebkit|chrome/.test(e.userAgent)?"opr":"version")+"\\/(\\d{1,2}\\.\\d+)"),r=t.exec(e.userAgent);return r?Number(r[1]):0}(),e.isMobile=Object.freeze({Android:/android/.test(e.userAgent),BlackBerry:/blackberry/.test(e.userAgent),iOS:/ip(?:hone|ad|od)/.test(e.userAgent),Windows:/iemobile/.test(e.userAgent),any:function(){var t=e.isMobile;return t.Android||t.BlackBerry||t.iOS||t.Windows}}),Object.freeze(e)}(),Has=function(){function e(e){try{if(null!=e&&e.length>=0){var t="SugarCube.WebStorage.Test",r="1701 Guilty Scott";if(e.setItem(t,r),e.getItem(t)===r)return e.removeItem(t),!0}}catch(e){}return!1}return Object.freeze({audio:"function"==typeof document.createElement("audio").canPlayType,fileAPI:"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15),geolocation:"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition,localStorage:"localStorage"in window&&e(window.localStorage),sessionStorage:"sessionStorage"in window&&e(window.sessionStorage)})}(),_ref4=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e)||e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return i(e,t)}).join(", ");if(e instanceof Map){var r=function(){var r=i,n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return{v:"( "+n+" )"}}();if("object"===("undefined"==typeof r?"undefined":_typeof(r)))return r.v}else{if(e instanceof Date)return e.toLocaleString();if("function"==typeof e.toString)return e.toString()}return Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref4.clone,convertBreaks=_ref4.convertBreaks,safeActiveElement=_ref4.safeActiveElement,setPageElement=_ref4.setPageElement,throwError=_ref4.throwError,toStringOrDefault=_ref4.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function r(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function a(e){if(null==e)return"";var t=String(e);return t&&p.test(t)?t.replace(f,function(e){return h[e]}):t}function i(e){if(null==e)return"";var t=String(e);return t&&m.test(t)?t.replace(g,function(e){return v[e]}):t}function o(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function s(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function u(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function l(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}function c(e,t){for(var r=Object.prototype.toString,n=Array.isArray(e),a=[].concat(Object.keys(e),Object.keys(t)).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}),i={},o=void 0,s=function(e){return e===o},u=0,l=a.length;u<l;++u){var c=a[u],d=e[c],f=t[c];if(e.hasOwnProperty(c))if(t.hasOwnProperty(c)){if(d===f)continue;if(("undefined"==typeof d?"undefined":_typeof(d))===("undefined"==typeof f?"undefined":_typeof(f)))if("function"==typeof d)d.toString()!==f.toString()&&(i[c]=[y.Copy,f]);else if("object"!==("undefined"==typeof d?"undefined":_typeof(d))||null===d)i[c]=[y.Copy,f];else{var p=r.call(d),h=r.call(f);if(p===h)if("[object Date]"===p){var g=Number(f);Number(d)!==g&&(i[c]=[y.CopyDate,g])}else if("[object RegExp]"===p)d.toString()!==f.toString()&&(i[c]=[y.Copy,clone(f)]);else{var m=Util.diff(d,f);null!==m&&(i[c]=m)}else i[c]=[y.Copy,clone(f)]}else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}else if(n&&Util.isNumeric(c)){var v=Number(c);if(!o){o="";do o+="~";while(a.some(s));i[o]=[y.SpliceArray,v,v]}v<i[o][1]&&(i[o][1]=v),v>i[o][2]&&(i[o][2]=v)}else i[c]=y.Delete;else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}return Object.keys(i).length>0?i:null}function d(e,t){for(var r=Object.keys(t||{}),n=clone(e),a=0,i=r.length;a<i;++a){var o=r[a],s=t[o];if(s===y.Delete)delete n[o];else if(Array.isArray(s))switch(s[0]){case y.SpliceArray:n.splice(s[1],1+(s[2]-s[1]));break;case y.Copy:n[o]=clone(s[1]);break;case y.CopyDate:n[o]=new Date(s[1])}else n[o]=Util.patch(n[o],s)}return n}var f=/[&<>"'`]/g,p=new RegExp(f.source),h=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),g=/&(?:amp|lt|gt|quot|apos|#39|#x27|#96|#x60);/g,m=new RegExp(g.source),v=Object.freeze({"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"}),y=e({Delete:0,SpliceArray:1,Copy:2,CopyDate:3});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},isNumeric:{value:t},isBoolean:{value:r},slugify:{value:n},escape:{value:a},unescape:{value:i},fromCssTime:{value:o},toCssTime:{value:s},fromCssProperty:{value:u},parseUrl:{value:l},DiffOp:{value:y},diff:{value:c},patch:{value:d},random:{value:Math.random},entityEncode:{value:a},entityDecode:{value:i},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(v,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');if(!e.hasOwnProperty("format"))throw new Error('source object missing required "format" property');var l=a(e.format);null!==l&&(t={src:e.src,type:l});break;default:throw new Error("invalid source value (type: "+("undefined"==typeof e?"undefined":_typeof(e))+")")}if(null!==t){var c=document.createElement("source");c.src=t.src,c.type=t.type,o.appendChild(c),i.push(t)}}),!o.hasChildNodes())if(Browser.isIE)o.src=undefined;else{var s=document.createElement("source");s.src=undefined,s.type=undefined,o.appendChild(s)}this._finalize(o,i,clone(t))}},{key:"_copy",value:function(t){if(!(t instanceof e))throw new Error("original parameter must be an instance of AudioWrapper");this._finalize(t.audio.cloneNode(!0),clone(t.sources),clone(t.originalSources))}},{key:"_finalize",value:function(e,t,r){var n=this;Object.defineProperties(this,{audio:{configurable:!0,value:e},sources:{configurable:!0,value:Object.freeze(t)},originalSources:{configurable:!0,value:Object.freeze(r)},_error:{writable:!0,value:!1},_faderId:{writable:!0,value:null},_mute:{writable:!0,value:!1},_rate:{writable:!0,value:1},_volume:{writable:!0,value:1}}),jQuery(this.audio).on("loadstart",function(){return n._error=!1}).on("error",function(){return n._error=!0}).find("source:last-of-type").on("error",function(){return n._trigger("error")}),SimpleAudio.subscribe(this,function(e){if(!n.audio)return void SimpleAudio.unsubscribe(n);switch(e){case"mute":n._updateAudioMute();break;case"rate":n._updateAudioRate();break;case"stop":n.stop();break;case"volume":n._updateAudioVolume()}}),this.load()}},{key:"_trigger",value:function(e){jQuery(this.audio).triggerHandler(e)}},{key:"clone",value:function(){return new e(this)}},{key:"destroy",value:function(){SimpleAudio.unsubscribe(this),this.fadeStop(),this.stop();
