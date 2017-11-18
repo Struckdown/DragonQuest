@@ -155,6 +155,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -203,20 +206,27 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</script><tw-passagedata pid="1" name="Main Menu" tags="" position="163,124">Welcome to DragonQuest.
+
+
+
+</script><tw-passagedata pid="1" name="Main Menu" tags="" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required)
 
 Created by CD Projekt Blue.
+[[Credits]]
+Disclaimer: None of the art or sound is made by us.
 
 &lt;img src=&quot;assets/image/TitleDragon.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
 
 [[Let the game begin.|Intro]]
 
+&lt;&lt;if $started != true&gt;&gt;
+&lt;&lt;masteraudio volume 0.8&gt;&gt;
 &lt;&lt;set $morality to 0&gt;&gt;
 &lt;&lt;set $hasWings to true&gt;&gt;
 &lt;&lt;set $prisonerHeld to false&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;bgm_gameStartMusic&quot; &quot;assets/GameStartMusic.mp3&quot;&gt;&gt;
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; loop play&gt;&gt;
+&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 loop play&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;
@@ -224,21 +234,27 @@ Created by CD Projekt Blue.
 &lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_orcAttack&quot; &quot;assets/OrcAttack.mp3&quot;&gt;&gt;
-
+&lt;&lt;cacheaudio &quot;bgm_empireBuilding&quot; &quot;assets/EmpireBuilding.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bgm_cave&quot; &quot;assets/Cave.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="151,245">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of, and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
+&lt;&lt;set $started to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
 [[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
 
-[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
+[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
 [[Fly to Farms|Go to Farms]]
-[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village, with any horses they could get a hold of.
+[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village with any horses they could get a hold of.
 
 How do you feel about this?
 [[You take joy in killing the helpless humans|Evil Bastard]]
@@ -246,16 +262,16 @@ How do you feel about this?
 
 &lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Hunt Wildlife" tags="" position="872,152">$HeShe knew his Father and Mother would be angry. Yet, this still did not scare $himher enough to attack the humans. $HeShe knew how bad they had it. The Orcs in the North, and $hisher parents up in Karak Seven Peaks. $playerName streaked into the woods, $hisher small frame allowing $himher to traverse the foliage. It was better this way, and yet $hisher parents did not understand it. They told $himher that this was the way things are. Dragons loot, pillage, and destroy. Humans offer tribute, cower, and die. $playerName refused to believe that this was the way things are, and if they were $heshe wished to change them. As $heshe approached a small clearing, $heshe saw a group of deer. $HeShe opened $hisher mouth letting loose a torrent of flame, knowing that tonight not only would $heshe be getting a mouthful of deer, but an earful from $hisher parents as well. 
 &lt;&lt;set $morality to $morality + 10&gt;&gt;
--[[Having eaten some deer, you return home, dreading what is to come.|Return Home]]</tw-passagedata><tw-passagedata pid="7" name="Evil Bastard" tags="" position="900,426">$playerName smiled as the little humans ran from in utter despair. There was something inexplicably euphoric about lauding the spectre of death over these mewling ingrates. A flick of a claw, or a brief spout of dragon’s breath, would easily dispatch a few humans. They would flee towards the village, thinking that they could run from $himher. Any that escaped, did so only because $heshe allowed it. It was always good to leave some survivors. $HisHer Father always told $himher, “Fear is only useful if it spreads”. Let them speak in hushed tones tonight, let them cower in fear of $playerName.
+[[Having eaten some deer, you return home, dreading what is to come.|Return Home]]</tw-passagedata><tw-passagedata pid="7" name="Evil Bastard" tags="" position="900,426">$playerName smiled as the little humans ran from in utter despair. There was something inexplicably euphoric about lauding the spectre of death over these mewling ingrates. A flick of a claw, or a brief spout of dragon’s breath, would easily dispatch a few humans. They would flee towards the village, thinking that they could run from $himher. Any that escaped, did so only because $heshe allowed it. It was always good to leave some survivors. $HisHer Father always told $himher, “Fear is only useful if it spreads”. Let them speak in hushed tones tonight, let them cower in fear of $playerName.
 &lt;&lt;set $morality to $morality - 5&gt;&gt;
 [[Now that the farms have been burnt, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="8" name="Doing My Job" tags="" position="908,287">As $heshe descended upon the farms, $heshe saw the humans begin to run. $HeShe was a force of nature. $HeShe knew this, as long as $heshe remained mindful of not overstepping, $heshe had complete control of the situation. This is the way the world worked. $HeShe was a dragon,  and they were not. This mere association made them no different then the deer $heshe would sometimes hunt. Both put up the same lack of resistance. $HeShe would grab as much livestock as possible, without starving any of the survivors when they returned of course. They still needed something to collect tribute from after all.
 &lt;&lt;set $morality to $morality + 2&gt;&gt;
--[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1221,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;$playerName returned home with bloody claws and hunks of flesh still stuck to $hisher teeth. $HisHer Father greeted $himher with a broad smile.
+[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1221,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;$playerName returned home with bloody claws and hunks of flesh still stuck to $hisher teeth. $HisHer Father greeted $himher with a broad smile.
 	  Jörmungandr, Dwarf&#x27;s Bane: “Any more blood on those claws of yours, and I’ll have to call you ‘$playerName, the Butcher’. You have done well $sondaughter, a true dragon in the making!”
 	  $playerName: “The farmers were of no challenge Father, the task was as easy as you said.”
 	  Jörmungandr, Dwarf&#x27;s Bane: “No doubt it was! Did you remember to leave survivors like I told you to?”
 	  $playerName: “Yes, they will spread the tale of what happened tonight.”
-	  Jörmungandr, Dwarf&#x27;s Bane: &quot;Your Mother and I grow weary of defending the humans, their troubles are no longer our concern. I tell you what $sondaughter, you seem like you are ready to take on a bigger challenge. I say ‘challenge’, but in truth it is a laughable task for me or your Mother. That is why I want you to destroy the village of Kanata. Consider it your rite of passage.”
+	  Jörmungandr, Dwarf&#x27;s Bane: &quot;Your Mother and I grow weary of defending the humans; their troubles are no longer our concern. I tell you what $sondaughter, you seem like you are ready to take on a bigger challenge. I say ‘challenge’, but in truth it is a laughable task for me or your Mother. That is why I want you to destroy the village of Kanata. Consider it your rite of passage.”
 &lt;&lt;else&gt;&gt;$playerName returned home fully aware that $heshe was going to be called all manner of names for disobeying $hisher parents.
 			  Jörmungandr, Dwarf&#x27;s Bane: “$playerName! You dare to enter into the hold after disobeying your mother so?!!”
 			  Jörmungandr, Dwarfs Bane: “I have half a mind to bite your wings off and throw you down the mountain! Let the humans take care of you, as you have taken care of them. See if they show you the respite that you have shown them.”
@@ -269,21 +285,17 @@ How do you feel about this?
 &lt;&lt;endif&gt;&gt;\
 [[Run Away]]
 
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 1.0 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="427,145">The colour of $playerName&#x27;s scales were:
+&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="429,144">The colour of $playerName&#x27;s scales were:
 &lt;&lt;link &quot;Azure Blue&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;blue&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;ice shards&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;270&quot; height =&quot;190&quot; alt=&quot;blueDragon&quot;/&gt;
-
+&lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;225&quot; height =&quot;225&quot; alt=&quot;blueDragon&quot;/&gt;
 &lt;&lt;link &quot;Fiery Red&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;red&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;flames&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;img src=&quot;assets/image/red/red_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;redDragon&quot;/&gt;
-
-&lt;&lt;link &quot;Midnight Black&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;black&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;acid&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;img src=&quot;assets/image/black/black_2.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;blackDragon&quot;/&gt;
-
+&lt;img src=&quot;assets/image/red/red_1.jpg&quot; width =&quot;294&quot; height =&quot;171&quot; alt=&quot;redDragon&quot;/&gt;
+&lt;&lt;link &quot;Midnight Black&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;black&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;acid&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;					
+&lt;img src=&quot;assets/image/black/black_2.jpg&quot; width =&quot;294&quot; height =&quot;171&quot; alt=&quot;blackDragon&quot;/&gt;
 &lt;&lt;link &quot;Golden Yellow&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;yellow&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;lightning&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;img src=&quot;assets/image/yellow/yellow_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;yellowDragon&quot;/&gt;
-
+&lt;img src=&quot;assets/image/yellow/yellow_1.jpg&quot; width =&quot;284&quot; height =&quot;177&quot; alt=&quot;yellowDragon&quot;/&gt;
 &lt;&lt;link &quot;Emerald Green&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;green&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;poison gas&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;img src=&quot;assets/image/green/green_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;greenDragon&quot;/&gt;
+&lt;img src=&quot;assets/image/green/green_1.jpg&quot; width =&quot;294&quot; height =&quot;171&quot; alt=&quot;greenDragon&quot;/&gt;
 
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;
   &lt;&lt;set $heshe to &quot;he&quot;&gt;&gt;
@@ -321,7 +333,7 @@ Attack:
 	[[Attack Fleeing Villagers]]
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|Run Away]]
-</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="" position="1476,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
+</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="" position="1477,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
 	Old Man: “Greetings, young $mastermistress $playerName! What brings you to our humble village, nothing bad I hope?”
 	$playerName: “Hello, Kaecilius. My parents have instructed me to burn the village down, as the find no more use in keeping you alive. I come to warn you of their approach, I cannot take your lives. I am going to flee, and I urge you all to do the same.”
 	Old Man: “By the Gods! This is truly devastating news. We will begin evacuation at once. If you are fleeing you parents wrath, then perhaps the Misthollow Swamps to the South would be a suitable hiding place. You could also go to Mt. Etna, a smouldering volcano slightly east of the Misthollow Swamps.”
@@ -336,7 +348,9 @@ Alternatively, you could visit your old friend in the forest.
 	[[Travel to Forest|Found Faerie Dragon]]
 
 Or if you dare...
-[[Return Home|Return Home(Defeat)]]</tw-passagedata><tw-passagedata pid="14" name="Farms" tags="" position="734,636">You fly over the farms, picking off humans and various animals, crunching on their bones.
+[[Return Home|Return Home(Defeat)]]
+
+&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Farms" tags="" position="734,636">You fly over the farms, picking off humans and various animals, crunching on their bones.
 
 You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
@@ -374,7 +388,7 @@ You swiftly find the royal caravan which you determine contains the $princeprinc
 &lt;&lt;endif&gt;&gt;\
 [[Murder|Murder]]
 
-&lt;img src=&quot;assets/image/attack/attack_6.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;fleeingVillagers&quot;/&gt;
+&lt;img src=&quot;assets/image/attack/attack_6.jpg&quot; width =&quot;400&quot; height =&quot;256&quot; alt=&quot;fleeingVillagers&quot;/&gt;
 
 &lt;&lt;set $prisonerHeld to false&gt;&gt;
 &lt;&lt;set $playerName to $playerName + &quot;, the Deathbringer&quot;&gt;&gt;
@@ -393,7 +407,7 @@ Not as graceful as you would have liked, but that will work.
 
 Now that the people have lost their leader, their morale sinking even further, you return to the carnage.
 
-[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="" position="824,943">After carrying your prisoner high into the air, dropping them and in general intimidating them by being a dragon, you eventually return your unconscious prisoner back to the caravan with the peasants.
+[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="" position="824,943">After carrying your prisoner high into the air, dropping them and then catching them and in general intimidating them by being a dragon, you eventually return your unconscious prisoner back to the caravan with the peasants.
 
 Now, to finish the destroying the village for pleasure...
 
@@ -407,20 +421,21 @@ With your satisfaction of imposing your dominance upon the people, you head back
 
 [[Continue Destroying village]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">&lt;&lt;if $ransom == 1&gt;&gt;The humans apparently both have treasure to part with you, as well as the desire to save their fellow man. You eagerly await as they pile bits and pieces of gold at you feet. It&#x27;s a little pitiful, but they are a small village and every dragon has its beginnings somewhere.
-	[[Time to go home|Return Home(Victory)]] &lt;&lt;set $prisonerHeld to false&gt;&gt;&lt;&lt;else&gt;&gt;Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923,1261">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923,1263">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
 
-&lt;&lt;linkreplace &quot;Old Building&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;linkreplace &quot;Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/linkreplace&gt;&gt;
-[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1359,1163">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+&lt;span id=&quot;OldBuilding&quot;&gt;Old Building&lt;/span&gt;
+&lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#OldBuilding&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1498,1173">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
+&lt;span id=&quot;Windmill&quot;&gt;Windmill&lt;/span&gt;
+&lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1427,1179">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1425,1050">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
 
 [[Return Home|Return Home(Victory)]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="" position="1628,1177">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="" position="1465,925">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
 
 [[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="" position="1834,30">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
 
@@ -447,19 +462,18 @@ Nontheless, this does mean you are free. Free to pursue whatever adventure you w
 
 Descending down, you find a cave nearby. That should be interesting enough.
 
-[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2330,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
+[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2331,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
 
 The thick skinned two-headed ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
-
 &lt;&lt;if $prisonerHeld is true&gt;&gt;You instruct the $princeprincess to stay out of harms way and not to run. $HeShe obediently obeys out of fear.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $playerHP to 8&gt;&gt;\
-&lt;&lt;set $ogreHP to 5&gt;&gt;\
 [[Bring it on Ogre|Ogre Fight]]
 
 &lt;img src=&quot;assets/image/twoHeadedOgre.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;twoHeadedOgre&quot;/&gt;
 
-&lt;&lt;audio &quot;bgm_cave&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
+&lt;&lt;audio &quot;bgm_cave&quot; loop play&gt;&gt;
+&lt;&lt;set $playerHP to 8&gt;&gt;
+&lt;&lt;set $ogreHP to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
 
@@ -561,14 +575,14 @@ $playerName: “I will leave at once, hang on friend!”
 
 &lt;&lt;audio &quot;bgm_faerieDragon&quot; loop play volume 0 fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
 &lt;&lt;set $villageDamage to 1&gt;&gt;\
-&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have gotten a ballista pointed at you.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have got a ballista pointed at you.&lt;&lt;endif&gt;&gt;
 The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
 
 &lt;img src=&quot;assets/image/attack/BurningBlacksmith.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningBlacksmith&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="" position="1050,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse. The humans saw you approaching, you could tell has the clanging of their bell echoed in the valley. You see the them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="" position="1051,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. &lt;&lt;if visited (&quot;Go to Farms&quot;)&gt;&gt;The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse.&lt;&lt;/if&gt;&gt;The humans saw you approaching, you could tell as the clanging of their bell echoed in the valley. You see them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
 
 [[Attack Village]]
 
@@ -576,7 +590,7 @@ The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP to 8&gt;&gt;
 &lt;&lt;set $villageDamage to 3&gt;&gt;
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3388,592">Now with the treasure in your claws, you feel satisfied. 
+&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 0.8 loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3388,592">Now with the treasure in your claws, you feel satisfied. 
 
 &lt;&lt;if visited (&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You leave, burdened by the last few days, in search for a new home. 
 
@@ -598,7 +612,7 @@ You return as fast you can back to Foxglove’s tree. You find him gasping for b
 	
 	[[Care for Foxglove|Save Foxglove]]
 &lt;&lt;else&gt;&gt;
-You leave the cave carrying your treasure. With your success, you feel it&#x27;s appropriate to go seek out a place to live, a place to establish as your territory.
+You leave the cave carrying your treasure. With your success, you feel it&#x27;s appropriate to go seek out a place to live, a place to establish as your territory. Your parents had wanted you to set out for yourself and you finally felt ready.
 &lt;&lt;if $prisonerHeld is false&gt;&gt;[[Seek Out New Home|Home Alone]]
 &lt;&lt;else&gt;&gt;
 [[Seek Out New Home|Home with Prisoner]]
@@ -658,16 +672,17 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="" position="2489,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="" position="2490,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
 
 You smile with relief, but then grow worried as the light within the cave shrinks, the rubble piling up onto the entrance. Looks like you&#x27;ll need to find another way out.
-&lt;&lt;if $prisonerHeld is true&gt;&gt;The $princeprincess is trapped in here with you.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $prisonerHeld is true&gt;&gt;As well, the $princeprincess is trapped in here with you. Poor soul.&lt;&lt;/if&gt;&gt;
 [[Into the Cave|Hub Room]]
 
+&lt;&lt;set $playerName to $playerName + &quot;, Slayer of Ogres&quot;&gt;&gt;(Title unlocked! You are now known as $playerName)
 &lt;&lt;set $puzzleComplete to false&gt;&gt;
 &lt;&lt;set $treasureGot to false&gt;&gt;
-&lt;&lt;set $playerName to $playerName + &quot;, Slayer of Ogres&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="" position="2482,769">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
+
+&lt;&lt;audio &quot;caveIn&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="" position="2482,769">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
 
 GAME OVER.
 
@@ -679,7 +694,7 @@ GAME OVER.
 
 Alternatively, you could [[return to the cave entrance|Collapsed Cave Entrance]]
 
-&lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2815,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the mushrooms in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
+&lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2815,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the mushrooms in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now. You hear a distant thud as something loud hits the ground nearby. It sounds like it came from outside.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
 &lt;&lt;else&gt;&gt;You see a magnificant pile of treasure before you in this room. Golden coins, trinkets, jewels and gems all sit in the center of the room. As well, you can see a beautiful white pearl sitting in the center of it all. That must be important. However, the path is walled off by a series of large spikes protruding from the walls and ceiling. You can&#x27;t seem to move them.&lt;&lt;endif&gt;&gt;
 
 [[Return back to main room|Hub Room]]
@@ -699,9 +714,7 @@ Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Time|Correct Guess]]
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[The Wind|Wrong Guess]]
 
-&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;
-
-[[Return to main room|Hub Room]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;[[Return to main room|Hub Room]]
 &lt;&lt;/if&gt;&gt;
 
 &lt;img src=&quot;assets/image/PoisonStatue.png&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2820,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
@@ -723,14 +736,16 @@ GAME OVER.
 Your remaining health: $playerHP
 
 [[Look at the statue again|Poison Puzzle]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Correct Guess" tags="" position="3117,242">A small red gem pops out of the statue&#x27;s mouth. You take hold of it.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;audio &quot;poisonGas&quot; time 4 play&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Correct Guess" tags="" position="3117,242">A small red gem pops out of the statue&#x27;s mouth. You take hold of it.
 
 [[Continue|Poison Puzzle]]
 
-&lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="" position="3124,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked.
+&lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="" position="3125,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked. Any attempts to move it are unsuccessful. You&#x27;ll have to wait till someone moves it aside or find an alternative way out.
 [[Return to main area|Hub Room]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
-
+&lt;&lt;audio &quot;bgm_cave&quot; volume 1.0 fadeoverto 5 0.0&gt;&gt;
 &lt;&lt;if visited(&quot;Taunt&quot;)&gt;&gt;\
 Ancalagon: “You mewling wyrm...I have found you again. Snooping around one of my stashes? Should have set me free, perhaps you would have been rewarded. Any clever last words, before I turn you to ash?&quot;
 
@@ -752,21 +767,19 @@ Ancalagon: “What do we have here? A little dragon such as yourself so far from
 	[[Ask for forgiveness|Forgiveness]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
-
-&lt;&lt;audio &quot;bgm_cave&quot; volume 1.0 fadeoverto 5 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
+</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
 &lt;&lt;set $puzzleComplete to true&gt;&gt;
-[[Continue|Gem Puzzle]]</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
+[[Continue|Gem Puzzle]]
+
+&lt;&lt;audio &quot;mechanismMoving&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
 
 Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, with an incredible urge to sleep forever. Yes, that would be good. Unending sleep... You barely open your eyes briefly and see silhouettes in front of you, not entirely sure what they are. It doesn&#x27;t matter now... Sleep sounds good. Eternal sleep sounds better. You close your eyes one last time. Never to open them again.
 
 [Game Over]
 (Hint: Read the village for clues and try to figure out what order you should attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="" position="1960,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;) or visited(&quot;Ransom&quot;)&gt;&gt;\
-You successfully conquered the village! Your parents tell you to go to a cave for adventure.
-
-&lt;&lt;endif&gt;&gt;
-
-&lt;&lt;if $prisonerHeld is true&gt;&gt;
-(TODO: You have a prisoner with you! Give to parents? Keep for yourself?)
+You successfully conquered the village! Your parents are very pleased and ask you to go to a nearby cave as an opportunity for you to scout out a home of your own.
+&lt;&lt;endif&gt;&gt;&lt;&lt;if $prisonerHeld is true&gt;&gt;
+You have a prisoner with you! What shall you do with this poor soul? Give $himher to your parents? Keep for yourself? 
 [[Keep prisoner for yourself|Cave Entrance]] (And leave for adventure)
 [[Give prisoner to parents|Parents Get Prisoner]]
 
@@ -790,7 +803,7 @@ Titania, the Deceiver: &quot;Begone from here. We have no need for the weak, for
 
 &lt;&lt;/if&gt;&gt;
 
-[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="" position="3048,886">$playerName: “Seeing as I am about to die, I shall taunt you a second time. Your mother was but a lizard, and your father smelt of elderberries!”
+[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="" position="3048,886">$playerName: “Seeing as I am about to die, I shall taunt you&lt;&lt;if visited (&quot;Taunt&quot;)&gt;&gt; a second time&lt;&lt;/if&gt;&gt;. Your mother was but a lizard, and your father smelt of elderberries!”
 
 His eyes flash in anger, and before you could utter another word you see his maw open and a torrent of hellfire erupts around you. Your ashes are swept away by the breath of Ancalagon, the Apocalypse. 
 
@@ -815,29 +828,24 @@ You will never be able to fly again.
 
 [[You leave for adventure|Cave Entrance]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;
-
-&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Home Alone" tags="" position="3564,1105">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Home Alone" tags="" position="3564,1105">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
 Mt Etna was certainly a warm place. It would serve as a home.
 &lt;&lt;set $home to &quot;volcano&quot;&gt;&gt;
-
 &lt;&lt;elseif visited (&quot;Travel to Volcano&quot;)&gt;&gt;
 The Misthollow swamp could make for a great new home, and it wouldn&#x27;t be near that ancient dragon.
 &lt;&lt;set $home to &quot;swamplands&quot;&gt;&gt;
-
 &lt;&lt;elseif visited (&quot;Finish Destroying Village&quot;)&gt;&gt;
 The ruins of that village you destroyed will serve as your new home.
 &lt;&lt;set $home to &quot;village&quot;&gt;&gt;
-
 &lt;&lt;else&gt;&gt;
 You shall make your home in the $forestName.
 &lt;&lt;set $home to &quot;forest&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
 You time here would be lonely, but at least you would be safe. Safe from the countless enemies you had in the world. 
 
 [[Growing Up (Solo)]]
-</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="" position="3633,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
+
+&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="" position="3633,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
 Mt Etna was certainly a warm place. It would serve as a home.
 &lt;&lt;set $home to &quot;volcano&quot;&gt;&gt;
 
@@ -857,7 +865,7 @@ The prisoner would make for some entertainment, perhaps retiring to a secluded l
 
 Do you let the prisoner befriend you?
 [[Certainly, it is only a matter of time|Prisoner Befriends You]]
-[[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="" position="3970,568">--20 years later--
+[[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="" position="3971,568">--20 years later--
 
 As the years pass by, you grow more trusting of your prisoner. $HeShe had several opportunities to try and run, but $heshe never took them, in a way they seemed to be happy with you. You would make each other laugh, and despite your gruff demeanor, you had grown fond of them. There had been countless attempts made by valient knights to rescue $himher. All had been easily dispatched, lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The past twenty years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
 
@@ -866,7 +874,9 @@ Over the years, the $princeprincess has asked for freedom, and you have refused 
 One day you wake to hear the clamor of armor and swords being drawn. You sigh, it seems as though more men had come to die. As you make your way out, you see that a group of perhaps a hundred men all heavily armored had come to your doorstep. They send forward about twenty or so men, one of which was carrying a white flag. As if that would deter you from roasting them in their precious armor. You grin with satisfaction at the chance to exert your dominance. The $princeprincess recognizes the emblem on the soldiers armor, and pleads you to not incinerate these men on the spot. 
 
 [[Listen|Listen to Army]]
-[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="" position="3948,1001">You hold onto the $princeprincess for years but never become friends with them.
+[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="" position="3948,1001">--20 years later--
+
+You hold onto the $princeprincess for years but never become friends with them. For the most part, you leave them alone, confined to their prison, while you go about your own business, attacking nearby villages, dominating the region, building your hoard, your piles of treasures and trophies.
 
 [[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="72" name="Listen to Army" tags="" position="4165,668">The $princeprincess: &quot;Please $playerName, I beg you, do not slay them before hearing what they have to say.&quot;
 
@@ -1423,15 +1433,15 @@ Choose your next target:
 
 [[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
 [[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
-[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="" position="3059,2100">&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
+[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="" position="3059,2101">&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
 Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
-&lt;&lt;set $playerForcesIncrease to random(200000, 300000)&gt;&gt;
+&lt;&lt;set $playerForcesIncrease to random(100000, 150000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;elseif $playerForces &gt; 75000&gt;&gt;
 The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
-&lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
+&lt;&lt;set $playerForcesIncrease to random(80000, 100000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
@@ -1450,63 +1460,49 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;else&gt;&gt;
 You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2934,1515">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2934,1515">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 15000&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 15000&gt;&gt;The defenses are strong, but your forces are stronger. Your forces attack from various sides and many of them are taken down by a hail of arrows. Fortunately, with your superior numbers, you still manage to take the city. You take heavy casualties but still gain many troops.
 &lt;&lt;set $playerForcesIncrease to random(2000, 4500)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat.
 
 &lt;&lt;set $playerForcesIncrease to random(6000, 12000)&gt;&gt;
-&lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
-&lt;&lt;set $playerForcesIncrease to $playerForces&gt;&gt;
-Unfortunately, none of your troops are able to get away.
+&lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;&lt;&lt;set $playerForcesIncrease to $playerForces&gt;&gt;Unfortunately, none of your troops are able to get away.
 &lt;&lt;/if&gt;&gt;
 
 Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
-You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
+You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the city, slaying many of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the city for your own satisfaction. There will be other places to find more &quot;willing&quot; servants.
 
 You gain no forces.
-
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2812,1533">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
-Your forces increase by $playerForcesIncrease!
+The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 &lt;&lt;elseif $playerForces &gt; 2500&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+The outpost&#x27;s defenses are not particularly mighty but the few well trained soldiers they have are able to take on several of your minions before going down. You descend down onto the outpost and tear through some of the primary targets, forcing the surrender. Your forces take heavy casualties but you still gain many troops from the outpost, as well as control of the area.
 &lt;&lt;set $playerForcesIncrease to random(1000, 1500)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. Those humans may be fragile but their ability to fortify a location is not to be overlooked.
 
 &lt;&lt;set $playerForcesIncrease to random(750, 1250)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
@@ -1518,73 +1514,53 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
-You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
+You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the outpost, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2997,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2998,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="3000,1293">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="3000,1293">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 3000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
-
-&lt;&lt;elseif $playerForces &gt; 750&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 750&gt;&gt;The defenses are strong, but your forces are relentless and with sheer numbers, you overwhelm them. You take heavy casualties but still have a net gain of many troops.
 &lt;&lt;set $playerForcesIncrease to random(750, 1500)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
-
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
-&lt;&lt;set $playerForcesIncrease to random(20, 50)&gt;&gt;
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the fortifications, and takes heavy casualties before you order the retreat. The defenders look pleased that they have repelled you.
+&lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt;= $playerForces&gt;&gt; Your forces are unable to escape. There are no survivors. &lt;&lt;set $playerForcesIncrease to $playerForces&gt;&gt;&lt;&lt;/if&gt;&gt;
 Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
+&lt;&lt;else&gt;&gt;You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="" position="2762,1655">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
-&lt;&lt;set $playerForcesIncrease to random(1000, 3000)&gt;&gt;
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="" position="2762,1655">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
+&lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 2000&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 2000&gt;&gt;The various defenses are strong, but your forces are stronger. Your troops swarm through the forest, finding stray elf colonies all over the place. You take heavy casualties but still gain many troops. Who knew there were so many elves in the forest?
 &lt;&lt;set $playerForcesIncrease to random(1000, 2000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the forest, and a rain of arrows greets them, felling many of them. You order the retreat to prevent further unnecessary losses.
 
 &lt;&lt;set $playerForcesIncrease to random(1500, 5000)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
@@ -1600,58 +1576,41 @@ You attack the fortifications but are warded off immediately by a hail of arrows
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="3121,1140">&lt;&lt;if $playerForces &gt; 100&gt;&gt;
-Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="3121,1140">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
 &lt;&lt;set $playerForcesIncrease to random(200, 300)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
-
 &lt;&lt;elseif $playerForces &gt; 30&gt;&gt;
 The ogres club through the majority of your forces before you arrive personally, forcing them to drop their weapons and surrender.
 &lt;&lt;set $playerForcesIncrease to random(50, 150)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
-
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. Despite your own arrival at the scene, none of the ogres are willing to join your cause. You roast them all the same. 
-
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. Despite your own arrival at the scene, none of the ogres are willing to join your cause. You roast them all the same. 
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
 &lt;&lt;set $playerForcesIncrease to $playerForces&gt;&gt;
 Unfortunately, none of your troops are able to get away.
 Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-You arrive by yourself and none of the ogres agree to join you. You burn them all.
+&lt;&lt;else&gt;&gt;You arrive by yourself and none of the ogres agree to join you. The fools. You burn them all.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="" position="2911,1899">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="" position="2911,1899">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 40000&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 40000&gt;&gt;The city is well prepared and well equipped to defend against your forces. You can see several spellcasters casting enchantments on various troops to aid them in the battle. Fireballs rain from the skies, soldiers flying left and right as your ogre troops charge forward, disregarding the lives of anyone they plow into. You are able to take the city, but suffer some losses. Fortunately, the losses you suffer are sufficiently outweighed by the extra forces you recieve when the city offers an unconditional surrender.
 &lt;&lt;set $playerForcesIncrease to random(10000, 20000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the fortifications, and is heavily torn apart, ogres flying across the battlefield, before you order the retreat. 
 
 &lt;&lt;set $playerForcesIncrease to random(7500, 20000)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
@@ -1667,27 +1626,23 @@ You attack the fortifications but are warded off immediately by a hail of arrows
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="" position="2949,2009">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
 &lt;&lt;set $playerForcesIncrease to random(1000000, 1500000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;elseif $playerForces &gt; 800000&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+The Empire is spread out and is difficult to properly attack. You lack the sufficient troops to properly overwhelm it and instead attack several key locations one after another. You are unable to hold control over any point for long without overextending your troops. However, it seems the lizardfolk are hurt worse than you imagined as they offer their surrender. 
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the empire, and is heavily torn apart before you order the retreat. 
+Your pitiful army attacks the empire, and is heavily torn apart before you order the retreat. You have never before seen so many lizards.
 
 &lt;&lt;set $playerForcesIncrease to random(100000, 300000)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
@@ -1704,27 +1659,20 @@ You attack the fortifications but are warded off immediately by a hail of arrows
 You gain no forces.
 
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="" position="2884,1664">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="" position="2885,1664">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 7500&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 7500&gt;&gt;The underground dwarven armory features many defenses, including several trapped hallways, boulder traps and even some sort of automated flamethrower system. While impressive, your forces attack the armory relentlessly, climbing over the bodies of each other to reach at the dwarves. You take heavy casualties but still gain many troops and many improvements to your weapons from the dwarves.
 &lt;&lt;set $playerForcesIncrease to random(1000, 2000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+&lt;&lt;elseif $playerForces &gt; 0&gt;&gt;Your pitiful army attacks the fortifications, and is heavily torn apart by the various weapons employed by the dwarves, including an automated flamethrower system, before you order the retreat. 
 
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
@@ -1736,65 +1684,60 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
-You attack the fortifications but are warded off immediately by a hail of arrows. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
+You attack the fortifications but are warded off immediately by a hail of various weapons, including a flamethrower unit. You return a moment later higher up, and breath $breathAttack onto the armory, slaying several of the defenders and injuring many more. None may challenge the will of a dragon. You proceed to destroy the rest of the armory for your satisfaction. There will be other places to find more servants.
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="" position="3226,2057">&lt;&lt;if $playerForces &gt; 150000&gt;&gt;
-Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="" position="3226,2057">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
-&lt;&lt;elseif $playerForces &gt; 120000&gt;&gt;
-The defenses are strong, but your forces are stronger. You take heavy casualties but still gain many troops.
+&lt;&lt;elseif $playerForces &gt; 200000&gt;&gt;
+The dragons fight tooth and tail and after a few fall, the remainder agree to serve you instead of sacrificing their lives in vain. 
 &lt;&lt;set $playerForcesIncrease to random(80000, 100000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;elseif $playerForces &gt; 0&gt;&gt;
-Your pitiful army attacks the fortifications, and is heavily torn apart before you order the retreat. 
+Your army attacks the home of the dragons. From the various caves, many dragons emerge all at once, and together scorch the very ground your troops stand on. Before long, many of your soldiers have fallen and you hastely order the retreat before the dragons decide to come for you.
 
-&lt;&lt;set $playerForcesIncrease to random(80000, 110000)&gt;&gt;
+&lt;&lt;set $playerForcesIncrease to random(150000, 180000)&gt;&gt;
 &lt;&lt;if $playerForcesIncrease &gt; $playerForces&gt;&gt;
 &lt;&lt;set $playerForcesIncrease to $playerForces&gt;&gt;
-Unfortunately, none of your troops are able to get away.
+Unfortunately, none of your troops are able to get away from the wrath of the dragons.
 &lt;&lt;/if&gt;&gt;
 
 Your forces decrease by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces - $playerForcesIncrease&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
-You attack the fortifications but are warded off immediately by a hail of attack. You return a moment later higher up, and breath $breathAttack onto the stronghold, slaying all of the defenders. None may challenge the will of a dragon. You proceed to destroy the rest of the stronghold for your satisfaction. There will be other places to find more servants.
+You attack the fortifications but are warded off immediately by a dragons. Not a wise idea. You leave immediately.
 
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
+&lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
+&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
+&lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="" position="3386,2361">Several dragons flee before the expansion of your empire.
 
-&lt;&lt;if $playerForces &lt; 5000&gt;&gt;
-[[Continue|Enslaving Tier 1]]
-&lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;
-[[Continue|Enslaving Tier 2]]
-&lt;&lt;else&gt;&gt;
-[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="" position="3385,2362">Several dragons flee before the expansion of your empire.
-
-Eventually, one rises to challenge you and your empire. The Ancient Dragon.
+Eventually, one rises to challenge you and your empire. Ancalagon, the Apocalypse.
 
 He challenges you to a duel for control of the empire.
 
-[[Very Well|Fight the Ancient Dragon]]
-[[No Way|Power Overwhelming]]</tw-passagedata><tw-passagedata pid="132" name="Power Overwhelming" tags="" position="3354,2548">You order your minions to swarm the dragon. He brushes off many of them, but hundreds of thousands are still around. They continue to swarm the dragon before you join the fray. Together, you overwhelm the dragon. He is no match for you and your servants.
+[[No Way|Power Overwhelming]]</tw-passagedata><tw-passagedata pid="132" name="Power Overwhelming" tags="" position="3354,2548">You order your minions to swarm Ancalagon. He brushes off many of them, but hundreds of thousands are still around. They continue to swarm the him before you join the fray. Together, you overwhelm the dragon. He is no match for you and your servants.
 
 [[Age of Dragons]]
 &lt;&lt;set $playerName to $playerName + &quot;, The Ruthless&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Fight the Ancient Dragon" tags="" position="2818,2666">(End of Demo)</tw-passagedata><tw-passagedata pid="134" name="Age of Dragons" tags="" position="3276,2777">A new era had come. The Age of Dragons it would be known. Your reign would be fierce. None would dare challenge the might of $playerName.</tw-passagedata><tw-passagedata pid="135" name="Evade Wizard" tags="" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Age of Dragons" tags="" position="3277,2778">Game Complete!
+
+A new era had come. The Age of the Dragon it would be known. Legions of kobolds, goblins, bugbears all lived to serve you. Even the humans, dwarves and elves had no choice but to obey your demands because of the raw might you possessed in your forces. The might of a million voices cried out in unison as you stood atop your home, the fire burning in your eyes. Your reign would be fierce. None would, none could dare challenge the might of $playerName.
+
+&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1812,21 +1755,31 @@ The wizard unleashes a charged spell!
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Enslaving Tier 2" tags="" position="3468,1571">Your forces are now large enough to take on even greater foes...
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="3468,1571">Your forces are now large enough to take on even greater foes...
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
 Choose your next target:
 
+[[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
+[[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
+[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;
 [[Elven Silver City of Ayonor|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
 [[Elven Forest of Qraph|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
 [[Dwarven Armory]] &lt;span style=&quot;color:yellow&quot;&gt;(Horde)&lt;/span&gt;
-[[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="137" name="Enslaving Tier 3" tags="" position="3512,1796">&lt;&lt;if $playerForces &lt;= 2500000&gt;&gt;
+[[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="136" name="Enslaving Tier 3" tags="" position="3512,1796">&lt;&lt;if $playerForces &lt;= 2500000&gt;&gt;
 As your armies have grown, so have your targets...
 Forces: $playerForces minions, servants, soldiers of $playerName
 
 Choose your next target:
 
+[[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
+[[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
+[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;
+[[Elven Silver City of Ayonor|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
+[[Elven Forest of Qraph|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
+[[Dwarven Armory]] &lt;span style=&quot;color:yellow&quot;&gt;(Horde)&lt;/span&gt;
+[[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;
 [[Dwarf Underground Fortress of Hammerhold|Dwarven Underground Fortress]] &lt;span style=&quot;color:red&quot;&gt;(Swarm)&lt;/span&gt;
 [[Dragons of The Hollow Mountains|Dragons in Mountains]] &lt;span style=&quot;color:red&quot;&gt; (Few)&lt;/span&gt;
 [[Lizardfolk Empire]] &lt;span style=&quot;color:gray&quot;&gt;(Countless)&lt;/span&gt;
@@ -1834,8 +1787,13 @@ Choose your next target:
 &lt;&lt;else&gt;&gt;
 Now that you have enough forces, it is only a matter of time before either the dragons come to you, or you come to them.
 
+
 [[Wait patiently|Return of the Ancient Dragon]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Credits" tags="" position="92,415">Lead Writer: Aditya
+Lead Programmer and Lead Designer: Boris
+Support: Charles, Dover, Ceegan, Shardul
+
+[[Back To Main Menu|Main Menu]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){if(0===arguments.length)throw new Error("_random called with insufficient parameters");var e=void 0,t=void 0;if(1===arguments.length?(e=0,t=arguments[0]):(e=arguments[0],t=arguments[1]),e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e,t,r){var n=t,a=r;return 2===arguments.length&&(a=n,n=0),Array.isArray(e)?e.random(n,a):e.hasOwnProperty("length")?[].concat(_toConsumableArray(e)).random(n,a):void 0}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),Array.prototype.splice.call(this,_random(n,a),1)[0]}}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),this[_random(n,a)]}}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0!==e){for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1)),n=[this[r],this[t]];this[t]=n[0],this[r]=n[1]}return this}}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e={userAgent:navigator.userAgent.toLowerCase()};return e.isGecko=navigator&&"Gecko"===navigator.product&&!/webkit|trident/.test(e.userAgent),e.isIE=/msie|trident/.test(e.userAgent)&&!e.userAgent.includes("opera"),e.ieVersion=function(){var t=/(?:msie\s+|rv:)(\d{1,2}\.\d)/.exec(e.userAgent);return t?Number([1]):0}(),e.isOpera=e.userAgent.includes("opera")||e.userAgent.includes(" opr/"),e.operaVersion=function(){var t=new RegExp((/applewebkit|chrome/.test(e.userAgent)?"opr":"version")+"\\/(\\d{1,2}\\.\\d+)"),r=t.exec(e.userAgent);return r?Number(r[1]):0}(),e.isMobile=Object.freeze({Android:/android/.test(e.userAgent),BlackBerry:/blackberry/.test(e.userAgent),iOS:/ip(?:hone|ad|od)/.test(e.userAgent),Windows:/iemobile/.test(e.userAgent),any:function(){var t=e.isMobile;return t.Android||t.BlackBerry||t.iOS||t.Windows}}),Object.freeze(e)}(),Has=function(){function e(e){try{if(null!=e&&e.length>=0){var t="SugarCube.WebStorage.Test",r="1701 Guilty Scott";if(e.setItem(t,r),e.getItem(t)===r)return e.removeItem(t),!0}}catch(e){}return!1}return Object.freeze({audio:"function"==typeof document.createElement("audio").canPlayType,fileAPI:"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15),geolocation:"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition,localStorage:"localStorage"in window&&e(window.localStorage),sessionStorage:"sessionStorage"in window&&e(window.sessionStorage)})}(),_ref4=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e)||e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return i(e,t)}).join(", ");if(e instanceof Map){var r=function(){var r=i,n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return{v:"( "+n+" )"}}();if("object"===("undefined"==typeof r?"undefined":_typeof(r)))return r.v}else{if(e instanceof Date)return e.toLocaleString();if("function"==typeof e.toString)return e.toString()}return Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref4.clone,convertBreaks=_ref4.convertBreaks,safeActiveElement=_ref4.safeActiveElement,setPageElement=_ref4.setPageElement,throwError=_ref4.throwError,toStringOrDefault=_ref4.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function r(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function a(e){if(null==e)return"";var t=String(e);return t&&p.test(t)?t.replace(f,function(e){return h[e]}):t}function i(e){if(null==e)return"";var t=String(e);return t&&m.test(t)?t.replace(g,function(e){return v[e]}):t}function o(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function s(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function u(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function l(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}function c(e,t){for(var r=Object.prototype.toString,n=Array.isArray(e),a=[].concat(Object.keys(e),Object.keys(t)).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}),i={},o=void 0,s=function(e){return e===o},u=0,l=a.length;u<l;++u){var c=a[u],d=e[c],f=t[c];if(e.hasOwnProperty(c))if(t.hasOwnProperty(c)){if(d===f)continue;if(("undefined"==typeof d?"undefined":_typeof(d))===("undefined"==typeof f?"undefined":_typeof(f)))if("function"==typeof d)d.toString()!==f.toString()&&(i[c]=[y.Copy,f]);else if("object"!==("undefined"==typeof d?"undefined":_typeof(d))||null===d)i[c]=[y.Copy,f];else{var p=r.call(d),h=r.call(f);if(p===h)if("[object Date]"===p){var g=Number(f);Number(d)!==g&&(i[c]=[y.CopyDate,g])}else if("[object RegExp]"===p)d.toString()!==f.toString()&&(i[c]=[y.Copy,clone(f)]);else{var m=Util.diff(d,f);null!==m&&(i[c]=m)}else i[c]=[y.Copy,clone(f)]}else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}else if(n&&Util.isNumeric(c)){var v=Number(c);if(!o){o="";do o+="~";while(a.some(s));i[o]=[y.SpliceArray,v,v]}v<i[o][1]&&(i[o][1]=v),v>i[o][2]&&(i[o][2]=v)}else i[c]=y.Delete;else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}return Object.keys(i).length>0?i:null}function d(e,t){for(var r=Object.keys(t||{}),n=clone(e),a=0,i=r.length;a<i;++a){var o=r[a],s=t[o];if(s===y.Delete)delete n[o];else if(Array.isArray(s))switch(s[0]){case y.SpliceArray:n.splice(s[1],1+(s[2]-s[1]));break;case y.Copy:n[o]=clone(s[1]);break;case y.CopyDate:n[o]=new Date(s[1])}else n[o]=Util.patch(n[o],s)}return n}var f=/[&<>"'`]/g,p=new RegExp(f.source),h=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),g=/&(?:amp|lt|gt|quot|apos|#39|#x27|#96|#x60);/g,m=new RegExp(g.source),v=Object.freeze({"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"}),y=e({Delete:0,SpliceArray:1,Copy:2,CopyDate:3});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},isNumeric:{value:t},isBoolean:{value:r},slugify:{value:n},escape:{value:a},unescape:{value:i},fromCssTime:{value:o},toCssTime:{value:s},fromCssProperty:{value:u},parseUrl:{value:l},DiffOp:{value:y},diff:{value:c},patch:{value:d},random:{value:Math.random},entityEncode:{value:a},entityDecode:{value:i},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(v,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');if(!e.hasOwnProperty("format"))throw new Error('source object missing required "format" property');var l=a(e.format);null!==l&&(t={src:e.src,type:l});break;default:throw new Error("invalid source value (type: "+("undefined"==typeof e?"undefined":_typeof(e))+")")}if(null!==t){var c=document.createElement("source");c.src=t.src,c.type=t.type,o.appendChild(c),i.push(t)}}),!o.hasChildNodes())if(Browser.isIE)o.src=undefined;else{var s=document.createElement("source");s.src=undefined,s.type=undefined,o.appendChild(s)}this._finalize(o,i,clone(t))}},{key:"_copy",value:function(t){if(!(t instanceof e))throw new Error("original parameter must be an instance of AudioWrapper");this._finalize(t.audio.cloneNode(!0),clone(t.sources),clone(t.originalSources))}},{key:"_finalize",value:function(e,t,r){var n=this;Object.defineProperties(this,{audio:{configurable:!0,value:e},sources:{configurable:!0,value:Object.freeze(t)},originalSources:{configurable:!0,value:Object.freeze(r)},_error:{writable:!0,value:!1},_faderId:{writable:!0,value:null},_mute:{writable:!0,value:!1},_rate:{writable:!0,value:1},_volume:{writable:!0,value:1}}),jQuery(this.audio).on("loadstart",function(){return n._error=!1}).on("error",function(){return n._error=!0}).find("source:last-of-type").on("error",function(){return n._trigger("error")}),SimpleAudio.subscribe(this,function(e){if(!n.audio)return void SimpleAudio.unsubscribe(n);switch(e){case"mute":n._updateAudioMute();break;case"rate":n._updateAudioRate();break;case"stop":n.stop();break;case"volume":n._updateAudioVolume()}}),this.load()}},{key:"_trigger",value:function(e){jQuery(this.audio).triggerHandler(e)}},{key:"clone",value:function(){return new e(this)}},{key:"destroy",value:function(){SimpleAudio.unsubscribe(this),this.fadeStop(),this.stop();
