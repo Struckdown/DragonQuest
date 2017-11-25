@@ -165,7 +165,9 @@ body.main{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -229,7 +231,7 @@ Created by CD Projekt Blue.
 [[Credits]]
 Disclaimer: None of the art or sound is made by us.
 
-&lt;img src=&quot;assets/image/TitleDragon.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
+&lt;img src=&quot;assets/image/background/logo_2_ori.png&quot; width =&quot;400&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
 
 [[Let the game begin.|Intro]]
 &lt;&lt;if $started != true&gt;&gt;
@@ -238,18 +240,31 @@ Disclaimer: None of the art or sound is made by us.
 &lt;&lt;cacheaudio &quot;bgm_gameStartMusic&quot; &quot;assets/GameStartMusic.mp3&quot;&gt;&gt;
 &lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 loop play&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_swamplands&quot; &quot;assets/Swamplands.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_orcAttack&quot; &quot;assets/OrcAttack.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_empireBuilding&quot; &quot;assets/EmpireBuilding.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_cave&quot; &quot;assets/Cave.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_swamplands&quot; &quot;assets/Swamplands.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_orcAttack&quot; &quot;assets/OrcAttack.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_empireBuilding&quot; &quot;assets/EmpireBuilding.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_cave&quot; &quot;assets/Cave.mp3&quot;&gt;&gt;\
 
-&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;dragonBite&quot; &quot;assets/DragonBiteSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;set $started to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
-[[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
+
+[[Continue...|Character Creation]]
+
+&lt;img src=&quot;assets/image/DwarvenMountains.jpg&quot; width =&quot;400&quot; height =&quot;250&quot; alt=&quot;DwarvenMountains&quot;/&gt;</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
 
-[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
+[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="727,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
 [[Fly to Farms|Go to Farms]]
 [[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village with any horses they could get a hold of.
@@ -283,7 +298,9 @@ How do you feel about this?
 &lt;&lt;endif&gt;&gt;\
 [[Run Away]]
 
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="429,144">The colour of $playerName&#x27;s scales were:
+&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.
+
+&lt;img src=&quot;assets/image/DragonEgg.png&quot; width =&quot;600&quot; height =&quot;600&quot; alt=&quot;DragonEgg&quot;/&gt;</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="429,144">The colour of $playerName&#x27;s scales were:
 &lt;&lt;link &quot;Azure Blue&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;blue&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;ice shards&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;225&quot; height =&quot;225&quot; alt=&quot;blueDragon&quot;/&gt;
 &lt;&lt;link &quot;Fiery Red&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;red&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;flames&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -642,7 +659,9 @@ You attempt to bite the ogre, but its large size makes it difficult to get a pro
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -820,7 +839,7 @@ You will never be able to fly again.
 
 [[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
 
-[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess.
+[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess. After all, you are old enough now and you should really start seeking out a home of your own. Start gathering your treasure somewhere after all.
 
 [[You leave for adventure|Cave Entrance]]
 
@@ -989,7 +1008,9 @@ You attempt to bite the Storm Giant. You latch onto one of its arms and can feel
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks weakened. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1213,7 +1234,7 @@ You set up a flame trap! Without much difficulty, the dragon statue should eject
 &lt;&lt;set $trapsSet to $trapsSet + 6&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 5000&gt;&gt;
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1821.6666666666667">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1821">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
 &lt;&lt;if $trapSet is 1&gt;&gt;\
 You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth.
 &lt;img src=&quot;assets/image/DragonStatueWithSphere.jpg&quot; width =&quot;564&quot; height =&quot;411&quot; alt=&quot;DragonStatueWithSphere&quot;/&gt;
@@ -1285,7 +1306,9 @@ You bite the wizard. Your teeth easily sink into him before he teleports a short
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;/
+
+&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;/</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
