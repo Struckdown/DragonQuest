@@ -165,10 +165,6 @@ body.main{
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -227,61 +223,49 @@ body.main{
 
 
 
-<<<<<<< HEAD
 </script><tw-passagedata pid="1" name="Main Menu" tags="main" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required)
-=======
-
-</script><tw-passagedata pid="1" name="Main Menu" tags="main &quot;main&quot;" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required)
->>>>>>> origin/master
 
 Created by CD Projekt Blue.
 [[Credits]]
- or sound is made by us.
+Disclaimer: None of the art or sound is made by us.
 
-&lt;img src=&quot;assets/image/background/logo_2_ori.png&quot; width =&quot;400&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
+&lt;img src=&quot;assets/image/TitleDragon.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;first&quot;/&gt;
 
 [[Let the game begin.|Intro]]
+
 &lt;&lt;if $started != true&gt;&gt;
 &lt;&lt;masteraudio volume 0.8&gt;&gt;
-&lt;&lt;set $morality to 0&gt;&gt;&lt;&lt;set $hasWings to true&gt;&gt;&lt;&lt;set $prisonerHeld to false&gt;&gt;
+&lt;&lt;set $morality to 0&gt;&gt;
+&lt;&lt;set $hasWings to true&gt;&gt;
+&lt;&lt;set $prisonerHeld to false&gt;&gt;
+
 &lt;&lt;cacheaudio &quot;bgm_gameStartMusic&quot; &quot;assets/GameStartMusic.mp3&quot;&gt;&gt;
 &lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 loop play&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_swamplands&quot; &quot;assets/Swamplands.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_orcAttack&quot; &quot;assets/OrcAttack.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_empireBuilding&quot; &quot;assets/EmpireBuilding.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;bgm_cave&quot; &quot;assets/Cave.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;bgm_sleepingDragon&quot; &quot;assets/Sleeping_Dragon.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_volcano&quot; &quot;assets/Volcano.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_swamplands&quot; &quot;assets/Swamplands.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_faerieDragon&quot; &quot;assets/FaerieDragon.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_villageAttack&quot; &quot;assets/VillageAttack.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_orcAttack&quot; &quot;assets/OrcAttack.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_empireBuilding&quot; &quot;assets/EmpireBuilding.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm_cave&quot; &quot;assets/Cave.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;\
-&lt;&lt;cacheaudio &quot;dragonBite&quot; &quot;assets/DragonBiteSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;dragonBreath&quot; &quot;assets/dragonRoarAndFireBreath.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;
+
 &lt;&lt;set $started to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-<<<<<<< HEAD
 
 &lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="main" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
 [[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="Home" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
-=======
-&lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
-
-[[Continue...|Character Creation]]
-
-&lt;img src=&quot;assets/image/DwarvenMountains.jpg&quot; width =&quot;400&quot; height =&quot;250&quot; alt=&quot;DwarvenMountains&quot;/&gt;</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
->>>>>>> origin/master
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
 
-<<<<<<< HEAD
 [[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="Hunt" position="724.3333333333334,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
-=======
-[[Begin the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="727,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
->>>>>>> origin/master
 
 [[Fly to Farms|Go to Farms]]
 [[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="Hunt" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village with any horses they could get a hold of.
@@ -315,13 +299,7 @@ How do you feel about this?
 &lt;&lt;endif&gt;&gt;\
 [[Run Away]]
 
-<<<<<<< HEAD
 &lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="main" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="main" position="429,144">The colour of $playerName&#x27;s scales were:
-=======
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.
-
-&lt;img src=&quot;assets/image/DragonEgg.png&quot; width =&quot;600&quot; height =&quot;600&quot; alt=&quot;DragonEgg&quot;/&gt;</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="429,144">The colour of $playerName&#x27;s scales were:
->>>>>>> origin/master
 &lt;&lt;link &quot;Azure Blue&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;blue&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;ice shards&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;225&quot; height =&quot;225&quot; alt=&quot;blueDragon&quot;/&gt;
 &lt;&lt;link &quot;Fiery Red&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;red&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;flames&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -612,7 +590,7 @@ $playerName: “I will leave at once, hang on friend!”
 &lt;&lt;audio &quot;bgm_faerieDragon&quot; loop play volume 0 fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="Hunt" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
 &lt;&lt;set $villageDamage to 1&gt;&gt;\
 &lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have got a ballista pointed at you.&lt;&lt;endif&gt;&gt;
-The villagers fight back, dealing $villageDamage damage to you.
+The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to center of town|Attack Village]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|Village Defeat]]&lt;&lt;/if&gt;&gt;
 
@@ -629,6 +607,7 @@ The villagers fight back, dealing $villageDamage damage to you.
 &lt;&lt;audio &quot;bgm_villageAttack&quot; volume 0.8 loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="Cave" position="3388,592">Now with the treasure in your claws, you feel satisfied. 
 
 &lt;&lt;if visited (&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You leave, burdened by the last few days, in search for a new home. 
+
 &lt;&lt;elseif visited(&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Befriend&quot;)&gt;&gt;\
 You race back to the human rangers giving them the cure for the Princess. They try to thank you but you quickly take off in the direction of Foxglove.
 
@@ -646,13 +625,14 @@ You return as fast you can back to Foxglove’s tree. You find him gasping for b
 		$playerName: “Anything for you friend, this will be my new home for the time being.”
 	
 	[[Care for Foxglove|Save Foxglove]]
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 You leave the cave carrying your treasure. With your success, you feel it&#x27;s appropriate to go seek out a place to live, a place to establish as your territory. Your parents had wanted you to set out for yourself and you finally felt ready.
 &lt;&lt;if $prisonerHeld is false&gt;&gt;[[Seek Out New Home|Home Alone]]
 &lt;&lt;else&gt;&gt;
 [[Seek Out New Home|Home with Prisoner]]
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;if $prisonerHeld is true&gt;&gt;The $princeprincess is still stuck with you.&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $playerHP to 120&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="Ogre" position="2494,482">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
@@ -680,13 +660,7 @@ You attempt to bite the ogre, but its large size makes it difficult to get a pro
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
->>>>>>> origin/master
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -784,13 +758,13 @@ Your remaining health: $playerHP
 
 &lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="Cave" position="3125,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked. Any attempts to move it are unsuccessful. You&#x27;ll have to wait till someone moves it aside or find an alternative way out.
 [[Return to main area|Hub Room]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,\
+&lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
 &lt;&lt;audio &quot;bgm_cave&quot; volume 1.0 fadeoverto 5 0.0&gt;&gt;
 &lt;&lt;if visited(&quot;Taunt&quot;)&gt;&gt;\
 Ancalagon: “You mewling wyrm...I have found you again. Snooping around one of my stashes? Should have set me free, perhaps you would have been rewarded. Any clever last words, before I turn you to ash?&quot;
 
-	[[Taunt Again]]
-	[[Forgiveness]]
+	-[[Taunt Again]]
+	-[[Forgiveness]]
 &lt;&lt;elseif visited(&quot;Free&quot;)&gt;&gt;\
 Ancalagon: “Ahhh, so we meet again little $playerName. It is your good fortune that you spared me the extra ten minutes of freeing myself from those chains. Had you not, you would have been dead already. It appears you have found your way into my little stash. Consider it your reward, now go lest I change my mind…”
 	
@@ -798,8 +772,8 @@ Ancalagon: “Ahhh, so we meet again little $playerName. It is your good fortune
 &lt;&lt;elseif visited(&quot;Flee&quot;)&gt;&gt;\
 Ancalagon: “Ahhh, if it isn’t the little coward. Running away when an elder needs your assistance? Your parents must not have taught you proper manners, and now I catch you thieving my little cave. Any last words?
 		
-	[[Taunt him|Taunt Again]]
-	[[Forgiveness]]
+	-[[Taunt him|Taunt Again]]
+	-[[Forgiveness]]
 &lt;&lt;else&gt;&gt;\
 Ancalagon: “What do we have here? A little dragon such as yourself so far from home. Why have you taken what is not yours? Your parents must not have taught you proper manners!”
 	
@@ -864,11 +838,7 @@ You will never be able to fly again.
 
 [[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="Forest" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
 
-<<<<<<< HEAD
 [[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="Home" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess.
-=======
-[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess. After all, you are old enough now and you should really start seeking out a home of your own. Start gathering your treasure somewhere after all.
->>>>>>> origin/master
 
 [[You leave for adventure|Cave Entrance]]
 
@@ -885,32 +855,27 @@ The ruins of that village you destroyed will serve as your new home.
 You shall make your home in the $forestName.
 &lt;&lt;set $home to &quot;forest&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-Your time here would be lonely, but at least you would be safe. Safe from the countless enemies you had in the world. 
+You time here would be lonely, but at least you would be safe. Safe from the countless enemies you had in the world. 
 
 [[Growing Up (Solo)]]
 
-<<<<<<< HEAD
 &lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="Home" position="3633,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
-=======
-&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="" position="3631,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;\
->>>>>>> origin/master
 Mt Etna was certainly a warm place. It would serve as a home.
 &lt;&lt;set $home to &quot;volcano&quot;&gt;&gt;
 
-&lt;&lt;elseif visited (&quot;Travel to Volcano&quot;)&gt;&gt;\
-The Misthollow Swamp could make for a great new home, and it wouldn&#x27;t be near that ancient dragon.
+&lt;&lt;elseif visited (&quot;Travel to Volcano&quot;)&gt;&gt;
+The Misthollow swamp could make for a great new home, and it wouldn&#x27;t be near that ancient dragon.
 &lt;&lt;set $home to &quot;swamplands&quot;&gt;&gt;
 
-&lt;&lt;elseif visited (&quot;Finish Destroying Village&quot;)&gt;&gt;\
+&lt;&lt;elseif visited (&quot;Finish Destroying Village&quot;)&gt;&gt;
 The ruins of that village you destroyed will serve as your new home.
 &lt;&lt;set $home to &quot;village&quot;&gt;&gt;
 
-&lt;&lt;else&gt;&gt;\
-You shall make your home in $forestName.
+&lt;&lt;else&gt;&gt;
+You shall make your home in the $forestName.
 &lt;&lt;set $home to &quot;forest&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
 The prisoner would make for some entertainment, perhaps retiring to a secluded location would do you well for a few years.
-You &quot;convince&quot; some nearby kobolds to serve you. They will do as minions.
 
 Do you let the prisoner befriend you?
 [[Certainly, it is only a matter of time|Prisoner Befriends You]]
@@ -1041,13 +1006,7 @@ You attempt to bite the Storm Giant. You latch onto one of its arms and can feel
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks weakened. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="Hunt" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
->>>>>>> origin/master
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1127,7 +1086,10 @@ A wizard...wizards are formidable opponents, perhaps this will provide a nice ch
 
 [[Tell me more|Tell Me More]]</tw-passagedata><tw-passagedata pid="94" name="Tell Me More" tags="Wizard" position="4247,1276">The $princeprincess: &quot;The wizard&#x27;s name is Stratavarious Kane. His origin is a mystery, even to the king and queen. He has been a master of the Academy for over two generations of kings and queens. I once met him playing Dragonchess. Have you ever played Dragonchess? The game requires you to think five steps ahead of your opponent, and he is a champion. Do not take him to be a kindly man, his old age has made him haggard and cruel. He forces his students to play Dragonchess, just to see the look of dissapointment when they lose. Do not fight him, for him you are just another opponent to dissapoint.&quot;
 
+
 $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same trap every other human I have encountered. You all have the same expectations when you see a dragon. I will prepare for him in such a manner that he will not be able to predict my next thirty moves!&quot;
+
+
 
 [[Release Prisoner]]
 [[I fear no wizard|I Fear No Wizard]]
@@ -1140,16 +1102,13 @@ $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same tra
 &lt;&lt;set $trapsSet to 0&gt;&gt;
 &lt;&lt;set $greaterHealthPotions to 0&gt;&gt;
 &lt;&lt;set $protection to 0&gt;&gt;
+
 &lt;&lt;set $wizardHP to 120&gt;&gt;
 &lt;&lt;set $wizardMode to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="I Fear No Wizard" tags="" position="4482,1362">The $princeprincess had kept you comapny for more than twenty years, let the wizard come. The $princeprincess could watch that it was with you $heshe is the safest. 
 
-<<<<<<< HEAD
 [[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="Home" position="4283,1496">
 You release your prisoner, you know the wizard will come for you anyways, but at least this way $princeprincess will be safetly out of harms way.
 
-=======
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="" position="4283,1496">You release your prisoner, you know the wizard will come for you anyways, but at least this way $princeprincess will be safetly out of harms way.
->>>>>>> origin/master
 
 [[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="97" name="Preparation" tags="Home" position="4724,1488">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If the wizard is coming, then you must prepare.
 Health: $playerHP/$maxPlayerHP
@@ -1168,7 +1127,7 @@ Select an action (costs 1 day):
 Or you could be a cowardly dragon and flee
 [[Flee From Wizard]]
 
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 The wizard has come, prepare for battle!
 [[Finish Preparation]]
 
@@ -1179,28 +1138,21 @@ Or cowardly flee.
 Game Over
 (Hint: While abandoning your home is a valid but dissatisfying option, are you really a dragon if you will not defend all that you have?)</tw-passagedata><tw-passagedata pid="99" name="Finish Preparation" tags="Home" position="4723,1972">Now that you are ready, let the fighting begin!
 
-<<<<<<< HEAD
 First, the wizard must navigate your dungeon and any traps you have set up.
 [[Traps!|Wizard Traps]]</tw-passagedata><tw-passagedata pid="100" name="Raid Village" tags="Hunt" position="4943,1176">You raid the village.
-=======
-First, the wizard must navigate your lair and any traps you have set up.
-
-[[Traps!|Wizard Traps]]</tw-passagedata><tw-passagedata pid="100" name="Raid Village" tags="" position="4943,1176">You raid a nearby village. The &lt;&lt;print either(&quot;elves&quot;, &quot;dwarves&quot;, &quot;humans&quot;)&gt;&gt; all flee before your terrible wrath. The guards are quickly struck down, mercilessly. Before long, with several collapsed buildings, you descend down and inform the locals to give up their treasures. They surrender all they have quickly. Satisfied, you destroy the rest of the town and leave.
->>>>>>> origin/master
 &lt;&lt;set $goldGained to 500*random(2, 4)&gt;&gt;
 You gain $goldGained pieces of gold!
 &lt;&lt;set $damageTaken to random(3, 10)&gt;&gt;
-You take $damageTaken points of damage from the town&#x27;s defenses.
+You take $damageTaken points of damage.
 &lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;\
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;
 [[Continue|Preparation]]
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 [[Your injuries are too severe...|Preparation Death]]
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldGained&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-<<<<<<< HEAD
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="Dungeon" position="5053,1452">&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;
 &lt;&lt;if $dungeonReward is 1&gt;&gt;
 &lt;&lt;set $increaseHP to random(15, 20)&gt;&gt;
@@ -1217,49 +1169,36 @@ You will take 3 less points of damage from the wizard!
 You get a potion of greater recovery!
 This can be used to heal 30 hitpoints!
 &lt;&lt;set $greaterHealthPotions to $greaterHealthPotions + 1&gt;&gt;
-=======
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="" position="5053,1453">You spend some time exploring the crumbling remains of an old abandoned lair of a &lt;&lt;print either(&quot;lich&quot;,&quot;another dragon&quot;, &quot;ancient necromancer&quot;)&gt;&gt; and stumble upon some treasure.
->>>>>>> origin/master
 
-&lt;img src=&quot;assets/image/ExploringDungeon.jpg&quot; width =&quot;640&quot; height =&quot;480&quot; alt=&quot;ExploringDungeon&quot;/&gt;
-
-&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;&lt;&lt;if $dungeonReward is 1&gt;&gt;&lt;&lt;set $increaseHP to random(15, 20)&gt;&gt;You get &lt;&lt;print either(&quot;an Amulet of Health&quot;, &quot;a Staff of Life&quot;, &quot;a Stone of Fortitude&quot;)&gt;&gt;
-Your maximum HP increases by $increaseHP!&lt;&lt;set $playerHP to $playerHP + $increaseHP&gt;&gt;&lt;&lt;set $maxPlayerHP to $maxPlayerHP + $increaseHP&gt;&gt;
-&lt;&lt;elseif $dungeonReward is 2&gt;&gt;You get &lt;&lt;print either(&quot;an Amulet of Protection&quot;, &quot;Ring of Protection&quot;)&gt;&gt;
-You will take 3 less points of damage from the wizard per attack!&lt;&lt;set $protection to $protection + 3&gt;&gt;
-&lt;&lt;else&gt;&gt;You get a potion of greater recovery!
-This can be used to heal 30 hitpoints!&lt;&lt;set $greaterHealthPotions to $greaterHealthPotions + 1&gt;&gt;
-&lt;img src=&quot;assets/image/HealingPotion.png&quot; width =&quot;400&quot; height =&quot;519&quot; alt=&quot;HealingPotion&quot;/&gt;
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;set $damageTaken to random(10, 20)&gt;&gt;\
-You take $damageTaken points of damage while exploring the dungeon!&lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;\
+&lt;&lt;set $damageTaken to random(10, 20)&gt;&gt;
+You take $damageTaken points of damage!
+&lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;
 [[Continue|Preparation]]
-&lt;&lt;else&gt;&gt;[[Preparation Death]]
+&lt;&lt;else&gt;&gt;
+[[Preparation Death]]
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-<<<<<<< HEAD
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="Home" position="5001,1602">What level of trap would you like to set up?
-=======
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="" position="5001,1603">What level of trap would you like to set up?
->>>>>>> origin/master
 Current Gold: $gold
-&lt;&lt;if $gold &gt;= 1000&gt;&gt;\
+&lt;&lt;if $gold &gt;= 1000&gt;&gt;
 [[Simple Trap]] (Costs 1000 gold)
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 ==Simple Trap (Costs 1000 gold)==
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $gold &gt;= 5000&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $gold &gt;= 5000&gt;&gt;
 [[Dangerous Trap]] (Costs 5000 gold)
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 ==Dangerous Trap (Costs 5000 gold)==
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $gold &gt;= 10000&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $gold &gt;= 10000&gt;&gt;
 [[Deadly Trap]] (Costs 10000 gold)
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 ==Deadly Trap (Costs 10000 gold)==
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
 
 [[I changed my mind|Preparation]]</tw-passagedata><tw-passagedata pid="103" name="Rest and Heal" tags="Home" position="4932,1747">You heal your wounds through rest.
 &lt;&lt;set $recoveredHP to random(20, 30)&gt;&gt;
@@ -1271,12 +1210,8 @@ You recover $recoveredHP points of health.
 &lt;&lt;set $playerHP to $maxPlayerHP&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
-<<<<<<< HEAD
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="Victory" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
-=======
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;. They will continue to work, but their hard work will only make you wealthier. Should they refuse, you need but to pay them a visit and unleash your wrath. Fortunately, they seem to be wise enough to work hard.
->>>>>>> origin/master
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
 
@@ -1284,7 +1219,6 @@ They will produce $newGoldProduction gold per day.
 
 &lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-<<<<<<< HEAD
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="Home" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;/
 You set up a boulder trap!
@@ -1292,24 +1226,11 @@ You set up a boulder trap!
 You set up a spike trap!
 &lt;&lt;else&gt;&gt;/
 You set up a flame trap!&gt;&gt;
-=======
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
-&lt;&lt;if $trapSet is 1&gt;&gt;\
-You set up a simple boulder trap! This should cause a large boulder to come rolling down the hallway and smash any foolish trespassers.
-&lt;img src=&quot;assets/image/Boulder.png&quot; width =&quot;184&quot; height =&quot;181&quot; alt=&quot;Boulder&quot;/&gt;
-&lt;&lt;elseif $trapSet is 2&gt;&gt;\
-You set up a spike trap! Using a simple set of spikes, you order some of your kobold servants to dig a pit in one of the hallways of your lair, fill it with sharp objects, and then cover the hole with a simple rug.
-&lt;img src=&quot;assets/image/SpikeTrap.png&quot; width =&quot;800&quot; height =&quot;600&quot; alt=&quot;SpikeTrap&quot;/&gt;
-&lt;&lt;else&gt;&gt;\
-You set up a flame trap! Without much difficulty, the dragon statue should eject high temperature flames at anyone foolish enough to step on the pressure plate nearby.
-&lt;img src=&quot;assets/image/FireTrap.jpg&quot; width =&quot;576&quot; height =&quot;249&quot; alt=&quot;FireTrap&quot;/&gt;
->>>>>>> origin/master
 &lt;&lt;/if&gt;&gt;
-[[Continue|Preparation]]
+
 &lt;&lt;set $trapsSet to $trapsSet + 1&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 1000&gt;&gt;
-<<<<<<< HEAD
 
 [[Continue|Preparation]]
 
@@ -1320,64 +1241,43 @@ You set up a trap where rocks will fall from the roof and kill anyone below.
 You set up a fake treasure chest which is actually a mimic in disguise.
 &lt;&lt;else&gt;&gt;
 You set up a fake floor over a pit of vipers.
-=======
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="" position="5240,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;&lt;&lt;if $trapSet is 1&gt;&gt;You set up a trap where rocks will fall from the roof and kill anyone below. A simple concept really. Rocks fall, everyone dies.
-&lt;img src=&quot;assets/image/FallingRocks.jpg&quot; width =&quot;184&quot; height =&quot;250&quot; alt=&quot;FallingRocks&quot;/&gt;
-&lt;&lt;elseif $trapSet is 2&gt;&gt;You set up a fake treasure chest which is actually a mimic in disguise. The mimic has many sharp teeth and looks like it will tear through any humans quite easily.
-&lt;img src=&quot;assets/image/Mimic.png&quot; width =&quot;400&quot; height =&quot;200&quot; alt=&quot;Mimic&quot;/&gt;
-&lt;&lt;else&gt;&gt;You set up a fake floor over a pit of vipers. A simple rug to hide the pit. Some music to hide the hissing. And now to smile when someone falls in...
-&lt;img src=&quot;assets/image/Snakes.jpg&quot; width =&quot;450&quot; height =&quot;200&quot; alt=&quot;Snakes&quot;/&gt;
->>>>>>> origin/master
 &lt;&lt;/if&gt;&gt;
-[[Continue|Preparation]]
+
 &lt;&lt;set $trapsSet to $trapsSet + 6&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 5000&gt;&gt;
-<<<<<<< HEAD
 
 [[Continue|Preparation]]
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="Home" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;
-=======
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1821">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
-&lt;&lt;if $trapSet is 1&gt;&gt;\
->>>>>>> origin/master
 You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth.
-&lt;img src=&quot;assets/image/DragonStatueWithSphere.jpg&quot; width =&quot;564&quot; height =&quot;411&quot; alt=&quot;DragonStatueWithSphere&quot;/&gt;
-&lt;&lt;elseif $trapSet is 2&gt;&gt;\
-You set up a dragon statue with a disintegration trap that activates and fires a disintegration ray at any trespassers. That should deal with any pesky interlopers 
-&lt;img src=&quot;assets/image/LaserTrap.png&quot; width =&quot;400&quot; height =&quot;450&quot; alt=&quot;LaserTrap&quot;/&gt;
-&lt;&lt;else&gt;&gt;\
-You set up a fake floor over a pit of lava. Using some of the magical artifacts you found in the villages you&#x27;ve raided, you are able to create the illusion of a floor where instead there is a pit of lava. Lethal. You like it.
-&lt;img src=&quot;assets/image/FakeFloor.jpg&quot; width =&quot;400&quot; height =&quot;400&quot; alt=&quot;FakeFloor&quot;/&gt;
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;elseif $trapSet is 2&gt;&gt;
+You set up a dragon statue with a disintegration trap that activates and fires at any trespassers.
+&lt;&lt;else&gt;&gt;
+You set up a fake floor over a pit of lava.
+&lt;&lt;/if&gt;&gt;
 
-[[Continue|Preparation]]
 
 &lt;&lt;set $trapsSet to $trapsSet + 13&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 10000&gt;&gt;
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="" position="4793,1114">In your zealous preperation you grow more and more weak. The countless raids and battles over the last few days have taken their toll. As you leave to prepare some more, you collapse in heap of exhaustion. In your eager preperation you have already done the Wizard&#x27;s work for him, your vision slowly fades and your body goes still.
 
-Game Over.
+[[Continue|Preparation]]
 
-<<<<<<< HEAD
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="Defeat" position="4793,1114">In your zealous preperation you grow more and more weak. The countless raids and battles over the last few days have taken their toll. As you leave to prepare some more, you collapse in heap of exhaustion. In your eager preperation you have already done the Wizard&#x27;s woke for him, your vision slowly fades and your body goes still.
 
 Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="Wizard" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;
-=======
-(Hint: Monitor your health! You can rest and sleep to recover health.)</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;\
->>>>>>> origin/master
 The quiet of night is pierced by the sound of a cane hitting the stone floor of your cave. An eerie whistling echoes throughout the cave.
 
 Stratavarious Kane: &quot;I hope you are not sleeping $playername...I would hate for it to be no challenge at all. Well who am I kidding... of course it won&#x27;t be a challenge.&quot;
 
 He has arrived, hopefully your preparation will not have been in vain.
 &lt;&lt;set $wizardSeen to true&gt;&gt;
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 Stratavarious Kane stands before you, calculating his next move.
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+
 Your current health: $playerHP / $maxPlayerHP
 What shall you do?
 
@@ -1385,8 +1285,8 @@ What shall you do?
 [[Claws|Claw Wizard]] (Slashing)
 [[Breath attack|Breath Wizard]] 
 [[Tail attack|Tail Wizard]] (Bludgeoning)
-[[Evade|Evade Wizard]]
 &lt;&lt;if $greaterHealthPotions &gt; 0&gt;&gt;
+[[Evade|Evade Wizard]]
 [[Drink Greater Health Potion|Heal Potion]]
 &lt;&lt;/if&gt;&gt;
 
@@ -1394,30 +1294,23 @@ What shall you do?
 &lt;&lt;set $wizardMode to 4&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;set $wizardMode to random(1, 3)&gt;&gt;
-<<<<<<< HEAD
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="Wizard" position="5472,1997">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
-=======
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="" position="5472,1997">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
->>>>>>> origin/master
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(30,50) - $protection&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
 
 You bite the wizard. Your teeth easily sink into him before he teleports a short distance away.
 &lt;&lt;set $wizardHP to $wizardHP - 20&gt;&gt;
@@ -1426,32 +1319,24 @@ You bite the wizard. Your teeth easily sink into him before he teleports a short
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="Wizard" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;/
-
-&lt;&lt;audio &quot;dragonBite&quot; play&gt;&gt;/</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
->>>>>>> origin/master
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(30,50) - $protection&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
+
 You claw at the wizard, but his cloak seems to be made of a special cloth. You claws leave scratches on his cloak as though you had scratched stone, but the wizard seems to have been rather unphased.
 &lt;&lt;set $wizardHP to $wizardHP - 10&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -1459,63 +1344,48 @@ You claw at the wizard, but his cloak seems to be made of a special cloth. You c
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="Wizard" position="5550,2274">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="" position="5550,2274">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
->>>>>>> origin/master
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(30,50) - $protection&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-You breath $breathAttack at the wizard. A shimmering shield appears in front of him, absorbing a large amount of your attack.
-&lt;img src=&quot;assets/image/Shield.jfif&quot; width =&quot;248&quot; height =&quot;250&quot; alt=&quot;MagicShield&quot;/&gt;
+
+You breath $breathAttack at the wizard. A shimmering shield appears in front of him, absorbing a large amount of your attack.  
 &lt;&lt;set $wizardHP to $wizardHP - 5&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="Wizard" position="5542,2417">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="" position="5542,2417">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;\
->>>>>>> origin/master
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;else&gt;&gt;\
-The wizard unleashes a charged spell! &lt;&lt;print either(&quot;A flurry of meteors crash through the ceiling&quot;, &quot;A ray of disintegration fires from his finger&quot;, &quot;A bolt of lightning streaks at you&quot;)&gt;&gt; dealing terrible, terrible damage!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;else&gt;&gt;
+The wizard unleashes a charged spell!
+&lt;&lt;set $wizardDamage to random(30,50) - $protection&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
 
 You swing your masssive tail at him, catching him off guard. He manages to cast a spell absorbing some of the impact, but still you can see after he gets up, he is no longer smirking, but rather a hint of fear has now crept into his green eyes.
 &lt;&lt;set $wizardHP to $wizardHP - 25&gt;&gt;
@@ -1524,40 +1394,29 @@ You swing your masssive tail at him, catching him off guard. He manages to cast 
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Heal Potion" tags="Potion" position="5349,2652">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
-=======
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Heal Potion" tags="" position="5349,2652">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
->>>>>>> origin/master
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;\
-You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
 &lt;&lt;set $wizardDamage to random(30,50) - $protection&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
+
 You drink a healing potion.
-You recover 30 hitpoints! &lt;&lt;set $playerHP to $playerHP + 30&gt;&gt;&lt;&lt;if $playerHP &gt; $maxPlayerHP&gt;&gt;&lt;&lt;set $playerHP to $maxPlayerHP&gt;&gt;&lt;&lt;/if&gt;&gt;
+You recover 30 hitpoints!
+&lt;&lt;set $playerHP to $playerHP + 30&gt;&gt;
 
-<<<<<<< HEAD
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Alas, it is not enough... [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Continue|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Wizard Wins" tags="Defeat" position="5971,2107">Your attacks proved futile, as the wizard had an answer to everything you try. He was clearly more than five steps ahead of you. Not listening to the $princeprincess would prove to be your downfall. The wizard finally stops smirking.
-=======
-&lt;img src=&quot;assets/image/HealingPotion.png&quot; width =&quot;400&quot; height =&quot;519&quot; alt=&quot;HealingPotion&quot;/&gt;
-
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;Alas, it is not enough... [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Continue|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Wizard Wins" tags="" position="5971,2107">Your attacks proved futile, as the wizard had an answer to everything you try. He was clearly more than five steps ahead of you. Not listening to the $princeprincess would prove to be your downfall. The wizard finally stops smirking.
->>>>>>> origin/master
 Stratavarious Kane: &quot;Well this was fun while it lasted, you tried to suprise me with those traps, but clearly did not have enough of them. A wizard is always prepared, when you finally chose to fight me face to face, it was already hopeless. All you dragons are the same, always with the breath attacks, claws and biting. Well, I would like to say this will be painless, but then I would be lying...&quot;
 He twirls his cane and your body seizes up. It felt as though your bones were on fire, and the wounds you had sustained were now being slowly pried open. The pain was too much, you wanted to die, and after another 30 grueling seconds, you did.  
 
@@ -1572,16 +1431,12 @@ Stratavarious Kane: &quot;Please, I will do anything, gold and power beyond your
 $playername: &quot;Checkmate.&quot;
 With that final word, you lift your tail up and bring it down with all the force you can muster. His magic powerless against your raw strength. You leave him smeared on the floor, and let out a triumphent roar.
 
-As the first morning light pierced the dark entrance of your cave, you realized that adventure would not always come to your doorstep. If you wanted to go down as the greatest dragon that ever lived, you would have to seek out adventure. Taking one last look at your home, you take off, flying towards the rising sun.
-
-Game Complete!
-See if you can find the other three endings (The Orcs, The Friend and The Empire)</tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="" position="4858,2108">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 6*$trapsSet&gt;&gt; It&#x27;s a trap! The wizard gets hurt by the traps! He takes $damage points of damage!\
+As the first morning light pierced the dark entrance of your cave, you realized that adventure would not always come to your doorstep. If you wanted to go down as the greatest dragon that ever lived, you would have to seek out adventure. Taking one last look at your home, you take off, flying towards the rising sun.  </tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="" position="4858,2108">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 6*$trapsSet&gt;&gt;
+The wizard gets hurt by the traps! He takes $damage points of damage!
 &lt;&lt;set $wizardHP to $wizardHP - $damage&gt;&gt;
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 Too bad you don&#x27;t have any traps set up. He easily navigates to you.
-&lt;&lt;/if&gt;&gt;\
-Before long, many of your kobolds have been slain, and the wizard has come to you.
-
+&lt;&lt;/if&gt;&gt;
 [[Wizard Fight]]
 
 &lt;&lt;set $wizardSeen to false&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Enslaving Tier 1" tags="" position="3341,1332">Enslaving other races would expand your power. This would be an open invitation for other dragons to come challenge you. If they don&#x27;t come to you, then you would come to them. Either way, your competition will be eliminated. 
@@ -1622,9 +1477,7 @@ You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/DwarvenStronghold.jpg&quot; width =&quot;600&quot; height =&quot;600&quot; alt=&quot;DwarvenStronghold&quot;/&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2934,1515">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2934,1515">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1651,9 +1504,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/ElvenCity.jpg&quot; width =&quot;600&quot; height =&quot;300&quot; alt=&quot;ElvenCity&quot;/&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2812,1533">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2812,1533">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
 Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
@@ -1684,9 +1535,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/Outpost.jpg&quot; width =&quot;600&quot; height =&quot;400&quot; alt=&quot;Outpost&quot;/&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2998,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2998,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1695,7 +1544,7 @@ Your forces increase by $playerForcesIncrease!
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;Kobolds&quot;/&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="3000,1293">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
+&lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="3000,1293">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 3000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1715,9 +1564,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/GoblinBugbearStronghold.jpg&quot; width =&quot;640&quot; height =&quot;453&quot; alt=&quot;GoblinBugbearStronghold&quot;/&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="" position="2762,1655">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="" position="2762,1655">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1746,8 +1593,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-&lt;img src=&quot;assets/image/ElvenForest.jpg&quot; width =&quot;640&quot; height =&quot;465&quot; alt=&quot;ElvenForest&quot;/&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="3121,1140">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="3121,1140">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
 &lt;&lt;set $playerForcesIncrease to random(200, 300)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1768,9 +1614,7 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/Ogres.jpg&quot; width =&quot;350&quot; height =&quot;236&quot; alt=&quot;Ogres&quot;/&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="" position="2911,1899">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="" position="2911,1899">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1799,9 +1643,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/HumanCity.jfif&quot; width =&quot;600&quot; height =&quot;300&quot; alt=&quot;HumanCity&quot;/&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="" position="2949,2009">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="" position="2949,2009">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
 You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
 &lt;&lt;set $playerForcesIncrease to random(1000000, 1500000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1834,8 +1676,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-&lt;img src=&quot;assets/image/LizardfolkEmpire.jfif&quot; width =&quot;600&quot; height =&quot;450&quot; alt=&quot;LizardfolkEmpire&quot;/&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="" position="2885,1664">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="" position="2885,1664">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1864,9 +1705,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;img src=&quot;assets/image/Armory.jpg&quot; width =&quot;600&quot; height =&quot;450&quot; alt=&quot;Armory&quot;/&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="" position="3226,2057">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="" position="3226,2057">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
 Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1898,8 +1737,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;
-&lt;img src=&quot;assets/image/DragonsInMountains.jpg&quot; width =&quot;600&quot; height =&quot;300&quot; alt=&quot;ElvenCity&quot;/&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="" position="3386,2361">Several dragons flee before the expansion of your empire.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="" position="3386,2361">Several dragons flee before the expansion of your empire.
 
 Eventually, one rises to challenge you and your empire. Ancalagon, the Apocalypse.
 
@@ -1913,32 +1751,25 @@ He challenges you to a duel for control of the empire.
 
 A new era had come. The Age of the Dragon it would be known. Legions of kobolds, goblins, bugbears all lived to serve you. Even the humans, dwarves and elves had no choice but to obey your demands because of the raw might you possessed in your forces. The might of a million voices cried out in unison as you stood atop your home, the fire burning in your eyes. Your reign would be fierce. None would, none could dare challenge the might of $playerName.
 
-<<<<<<< HEAD
 &lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to (random(15,30) - $protection)/4&gt;&gt;
-=======
-&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
-&lt;&lt;set $wizardMode to 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to Math.round((random(15,30) - $protection)/4)&gt;&gt;&lt;&lt;if $wizardDamage&lt;0&gt;&gt;&lt;&lt;set $wizardDamage to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
->>>>>>> origin/master
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;\
-You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;elseif $wizardMode == 2&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $wizardMode == 2&gt;&gt;
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $wizardMode == 3&gt;&gt;\
+&lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
-&lt;&lt;set $wizardDamage to Math.round((random(12,20)*4 - $protection)/4)&gt;&gt;
+&lt;&lt;set $wizardDamage to (random(30,50) - $protection)/4&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Continue|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="3468,1571">Your forces are now large enough to take on even greater foes...
+
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="3468,1571">Your forces are now large enough to take on even greater foes...
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
