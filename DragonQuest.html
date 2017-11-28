@@ -164,6 +164,7 @@ body.main{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -221,7 +222,8 @@ body.main{
 
 
 
-</script><tw-passagedata pid="1" name="Main Menu" tags="main &quot;main&quot;" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required)
+
+</script><tw-passagedata pid="1" name="Main Menu" tags="main" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required)
 
 Created by CD Projekt Blue.
 [[Credits]]
@@ -257,28 +259,28 @@ Disclaimer: None of the art or sound is made by us.
 &lt;&lt;set $started to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
-[[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
+&lt;&lt;set $forestName to &quot;Silverwood&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="main" position="244,266">The Dwarven hold of Karak Seven Peaks was once the home of Ungrim Ironhide, the powerful Dwarven chieftain. His Dwarvish ancestors had ruled the hold for many years after evicting the mighty dragon Durnehviir, the World Render. After generations of Dwarves, there amassed a treasure so great that two dragons named Titania the Deceiver and Jörmungandr, Dwarf&#x27;s Bane joined forces to destroy the great armies of Ungrim Ironhide. This alliance among dragons was unheard of and while the Dwarves were capable of repelling one dragon, the might of two eventually wiped them out. The legendary duo of Titania and Jörmungandr created a spawn, a spawn to inherit the legendary hoard. The dragon that was produced by this union was &lt;&lt;textbox &quot;$playerName&quot; &quot;Talon&quot;&gt;&gt;
+[[Continue...|Character Creation]]</tw-passagedata><tw-passagedata pid="3" name="Parents Instructions" tags="Home" position="555,157">Titania, the Deceiver: “Wake up $playerName! You have much work to do today. Do not let your Father see you lazing about.”
 $playerName: “Yes Mother.”
 Titania, the Deceiver: Instead of sprawling among the riches that your Father and I have claimed, why do you not instead gather food for us? Make sure not to sully our reputation by hunting deer like some coward. Now go, lest I name you ‘$playerName, the Cowardly Slayer of Sheep’.” 
 $playerName: “Yes Mother, I shall make haste!”
 
-[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="" position="726,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
+[[Being the hunt|The Hunt]]</tw-passagedata><tw-passagedata pid="4" name="The Hunt" tags="Hunt" position="724.3333333333334,158">As $playerName took off from the peak of Karak Seven Peaks, $heshe surveyed the land. To $hisher West lay the farms of Kanata. Kanata was a human village that provided tribute to $playerName&#x27;s parents in return for protection from the warring Orcish tribes in the North. However, this did not stop $hisher parents from taking a little tribute on the side, often through indiscriminate force. $playerName could go to the farms and take the farmers and their livestock. While that is what $hisher parents would require of $himher, $playerName could also go East into the forest and hunt down deer and other wildlife. Doing so would incur $hisher Father and Mother’s wrath, but would spare the humans of any trouble. They already had enough problems to deal with, why bother them any more? 
 
 [[Fly to Farms|Go to Farms]]
-[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village with any horses they could get a hold of.
+[[Hunt Wildlife|Hunt Wildlife]]</tw-passagedata><tw-passagedata pid="5" name="Go to Farms" tags="Hunt" position="756,298">$playerName descends upon the farms breathing $hisher fire on their loosely thatched roofs. Quickly the houses and barns caught on fire, and farmers began to scream at their loved ones to run towards the village with any horses they could get a hold of.
 
 How do you feel about this?
 [[You take joy in killing the helpless humans|Evil Bastard]]
 [[This is what dragons do. It is only natural.|Doing My Job]]
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Hunt Wildlife" tags="" position="872,152">$HeShe knew his Father and Mother would be angry. Yet, this still did not scare $himher enough to attack the humans. $HeShe knew how bad they had it. The Orcs in the North, and $hisher parents up in Karak Seven Peaks. $playerName streaked into the woods, $hisher small frame allowing $himher to traverse the foliage. It was better this way, and yet $hisher parents did not understand it. They told $himher that this was the way things are. Dragons loot, pillage, and destroy. Humans offer tribute, cower, and die. $playerName refused to believe that this was the way things are, and if they were $heshe wished to change them. As $heshe approached a small clearing, $heshe saw a group of deer. $HeShe opened $hisher mouth letting loose a torrent of flame, knowing that tonight not only would $heshe be getting a mouthful of deer, but an earful from $hisher parents as well. 
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Hunt Wildlife" tags="Hunt" position="872,152">$HeShe knew his Father and Mother would be angry. Yet, this still did not scare $himher enough to attack the humans. $HeShe knew how bad they had it. The Orcs in the North, and $hisher parents up in Karak Seven Peaks. $playerName streaked into the woods, $hisher small frame allowing $himher to traverse the foliage. It was better this way, and yet $hisher parents did not understand it. They told $himher that this was the way things are. Dragons loot, pillage, and destroy. Humans offer tribute, cower, and die. $playerName refused to believe that this was the way things are, and if they were $heshe wished to change them. As $heshe approached a small clearing, $heshe saw a group of deer. $HeShe opened $hisher mouth letting loose a torrent of flame, knowing that tonight not only would $heshe be getting a mouthful of deer, but an earful from $hisher parents as well. 
 &lt;&lt;set $morality to $morality + 10&gt;&gt;
-[[Having eaten some deer, you return home, dreading what is to come.|Return Home]]</tw-passagedata><tw-passagedata pid="7" name="Evil Bastard" tags="" position="900,426">$playerName smiled as the little humans ran from in utter despair. There was something inexplicably euphoric about lauding the spectre of death over these mewling ingrates. A flick of a claw, or a brief spout of dragon’s breath, would easily dispatch a few humans. They would flee towards the village, thinking that they could run from $himher. Any that escaped, did so only because $heshe allowed it. It was always good to leave some survivors. $HisHer Father always told $himher, “Fear is only useful if it spreads”. Let them speak in hushed tones tonight, let them cower in fear of $playerName.
+[[Having eaten some deer, you return home, dreading what is to come.|Return Home]]</tw-passagedata><tw-passagedata pid="7" name="Evil Bastard" tags="Hunt" position="900,426">$playerName smiled as the little humans ran from in utter despair. There was something inexplicably euphoric about lauding the spectre of death over these mewling ingrates. A flick of a claw, or a brief spout of dragon’s breath, would easily dispatch a few humans. They would flee towards the village, thinking that they could run from $himher. Any that escaped, did so only because $heshe allowed it. It was always good to leave some survivors. $HisHer Father always told $himher, “Fear is only useful if it spreads”. Let them speak in hushed tones tonight, let them cower in fear of $playerName.
 &lt;&lt;set $morality to $morality - 5&gt;&gt;
-[[Now that the farms have been burnt, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="8" name="Doing My Job" tags="" position="908,287">As $heshe descended upon the farms, $heshe saw the humans begin to run. $HeShe was a force of nature. $HeShe knew this, as long as $heshe remained mindful of not overstepping, $heshe had complete control of the situation. This is the way the world worked. $HeShe was a dragon,  and they were not. This mere association made them no different then the deer $heshe would sometimes hunt. Both put up the same lack of resistance. $HeShe would grab as much livestock as possible, without starving any of the survivors when they returned of course. They still needed something to collect tribute from after all.
+[[Now that the farms have been burnt, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="8" name="Doing My Job" tags="Hunt" position="908,287">As $heshe descended upon the farms, $heshe saw the humans begin to run. $HeShe was a force of nature. $HeShe knew this, as long as $heshe remained mindful of not overstepping, $heshe had complete control of the situation. This is the way the world worked. $HeShe was a dragon,  and they were not. This mere association made them no different then the deer $heshe would sometimes hunt. Both put up the same lack of resistance. $HeShe would grab as much livestock as possible, without starving any of the survivors when they returned of course. They still needed something to collect tribute from after all.
 &lt;&lt;set $morality to $morality + 2&gt;&gt;
-[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1221,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;$playerName returned home with bloody claws and hunks of flesh still stuck to $hisher teeth. $HisHer Father greeted $himher with a broad smile.
+[[Having effortlessly slain the humans, you return home.|Return Home]]</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="Home" position="1221,248">&lt;&lt;if $morality &lt;= 2&gt;&gt;$playerName returned home with bloody claws and hunks of flesh still stuck to $hisher teeth. $HisHer Father greeted $himher with a broad smile.
 	  Jörmungandr, Dwarf&#x27;s Bane: “Any more blood on those claws of yours, and I’ll have to call you ‘$playerName, the Butcher’. You have done well $sondaughter, a true dragon in the making!”
 	  $playerName: “The farmers were of no challenge Father, the task was as easy as you said.”
 	  Jörmungandr, Dwarf&#x27;s Bane: “No doubt it was! Did you remember to leave survivors like I told you to?”
@@ -297,7 +299,7 @@ How do you feel about this?
 &lt;&lt;endif&gt;&gt;\
 [[Run Away]]
 
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="" position="429,144">The colour of $playerName&#x27;s scales were:
+&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="main" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="main" position="429,144">The colour of $playerName&#x27;s scales were:
 &lt;&lt;link &quot;Azure Blue&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;blue&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;ice shards&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;225&quot; height =&quot;225&quot; alt=&quot;blueDragon&quot;/&gt;
 &lt;&lt;link &quot;Fiery Red&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;red&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;flames&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -330,7 +332,7 @@ How do you feel about this?
   &lt;&lt;set $sondaughter to &quot;daughter&quot;&gt;&gt;
   &lt;&lt;set $mastermistress to &quot;mistress&quot;&gt;&gt;
   &lt;&lt;set $princeprincess to &quot;princess&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="" position="1045,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="Hunt" position="1045,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt; Pitiful looking guards from the Guard House fire arrows and bolts at you, trying to break your dragonhide.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited(&quot;Granary&quot;)&gt;&gt;Some peasants gather food from the granary, holding onto whatever they can. At least one is holding a crossbow though.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;The blacksmith is handing out weapons to various peasants which in turn are turning around trying to fire at you.
@@ -345,7 +347,7 @@ Attack:
 	[[Attack Fleeing Villagers]]
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|Run Away]]
-</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="" position="1477,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
+</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="Run" position="1477,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
 	Old Man: “Greetings, young $mastermistress $playerName! What brings you to our humble village, nothing bad I hope?”
 	$playerName: “Hello, Kaecilius. My parents have instructed me to burn the village down, as the find no more use in keeping you alive. I come to warn you of their approach, I cannot take your lives. I am going to flee, and I urge you all to do the same.”
 	Old Man: “By the Gods! This is truly devastating news. We will begin evacuation at once. If you are fleeing you parents wrath, then perhaps the Misthollow Swamps to the South would be a suitable hiding place. You could also go to Mt. Etna, a smouldering volcano slightly east of the Misthollow Swamps.”
@@ -362,7 +364,7 @@ Alternatively, you could visit your old friend in the forest.
 Or if you dare...
 [[Return Home|Return Home(Defeat)]]
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Farms" tags="" position="734,636">You fly over the farms, picking off humans and various animals, crunching on their bones.
+&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Farms" tags="Hunt" position="734,636">You fly over the farms, picking off humans and various animals, crunching on their bones.
 
 You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
@@ -370,7 +372,7 @@ You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endi
 
 &lt;img src=&quot;assets/image/attack/BurningFarm.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningFarm&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="" position="862,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Guard House" tags="Hunt" position="862,617">You roar loudly, sending several of the bravest and wisest soldiers fleeing. The fools that remain are too slow to flee before you descend upon them, ripping apart their bodies mercilessly.
 &lt;&lt;set $villageDamage to 1&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;&lt;&lt;set $villageDamage to 2&gt;&gt;&lt;&lt;endif&gt;&gt;
 With the guardhouse destroyed as well as their supplies, you have little to fear from the rest of this village. You take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage. &lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;However, that blacksmith is supplying some weapons still...&lt;&lt;endif&gt;&gt;
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
@@ -382,7 +384,7 @@ With the guardhouse destroyed as well as their supplies, you have little to fear
 
 &lt;img src=&quot;assets/image/attack/BurningGuardhouse.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningGuardhouse&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Granary" tags="Hunt" position="1025,639">With your claws, you tear into the granary, sending bits of grain flying everywhere. You catch brief glimpses of terror in the eyes of the peasants before they turn their backs on you.
 
 The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDamage != 1&gt;&gt;s&lt;&lt;endif&gt;&gt; of damage.
 &lt;&lt;set $playerHP = $playerHP - $villageDamage&gt;&gt;
@@ -390,7 +392,7 @@ The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDa
 
 &lt;img src=&quot;assets/image/attack/BurningGranary.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningGranary&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="" position="911,765">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="Guard" position="911,765">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
 
 You swiftly find the royal caravan which you determine contains the $princeprincess.
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;\
@@ -404,7 +406,7 @@ You swiftly find the royal caravan which you determine contains the $princeprinc
 
 &lt;&lt;set $prisonerHeld to false&gt;&gt;
 &lt;&lt;set $playerName to $playerName + &quot;, the Deathbringer&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="18" name="Kidnap" tags="" position="1027,858">You collapse onto the caravan, ripping off the roof effortlessly and pick up a well dressed figure, terror in $hisher eyes. You carry them off, the commonfolk around you shouting curses but powerless to stop you.
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="18" name="Kidnap" tags="Guard" position="1027,858">You collapse onto the caravan, ripping off the roof effortlessly and pick up a well dressed figure, terror in $hisher eyes. You carry them off, the commonfolk around you shouting curses but powerless to stop you.
 
 What will you do with your prisoner?
 
@@ -413,19 +415,19 @@ What will you do with your prisoner?
 [[Ransom]] - Or perhaps gold could be good? The peasants might not accept it though. Who would deal with a dragon after all?
 
 &lt;&lt;set $ransom to random(1, 2)&gt;&gt;
-&lt;&lt;set $prisonerHeld to true&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Murder" tags="" position="691,921">You land atop the caravan but overestimating how much weight the caravan could take, your speed carries you through, crushing the entire vehicle and anyone inside.
+&lt;&lt;set $prisonerHeld to true&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Murder" tags="Guard" position="691,921">You land atop the caravan but overestimating how much weight the caravan could take, your speed carries you through, crushing the entire vehicle and anyone inside.
 
 Not as graceful as you would have liked, but that will work.
 
 Now that the people have lost their leader, their morale sinking even further, you return to the carnage.
 
-[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="" position="824,943">After carrying your prisoner high into the air, dropping them and then catching them and in general intimidating them by being a dragon, you eventually return your unconscious prisoner back to the caravan with the peasants.
+[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="Guard" position="824,943">After carrying your prisoner high into the air, dropping them and then catching them and in general intimidating them by being a dragon, you eventually return your unconscious prisoner back to the caravan with the peasants.
 
 Now, to finish the destroying the village for pleasure...
 
 [[Continue Destroying village]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Torture then kill" tags="" position="996,978">After briefly playing around with your food, you gulp down the entire human.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Torture then kill" tags="Guard" position="996,978">After briefly playing around with your food, you gulp down the entire human.
 
 Delicious. Humans always made a great crunch as bones snapped. Perhaps you should consider this more often when you grow older. Elves probably taste even better. Not certain on dwarves cause of all their hair though...
 
@@ -433,7 +435,7 @@ With your satisfaction of imposing your dominance upon the people, you head back
 
 [[Continue Destroying village]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="" position="923,1263">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="Victory" position="923,1263">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
 
 &lt;span id=&quot;OldBuilding&quot;&gt;Old Building&lt;/span&gt;
 &lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#OldBuilding&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -441,40 +443,40 @@ With your satisfaction of imposing your dominance upon the people, you head back
 &lt;span id=&quot;Windmill&quot;&gt;Windmill&lt;/span&gt;
 &lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="" position="1427,1179">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="Victory" position="1427,1179">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="" position="1425,1050">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="Victory" position="1425,1050">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
 
 [[Return Home|Return Home(Victory)]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="" position="1465,925">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="Victory" position="1465,925">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="" position="1834,30">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="Vocano" position="1834,30">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
 
 &lt;&lt;set $volcanoswamp to &quot;volcano&quot;&gt;&gt;
 [[Approach the Dragon|Found chained ancient dragon]]
 
 &lt;&lt;audio &quot;bgm_volcano&quot; loop play&gt;&gt;
 
-&lt;img src=&quot;assets/image/environment/Volcano.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;Volcano&quot;/&gt;</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="" position="1825,159">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
+&lt;img src=&quot;assets/image/environment/Volcano.png&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;Volcano&quot;/&gt;</tw-passagedata><tw-passagedata pid="28" name="Travel to Swamplands" tags="Swamp" position="1825,159">The oddly layered smell of onions wafts into your nose, followed by the stagnation of the cool breeze you had been experiencing. You look down to see the sludgy and dreary expanse that is the Misthollow Swamps. It wasn’t a nice looking place, but it would definitely keep other beings out of your business. You continue flying around looking for a nice cave to call home when your search is interrupted by a cataclysmic roar from your right. As you direct your gaze there, you see the colossal frame of a Dragon writhing and heaving against large chains.The dragon&#x27;s wingspan was that of your two parents combined. Its skin was a deep black as if it were made of onyx. Its entire body was etched with intricate purple patterns, and purple fumes arose from its mouth and nostrils. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of onions you had sensed earlier. 
 &lt;&lt;set $volcanoswamp to &quot;swamp&quot;&gt;&gt;
 [[Approach Dragon|Found chained ancient dragon]]
 
 &lt;&lt;audio &quot;bgm_swamplands&quot; loop play&gt;&gt;
 
-&lt;img src=&quot;assets/image/environment/env_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="" position="1321,800">You return home, by yourself, feeling disappointed that you didn&#x27;t do more damage and that your attempts to be clever had failed.
+&lt;img src=&quot;assets/image/environment/env_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="Home" position="1321,800">You return home, by yourself, feeling disappointed that you didn&#x27;t do more damage and that your attempts to be clever had failed.
 
 [[Return Home|Return Home(Defeat)]]
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="" position="1724,765">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
+&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="Home" position="1724,765">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
 
 Nontheless, this does mean you are free. Free to pursue whatever adventure you wish.
 
-[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="" position="1942,792">While flying around for several days, you decide that perhaps it is time to explore a cave or something of interest.
+[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="Run" position="1942,792">While flying around for several days, you decide that perhaps it is time to explore a cave or something of interest.
 
 Descending down, you find a cave nearby. That should be interesting enough.
 
-[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="" position="2331,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
+[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="Cave" position="2331,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
 
 The thick skinned two-headed ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 &lt;&lt;if $prisonerHeld is true&gt;&gt;You instruct the $princeprincess to stay out of harms way and not to run. $HeShe obediently obeys out of fear.&lt;&lt;/if&gt;&gt;
@@ -485,7 +487,7 @@ The thick skinned two-headed ogre looks angry at you for invading its territory.
 
 &lt;&lt;audio &quot;bgm_cave&quot; loop play&gt;&gt;
 &lt;&lt;set $playerHP to 8&gt;&gt;
-&lt;&lt;set $ogreHP to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="" position="2037,101">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
+&lt;&lt;set $ogreHP to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="Ancient" position="2037,97.66666666666666">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
 
@@ -496,7 +498,7 @@ The thick skinned two-headed ogre looks angry at you for invading its territory.
 &lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;&lt;img src=&quot;assets/image/black/black_5.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;ancientDragon&quot;/&gt;
 &lt;&lt;else&gt;&gt;
 &lt;img src=&quot;assets/image/ChainedDragon.jpg&quot; width =&quot;1600&quot; height =&quot;1033&quot; alt=&quot;ancientDragon&quot;/&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Taunt" tags="" position="2213,33">You take some satisfaction in rattling out a few insults that you got from your brother at the chained dragon.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Taunt" tags="Ancient" position="2213,33">You take some satisfaction in rattling out a few insults that you got from your brother at the chained dragon.
 
 &quot;You have small scales. Barely a lizard.&quot;
 &quot;Those teeth couldn&#x27;t even hurt a dwarf.&quot;
@@ -517,7 +519,7 @@ You leave and decide to explore the nearby area.
 &lt;&lt;audio &quot;bgm_volcano&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;bgm_swamplands&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Free" tags="" position="2055,233">&quot;You would choose to free me? Are you foolish or stupid or both? Or is it that you think it is the only way you will live? Very well, remove these chains quickly and you may yet live.&quot;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Free" tags="Ancient" position="2055,233">&quot;You would choose to free me? Are you foolish or stupid or both? Or is it that you think it is the only way you will live? Very well, remove these chains quickly and you may yet live.&quot;
 
 Perhaps a game is in order. There lies a treasure nearby in a cave. Recover it quickly and I will let you live.
 
@@ -527,7 +529,7 @@ Perhaps a game is in order. There lies a treasure nearby in a cave. Recover it q
 &lt;&lt;audio &quot;bgm_volcano&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;bgm_swamplands&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Flee" tags="" position="2173,157">Turning around as fast as your wings will let you, you make for the skies. The dragon roars angerly at you but is seemingly powerless to stop you.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Flee" tags="Ancient" position="2173,157">Turning around as fast as your wings will let you, you make for the skies. The dragon roars angerly at you but is seemingly powerless to stop you.
 
 The chains shake violently but it looks like it is not enough to break the creature from its prison.
 
@@ -539,14 +541,14 @@ You decide to explore elsewhere to see if you can find anything else of interest
 &lt;&lt;audio &quot;bgm_volcano&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;bgm_swamplands&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Stay Around Edge of Forest" tags="" position="1511,435">While flying to the cave mentioned by Foxglove, you quickly find a group of humans carrying weapons moving around. They seem to have noticed you but they are at quite a distance still.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Stay Around Edge of Forest" tags="Forest" position="1511,435">While flying to the cave mentioned by Foxglove, you quickly find a group of humans carrying weapons moving around. They seem to have noticed you but they are at quite a distance still.
 
 	[[Befriend]] - You could try and talk with them...
 	[[Hide and Follow]] - Or you could feign not to have seen them and follow them...
 	[[Burn Them]] - Or end their fates now.
 	[[Ignore Them|Cave Entrance]]
 	
-&lt;&lt;audio &quot;bgm_faerieDragon&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Befriend" tags="" position="1806,415">The humans look scared as you descend upon them
+&lt;&lt;audio &quot;bgm_faerieDragon&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Befriend" tags="Forest" position="1806,415">The humans look scared as you descend upon them
 
 Human: “Stop or we&#x27;ll shoot!”
 
@@ -560,14 +562,14 @@ Human: “If you don’t mind we will show you the way and then come back here. 
 
 Talon: “Very well…”
 
-[[Follow the humans to the cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="39" name="Hide and Follow" tags="" position="1776,655">You stealthily follow the humans, keeping them in your sights. You feel your stomach fill with dread as they finally arrive and congregate around Foxglove’s tree. There you see them laughing and hunching over the body of your now dead friend. 
+[[Follow the humans to the cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="39" name="Hide and Follow" tags="Forest" position="1776,655">You stealthily follow the humans, keeping them in your sights. You feel your stomach fill with dread as they finally arrive and congregate around Foxglove’s tree. There you see them laughing and hunching over the body of your now dead friend. 
 
-	[[Burn Them]]</tw-passagedata><tw-passagedata pid="40" name="Burn Them" tags="" position="1810,522">The human rangers begin screaming in anguish as your flame consumes their bodies. They were little match for the torrent of flame you unleashed. 
+	[[Burn Them]]</tw-passagedata><tw-passagedata pid="40" name="Burn Them" tags="Hunt" position="1810,522">The human rangers begin screaming in anguish as your flame consumes their bodies. They were little match for the torrent of flame you unleashed. 
 
 The dead body of your friend lies by the tree in which he lived, surrounded by the burnt corpses of the humans. You decided too...
 	
 [[Cremeate]]
-[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="" position="1729,275">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
+[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="Forest" position="1729,275">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
 	
 Foxglove: “Hey...$playerName, ...lookin good buddy…”
 	
@@ -585,7 +587,7 @@ $playerName: “I will leave at once, hang on friend!”
 
 &lt;img src=&quot;assets/image/environment/Forest.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;Forest&quot;/&gt;
 
-&lt;&lt;audio &quot;bgm_faerieDragon&quot; loop play volume 0 fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
+&lt;&lt;audio &quot;bgm_faerieDragon&quot; loop play volume 0 fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Blacksmith" tags="Hunt" position="1150,656">You collapse onto the blacksmith, breaking the beams and causing the building to cave onto itself. The peasants won&#x27;t be gaining any more weapons from.
 &lt;&lt;set $villageDamage to 1&gt;&gt;\
 &lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt;\&lt;&lt;set $villageDamage to 3&gt;&gt;Those guards have got a ballista pointed at you.&lt;&lt;endif&gt;&gt;
 The villagers fight back, dealing $villageDamage to you.
@@ -594,7 +596,7 @@ The villagers fight back, dealing $villageDamage to you.
 
 &lt;img src=&quot;assets/image/attack/BurningBlacksmith.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningBlacksmith&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="" position="1051,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. &lt;&lt;if visited (&quot;Go to Farms&quot;)&gt;&gt;The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse.&lt;&lt;/if&gt;&gt;The humans saw you approaching, you could tell as the clanging of their bell echoed in the valley. You see them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Begin Village Attack" tags="Hunt" position="1051,390">You begin flying towards the village. The cold mountain breeze carries the smell of burning wood and flesh. &lt;&lt;if visited (&quot;Go to Farms&quot;)&gt;&gt;The smoldering remains of the farms you had destroyed smeared the otherwise pristine green expanse.&lt;&lt;/if&gt;&gt;The humans saw you approaching, you could tell as the clanging of their bell echoed in the valley. You see them scrambling around their ramparts, made of flimsy wood. Some of them begin to shoot arrows at you. Most miss you by a wide margin, their quivering hands no doubt betraying their aim. You laugh at the thought of arrows, and begin descent.
 
 [[Attack Village]]
 
@@ -602,7 +604,7 @@ The villagers fight back, dealing $villageDamage to you.
 &lt;&lt;set $playerHP to 8&gt;&gt;
 &lt;&lt;set $villageDamage to 3&gt;&gt;
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 0.8 loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="" position="3388,592">Now with the treasure in your claws, you feel satisfied. 
+&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 0.8 loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Exit Cave" tags="Cave" position="3388,592">Now with the treasure in your claws, you feel satisfied. 
 
 &lt;&lt;if visited (&quot;Found Faerie Dragon&quot;) &amp;&amp; visited(&quot;Burn Them&quot;) &amp;&amp; visited(&quot;Hide and Follow&quot;)&gt;&gt;Your heart is heavy with loss of your friend, but so are your talons with the weight of the gems found in the cave. You leave, burdened by the last few days, in search for a new home. 
 
@@ -633,7 +635,7 @@ You leave the cave carrying your treasure. With your success, you feel it&#x27;s
 
 &lt;&lt;if $prisonerHeld is true&gt;&gt;The $princeprincess is still stuck with you.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set $playerHP to 120&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="" position="2494,482">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
+&lt;&lt;set $playerHP to 120&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Ogre Fight" tags="Ogre" position="2494,482">The thick skinned ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 
 Your current health: $playerHP
 What shall you do?
@@ -646,7 +648,7 @@ What shall you do?
 &lt;&lt;audio &quot;bgm_volcano&quot; pause&gt;&gt;
 &lt;&lt;audio &quot;bgm_swamplands&quot; pause&gt;&gt;
 &lt;&lt;audio &quot;bgm_faerieDragon&quot; pause&gt;&gt;
-&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="" position="2302,650">The ogre swipes at you with its club!
+&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="Ogre" position="2302,650">The ogre swipes at you with its club!
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;&lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -658,7 +660,7 @@ You attempt to bite the ogre, but its large size makes it difficult to get a pro
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -670,7 +672,7 @@ You claw at the ogre, slashing into its thick hide. It is tougher than you expec
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="Ogre" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -694,11 +696,11 @@ You smile with relief, but then grow worried as the light within the cave shrink
 &lt;&lt;set $puzzleComplete to false&gt;&gt;
 &lt;&lt;set $treasureGot to false&gt;&gt;
 
-&lt;&lt;audio &quot;caveIn&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="" position="2482,769">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
+&lt;&lt;audio &quot;caveIn&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Desperate Last Stand" tags="Defeat" position="2482,769">As you manuever around, your scales cracked, and your head spinning, you look around to see the ogre charging at you. You are too slow to move out of the way as it collides with you, smashing you into the pillar supporting the roof. The beam gives way, and rubble collapses onto both you and the ogre, crushing the two of you.
 
 GAME OVER.
 
-(Hint: Consider the weakness of an ogre and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="51" name="Hub Room" tags="" position="2800,362">You enter into a central seeming room. There is a large pool of water in the middle of the cavern as well as several different exits out of the room.
+(Hint: Consider the weakness of an ogre and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="51" name="Hub Room" tags="Hub" position="2800,362">You enter into a central seeming room. There is a large pool of water in the middle of the cavern as well as several different exits out of the room.
 
 [[To the north|Treasure Room]], you can see a twisting path that slants off to the side.
 [[To the east|Poison Puzzle]], stalagmites and stalactites primarily lie in the way.
@@ -706,12 +708,12 @@ GAME OVER.
 
 Alternatively, you could [[return to the cave entrance|Collapsed Cave Entrance]]
 
-&lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="" position="2815,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the mushrooms in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now. You hear a distant thud as something loud hits the ground nearby. It sounds like it came from outside.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
+&lt;img src=&quot;assets/image/environment/env_8.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;undergroundCaves&quot;/&gt;</tw-passagedata><tw-passagedata pid="52" name="Treasure Room" tags="Treasure" position="2815,208">&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is false&gt;&gt;You grab as much of the treasure as you can, including the mushrooms in your mouth and being moving it to the main hub room. Transporting this will take time, but it all belongs to you now. You hear a distant thud as something loud hits the ground nearby. It sounds like it came from outside.&lt;&lt;set $treasureGot to true&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $puzzleComplete is true &amp;&amp; $treasureGot is true&gt;&gt;The room is barren as you have stripped it of its treasures.\
 &lt;&lt;else&gt;&gt;You see a magnificant pile of treasure before you in this room. Golden coins, trinkets, jewels and gems all sit in the center of the room. As well, you can see a beautiful white pearl sitting in the center of it all. That must be important. However, the path is walled off by a series of large spikes protruding from the walls and ceiling. You can&#x27;t seem to move them.&lt;&lt;endif&gt;&gt;
 
 [[Return back to main room|Hub Room]]
 
-&lt;img src=&quot;assets/image/CaveTreasure.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;CaveTreasure&quot;/&gt;</tw-passagedata><tw-passagedata pid="53" name="Poison Puzzle" tags="" position="2984,355">You see words written on a statue:
+&lt;img src=&quot;assets/image/CaveTreasure.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;CaveTreasure&quot;/&gt;</tw-passagedata><tw-passagedata pid="53" name="Poison Puzzle" tags="Puzzle" position="2984,355">You see words written on a statue:
 
 I can fly yet have no wings,
 I beat down mountains, I conquer kings,
@@ -729,7 +731,7 @@ Select an answer on the statue?&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;&lt;&lt;if not visited (&quot;Correct Guess&quot;)&gt;&gt;\[[Return to main room without guessing|Hub Room]]&lt;&lt;else&gt;&gt;[[Return to main room|Hub Room]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/PoisonStatue.png&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="" position="2820,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
+&lt;img src=&quot;assets/image/PoisonStatue.png&quot; width =&quot;174&quot; height =&quot;300&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="54" name="Gem Puzzle" tags="Gem" position="2820,489">&lt;&lt;if not visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; not visited (&quot;Insert Gem&quot;)&gt;&gt;\
 You can see three gems lined up into little sockets with the fourth socket missing.
@@ -738,7 +740,7 @@ You can see three gems lined up into little sockets with the fourth socket missi
 &lt;&lt;elseif visited (&quot;Correct Guess&quot;) &amp;&amp; visited (&quot;Insert Gem&quot;)&gt;&gt;\ 
 The four gems glow brightly, resting within the wall.
 &lt;&lt;/if&gt;&gt;
-[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="" position="3119,415">A puft of poison squirts at you from the status.
+[[Return to Main Room|Hub Room]]</tw-passagedata><tw-passagedata pid="55" name="Wrong Guess" tags="Poison" position="3119,415">A puft of poison squirts at you from the status.
 &lt;&lt;set $playerHP to $playerHP -2&gt;&gt;\
 
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Poison sprays all over your body. The acrid stench fills the room, as you lose feeling throughout your body. Your blurry vision soon fades to black as you drift into the grim embrace of death... Oops.
@@ -750,11 +752,11 @@ Your remaining health: $playerHP
 [[Look at the statue again|Poison Puzzle]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;poisonGas&quot; time 4 play&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Correct Guess" tags="" position="3117,242">A small red gem pops out of the statue&#x27;s mouth. You take hold of it.
+&lt;&lt;audio &quot;poisonGas&quot; time 4 play&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Correct Guess" tags="Puzzle" position="3117,242">A small red gem pops out of the statue&#x27;s mouth. You take hold of it.
 
 [[Continue|Poison Puzzle]]
 
-&lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="" position="3125,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked. Any attempts to move it are unsuccessful. You&#x27;ll have to wait till someone moves it aside or find an alternative way out.
+&lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="Cave" position="3125,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked. Any attempts to move it are unsuccessful. You&#x27;ll have to wait till someone moves it aside or find an alternative way out.
 [[Return to main area|Hub Room]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
 &lt;&lt;audio &quot;bgm_cave&quot; volume 1.0 fadeoverto 5 0.0&gt;&gt;
@@ -779,16 +781,16 @@ Ancalagon: “What do we have here? A little dragon such as yourself so far from
 	[[Ask for forgiveness|Forgiveness]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
+</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="Gem" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
 &lt;&lt;set $puzzleComplete to true&gt;&gt;
 [[Continue|Gem Puzzle]]
 
-&lt;&lt;audio &quot;mechanismMoving&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
+&lt;&lt;audio &quot;mechanismMoving&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="Defeat" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
 
 Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, with an incredible urge to sleep forever. Yes, that would be good. Unending sleep... You barely open your eyes briefly and see silhouettes in front of you, not entirely sure what they are. It doesn&#x27;t matter now... Sleep sounds good. Eternal sleep sounds better. You close your eyes one last time. Never to open them again.
 
 [Game Over]
-(Hint: Read the village for clues and try to figure out what order you should attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="" position="1960,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;) or visited(&quot;Ransom&quot;)&gt;&gt;\
+(Hint: Read the village for clues and try to figure out what order you should attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="Home" position="1960,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;) or visited(&quot;Ransom&quot;)&gt;&gt;\
 You successfully conquered the village! Your parents are very pleased and ask you to go to a nearby cave as an opportunity for you to scout out a home of your own.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if $prisonerHeld is true&gt;&gt;
 You have a prisoner with you! What shall you do with this poor soul? Give $himher to your parents? Keep for yourself? 
@@ -800,7 +802,7 @@ You decide to leave for adventure!
 	[[Cave Entrance]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Return Home(Defeat)" tags="" position="1472,756">&lt;&lt;if visited (&quot;Attack Fleeing Villagers&quot;)&gt;&gt;
+&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Return Home(Defeat)" tags="Home" position="1472,756">&lt;&lt;if visited (&quot;Attack Fleeing Villagers&quot;)&gt;&gt;
 Titania, the Deceiver: &quot;We watched as you flew into the village, burning down their various buildings. We were even pleased that you attacked the royal caravan of the visiting $princeprincess.&quot;
 
 Jörmungandr, Dwarf&#x27;s Bane: &quot;But why did you foolishly stop there when the people refused you!? You are a dragon, you will do as you wish! Those that would deny you should suffer! Have we taught you nothing!? You have brought shame and disgrace upon our family!
@@ -815,12 +817,12 @@ Titania, the Deceiver: &quot;Begone from here. We have no need for the weak, for
 
 &lt;&lt;/if&gt;&gt;
 
-[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="" position="3048,886">$playerName: “Seeing as I am about to die, I shall taunt you&lt;&lt;if visited (&quot;Taunt&quot;)&gt;&gt; a second time&lt;&lt;/if&gt;&gt;. Your mother was but a lizard, and your father smelt of elderberries!”
+[[Banished by Parents]]</tw-passagedata><tw-passagedata pid="62" name="Taunt Again" tags="Ancient" position="3048,886">$playerName: “Seeing as I am about to die, I shall taunt you&lt;&lt;if visited (&quot;Taunt&quot;)&gt;&gt; a second time&lt;&lt;/if&gt;&gt;. Your mother was but a lizard, and your father smelt of elderberries!”
 
 His eyes flash in anger, and before you could utter another word you see his maw open and a torrent of hellfire erupts around you. Your ashes are swept away by the breath of Ancalagon, the Apocalypse. 
 
 GAME OVER!
-(Hint: Perhaps taunting powerful looking dragons is not the wisest decision?)</tw-passagedata><tw-passagedata pid="63" name="Forgiveness" tags="" position="3198,886">$playerName: “Please let me leave, I promise I meant no ill will. Had I known this was yours I would never come here in the first place.”
+(Hint: Perhaps taunting powerful looking dragons is not the wisest decision?)</tw-passagedata><tw-passagedata pid="63" name="Forgiveness" tags="Ancient" position="3198,886">$playerName: “Please let me leave, I promise I meant no ill will. Had I known this was yours I would never come here in the first place.”
 
 Ancalagon: “Hmmm, it would be a shame to kill a dragon so young. Regardless of how cowardly you are. Leave and do not return, and take those god awful mushrooms with you, they stink up the entire place.”
 
@@ -830,13 +832,13 @@ Ancalagon surges towards you with stunning speed and you are helpless as he thro
 
 You will never be able to fly again.
  &lt;&lt;set $hasWings to false&gt;&gt;&lt;&lt;/if&gt;&gt;
-[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="" position="3407,322">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.
+[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="Years" position="3407,322">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.
 
-[[Growing Up]]</tw-passagedata><tw-passagedata pid="65" name="Cremeate" tags="" position="1969,585">Dragons are the fleshy incarnation of fire itself, it is only appropriate that you return your friend to the fire from which his soul had came. You gently breathe fire onto his now limp body, watching as he turned not ash, but rather the fairy dust the would emanate from his wings. Even in death he was beautiful.
+[[Growing Up]]</tw-passagedata><tw-passagedata pid="65" name="Cremeate" tags="Forest" position="1969,585">Dragons are the fleshy incarnation of fire itself, it is only appropriate that you return your friend to the fire from which his soul had came. You gently breathe fire onto his now limp body, watching as he turned not ash, but rather the fairy dust the would emanate from his wings. Even in death he was beautiful.
 
-[[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
+[[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="Forest" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
 
-[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess.
+[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="Home" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess.
 
 [[You leave for adventure|Cave Entrance]]
 
@@ -857,7 +859,7 @@ You time here would be lonely, but at least you would be safe. Safe from the cou
 
 [[Growing Up (Solo)]]
 
-&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="" position="3633,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
+&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Home with Prisoner" tags="Home" position="3633,638">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
 Mt Etna was certainly a warm place. It would serve as a home.
 &lt;&lt;set $home to &quot;volcano&quot;&gt;&gt;
 
@@ -877,7 +879,7 @@ The prisoner would make for some entertainment, perhaps retiring to a secluded l
 
 Do you let the prisoner befriend you?
 [[Certainly, it is only a matter of time|Prisoner Befriends You]]
-[[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="" position="3971,568">--20 years later--
+[[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="Years" position="3971,568">--20 years later--
 
 As the years pass by, you grow more trusting of your prisoner. $HeShe had several opportunities to try and run, but $heshe never took them, in a way they seemed to be happy with you. You would make each other laugh, and despite your gruff demeanor, you had grown fond of them. There had been countless attempts made by valient knights to rescue $himher. All had been easily dispatched, lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The past twenty years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
 
@@ -886,11 +888,11 @@ Over the years, the $princeprincess has asked for freedom, and you have refused 
 One day you wake to hear the clamor of armor and swords being drawn. You sigh, it seems as though more men had come to die. As you make your way out, you see that a group of perhaps a hundred men all heavily armored had come to your doorstep. They send forward about twenty or so men, one of which was carrying a white flag. As if that would deter you from roasting them in their precious armor. You grin with satisfaction at the chance to exert your dominance. The $princeprincess recognizes the emblem on the soldiers armor, and pleads you to not incinerate these men on the spot. 
 
 [[Listen|Listen to Army]]
-[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="" position="3948,1001">--20 years later--
+[[Burn Them|Deny Prisoner Request]]</tw-passagedata><tw-passagedata pid="71" name="Hold Onto Prisoner" tags="Home" position="3948,1001">--20 years later--
 
 You hold onto the $princeprincess for years but never become friends with them. For the most part, you leave them alone, confined to their prison, while you go about your own business, attacking nearby villages, dominating the region, building your hoard, your piles of treasures and trophies.
 
-[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="72" name="Listen to Army" tags="" position="4165,668">The $princeprincess: &quot;Please $playerName, I beg you, do not slay them before hearing what they have to say.&quot;
+[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="72" name="Listen to Army" tags="Army" position="4165,668">The $princeprincess: &quot;Please $playerName, I beg you, do not slay them before hearing what they have to say.&quot;
 
 Soldier: &quot;Oh great $playerName, my men and I have travelled far from our kingdom to ask for your help! A host of orcs gathers outside the borders of our kingdom, the host is too large for use to beat back. They are also led by the storm giant, Brokki, the Bane of Dragons. Surely if you do not wish to help us out of the goodness of your heart, then perhaps the prospect of such a challenge would entice you?&quot;
 
@@ -903,11 +905,11 @@ What would you do?
 [[Return With Them]]
 
 Alternatively, you&#x27;re an independant dragon who has no need for support from others.
-[[Attack by yourself]]</tw-passagedata><tw-passagedata pid="73" name="Deny Prisoner Request" tags="" position="4116,939">You are a mighty dragon, no one can tell you what to do. You destroy the army before you, attacking them despite the white flag they hold.
+[[Attack by yourself]]</tw-passagedata><tw-passagedata pid="73" name="Deny Prisoner Request" tags="Home" position="4116,939">You are a mighty dragon, no one can tell you what to do. You destroy the army before you, attacking them despite the white flag they hold.
 
 (Fill in)
 
-[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="74" name="Return With Them" tags="" position="4458,613">You to the capital and circle overhead the panicking civilians for a few minutes. The guards of course had orders to not shoot, as if it would have mattered anyways. You make sure to land with all the force you could muster in the middle of the city square. Dozens of merchants watched as their carts and wagons were flung across the square and smashed into splinters of wood. The $princeprincess looks overjoyed to see home for the first time in over twenty years. You could feel the $princeprincess shed tears on your scaled back. 
+[[Continue|The Wizard]]</tw-passagedata><tw-passagedata pid="74" name="Return With Them" tags="Army" position="4458,613">You to the capital and circle overhead the panicking civilians for a few minutes. The guards of course had orders to not shoot, as if it would have mattered anyways. You make sure to land with all the force you could muster in the middle of the city square. Dozens of merchants watched as their carts and wagons were flung across the square and smashed into splinters of wood. The $princeprincess looks overjoyed to see home for the first time in over twenty years. You could feel the $princeprincess shed tears on your scaled back. 
 
 King Cyrus: &quot;Mighty $playerName, we thank you for coming to help the kingdom, my spymaster Edric will relay to you all the information his scouts have gathered.&quot; 
 
@@ -923,11 +925,11 @@ The central group will contain the brunt of the attack, with orc berserkers and 
 
 The third group will contain the elite guard as well as the orc commander. They have a group of archers as well, and may be able to injure you.
 
-[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="75" name="Attack by yourself" tags="" position="4455,797">$playerName: &quot;Save your information! You dare insult my power by thinking I would need your help. I could whisper but a lick off flame, and all of you would turn to charcoal. I shall confront them by myself, and immortalize my name in myth and legend. Tell your children you insignifcant worm, tell them you had the honor of speaking with $playerName.&quot;
+[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="75" name="Attack by yourself" tags="Army" position="4455,797">$playerName: &quot;Save your information! You dare insult my power by thinking I would need your help. I could whisper but a lick off flame, and all of you would turn to charcoal. I shall confront them by myself, and immortalize my name in myth and legend. Tell your children you insignifcant worm, tell them you had the honor of speaking with $playerName.&quot;
 
 You take off, the force of your wings sending the soldiers flying back in a heap. They watch as you begin to fly North. After a few hours you spot the horde of orcs, already attacking the human battlements with their primitive siege engines. They had organized themselves into three large masses, and within these masses you see trolls and ogres accompanying the scores of orcs. At the back you see the towering frame of a blue giant.
 
-[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="76" name="War Attack" tags="" position="4875,634">&lt;&lt;if not visited(&quot;Left Army&quot;)&gt;&gt;Warlocks can be seen hurling spells at the castle defenses.
+[[Begin War Attack]]</tw-passagedata><tw-passagedata pid="76" name="War Attack" tags="Hunt" position="4875,634">&lt;&lt;if not visited(&quot;Left Army&quot;)&gt;&gt;Warlocks can be seen hurling spells at the castle defenses.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Central Army&quot;)&gt;&gt; Orc berserkers and direwolves surge forward.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited(&quot;Right Army&quot;)&gt;&gt; A large group of well armored orcs surge forward.
 &lt;&lt;endif&gt;&gt;Current health: $playerHP
@@ -942,7 +944,7 @@ Attack:
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|War Flee (Solitary End)]]
 	
-&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="" position="5125,498">You attack the warlocks. Plunging headfirst into their ranks, you tear apart the various acolytes. Fel flames bask your body and you feel the sharp pangs of pain. You spot the warlock leading the others against you, and bathe her in your searing fire. You watch as her ashes are swept away in the wind. 
+&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="Hunt" position="5125,498">You attack the warlocks. Plunging headfirst into their ranks, you tear apart the various acolytes. Fel flames bask your body and you feel the sharp pangs of pain. You spot the warlock leading the others against you, and bathe her in your searing fire. You watch as her ashes are swept away in the wind. 
 
 The remaining warlocks begin to flee, clearly the one you had just dispatched was of some importance.
 
@@ -953,7 +955,7 @@ The remaining warlocks begin to flee, clearly the one you had just dispatched wa
 You take $warDamage points of damage.
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="" position="5105,651">You attack the charging berserkers and trolls. They swing at you with all their might, and while they do provide you with an ample amount of scratches, not even the strongest can pierce you skin with any authority.
+&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="Hunt" position="5105,651">You attack the charging berserkers and trolls. They swing at you with all their might, and while they do provide you with an ample amount of scratches, not even the strongest can pierce you skin with any authority.
 
  &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, trolls falling over, some almost unrecognizable. Your terrifying presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
 
@@ -965,7 +967,7 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="" position="5109,787">You attack the orcs clad in crimson armor, among them stand a multitude of archers. An orc chieftain barks orders for the archers to shoot at you. You watch as their arrows blot out the faint winter sun, but your arrows deflect most of them. Any that do manage to catch provide you with short yet sharp pangs of pain. The crimson armored orcs charge but are met with the brunt of your tail swipe. The commander collapses to his knees, but can&#x27;t utter any cries of mercy as you launch him into the air with the swing of your tail. Any orcs left watch the lifeless body of their commander splatter against a rock, and proceed to run. 
+&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="Hunt" position="5109,787">You attack the orcs clad in crimson armor, among them stand a multitude of archers. An orc chieftain barks orders for the archers to shoot at you. You watch as their arrows blot out the faint winter sun, but your arrows deflect most of them. Any that do manage to catch provide you with short yet sharp pangs of pain. The crimson armored orcs charge but are met with the brunt of your tail swipe. The commander collapses to his knees, but can&#x27;t utter any cries of mercy as you launch him into the air with the swing of your tail. Any orcs left watch the lifeless body of their commander splatter against a rock, and proceed to run. 
 
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
@@ -974,10 +976,10 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="" position="4873,445">The battle was too much. You had let down $princeprincess, they would watch as their kingdom collapsed and burned at the hands of Brokki&#x27;s horde. All your boasts and pride had amounted to nothing. Your name would forever be remembered in tandem with the defeat you suffered at the hands of Brokki. You return to your home, and lie their listening quietly to the weeping $princeprincess.
+&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="Defeat" position="4873,445">The battle was too much. You had let down $princeprincess, they would watch as their kingdom collapsed and burned at the hands of Brokki&#x27;s horde. All your boasts and pride had amounted to nothing. Your name would forever be remembered in tandem with the defeat you suffered at the hands of Brokki. You return to your home, and lie their listening quietly to the weeping $princeprincess.
 
 Game end:
-$playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom had been wiped out by the orcs, who had now moved onto other conquests. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName would attack whenever the boredom crippled $hisher will to live. $playerName live out the rest of $hisher days knowing that no one would ever speak of $playerName in high regard ever again.  </tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="" position="5328,633">Brokki, the Bane of Dragons stands over thirty feet high. The orcs around his feet look like ants. His body rippled with muscle, and you see bolts of electricity crackle all over him. In his hand he holds a bolt of lightning, which had no doubt brought the lives of many dragons to a crashing halt.
+$playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom had been wiped out by the orcs, who had now moved onto other conquests. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName would attack whenever the boredom crippled $hisher will to live. $playerName live out the rest of $hisher days knowing that no one would ever speak of $playerName in high regard ever again.  </tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="Run" position="5328,633">Brokki, the Bane of Dragons stands over thirty feet high. The orcs around his feet look like ants. His body rippled with muscle, and you see bolts of electricity crackle all over him. In his hand he holds a bolt of lightning, which had no doubt brought the lives of many dragons to a crashing halt.
 
 
 Your current health: $playerHP
@@ -988,11 +990,11 @@ What shall you do?
 [[Breath attack|Breath Storm Giant]] 
 [[Tail attack|Tail Storm Giant]] (Bludgeoning)
 
-&lt;img src=&quot;assets/image/StormGiant.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;StormGiant&quot;/&gt;</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="" position="5061,364">You crash into the ground, sending chunks of rock and soild into the orcs. Seeing your impact, the orcs surge towards you. Their numbers are too great, and the viciously begin to stab and hack at your limbs. You lose feeling in your wings, and slowly your vision begins to fade. You breathe fire into their ranks, killing hundreds, but still more surge forward. The chance to kill a dragon proving all the motivation they need. Your life begins to fade, and your last moments are filled with rage, but it all eventually leads to the impending darkness.
+&lt;img src=&quot;assets/image/StormGiant.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;StormGiant&quot;/&gt;</tw-passagedata><tw-passagedata pid="82" name="War Defeat" tags="Hunt" position="5061,364">You crash into the ground, sending chunks of rock and soild into the orcs. Seeing your impact, the orcs surge towards you. Their numbers are too great, and the viciously begin to stab and hack at your limbs. You lose feeling in your wings, and slowly your vision begins to fade. You breathe fire into their ranks, killing hundreds, but still more surge forward. The chance to kill a dragon proving all the motivation they need. Your life begins to fade, and your last moments are filled with rage, but it all eventually leads to the impending darkness.
 
 
 Game over.
-(Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="" position="5593,824">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+(Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="Hunt" position="5593,824">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1004,7 +1006,7 @@ You attempt to bite the Storm Giant. You latch onto one of its arms and can feel
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks weakened. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="Hunt" position="5640,650">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1016,7 +1018,7 @@ You claw at the Storm Giant, slashing into its thick skin. The creature is tough
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks bloodied and is barely able to stand. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Breath Storm Giant" tags="" position="5639,466">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Breath Storm Giant" tags="Hunt" position="5639,466">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1030,12 +1032,12 @@ The Storm Giant looks bloodied and its actions are slowing. [[Finish it|Storm Gi
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="" position="5366,270">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="Defeat" position="5366,270">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
 
 
 GAME OVER.
 
-(Hint: Consider the weakness of a Storm Giant and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="87" name="Storm Giant Defeat" tags="" position="5832,609">You see Brokki wavering, his movement sluggish, and his head reeling. You charge into him, knocking him down to one knee. He looks up at you expecting to see flames envelope his body. Instead you swoop down and bite his his throat. You feel jolts of electricity as your teeth dig into his skin. His breath becomes wet gurgle, and you rip out his throat. His blue blood sprays onto your body, as he slumps into the ground crushing many of the retreating orcs. 
+(Hint: Consider the weakness of a Storm Giant and watch for clues in the text to point you in the right direction)</tw-passagedata><tw-passagedata pid="87" name="Storm Giant Defeat" tags="Hunt" position="5832,609">You see Brokki wavering, his movement sluggish, and his head reeling. You charge into him, knocking him down to one knee. He looks up at you expecting to see flames envelope his body. Instead you swoop down and bite his his throat. You feel jolts of electricity as your teeth dig into his skin. His breath becomes wet gurgle, and you rip out his throat. His blue blood sprays onto your body, as he slumps into the ground crushing many of the retreating orcs. 
 
 &lt;&lt;set $playerName to $playerName + &quot;, Protector of Mankind&quot;&gt;&gt;
 
@@ -1044,12 +1046,12 @@ Any orc left alive flees, and you watch them do so. They will spread the tale of
 Time to let the kingdom know that it has been [[saved|Kingdom Saved Ending]] by a dragon.
 
 
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="88" name="Kingdom Saved Ending" tags="" position="6051,644">You return to the kingdom victorious. The people praise your name as loud as they can. The kingsom had been saved. You look around and see the $princeprincess standing next to the king and queen. The $princeprincess cries with joy, as you bask in the glory of the people. To them you were the greatest dragon that had ever lived. 
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="88" name="Kingdom Saved Ending" tags="Victory" position="6051,644">You return to the kingdom victorious. The people praise your name as loud as they can. The kingsom had been saved. You look around and see the $princeprincess standing next to the king and queen. The $princeprincess cries with joy, as you bask in the glory of the people. To them you were the greatest dragon that had ever lived. 
 
 -------------------------------------------------------------
 Game complete, you are victorious! You release your prisoner to the kingdom. With the mighty orc armies defeated and scattered, and the kingdom granting you many treasures, you live out the rest of your life protecting this kingdom as they continue to serve you. In their tongue you were &#x27;Fahdon&#x27;. Friend.
 
-$playerName would forever be remembered in the eyes of man as a legend.</tw-passagedata><tw-passagedata pid="89" name="Tail Storm Giant" tags="" position="5578,1045">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+$playerName would forever be remembered in the eyes of man as a legend.</tw-passagedata><tw-passagedata pid="89" name="Tail Storm Giant" tags="Hunt" position="5578,1046.6666666666667">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1061,7 +1063,7 @@ You swing your tail at the Storm Giant, but its large size makes it difficult to
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant falls onto its knees. Perhaps that was the blow you needed. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="" position="4686,651">The human battlements have already been severely damaged. Humans and orcs alike cower as you fly by. The clamor and roar of battle drown out all your inhibitions. 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="Hunt" position="4686,651">The human battlements have already been severely damaged. Humans and orcs alike cower as you fly by. The clamor and roar of battle drown out all your inhibitions. 
 
 Let the [[fighting|War Attack]] begin!
 
@@ -1077,12 +1079,12 @@ The time has come where your power has now been fully realized. It was time to u
 
 [[&quot;Convince&quot; other races to serve you|Enslaving Tier 1]]
 
-&lt;&lt;set $playerForces to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="The Wizard" tags="" position="4151,1113">A few days after the army had visited you the $princeprincess recieved a vision. $hisher eyes glazed over, and after a few moments they fluttered open. 
+&lt;&lt;set $playerForces to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="The Wizard" tags="Wizard" position="4151,1113">A few days after the army had visited you the $princeprincess recieved a vision. $hisher eyes glazed over, and after a few moments they fluttered open. 
 The $princeprincess: &quot;I have recieved a vision from a mighty wizard, he claims that he is coming to slay you and retrieve me for my kingdom. &quot;
 
 A wizard...wizards are formidable opponents, perhaps this will provide a nice challenge...
 
-[[Tell me more|Tell Me More]]</tw-passagedata><tw-passagedata pid="94" name="Tell Me More" tags="" position="4247,1276">The $princeprincess: &quot;The wizard&#x27;s name is Stratavarious Kane. His origin is a mystery, even to the king and queen. He has been a master of the Academy for over two generations of kings and queens. I once met him playing Dragonchess. Have you ever played Dragonchess? The game requires you to think five steps ahead of your opponent, and he is a champion. Do not take him to be a kindly man, his old age has made him haggard and cruel. He forces his students to play Dragonchess, just to see the look of dissapointment when they lose. Do not fight him, for him you are just another opponent to dissapoint.&quot;
+[[Tell me more|Tell Me More]]</tw-passagedata><tw-passagedata pid="94" name="Tell Me More" tags="Wizard" position="4247,1276">The $princeprincess: &quot;The wizard&#x27;s name is Stratavarious Kane. His origin is a mystery, even to the king and queen. He has been a master of the Academy for over two generations of kings and queens. I once met him playing Dragonchess. Have you ever played Dragonchess? The game requires you to think five steps ahead of your opponent, and he is a champion. Do not take him to be a kindly man, his old age has made him haggard and cruel. He forces his students to play Dragonchess, just to see the look of dissapointment when they lose. Do not fight him, for him you are just another opponent to dissapoint.&quot;
 
 
 $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same trap every other human I have encountered. You all have the same expectations when you see a dragon. I will prepare for him in such a manner that he will not be able to predict my next thirty moves!&quot;
@@ -1104,11 +1106,11 @@ $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same tra
 &lt;&lt;set $wizardHP to 120&gt;&gt;
 &lt;&lt;set $wizardMode to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="I Fear No Wizard" tags="" position="4482,1362">The $princeprincess had kept you comapny for more than twenty years, let the wizard come. The $princeprincess could watch that it was with you $heshe is the safest. 
 
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="" position="4283,1496">
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="Home" position="4283,1496">
 You release your prisoner, you know the wizard will come for you anyways, but at least this way $princeprincess will be safetly out of harms way.
 
 
-[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="97" name="Preparation" tags="" position="4724,1488">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If the wizard is coming, then you must prepare.
+[[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="97" name="Preparation" tags="Home" position="4724,1488">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If the wizard is coming, then you must prepare.
 Health: $playerHP/$maxPlayerHP
 Gold: $gold (+$goldProduction per day)
 Days till wizard arrives: $daysLeft
@@ -1131,13 +1133,13 @@ The wizard has come, prepare for battle!
 
 Or cowardly flee.
 [[Flee From Wizard]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Flee From Wizard" tags="" position="4574,1084">You flee from the wizard. Your cowardice has rendered you the laughing stock of the world. While staying would have meant death, at least you would not be alive to hear the mocking shouts of all manner of creatures. You would not have been the dragon that had fled. You will have to live the rest of your life in fear, never remaining in one place, for the Stratavarious Kane never grew tired, and he would keep hunting you till your final days.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Flee From Wizard" tags="Defeat" position="4574,1084">You flee from the wizard. Your cowardice has rendered you the laughing stock of the world. While staying would have meant death, at least you would not be alive to hear the mocking shouts of all manner of creatures. You would not have been the dragon that had fled. You will have to live the rest of your life in fear, never remaining in one place, for the Stratavarious Kane never grew tired, and he would keep hunting you till your final days.
 
 Game Over
-(Hint: While abandoning your home is a valid but dissatisfying option, are you really a dragon if you will not defend all that you have?)</tw-passagedata><tw-passagedata pid="99" name="Finish Preparation" tags="" position="4723,1972">Now that you are ready, let the fighting begin!
+(Hint: While abandoning your home is a valid but dissatisfying option, are you really a dragon if you will not defend all that you have?)</tw-passagedata><tw-passagedata pid="99" name="Finish Preparation" tags="Home" position="4723,1972">Now that you are ready, let the fighting begin!
 
 First, the wizard must navigate your dungeon and any traps you have set up.
-[[Traps!|Wizard Traps]]</tw-passagedata><tw-passagedata pid="100" name="Raid Village" tags="" position="4943,1176">You raid the village.
+[[Traps!|Wizard Traps]]</tw-passagedata><tw-passagedata pid="100" name="Raid Village" tags="Hunt" position="4943,1176">You raid the village.
 &lt;&lt;set $goldGained to 500*random(2, 4)&gt;&gt;
 You gain $goldGained pieces of gold!
 &lt;&lt;set $damageTaken to random(3, 10)&gt;&gt;
@@ -1151,7 +1153,7 @@ You take $damageTaken points of damage.
 
 &lt;&lt;set $gold to $gold + $goldGained&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="" position="5053,1452">&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Explore Dungeon" tags="Dungeon" position="5053,1452">&lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;
 &lt;&lt;if $dungeonReward is 1&gt;&gt;
 &lt;&lt;set $increaseHP to random(15, 20)&gt;&gt;
 You get &lt;&lt;print either(&quot;an Amulet of Health&quot;, &quot;a Staff of Life&quot;, &quot;a Stone of Fortitude&quot;)&gt;&gt;
@@ -1179,7 +1181,7 @@ You take $damageTaken points of damage!
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="" position="5001,1602">What level of trap would you like to set up?
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Set Traps" tags="Home" position="5001,1602">What level of trap would you like to set up?
 Current Gold: $gold
 &lt;&lt;if $gold &gt;= 1000&gt;&gt;
 [[Simple Trap]] (Costs 1000 gold)
@@ -1198,7 +1200,7 @@ Current Gold: $gold
 ==Deadly Trap (Costs 10000 gold)==
 &lt;&lt;/if&gt;&gt;
 
-[[I changed my mind|Preparation]]</tw-passagedata><tw-passagedata pid="103" name="Rest and Heal" tags="" position="4932,1747">You heal your wounds through rest.
+[[I changed my mind|Preparation]]</tw-passagedata><tw-passagedata pid="103" name="Rest and Heal" tags="Home" position="4932,1747">You heal your wounds through rest.
 &lt;&lt;set $recoveredHP to random(20, 30)&gt;&gt;
 You recover $recoveredHP points of health.
 &lt;&lt;set $playerHP to $playerHP + $recoveredHP&gt;&gt;
@@ -1209,7 +1211,7 @@ You recover $recoveredHP points of health.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="Victory" position="5025,1318">You enslave some nearby &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt;.
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
 
@@ -1217,7 +1219,7 @@ They will produce $newGoldProduction gold per day.
 
 &lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="Home" position="5224,1551">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;/
 You set up a boulder trap!
 &lt;&lt;elseif $trapSet is 2&gt;&gt;/
@@ -1232,7 +1234,7 @@ You set up a flame trap!&gt;&gt;
 
 [[Continue|Preparation]]
 
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="" position="5240,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Dangerous Trap" tags="Home" position="5240,1679">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;
 You set up a trap where rocks will fall from the roof and kill anyone below.
 &lt;&lt;elseif $trapSet is 2&gt;&gt;
@@ -1247,7 +1249,7 @@ You set up a fake floor over a pit of vipers.
 
 [[Continue|Preparation]]
 
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="Home" position="5207,1820">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;
 &lt;&lt;if $trapSet is 1&gt;&gt;
 You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth.
 &lt;&lt;elseif $trapSet is 2&gt;&gt;
@@ -1263,9 +1265,9 @@ You set up a fake floor over a pit of lava.
 
 [[Continue|Preparation]]
 
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="" position="4793,1114">In your zealous preperation you grow more and more weak. The countless raids and battles over the last few days have taken their toll. As you leave to prepare some more, you collapse in heap of exhaustion. In your eager preperation you have already done the Wizard&#x27;s woke for him, your vision slowly fades and your body goes still.
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="Defeat" position="4793,1114">In your zealous preperation you grow more and more weak. The countless raids and battles over the last few days have taken their toll. As you leave to prepare some more, you collapse in heap of exhaustion. In your eager preperation you have already done the Wizard&#x27;s woke for him, your vision slowly fades and your body goes still.
 
-Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;
+Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="Wizard" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;
 The quiet of night is pierced by the sound of a cane hitting the stone floor of your cave. An eerie whistling echoes throughout the cave.
 
 Stratavarious Kane: &quot;I hope you are not sleeping $playername...I would hate for it to be no challenge at all. Well who am I kidding... of course it won&#x27;t be a challenge.&quot;
@@ -1292,7 +1294,7 @@ What shall you do?
 &lt;&lt;set $wizardMode to 4&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;set $wizardMode to random(1, 3)&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="" position="5472,1997">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="Wizard" position="5472,1997">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1317,7 +1319,7 @@ You bite the wizard. Your teeth easily sink into him before he teleports a short
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="Wizard" position="5556,2137">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1342,7 +1344,7 @@ You claw at the wizard, but his cloak seems to be made of a special cloth. You c
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="" position="5550,2274">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="Wizard" position="5550,2274">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1367,7 +1369,7 @@ You breath $breathAttack at the wizard. A shimmering shield appears in front of 
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="" position="5542,2417">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="Wizard" position="5542,2417">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1392,7 +1394,7 @@ You swing your masssive tail at him, catching him off guard. He manages to cast 
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Heal Potion" tags="" position="5349,2652">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Heal Potion" tags="Potion" position="5349,2652">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1414,17 +1416,17 @@ You drink a healing potion.
 You recover 30 hitpoints!
 &lt;&lt;set $playerHP to $playerHP + 30&gt;&gt;
 
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Alas, it is not enough... [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Continue|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Wizard Wins" tags="" position="5971,2107">Your attacks proved futile, as the wizard had an answer to everything you try. He was clearly more than five steps ahead of you. Not listening to the $princeprincess would prove to be your downfall. The wizard finally stops smirking.
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\Alas, it is not enough... [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Continue|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Wizard Wins" tags="Defeat" position="5971,2107">Your attacks proved futile, as the wizard had an answer to everything you try. He was clearly more than five steps ahead of you. Not listening to the $princeprincess would prove to be your downfall. The wizard finally stops smirking.
 Stratavarious Kane: &quot;Well this was fun while it lasted, you tried to suprise me with those traps, but clearly did not have enough of them. A wizard is always prepared, when you finally chose to fight me face to face, it was already hopeless. All you dragons are the same, always with the breath attacks, claws and biting. Well, I would like to say this will be painless, but then I would be lying...&quot;
 He twirls his cane and your body seizes up. It felt as though your bones were on fire, and the wounds you had sustained were now being slowly pried open. The pain was too much, you wanted to die, and after another 30 grueling seconds, you did.  
 
 Game Over
-(Hint: Consider your preparation stage and how to best optimize what you can do to fight the wizard)</tw-passagedata><tw-passagedata pid="116" name="Wizard Loses" tags="" position="5882,2505">You defeat the wizard!
+(Hint: Consider your preparation stage and how to best optimize what you can do to fight the wizard)</tw-passagedata><tw-passagedata pid="116" name="Wizard Loses" tags="Wizard_l" position="5882,2505">You defeat the wizard!
 
 [[Wizard Epilogue]]
 
 &lt;&lt;set $playerName to $playerName + &quot;, The Powerful&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="117" name="Wizard Epilogue" tags="" position="6070,2556">The wizard began to lean on his cane. He was exhusted, and his smirk was now a look of fear. He held out one hand...
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="117" name="Wizard Epilogue" tags="Victory_2" position="6070,2556">The wizard began to lean on his cane. He was exhusted, and his smirk was now a look of fear. He held out one hand...
 Stratavarious Kane: &quot;Please, I will do anything, gold and power beyond your wildest imagination, I could provide this. Just let me live, the prospect of death...I&#x27;m not ready.&quot;
 $playername: &quot;Checkmate.&quot;
 With that final word, you lift your tail up and bring it down with all the force you can muster. His magic powerless against your raw strength. You leave him smeared on the floor, and let out a triumphent roar.
@@ -1749,7 +1751,7 @@ He challenges you to a duel for control of the empire.
 
 A new era had come. The Age of the Dragon it would be known. Legions of kobolds, goblins, bugbears all lived to serve you. Even the humans, dwarves and elves had no choice but to obey your demands because of the raw might you possessed in your forces. The might of a million voices cried out in unison as you stood atop your home, the fire burning in your eyes. Your reign would be fierce. None would, none could dare challenge the might of $playerName.
 
-&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
@@ -1801,7 +1803,7 @@ Now that you have enough forces, it is only a matter of time before either the d
 
 
 [[Wait patiently|Return of the Ancient Dragon]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Credits" tags="cr" position="92,415">Lead Writer: Aditya
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Credits" tags="Credits" position="92,415">Lead Writer: Aditya
 Lead Programmer and Lead Designer: Boris
 Support: Charles, Dover, Ceegan, Shardul
 
