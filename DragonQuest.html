@@ -188,7 +188,13 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
 
 
 
@@ -419,7 +425,7 @@ The villagers fight back, and you take $villageDamage point&lt;&lt;if $villageDa
 
 &lt;img src=&quot;assets/image/attack/BurningGranary.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;BurningGranary&quot;/&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="Guard guard" position="911,765">The guards had screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Attack Fleeing Villagers" tags="Guard guard" position="911,765">The guards screamed for mercy, but why would you listen to their insolent mewling? Most of the men had stayed back, no doubt attempting to secure the retreat for their old and young ones. You had heard their captain yell encouragements, one of which particularly tickled your fancy. He had mentioned a $princeprincess, and how the more the guards fought, the further $heshe could run away. Your task was complete, your parents will no doubt be satisfied by the ruin you had brought to the humans. Perhaps you could now spend some time hunting the $princeprincess. These guards did not deserve any measure of success, and the fact that $princeprincess had made it out brought your blood to a boil. 
 
 You swiftly find the royal caravan which you determine contains the $princeprincess.
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;\
@@ -442,27 +448,35 @@ What will you do with your prisoner?
 [[Ransom]] - Or perhaps gold could be good? The peasants might not accept it though. Who would deal with a dragon after all?
 
 &lt;&lt;set $ransom to random(1, 2)&gt;&gt;
-&lt;&lt;set $prisonerHeld to true&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Murder" tags="Guard guard" position="691,921">You land atop the caravan but overestimating how much weight the caravan could take, your speed carries you through, crushing the entire vehicle and anyone inside.
+&lt;&lt;set $prisonerHeld to true&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Murder" tags="Guard guard" position="691,921">You land atop a wagon but overestimating how much weight the wagon could take, your speed carries you through, crushing the entire vehicle and anyone inside.
 
 Not as graceful as you would have liked, but that will work.
 
-Now that the people have lost their leader, their morale sinking even further, you return to the carnage.
+You curse as you realize that the wagon you had landed on contained the $princeprincess. In your fury you decide to descend upon the already ruined village.
 
-[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="Guard guard" position="824,943">After carrying your prisoner high into the air, dropping them and then catching them and in general intimidating them by being a dragon, you eventually return your unconscious prisoner back to the caravan with the peasants.
+[[Finish the Chaos|Continue Destroying village]]</tw-passagedata><tw-passagedata pid="20" name="Torture then send back with message" tags="Guard guard" position="824,943">
+You carry the prisoner high into the air, the villagers hushed whispering turned to a gasp as you fling the prisoner prisoner up. The prisoner screams as before $heshe falls beyond your grasp, you snatch them with your other claw. The prisoner&#x27;s screaming finally stops after a while, and all you feel is the huddled up self trembling against your scaly claws. You drop the prisoner onto a few of the villagers who break $hisher fall.
 
-Now, to finish the destroying the village for pleasure...
+$playerName: &quot;Go tell your pathetic kingdom about $playerName! Tell them that it was by my grace that you live, and that it was by my fury your family and friends died!&quot;
 
-[[Continue Destroying village]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Torture then kill" tags="Guard guard" position="996,978">After briefly playing around with your food, you gulp down the entire human.
-
-Delicious. Humans always made a great crunch as bones snapped. Perhaps you should consider this more often when you grow older. Elves probably taste even better. Not certain on dwarves cause of all their hair though...
-
-With your satisfaction of imposing your dominance upon the people, you head back to the village to finish destroying it for your pleasure.
+Now, to finish destroying the village for your own twisted pleasure...
 
 [[Continue Destroying village]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Your ransom efforts were unfortunately unsuccessful. An alternative solution shall have to do. You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] if you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="Victory victory" position="923,1263">You strike at the last few remaining buildings. All the humans have already fled, leaving just some poor animals for you to butcher. You finish caving in the various structures to your hearts content.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Torture then kill" tags="Guard guard" position="996,978">You grasp the human ever so tightly. A little tighter and $hisher bones will snap like twigs. You can see the fear in $hisher eyes, as their breath escapes them. You loosen your grip, and just as they gulp down some air, you tighten your hold once more. You continue to torture the $princeprincess in front of the distraught villagers. 
+
+Old Villager: &quot;Please stop! Can&#x27;t you see they are in so much pain?&quot;
+
+$playerName: &quot;You are correct old man, come to think of it, all this squeezing is making me hungry...&quot;
+
+Before anyone could utter another word you envelop the $princeprincess in your maw and swallow $hisher body whole. Humans always made a great crunch as bones snapped. Perhaps you should consider this more often when you grow older. Elves probably taste even better. Not certain on dwarves cause of all their hair though...
+
+The villagers cried out in horror as you took off laughing and smacking your lips with the blood of the $princeprincess. Satisfied with imposing your utter dominace over these pathetic creatures, you head back to the village to truely raze it to the ground.
+
+[[Continue Destroying village]]
+
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Hmm what to do with the prisoner? You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] If you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="Victory victory" position="923,1263">As you fly over the town you see a few old men and women who had not been fast enough to escape your initial attack, but through sheer dumb luck had somehow survived. They wander around aimlessly, gazing at their once beloved town. Many of them wail as you fly over knocking down any remaining buildings. You leave the decrepid old bats to their frigid fate, and fly home. 
 
 &lt;span id=&quot;OldBuilding&quot;&gt;Old Building&lt;/span&gt;
 &lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#OldBuilding&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -470,13 +484,22 @@ With your satisfaction of imposing your dominance upon the people, you head back
 &lt;span id=&quot;Windmill&quot;&gt;Windmill&lt;/span&gt;
 &lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#Windmill&quot;&gt;&gt;Ruined windmill&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="Victory victory" position="1428,1177">With the town now in absolute ruins, you take flight. Won&#x27;t your parents be pleased? You hope so but you&#x27;re not certain.
+[[Finish|Finish Attack]]</tw-passagedata><tw-passagedata pid="24" name="Finish Attack" tags="Victory victory" position="1428,1177">As you fly over the town you see a few old men and women who had not been fast enough to escape your initial attack, but through sheer dumb luck had somehow survived. They wander around aimlessly, gazing at their once beloved town. Many of them wail as you fly over knocking down any remaining buildings. You leave the decrepid old bats to their frigid fate, and fly home. 
 
-[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="Victory victory" position="1425,1050">Very well, if they won&#x27;t accept your generous offer, you&#x27;ll just put the victim out of their misery and be on your way. You don&#x27;t have time for this foolishness anyways. This is beneath you.
+[[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="25" name="Kill important person and retreat" tags="Victory victory" position="1425,1050">You grasp the human ever so tightly. A little tighter and $hisher bones will snap like twigs. You can see the fear in $hisher eyes, as their breath escapes them. You loosen your grip, and just as they gulp down some air, you tighten your hold once more. You continue to torture the $princeprincess in front of the distraught villagers. 
+
+Old Villager: &quot;Please stop! Can&#x27;t you see they are in so much pain?&quot;
+
+$playerName: &quot;You are correct old man, come to think of it, all this squeezing is making me hungry...&quot;
+
+Before anyone could utter another word you envelop the $princeprincess in your maw and swallow $hisher body whole. Humans always made a great crunch as bones snapped. Perhaps you should consider this more often when you grow older. Elves probably taste even better. Not certain on dwarves cause of all their hair though...
+
+The villagers cried out in horror as you took off laughing and smacking your lips with the blood of the $princeprincess. Satisfied with imposing your utter dominace over these pathetic creatures, you head back home.
 
 [[Return Home|Return Home(Victory)]]
 
-&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="Victory victory" position="1465,925">Bah, if they will not take $himher, then you will. Carrying $himher in your claws, you take off into the air, far above the pitiful humans.
+&lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Retreat with important person" tags="Victory victory" position="1465,925">You decide to take $himher. A $princeprincess would fetch a nice ransom. You parents would love that not only did you destroy the village, but also brought home such a valuable prize!
+
 
 [[Return Home|Return Home(Victory)]]</tw-passagedata><tw-passagedata pid="27" name="Travel to Volcano" tags="Vocano vocano" position="1834,30">The smell of brimstone and ash fill your nose, as you fly over smouldering Mt. Etna. The rivers of lava and bursts of flames would no doubt keep most beings away. Perhaps this was indeed an excellent place to create a new home for yourself. Your thoughts are interrupted by a cataclysmic roar from below. As you direct your gaze to ground below, you see the colossal frame of a Dragon writhing and heaving against large chains. The dragon&#x27;s wingspan was that of your two parents combined. Its skin was shimmering as if it were made of obsidian. Its entire body was etched with intricate red patterns. His every bellow caused the air around you to vibrate, and his breath you could now tell was the source of the smell of brimstone you had sensed earlier. 
 
@@ -491,19 +514,19 @@ With your satisfaction of imposing your dominance upon the people, you head back
 
 &lt;&lt;audio &quot;bgm_swamplands&quot; loop play&gt;&gt;
 
-&lt;img src=&quot;assets/image/environment/env_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="Home" position="1321,800">You return home, by yourself, feeling disappointed that you didn&#x27;t do more damage and that your attempts to be clever had failed.
+&lt;img src=&quot;assets/image/environment/env_1.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;swamplands&quot;/&gt;</tw-passagedata><tw-passagedata pid="29" name="Retreat by yourself" tags="Home" position="1321,800">Some of you wounds begin to ache, and your mind begins to race, as you contemplate all the potential threats that could be hidden in the caravan. You decide to not risk your life any further, and leave the prisoner behind.
 
 [[Return Home|Return Home(Defeat)]]
 
-&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="Home home" position="1724,765">For your failures, you have been eternally banished from your home. If you&#x27;re lucky, they won&#x27;t send your brother after you...
+&lt;&lt;audio &quot;bgm_villageAttack&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Banished by Parents" tags="Home home" position="1724,765">For your failures, you have been eternally banished from your home. What was once a reliable haven, had now become inhospitable to you. Your parents had forsaken you, but this is not the end. You are finally free to pursue any adventure you see fit. Pershaps it will be wise to head to the forest. You will show your parents that you can become a mighty dragon without their overbearing guidance.
 
-Nontheless, this does mean you are free. Free to pursue whatever adventure you wish.
 
-[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="Run run" position="1942,792">While flying around for several days, you decide that perhaps it is time to explore a cave or something of interest.
+
+[[Leave for Adventure]]</tw-passagedata><tw-passagedata pid="31" name="Leave for Adventure" tags="Run run" position="1942,792">As you fly around the forest for a bit, you see a clearing in the distance. There seems to be a little cluster of bolders and other small rocks.
 
 Descending down, you find a cave nearby. That should be interesting enough.
 
-[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="Cave cave" position="2331,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. Prepare for mortal combat!
+[[Investigate|Cave Entrance]]</tw-passagedata><tw-passagedata pid="32" name="Cave Entrance" tags="Cave cave" position="2331,344">You enter the cave and see that the entrance to the cave is held up by a wooden support system in the form of an archway. There is a two-headed ogre ahead of you. 
 
 The thick skinned two-headed ogre looks angry at you for invading its territory. It raises its club menacingly at you. It charges forward at you and you move to the side before it rams into a wooden beam near the entrance, supporting the archway. You can see bits and pieces of rubble shift from overhead.
 &lt;&lt;if $prisonerHeld is true&gt;&gt;You instruct the $princeprincess to stay out of harms way and not to run. $HeShe obediently obeys out of fear.&lt;&lt;/if&gt;&gt;
@@ -579,15 +602,15 @@ You decide to explore elsewhere to see if you can find anything else of interest
 
 Human: “Stop or we&#x27;ll shoot!”
 
-Talon: “I don’t mean to trouble you, I am merely looking for a cave. I need a cure found within it.”
+$playername: “I don’t mean to trouble you, I am merely looking for a cave. I need a cure found within it.”
 
 Human: “Me and my companions are also looking for that cave, the mushrooms inside are needed to help our princess!”
 
-Talon: “Lead me there and I will go in and retrieve the cure for us all!”
+$playername: “Lead me there and I will go in and retrieve the cure for us all!”
 
 Human: “If you don’t mind we will show you the way and then come back here. We worry about what is further into the forest. I would prefer to go home alive.”
 
-Talon: “Very well…”
+$playername: “Very well…”
 
 [[Follow the humans to the cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="39" name="Hide and Follow" tags="Forest forest" position="1776,655">You stealthily follow the humans, keeping them in your sights. You feel your stomach fill with dread as they finally arrive and congregate around Foxglove’s tree. There you see them laughing and hunching over the body of your now dead friend. 
 
@@ -820,7 +843,20 @@ Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, w
 
 [Game Over]
 (Hint: Read the village for clues and try to figure out what order you should attack the village in. Disrupting certain parts of the village will lower how effective they are in holding off your attack.)</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="Home home" position="1960,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;) or visited(&quot;Ransom&quot;)&gt;&gt;\
-You successfully conquered the village! Your parents are very pleased and ask you to go to a nearby cave as an opportunity for you to scout out a home of your own.
+
+Jörmungandr, Dwarf&#x27;s Bane: &quot;Greetings child! I see you have done even better than expected! Although I should have known the spawn of Titania and Jörmungandr would do nothing short of impress.&quot;
+
+$playerName: &quot;Thank you father! I always strive to better!&quot;
+
+Titania, the Deceiver: &quot;I am oh so proud of you! You should go investigate a cave down in the forest, for I fear that you have outgrown your parents home!&quot;
+
+$playerName: &quot;But Mother who will carry out errands such as these for you and Father?&quot;
+
+Titania, the Deceiver: &quot;Nonsense! You have shown the greatness you are clearly predisposed to. Living in your parents shadow will never let you reach your true potential!&quot;
+
+$playerName: &quot;Very well Mother, I shall go forth and spread our familly&#x27;s prestige!&quot;
+
+
 &lt;&lt;endif&gt;&gt;&lt;&lt;if $prisonerHeld is true&gt;&gt;
 You have a prisoner with you! What shall you do with this poor soul? Give $himher to your parents? Keep for yourself? 
 [[Keep prisoner for yourself|Cave Entrance]] (And leave for adventure)
@@ -867,7 +903,16 @@ You will never be able to fly again.
 
 [[Continue to cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="66" name="Bury" tags="Forest forest" position="1973,472">You could not bring yourself to burn your friend’s body and reduce it to the same ash as that of the human rangers. You instead dig a hole beside the tree that used to be his home. Even in death your friend will not leave the tree that had raised and sheltered him. 
 
-[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="Home home" position="2171,944">Your parents smile and ask you to leave for adventure to a nearby cave, they&#x27;ll take of the $princeprincess.
+[[Continue to Cave|Cave Entrance]]</tw-passagedata><tw-passagedata pid="67" name="Parents Get Prisoner" tags="Home home" position="2171,944">Your parents smile.
+
+Titania, the Deceiver: &quot;$playerName you should go on you adventure, I think that cave will prove very valuable.&quot;
+
+$playerName: &quot;What about the prisoner?&quot;
+
+Titania, the Deceiver: &quot;Oh don&#x27;t worry, your father and I will take good care of her. Make sure she is presentable when they arrive with the ransom.&quot;
+
+$playerName: &quot;Very well, farewell, until I return.&quot; 
+
 
 [[You leave for adventure|Cave Entrance]]
 
@@ -1009,8 +1054,8 @@ You take $warDamage points of damage.
 
 Game end:
 $playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom had been wiped out by the orcs, who had now moved onto other conquests. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName would attack whenever the boredom crippled $hisher will to live. $playerName live out the rest of $hisher days knowing that no one would ever speak of $playerName in high regard ever again.  </tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="Run run" position="5328,633">Brokki, the Bane of Dragons stands over thirty feet high. The orcs around his feet look like ants. His body rippled with muscle, and you see bolts of electricity crackle all over him. In his hand he holds a bolt of lightning, which had no doubt brought the lives of many dragons to a crashing halt.
-&lt;&lt;set stormGiantStance to random(1, 3)&gt;&gt;
-&lt;&lt;if stormGiantStance == 1&gt;&gt;/
+&lt;&lt;set $stormGiantStance to random(1, 3)&gt;&gt;
+&lt;&lt;if $stormGiantStance == 1&gt;&gt;/
 You can see Brokki is preparing to throw the bolt of lightning at you. His legs look particularly exposed.
 &lt;&lt;elseif stormGiantStance == 2&gt;&gt;
 Brokki has changed his grip on the lighting bolt to both hands, preparing for a large overhead swing, exposing his body.
@@ -1029,11 +1074,11 @@ What shall you do?
 
 
 Game over.
-(Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="Hunt hunt" position="5593,824">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+(Strategy is important. Consider taking out the more dangerous threats first.)</tw-passagedata><tw-passagedata pid="83" name="Bite Storm Giant" tags="Hunt hunt" position="5594,822">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if stormGiantStance == 3&gt;&gt;
+&lt;&lt;if $stormGiantStance == 3&gt;&gt;
 You leap onto the Storm Giant, surprising it as it unable to properly to react to you closing in the distance. Latching onto its arm, your fangs dig deep into the flesh, drawing the blue blood of the giant. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $stormGiantHP to $stormGiantHP - 25&gt;&gt;
 &lt;&lt;else&gt;&gt;
 You attempt to bite the Storm Giant. You latch onto one of its arms and can feel your fangs sink into its veins, blue blood flooding its arm. It stands tall and throws you off.
@@ -1048,7 +1093,7 @@ The Storm Giant looks weakened. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if stormGiantStance == 2&gt;&gt;
+&lt;&lt;if $stormGiantStance == 2&gt;&gt;
 You slash at the Storm Giant, easily taking advantage of the exposed skin. Blue blood gushes out of the newly formed wounds. &lt;&lt;set $stormGiantHP to $stormGiantHP - 25&gt;&gt;
 &lt;&lt;else&gt;&gt;
 You claw at the Storm Giant, slashing into a little of its thick skin as you are blocked by the bolt of lightning. The creature is tough, but you are able to rip into it, drawing blue blood.
@@ -1097,7 +1142,7 @@ $playerName would forever be remembered in the eyes of man as a legend.</tw-pass
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if stormGiantStance == 1&gt;&gt;
+&lt;&lt;if $stormGiantStance == 1&gt;&gt;
 You swiftly strike at the giant using your tail, sweeping at its exposed legs, knocking it off balance and it collides hard into a nearby orc siege weapon. &lt;&lt;set $stormGiantHP to $stormGiantHP - 25&gt;&gt;
 &lt;&lt;else&gt;&gt;
 You swing your tail at the Storm Giant, but its large size makes it difficult to toss to the side. It doesn&#x27;t even seem to mind much that its been hit by your tail.
@@ -1159,7 +1204,7 @@ $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same tra
 &lt;&lt;set $protection to 0&gt;&gt;
 
 &lt;&lt;set $wizardHP to 120&gt;&gt;
-&lt;&lt;set $wizardMode to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="I Fear No Wizard" tags="Home home" position="4482,1362">The $princeprincess had kept you comapny for more than twenty years, let the wizard come. The $princeprincess could watch that it was with you $heshe is the safest. 
+&lt;&lt;set $wizardMode to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="I Fear No Wizard" tags="Home home" position="4482,1362">The $princeprincess had kept you comapny for more than twenty years, let the wizard come. The $princeprincess cab realize that it was with you that $heshe is safest. 
 
 [[Continue|Preparation]]</tw-passagedata><tw-passagedata pid="96" name="Release Prisoner" tags="Home home" position="4283,1496">
 You release your prisoner, you know the wizard will come for you anyways, but at least this way $princeprincess will be safetly out of harms way.
@@ -1322,16 +1367,16 @@ You set up a fake floor over a pit of lava.
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Preparation Death" tags="Defeat defeat" position="4793,1114">In your zealous preperation you grow more and more weak. The countless raids and battles over the last few days have taken their toll. As you leave to prepare some more, you collapse in heap of exhaustion. In your eager preperation you have already done the Wizard&#x27;s woke for him, your vision slowly fades and your body goes still.
 
-Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="Wizard wizard" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;
+Game Over.</tw-passagedata><tw-passagedata pid="109" name="Wizard Fight" tags="Wizard wizard" position="5236,2275">&lt;&lt;if $wizardSeen == false&gt;&gt;\
 The quiet of night is pierced by the sound of a cane hitting the stone floor of your cave. An eerie whistling echoes throughout the cave.
 
 Stratavarious Kane: &quot;I hope you are not sleeping $playername...I would hate for it to be no challenge at all. Well who am I kidding... of course it won&#x27;t be a challenge.&quot;
 
 He has arrived, hopefully your preparation will not have been in vain.
 &lt;&lt;set $wizardSeen to true&gt;&gt;
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Stratavarious Kane stands before you, calculating his next move.
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 
 Your current health: $playerHP / $maxPlayerHP
 What shall you do?
@@ -1340,8 +1385,8 @@ What shall you do?
 [[Claws|Claw Wizard]] (Slashing)
 [[Breath attack|Breath Wizard]] 
 [[Tail attack|Tail Wizard]] (Bludgeoning)
-&lt;&lt;if $greaterHealthPotions &gt; 0&gt;&gt;
 [[Evade|Evade Wizard]]
+&lt;&lt;if $greaterHealthPotions &gt; 0&gt;&gt;
 [[Drink Greater Health Potion|Heal Potion]]
 &lt;&lt;/if&gt;&gt;
 
@@ -1491,7 +1536,7 @@ The wizard gets hurt by the traps! He takes $damage points of damage!
 
 He tears through your kobold defenses and soon enough reaches you.
 &lt;&lt;set $wizardHP to $wizardHP - $damage&gt;&gt;
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Too bad you don&#x27;t have any traps set up. He easily navigates to you. Several kobolds are blown to bits and you order the rest to retreat before they too are destroyed for naught.
 &lt;&lt;/if&gt;&gt;
 [[Wizard Fight]]
@@ -1592,7 +1637,7 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="Night night" position="2998,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="Night night" position="2998,1161">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1794,25 +1839,25 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="3386,2361">Several dragons flee before the expansion of your empire.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="3386,2361">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel.  
 
-Eventually, one rises to challenge you and your empire. Ancalagon, the Apocalypse.
+[[Accept the Challenge|Ancient Dragon Fight]]
+[[No Way|Power Overwhelming]]
 
-He challenges you to a duel for control of the empire.
-
-[[No Way|Power Overwhelming]]</tw-passagedata><tw-passagedata pid="132" name="Power Overwhelming" tags="Ancient ancient" position="3354,2548">You order your minions to swarm Ancalagon. He brushes off many of them, but hundreds of thousands are still around. They continue to swarm the him before you join the fray. Together, you overwhelm the dragon. He is no match for you and your servants.
+&lt;&lt;set $dragonHP to 200&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Power Overwhelming" tags="Ancient ancient" position="3354,2548">In a duel Ancalagon could potentially defeat you, as he is an ancient dragon. However, you have at your disposal the largest army to have ever been assembled. As he approaches, you grin. Before he can notice you, your troops fire a thousand scorpian bolts at his wings. The sheer number of them overwhelm him, as some find their mark. Ancalagon plummets to the ground, sending hundreds of your troops flying through the air alongside chunks of rocks and dirt. You quickly swoop down and land on his throat. You feel his pulse quicken as your claws dig into his fleshy neck. He tries to utter some words, perhaps some sage words of wisdom,  or perhaps how you chose the easy route. It doesn&#x27;t matter anymore, as you wipe your claws clean of his blood, you stand among your army unchallenged. 
 
 [[Age of Dragons]]
 &lt;&lt;set $playerName to $playerName + &quot;, The Ruthless&quot;&gt;&gt;
 (Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Age of Dragons" tags="Victory victory" position="3277,2778">Game Complete!
 
-A new era had come. The Age of the Dragon it would be known. Legions of kobolds, goblins, bugbears all lived to serve you. Even the humans, dwarves and elves had no choice but to obey your demands because of the raw might you possessed in your forces. The might of a million voices cried out in unison as you stood atop your home, the fire burning in your eyes. Your reign would be fierce. None would, none could dare challenge the might of $playerName.
+Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
-&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="5523,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
-&lt;&lt;set $wizardMode to 1&gt;&gt;
+
+&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="5524,2592">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $wizardMode == 1&gt;&gt;
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to (random(15,30) - $protection)/4&gt;&gt;
+&lt;&lt;if $wizardMode == 1&gt;&gt;\
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to Math.round((random(15,30) - $protection)/4)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
@@ -1822,11 +1867,11 @@ The wizard casts a spell and his wounds begin to mend quickly! He recovers some 
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
-&lt;&lt;set $wizardDamage to (random(30,50) - $protection)/4&gt;&gt;
+&lt;&lt;set $wizardDamage to Math.round((random(30,50) - $protection)/4)&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="Home home" position="3468,1571">Your forces are now large enough to take on even greater foes...
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="Home home" position="3468,1571">Your host grows larger with every passing week. However, these little rats will not be enough, it is time to look for larger prey... 
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
@@ -1839,7 +1884,7 @@ Choose your next target:
 [[Elven Forest of Qraph|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
 [[Dwarven Armory]] &lt;span style=&quot;color:yellow&quot;&gt;(Horde)&lt;/span&gt;
 [[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="136" name="Enslaving Tier 3" tags="Home home" position="3512,1796">&lt;&lt;if $playerForces &lt;= 2500000&gt;&gt;
-As your armies have grown, so have your targets...
+Your army&#x27;s ranks have swollen with followers, it&#x27;s time to begin marching on their final strongholds...
 Forces: $playerForces minions, servants, soldiers of $playerName
 
 Choose your next target:
@@ -1886,7 +1931,7 @@ You find Alexandra really beautiful. You spread your wings further apart, and st
 
 By now, your confidence in yourself and in the way you talk is clearly visible. Alexandra seems to be attracted to you because of that. She smiles, exhales deeply and says &quot;Yes, I am. I wouldn&#x27;t mind&quot;, whilst looking up and down at you. 
 
-[[Years pass by and you and Alexandra have a close bond together||Fall in love]]</tw-passagedata><tw-passagedata pid="140" name="Ignore Alexandra" tags="Cave cave" position="3903.6666666666665,132.66666666666666">You say &quot;It was nice meeting you&quot;, and rush ahead to the river, where you collect water for you and Foxglove. You use a large rock pot, that you molded in the cave, using your own breath. After filling it up, you admire the river for a few more seconds, open your wings, and soar past Alexandra, into the sky, and back to the cave with Foxgrove. </tw-passagedata><tw-passagedata pid="141" name="Home (Wizard)" tags="" position="3884,1399">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
+[[Years pass by and you and Alexandra have a close bond together||Fall in love]]</tw-passagedata><tw-passagedata pid="140" name="Ignore Alexandra" tags="Cave cave" position="3903,132">You say &quot;It was nice meeting you&quot;, and rush ahead to the river, where you collect water for you and Foxglove. You use a large rock pot, that you molded in the cave, using your own breath. After filling it up, you admire the river for a few more seconds, open your wings, and soar past Alexandra, into the sky, and back to the cave with Foxgrove. </tw-passagedata><tw-passagedata pid="141" name="Home (Wizard)" tags="" position="3885,1399">&lt;&lt;if visited (&quot;Travel to Swamplands&quot;)&gt;&gt;
 Mt Etna was certainly a warm place. It would serve as a home.
 &lt;&lt;set $home to &quot;volcano&quot;&gt;&gt;
 
@@ -1902,7 +1947,7 @@ The ruins of that village you destroyed will serve as your new home.
 You shall make your home in the $forestName.
 &lt;&lt;set $home to &quot;forest&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
-[[Living Alone|Years Later]]</tw-passagedata><tw-passagedata pid="142" name="Years Later" tags="" position="4035,1398">--20 Years Later--
+[[Living Alone|Years Later]]</tw-passagedata><tw-passagedata pid="142" name="Years Later" tags="" position="4036,1398">--20 Years Later--
 You have grown older and stronger. You have settled down nicely in your $home and life has been kind to you. You have even gathered some kobold followers that serve your bidding. The kingdom has tried several times to slay you and you have destroyed every knight they have sent your way. One day, one of your kobolds reports that the kingdom has enlisted the service of a mighty wizard to slay you.
 
 The Kobold: &quot;The wizard&#x27;s name isssss Stratavarious Kane. Hisssss origin issssss a mystery, even to the king and queen. He has been a master of the Academy for over two generations of kingssss and queenssss. He is know to love playing Dragonchesssss. Have you ever played Dragonchesssss? The game requiresssss you to think five ssssstepssssss ahead of your opponent, and he is a champion. Do not take him to be a kindly man, hisssss old age has made him haggard and cruel. He forces his sssssstudents to play Dragonchess, just to see the look of disssssssapointment when they lose. Do not fight him, for him you are just another opponent to dissapoint.&quot;
@@ -1935,20 +1980,176 @@ The Kobold: &quot;As you will massssster.&quot;
 &lt;span id=&quot;EmpireHint&quot;&gt;Hidden&lt;/span&gt;
 &lt;&lt;link &quot;Reveal Empire Hint&quot;&gt;&gt;&lt;&lt;replace &quot;#EmpireHint&quot;&gt;&gt;Stay alone, help no one.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Return|Main Menu]] </tw-passagedata><tw-passagedata pid="144" name="Fall in love" tags="" position="4247.666666666667,392.66666666666663">After the very first day you met Alexandra, you have come a long way with him/her. You two share a strong bond now, a bond that is unbreakable. You take the idea of love very seriously. Despite this, you think every day how you are in love with Alexandra. You have admitted these feelings to Alexandra, and she has reciprocated them in both words and actions. You too have shown many gestures of love towards Alexandra. Foxgrove healed completely and was stronger than ever before. He thanked you multiple times, and told you that he was ready to leave and go back to his home or find a new home. He was ready to go out in the wild again, and left. The same cave you and Foxgrove used to live in is now used by you and Alexandra.
+[[Return|Main Menu]] </tw-passagedata><tw-passagedata pid="144" name="Fall in love" tags="" position="4247,392">After the very first day you met Alexandra, you have come a long way with him/her. You two share a strong bond now, a bond that is unbreakable. You take the idea of love very seriously. Despite this, you think every day how you are in love with Alexandra. You have admitted these feelings to Alexandra, and she has reciprocated them in both words and actions. You too have shown many gestures of love towards Alexandra. Foxgrove healed completely and was stronger than ever before. He thanked you multiple times, and told you that he was ready to leave and go back to his home or find a new home. He was ready to go out in the wild again, and left. The same cave you and Foxgrove used to live in is now used by you and Alexandra.
 
 One day, you and Alexandra were taking a walk near the same river you and her had met before. The river and the area around w not the same as before today. In place of chirping and animal sounds was a heavy, defeaning silence. There were vines that were broken and twisted, that laid in the path near the river. A few trees were scorched; some had crashed down into the river. You and Alexandra are both looking around. You state &quot;Something terrible must have happened here...&quot; and Alexandra nods in agreement.
 
 Alexandra points towards near a large willow tree quite far away from where the two of you are standing. It is near a curvature of the river. &quot;There - what&#x27;s that?&quot;, Alexandra asks.
 
-[[Both of you are curious||Walk upto to the willow tree]]</tw-passagedata><tw-passagedata pid="145" name="Walk upto to the willow tree" tags="" position="4509.333333333334,217.66666666666663">You walk upto the willow tree with Alexandra. Under the willow tree, lay two large eggs. You and Alexandra look at each other in surprise. They were dragon eggs. You would recognize them anywhere. Dragons recognize dragon eggs extremely easily. They were large in size. One of the egg covering was yellow, one of them was red. 
+[[Both of you are curious||Walk upto to the willow tree]]</tw-passagedata><tw-passagedata pid="145" name="Walk upto to the willow tree" tags="" position="4509,217">You walk upto the willow tree with Alexandra. Under the willow tree, lay two large eggs. You and Alexandra look at each other in surprise. They were dragon eggs. You would recognize them anywhere. Dragons recognize dragon eggs extremely easily. They were large in size. One of the egg covering was yellow, one of them was red. 
 
 &quot;Why would two dragon eggs randomly be here?&quot; you think out loud. &quot;I have seen those scorched trees, claw marks across the ground and almost everywhere before&quot; whispers Alexandra, in a hushed manner. &quot;This amount of destruction can only be achieved by dragons fighting each other&quot;, she continues. You nod in agreement and say &quot;You are right. I have seen dragons fight before, and I have heard stories of dragon fights from my parents when I was a child&quot;. &quot;Dragons destroy everything in their paths when fighting each other. These eggs must be  abandoned, of some kind of dragon&quot; you claim.
 
 ***next, add:
 -Talon and Alexandra wait for someone to come pick them up or take them back for some time (maybe a few days?)
 -When they are still there, they take them home. These are the adopted babies of Talon and Alexandra. Give the player choice of name/color/gender/etc of the babies.
--Talon grows old together with Alexandra and their adopted children, and live happily ever after.</tw-passagedata></tw-storydata></div>
+-Talon grows old together with Alexandra and their adopted children, and live happily ever after.</tw-passagedata><tw-passagedata pid="146" name="Ancient Dragon Fight" tags="" position="3571,2320">The Ancient Dragon stands before you.
+&lt;&lt;set $dragonStance to random(1, 4)&gt;&gt;\
+&lt;&lt;if $dragonStance == 1&gt;&gt;\
+You can see the dragon is watching you carefully, preparing to predict you.
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+The dragon has shifted weight to prepare to pounce.
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
+The dragon is gathering air.
+&lt;&lt;else&gt;&gt;
+The dragon is circling around you, looking for an opportunity to slash at you with its claws.
+&lt;&lt;/if&gt;&gt;
+Your current health: $playerHP
+What shall you do?
+
+[[Bite Attack|Bite Dragon]] (Piercing)
+[[Claws|Claw Dragon]] (Slashing)
+[[Breath attack|Breath Dragon]] 
+[[Tail attack|Tail Dragon]] (Bludgeoning)
+[[Evade|Evade Dragon]]</tw-passagedata><tw-passagedata pid="147" name="Bite Dragon" tags="" position="3958,1973">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+&lt;&lt;else&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You attempt to bite the dragon.
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Claw Dragon" tags="" position="3938,2145">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You attempt to bite the dragon.
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Breath Dragon" tags="" position="3915,2321.6666666666665">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 4&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+&lt;&lt;else&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You attempt to bite the dragon.
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Tail Dragon" tags="" position="3934.3333333333335,2487.6666666666665">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 4&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+&lt;&lt;else&gt;&gt;
+The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+
+You attempt to bite the dragon.
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
+[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
+The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Evade Dragon" tags="" position="3907.6666666666665,2691">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+You and the dragon stare at each other for a moment, no one daring to make a move.
+
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;
+The dragon attacks with a bite attack!  &lt;&lt;set $dragonDamage to Math.round(random(15,30)/4)&gt;&gt;
+&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
+&lt;&lt;if $hit &gt;= 14&gt;&gt;
+Ouch. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;
+The dragon breathes some flames at you, but you swiftly move out of the way!
+&lt;&lt;else&gt;&gt;
+The dragon claws at you. You avoid most of the slashes.
+&lt;&lt;set $dragonDamage to Math.round((random(30,50))/4)&gt;&gt;
+You take $dragonDamage damage! &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Ancient Dragon Wins" tags="" position="4393,1936">You are destroyed by the dragon.
+
+Game Over
+(Hint: Watch the actions of your foe to see what attacks are more effective.)</tw-passagedata><tw-passagedata pid="153" name="Ancient Dragon Loses" tags="" position="4316,2301">The dragon is slain. You are king.
+
+Game Complete!</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){if(0===arguments.length)throw new Error("_random called with insufficient parameters");var e=void 0,t=void 0;if(1===arguments.length?(e=0,t=arguments[0]):(e=arguments[0],t=arguments[1]),e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e,t,r){var n=t,a=r;return 2===arguments.length&&(a=n,n=0),Array.isArray(e)?e.random(n,a):e.hasOwnProperty("length")?[].concat(_toConsumableArray(e)).random(n,a):void 0}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),Array.prototype.splice.call(this,_random(n,a),1)[0]}}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),this[_random(n,a)]}}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0!==e){for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1)),n=[this[r],this[t]];this[t]=n[0],this[r]=n[1]}return this}}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e={userAgent:navigator.userAgent.toLowerCase()};return e.isGecko=navigator&&"Gecko"===navigator.product&&!/webkit|trident/.test(e.userAgent),e.isIE=/msie|trident/.test(e.userAgent)&&!e.userAgent.includes("opera"),e.ieVersion=function(){var t=/(?:msie\s+|rv:)(\d{1,2}\.\d)/.exec(e.userAgent);return t?Number([1]):0}(),e.isOpera=e.userAgent.includes("opera")||e.userAgent.includes(" opr/"),e.operaVersion=function(){var t=new RegExp((/applewebkit|chrome/.test(e.userAgent)?"opr":"version")+"\\/(\\d{1,2}\\.\\d+)"),r=t.exec(e.userAgent);return r?Number(r[1]):0}(),e.isMobile=Object.freeze({Android:/android/.test(e.userAgent),BlackBerry:/blackberry/.test(e.userAgent),iOS:/ip(?:hone|ad|od)/.test(e.userAgent),Windows:/iemobile/.test(e.userAgent),any:function(){var t=e.isMobile;return t.Android||t.BlackBerry||t.iOS||t.Windows}}),Object.freeze(e)}(),Has=function(){function e(e){try{if(null!=e&&e.length>=0){var t="SugarCube.WebStorage.Test",r="1701 Guilty Scott";if(e.setItem(t,r),e.getItem(t)===r)return e.removeItem(t),!0}}catch(e){}return!1}return Object.freeze({audio:"function"==typeof document.createElement("audio").canPlayType,fileAPI:"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15),geolocation:"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition,localStorage:"localStorage"in window&&e(window.localStorage),sessionStorage:"sessionStorage"in window&&e(window.sessionStorage)})}(),_ref4=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e)||e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return i(e,t)}).join(", ");if(e instanceof Map){var r=function(){var r=i,n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return{v:"( "+n+" )"}}();if("object"===("undefined"==typeof r?"undefined":_typeof(r)))return r.v}else{if(e instanceof Date)return e.toLocaleString();if("function"==typeof e.toString)return e.toString()}return Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref4.clone,convertBreaks=_ref4.convertBreaks,safeActiveElement=_ref4.safeActiveElement,setPageElement=_ref4.setPageElement,throwError=_ref4.throwError,toStringOrDefault=_ref4.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function r(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function a(e){if(null==e)return"";var t=String(e);return t&&p.test(t)?t.replace(f,function(e){return h[e]}):t}function i(e){if(null==e)return"";var t=String(e);return t&&m.test(t)?t.replace(g,function(e){return v[e]}):t}function o(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function s(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function u(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function l(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}function c(e,t){for(var r=Object.prototype.toString,n=Array.isArray(e),a=[].concat(Object.keys(e),Object.keys(t)).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}),i={},o=void 0,s=function(e){return e===o},u=0,l=a.length;u<l;++u){var c=a[u],d=e[c],f=t[c];if(e.hasOwnProperty(c))if(t.hasOwnProperty(c)){if(d===f)continue;if(("undefined"==typeof d?"undefined":_typeof(d))===("undefined"==typeof f?"undefined":_typeof(f)))if("function"==typeof d)d.toString()!==f.toString()&&(i[c]=[y.Copy,f]);else if("object"!==("undefined"==typeof d?"undefined":_typeof(d))||null===d)i[c]=[y.Copy,f];else{var p=r.call(d),h=r.call(f);if(p===h)if("[object Date]"===p){var g=Number(f);Number(d)!==g&&(i[c]=[y.CopyDate,g])}else if("[object RegExp]"===p)d.toString()!==f.toString()&&(i[c]=[y.Copy,clone(f)]);else{var m=Util.diff(d,f);null!==m&&(i[c]=m)}else i[c]=[y.Copy,clone(f)]}else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}else if(n&&Util.isNumeric(c)){var v=Number(c);if(!o){o="";do o+="~";while(a.some(s));i[o]=[y.SpliceArray,v,v]}v<i[o][1]&&(i[o][1]=v),v>i[o][2]&&(i[o][2]=v)}else i[c]=y.Delete;else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}return Object.keys(i).length>0?i:null}function d(e,t){for(var r=Object.keys(t||{}),n=clone(e),a=0,i=r.length;a<i;++a){var o=r[a],s=t[o];if(s===y.Delete)delete n[o];else if(Array.isArray(s))switch(s[0]){case y.SpliceArray:n.splice(s[1],1+(s[2]-s[1]));break;case y.Copy:n[o]=clone(s[1]);break;case y.CopyDate:n[o]=new Date(s[1])}else n[o]=Util.patch(n[o],s)}return n}var f=/[&<>"'`]/g,p=new RegExp(f.source),h=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),g=/&(?:amp|lt|gt|quot|apos|#39|#x27|#96|#x60);/g,m=new RegExp(g.source),v=Object.freeze({"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"}),y=e({Delete:0,SpliceArray:1,Copy:2,CopyDate:3});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},isNumeric:{value:t},isBoolean:{value:r},slugify:{value:n},escape:{value:a},unescape:{value:i},fromCssTime:{value:o},toCssTime:{value:s},fromCssProperty:{value:u},parseUrl:{value:l},DiffOp:{value:y},diff:{value:c},patch:{value:d},random:{value:Math.random},entityEncode:{value:a},entityDecode:{value:i},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(v,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');if(!e.hasOwnProperty("format"))throw new Error('source object missing required "format" property');var l=a(e.format);null!==l&&(t={src:e.src,type:l});break;default:throw new Error("invalid source value (type: "+("undefined"==typeof e?"undefined":_typeof(e))+")")}if(null!==t){var c=document.createElement("source");c.src=t.src,c.type=t.type,o.appendChild(c),i.push(t)}}),!o.hasChildNodes())if(Browser.isIE)o.src=undefined;else{var s=document.createElement("source");s.src=undefined,s.type=undefined,o.appendChild(s)}this._finalize(o,i,clone(t))}},{key:"_copy",value:function(t){if(!(t instanceof e))throw new Error("original parameter must be an instance of AudioWrapper");this._finalize(t.audio.cloneNode(!0),clone(t.sources),clone(t.originalSources))}},{key:"_finalize",value:function(e,t,r){var n=this;Object.defineProperties(this,{audio:{configurable:!0,value:e},sources:{configurable:!0,value:Object.freeze(t)},originalSources:{configurable:!0,value:Object.freeze(r)},_error:{writable:!0,value:!1},_faderId:{writable:!0,value:null},_mute:{writable:!0,value:!1},_rate:{writable:!0,value:1},_volume:{writable:!0,value:1}}),jQuery(this.audio).on("loadstart",function(){return n._error=!1}).on("error",function(){return n._error=!0}).find("source:last-of-type").on("error",function(){return n._trigger("error")}),SimpleAudio.subscribe(this,function(e){if(!n.audio)return void SimpleAudio.unsubscribe(n);switch(e){case"mute":n._updateAudioMute();break;case"rate":n._updateAudioRate();break;case"stop":n.stop();break;case"volume":n._updateAudioVolume()}}),this.load()}},{key:"_trigger",value:function(e){jQuery(this.audio).triggerHandler(e)}},{key:"clone",value:function(){return new e(this)}},{key:"destroy",value:function(){SimpleAudio.unsubscribe(this),this.fadeStop(),this.stop();
