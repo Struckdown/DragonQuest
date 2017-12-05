@@ -191,7 +191,9 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1844,6 +1846,9 @@ You gain no forces.
 [[Accept the Challenge|Ancient Dragon Fight]]
 [[No Way|Power Overwhelming]]
 
+&lt;&lt;set $playerHP to 120&gt;&gt;
+&lt;&lt;set $maxPlayerHP to 120&gt;&gt;
+
 &lt;&lt;set $dragonHP to 200&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Power Overwhelming" tags="Ancient ancient" position="3354,2548">In a duel Ancalagon could potentially defeat you, as he is an ancient dragon. However, you have at your disposal the largest army to have ever been assembled. As he approaches, you grin. Before he can notice you, your troops fire a thousand scorpian bolts at his wings. The sheer number of them overwhelm him, as some find their mark. Ancalagon plummets to the ground, sending hundreds of your troops flying through the air alongside chunks of rocks and dirt. You quickly swoop down and land on his throat. You feel his pulse quicken as your claws dig into his fleshy neck. He tries to utter some words, perhaps some sage words of wisdom,  or perhaps how you chose the easy route. It doesn&#x27;t matter anymore, as you wipe your claws clean of his blood, you stand among your army unchallenged. 
 
 [[Age of Dragons]]
@@ -2011,28 +2016,28 @@ What shall you do?
 [[Claws|Claw Dragon]] (Slashing)
 [[Breath attack|Breath Dragon]] 
 [[Tail attack|Tail Dragon]] (Bludgeoning)
-[[Evade|Evade Dragon]]</tw-passagedata><tw-passagedata pid="147" name="Bite Dragon" tags="" position="3958,1973">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+[[Evade|Evade Dragon]]</tw-passagedata><tw-passagedata pid="147" name="Bite Dragon" tags="" position="3959.6666666666665,1973">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
 
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+The dragon pounces onto you, using fangs to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
+The dragon attacks with firey breath.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;else&gt;&gt;\
+The dragon attacks with its claws. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 3&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonStance == 3&gt;&gt;\
+You leap onto the dragon, latching onto it with your fangs. Shortly afterwards, you are thrown off, doing terrible terrible damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
 
-You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
-&lt;&lt;else&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
-
-You attempt to bite the dragon.
+&lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+You attempt to bite the dragon. Your attack is not very effective.
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2040,29 +2045,28 @@ You attempt to bite the dragon.
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Claw Dragon" tags="" position="3938,2145">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Claw Dragon" tags="" position="3938,2145">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
 
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+The dragon pounces onto you, using fangs to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
+The dragon attacks with firey breath.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;else&gt;&gt;\
+The dragon attacks with its claws. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 2&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonStance == 2&gt;&gt;\
+You claw at the dragon, doing terrible terrible damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
 
-You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
-
-You attempt to bite the dragon.
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+You attempt to claw the dragon. Your attack is not very effective.
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2070,28 +2074,28 @@ You attempt to bite the dragon.
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Breath Dragon" tags="" position="3915,2321.6666666666665">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Breath Dragon" tags="" position="3915,2321">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
 
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+The dragon pounces onto you, using fangs to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
+The dragon attacks with firey breath.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;else&gt;&gt;\
+The dragon attacks with its claws. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 4&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonStance == 3&gt;&gt;\
+You breath $breathAttack, doing terrible terrible damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
 
-You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
-&lt;&lt;else&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
-
-You attempt to bite the dragon.
+&lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+You attempt use your $breathAttack on it. Your attack is not very effective as it avoids most of it.
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2099,28 +2103,28 @@ You attempt to bite the dragon.
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Tail Dragon" tags="" position="3934.3333333333335,2487.6666666666665">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it!
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Tail Dragon" tags="" position="3934,2487">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+The dragon outpredicts you, and claws at you before you&#x27;re able to react! You are unable to hit it! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
 
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+The dragon pounces onto you, using fangs to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
+The dragon attacks with firey breath.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+
+&lt;&lt;else&gt;&gt;\
+The dragon attacks with its claws. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 4&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dragonStance == 3&gt;&gt;\
+You swing your tail at the dragon, latching onto it with your fangs. Shortly afterwards, you are thrown off, doing terrible terrible damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
 
-You leap onto the dragon, surprising it as it unable to properly to react to you closing in the distance. Latching onto it, your fangs dig deep into the flesh, drawing the red blood of the dragon. After a short effort, you are forced to let go and retreat to avoid being struck again immediately. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
-&lt;&lt;else&gt;&gt;
-The dragon attacks.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
-&lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
-&lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to harm you either!&lt;&lt;/if&gt;&gt;\
-
-You attempt to bite the dragon.
+&lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+You attempt to swing your tail at the dragon. Your attack is not very effective.
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2128,21 +2132,22 @@ You attempt to bite the dragon.
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The dragon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Evade Dragon" tags="" position="3907.6666666666665,2691">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-You and the dragon stare at each other for a moment, no one daring to make a move.
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Evade Dragon" tags="" position="3907,2691">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+You and the dragon stare at each other for a moment, no one daring to make a move.\
 
-&lt;&lt;elseif $dragonStance == 2&gt;&gt;
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
 The dragon attacks with a bite attack!  &lt;&lt;set $dragonDamage to Math.round(random(15,30)/4)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-Ouch. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
-&lt;&lt;elseif $dragonStance == 3&gt;&gt;
+Ouch. You take $dragonDamage damage.&lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;elseif $dragonStance == 3&gt;&gt;\
 The dragon breathes some flames at you, but you swiftly move out of the way!
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 The dragon claws at you. You avoid most of the slashes.
 &lt;&lt;set $dragonDamage to Math.round((random(30,50))/4)&gt;&gt;
 You take $dragonDamage damage! &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Ancient Dragon Wins" tags="" position="4393,1936">You are destroyed by the dragon.
 
