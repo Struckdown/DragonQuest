@@ -297,6 +297,17 @@ Disclaimer: None of the sound is made by us. Besides the DragonQuest logo, the r
 &lt;&lt;cacheaudio &quot;caveIn&quot; &quot;assets/CaveInSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;mechanismMoving&quot; &quot;assets/mechanismMovingSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;poisonGas&quot; &quot;assets/PoisonGasSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;biteSFX&quot; &quot;assets/DragonBiteSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;healSFX&quot; &quot;assets/HealSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;fireballSFX&quot; &quot;assets/FireballSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;winSFX&quot; &quot;assets/WinSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;magicMissSFX&quot; &quot;assets/MagicMissSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;clashOfBlades1&quot; &quot;assets/ClashOfBladesSFX1.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;clashOfBlades2&quot; &quot;assets/ClashOfBladesSFX2.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;ogreSFX&quot; &quot;assets/OgreSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;dragonSleepSFX&quot; &quot;assets/DragonSleepSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;clawSFX&quot; &quot;assets/DragonClawSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;tailWhipSFX&quot; &quot;assets/TailWhipSFX.mp3&quot;&gt;&gt;\
 
 &lt;&lt;set $started to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -547,7 +558,9 @@ The thick skinned two-headed ogre looks angry at you for invading its territory.
 
 &lt;&lt;audio &quot;bgm_cave&quot; loop play&gt;&gt;
 &lt;&lt;set $playerHP to 8&gt;&gt;
-&lt;&lt;set $ogreHP to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="Ancient ancient" position="2037,97">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
+&lt;&lt;set $ogreHP to 5&gt;&gt;
+
+&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="Ancient ancient" position="2037,97">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
 
@@ -725,7 +738,10 @@ You attempt to bite the ogre, but its large size makes it difficult to get a pro
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre ogre" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre ogre" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -737,7 +753,10 @@ You claw at the ogre, slashing into its thick hide. It is tougher than you expec
 &lt;&lt;if $ogreHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="Ogre ogre" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="Ogre ogre" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -751,7 +770,8 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="Cave cave" position="2490,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
+&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="Cave cave" position="2490,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
 
 You smile with relief, but then grow worried as the light within the cave shrinks, the rubble piling up onto the entrance. Looks like you&#x27;ll need to find another way out.
 &lt;&lt;if $prisonerHeld is true&gt;&gt;As well, the $princeprincess is trapped in here with you. Poor soul.&lt;&lt;/if&gt;&gt;
@@ -1605,7 +1625,7 @@ Choose your next target:
 
 [[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
 [[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
-[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="Dwarf dwarf" position="2411,2565">&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
+[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="Dwarf dwarf" position="2411,2566.6666666666665">&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
 Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(100000, 150000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1638,7 +1658,15 @@ You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1668,7 +1696,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2166,1997">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2166,1997">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
 Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
@@ -1702,7 +1738,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2350,1625">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2350,1625">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1711,7 +1755,15 @@ Your forces increase by $playerForcesIncrease!
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="2353,1755">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
+&lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;PoisonStatue&quot;/&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="2353,1755">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 3000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1734,7 +1786,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1766,7 +1826,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2473,1606">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2473,1606">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
 &lt;&lt;set $playerForcesIncrease to random(200, 300)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1790,7 +1858,15 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1822,7 +1898,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
 You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
 &lt;&lt;set $playerForcesIncrease to random(1000000, 1500000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1858,7 +1942,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="Dwarf dwarf" position="2237,2128">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="Dwarf dwarf" position="2237,2128">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1890,7 +1982,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2578,2521">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2578,2521">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
 Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1925,7 +2025,15 @@ You gain no forces.
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="2739,2823">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel.  
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;if $random is 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="2739,2823">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel.  
 
 [[Accept the Challenge|Ancient Dragon Fight]]
 [[No Way|Power Overwhelming]]
@@ -1942,7 +2050,7 @@ You gain no forces.
 Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
 
-&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="6045,2992">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="6050,2992">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
@@ -1954,13 +2062,16 @@ You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamag
 The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
 The wizard looks like he&#x27;s charging up some sort of attack!
+&lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;/
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment. You evade the majority of it!
 &lt;&lt;set $wizardDamage to Math.round((random(50,80) - $protection)/4)&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="2820,2035">Your host grows larger with every passing week. However, these little rats will not be enough, it is time to look for larger prey... 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="2820,2035">Your host grows larger with every passing week. However, these little rats will not be enough, it is time to look for larger prey... 
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
@@ -2349,7 +2460,7 @@ You lose $damageTaken points of tidiness!
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Date Preparation Failure" tags="" position="4841.666666666667,137.5">Your tidiness hit 0, oh no!
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Date Preparation Failure" tags="" position="4846.666666666667,107.5">Your tidiness hit 0, oh no!
 
 Your mate is not impressed and you are unable to do anything. You&#x27;re sad.
 
@@ -2444,14 +2555,17 @@ You acquire an animated shield. The thing levitates by itself and understands si
 &lt;&lt;set $gold to $gold - 1000&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Legendary Gift" tags="" position="5226.666666666667,769.1666666666667">&lt;&lt;set $gift to random(1, 3)&gt;&gt;\
 &lt;&lt;if $gift is 1&gt;&gt;\
-You got a potion of healing. Simple, but useful.
-
+You are able to secure a deal to get an item known as the Deck of Many Things. While a dangerous item, it&#x27;s mythic properties easily turn heads.
+\
 &lt;&lt;elseif $trapSet is 2&gt;&gt;\
-You got a scroll of levitation. A party trick really, but maybe it&#x27;ll impress $mate.
-
+With your wealth, you are able to trade for a Horn of Valhalla, an old artifact that has the power to summon a legion of spectral vikings to one&#x27;s aid.
+\
 &lt;&lt;else&gt;&gt;/
-You acquire a +1 longsword. This won&#x27;t be turning heads, but every bit counts.
-&lt;&lt;/if&gt;&gt;
+You are astonished as you are able to get your claws on the Mask of The Dragon Queen, a legendary item that long ago released Tiamat herself from the Nine Hells.
+\
+&lt;&lt;/if&gt;&gt;\
+
+Now that&#x27;s a treasure.
 
 [[Continue|Date Preparation]]
 
