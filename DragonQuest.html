@@ -197,6 +197,8 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -268,7 +270,9 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
-</script><tw-passagedata pid="1" name="Main Menu" tags="wtf main" position="164,124">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required) If you need a hint to find one... [[Hints|Hints]]
+
+
+</script><tw-passagedata pid="1" name="Main Menu" tags="wtf main" position="164,123">Welcome to DragonQuest. You will play a mighty dragon that explores their identity and determine what path you explore. There are four major game endings (The Wizard, The Empire, The Orcs and The Friend). See if you can find them all! (Multiple play throughs would be required) If you need a hint to find one... [[Hints|Hints]]
 
 Created by CD Projekt Blue.
 [[Credits]]
@@ -305,6 +309,7 @@ Disclaimer: None of the sound is made by us. Besides the DragonQuest logo, the r
 &lt;&lt;cacheaudio &quot;healSFX&quot; &quot;assets/HealSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;fireballSFX&quot; &quot;assets/FireballSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;winSFX&quot; &quot;assets/WinSFX.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;missSFX&quot; &quot;assets/MissSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;magicMissSFX&quot; &quot;assets/MagicMissSFX.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;clashOfBlades1&quot; &quot;assets/ClashOfBladesSFX1.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;clashOfBlades2&quot; &quot;assets/ClashOfBladesSFX2.mp3&quot;&gt;&gt;\
@@ -564,7 +569,7 @@ The thick skinned two-headed ogre looks angry at you for invading its territory.
 &lt;&lt;set $playerHP to 8&gt;&gt;
 &lt;&lt;set $ogreHP to 5&gt;&gt;
 
-&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="Ancient ancient" position="2037,97">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
+&lt;&lt;timed 1s&gt;&gt;&lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Found chained ancient dragon" tags="Ancient ancient" position="2037,97">The black scales of the behemoth are nightmare black and you can see dark blood staining the ground near it. The creature looks aggrevated. It looks towards you and speaks. You can feel the ground vibrate.
 
 &quot;Free me or I will end you sooner rather than later.&quot;
 
@@ -730,7 +735,7 @@ What shall you do?
 &lt;&lt;audio &quot;bgm_volcano&quot; pause&gt;&gt;
 &lt;&lt;audio &quot;bgm_swamplands&quot; pause&gt;&gt;
 &lt;&lt;audio &quot;bgm_faerieDragon&quot; pause&gt;&gt;
-&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="Ogre ogre" position="2302,650">The ogre swipes at you with its club!
+&lt;&lt;audio &quot;bgm_villageAttack&quot; pause&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Bite Ogre" tags="Ogre ogre" position="2303,650">The ogre swipes at you with its club!
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;&lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -745,7 +750,7 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre ogre" position="2483,619">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Claw Ogre" tags="Ogre ogre" position="2483,620">The ogre swipes at you with its club! &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -760,7 +765,7 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="Ogre ogre" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Breath Ogre" tags="Ogre ogre" position="2655,633">The ogre swipes at you with its club!  &lt;&lt;set $ogreDamage to random(2,3)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The club finds its mark, battering you and sending you flying into the wall. You take $ogreDamage damage. &lt;&lt;set $playerHP to $playerHP - $ogreDamage&gt;&gt;&lt;&lt;else&gt;&gt;The club misses you!&lt;&lt;/if&gt;&gt;\
@@ -775,7 +780,7 @@ The ogre looks weakened. [[Finish it|Ogre Defeat]]
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Desperate Last Stand]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;audio &quot;ogreSFX&quot; play&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="Cave cave" position="2490,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Ogre Defeat" tags="Cave cave" position="2490,343">The ogre is heavily injured and charges towards you. You switftly move out of the way and the ogre continues with its momentum. It collides with the support beam, snapping it clean in half. You hear some rumbling and move deeper into the cave as you see rubble and the like begin to collapse onto the ogre, burying it.
 
 You smile with relief, but then grow worried as the light within the cave shrinks, the rubble piling up onto the entrance. Looks like you&#x27;ll need to find another way out.
 &lt;&lt;if $prisonerHeld is true&gt;&gt;As well, the $princeprincess is trapped in here with you. Poor soul.&lt;&lt;/if&gt;&gt;
@@ -1062,7 +1067,7 @@ Attack:
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|War Flee (Solitary End)]]
 	
-&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="Hunt hunt" position="5845,790">You attack the warlocks. Plunging headfirst into their ranks, you tear apart the various acolytes. Fel flames bask your body and you feel the sharp pangs of pain. You spot the warlock leading the others against you, and bathe her in your searing fire. You watch as her ashes are swept away in the wind. 
+&lt;img src=&quot;assets/image/OrcArmy.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArmy&quot;/&gt;</tw-passagedata><tw-passagedata pid="77" name="Left Army" tags="Hunt hunt" position="5845,791.6666666666666">You attack the warlocks. Plunging headfirst into their ranks, you tear apart the various acolytes. Fel flames bask your body and you feel the sharp pangs of pain. You spot the warlock leading the others against you, and bathe her in your searing fire. You watch as her ashes are swept away in the wind. 
 
 The remaining warlocks begin to flee, clearly the one you had just dispatched was of some importance.
 
@@ -1073,7 +1078,10 @@ The remaining warlocks begin to flee, clearly the one you had just dispatched wa
 You take $warDamage points of damage.
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="Hunt hunt" position="5825,943">You attack the charging berserkers and trolls. They swing at you with all their might, and while they do provide you with an ample amount of scratches, not even the strongest can pierce you skin with any authority.
+&lt;img src=&quot;assets/image/OrcWarlock.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcWarlock&quot;/&gt;
+
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="Central Army" tags="Hunt hunt" position="5825,943">You attack the charging berserkers and trolls. They swing at you with all their might, and while they do provide you with an ample amount of scratches, not even the strongest can pierce you skin with any authority.
 
  &lt;&lt;if $hasWings is true&gt;&gt;You fly above them&lt;&lt;else&gt;&gt;You move towards them&lt;&lt;/if&gt;&gt;, breathing $breathAttack at them. Bodies hit the ground, trolls falling over, some almost unrecognizable. Your terrifying presence is enough to cause the rest of the group to scatter, fleeing for their lives. These foolish orcs are no longer of concern.
 
@@ -1085,7 +1093,10 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="Hunt hunt" position="5829,1079">You attack the orcs clad in crimson armor, among them stand a multitude of archers. An orc chieftain barks orders for the archers to shoot at you. You watch as their arrows blot out the faint winter sun, but your arrows deflect most of them. Any that do manage to catch provide you with short yet sharp pangs of pain. The crimson armored orcs charge but are met with the brunt of your tail swipe. The commander collapses to his knees, but can&#x27;t utter any cries of mercy as you launch him into the air with the swing of your tail. Any orcs left watch the lifeless body of their commander splatter against a rock, and proceed to run. 
+&lt;img src=&quot;assets/image/WolfRiders.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;WolfRiders&quot;/&gt;
+
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Right Army" tags="Hunt hunt" position="5829,1079">You attack the orcs clad in crimson armor, among them stand a multitude of archers. An orc chieftain barks orders for the archers to shoot at you. You watch as their arrows blot out the faint winter sun, but your arrows deflect most of them. Any that do manage to catch provide you with short yet sharp pangs of pain. The crimson armored orcs charge but are met with the brunt of your tail swipe. The commander collapses to his knees, but can&#x27;t utter any cries of mercy as you launch him into the air with the swing of your tail. Any orcs left watch the lifeless body of their commander splatter against a rock, and proceed to run. 
 
 
 &lt;&lt;if not visited (&quot;Left Army&quot;)&gt;&gt;Some warlocks cast magic spells at you, and you are hit hard by their fel magic&lt;&lt;/if&gt;&gt;
@@ -1094,7 +1105,10 @@ You take $warDamage points of damage.
 &lt;&lt;set $playerHP = $playerHP - $warDamage&gt;&gt;
 &lt;&lt;if $playerHP &gt; 0&gt;&gt;[[Back to attacking|War Attack]]&lt;&lt;else&gt;&gt;[[You don&#x27;t feel so good...|War Defeat]]&lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="Defeat defeat" position="5530,712">The battle was too much. You had let down $princeprincess, they would watch as their kingdom collapsed and burned at the hands of Brokki&#x27;s horde. All your boasts and pride had amounted to nothing. Your name would forever be remembered in tandem with the defeat you suffered at the hands of Brokki. You return to your home, and lie their listening quietly to the weeping $princeprincess.
+&lt;img src=&quot;assets/image/OrcArchers.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcArchers&quot;/&gt;
+
+&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="War Flee (Solitary End)" tags="Defeat defeat" position="5530,712">The battle was too much. You had let down $princeprincess, they would watch as their kingdom collapsed and burned at the hands of Brokki&#x27;s horde. All your boasts and pride had amounted to nothing. Your name would forever be remembered in tandem with the defeat you suffered at the hands of Brokki. You return to your home, and lie their listening quietly to the weeping $princeprincess.
 
 Game end:
 $playerName lived out the rest of $hisher days with the $princeprincess until the $princeprincess died of old age. The kingdom had been wiped out by the orcs, who had now moved onto other conquests. The years went by and eventually a new force grew and defeated the orcs. In turn, that new power would crumble. Nothing ever changed. $playerName would attack whenever the boredom crippled $hisher will to live. $playerName live out the rest of $hisher days knowing that no one would ever speak of $playerName in high regard ever again.  </tw-passagedata><tw-passagedata pid="81" name="Storm Giant Fight" tags="Run run" position="6048,925">Brokki, the Bane of Dragons stands over thirty feet high. The orcs around his feet look like ants. His body rippled with muscle, and you see bolts of electricity crackle all over him. In his hand he holds a bolt of lightning, which had no doubt brought the lives of many dragons to a crashing halt.
@@ -1133,7 +1147,9 @@ You attempt to bite the Storm Giant. You latch onto one of its arms and can feel
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks weakened. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="Hunt hunt" position="6360,942">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Claw Storm Giant" tags="Hunt hunt" position="6360,940.3333333333334">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1149,7 +1165,9 @@ You claw at the Storm Giant, slashing into a little of its thick skin as you are
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant looks bloodied and is barely able to stand. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Breath Storm Giant" tags="Hunt hunt" position="6359,758">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Breath Storm Giant" tags="Hunt hunt" position="6359,758">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1163,7 +1181,7 @@ The Storm Giant looks bloodied and its actions are slowing. [[Finish it|Storm Gi
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="Defeat defeat" position="6086,534">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="Defeat defeat" position="6086,534">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
 
 
 GAME OVER.
@@ -1180,7 +1198,9 @@ Time to let the kingdom know that it has been [[saved|Kingdom Saved Ending]] by 
 -------------------------------------------------------------
 Game complete, you are victorious! You release your prisoner to the kingdom. With the mighty orc armies defeated and scattered, and the kingdom granting you many treasures, you live out the rest of your life protecting this kingdom as they continue to serve you. In their tongue you were &#x27;Fahdon&#x27;. Friend.
 
-$playerName would forever be remembered in the eyes of man as a legend.</tw-passagedata><tw-passagedata pid="89" name="Tail Storm Giant" tags="Hunt hunt" position="6298,1338">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
+$playerName would forever be remembered in the eyes of man as a legend.
+
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Tail Storm Giant" tags="Hunt hunt" position="6298,1338">The Storm Giant strikes at you with its bolt of lightning!  &lt;&lt;set $stormGiantDamage to random(15,30)&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 The bolt finds its mark, shocking you and sending you flying several feet into the air before you roll into a group of orcs, crushing them. You take $stormGiantDamage damage. &lt;&lt;set $playerHP to $playerHP - $stormGiantDamage&gt;&gt;&lt;&lt;else&gt;&gt;The bolt of lightning is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
@@ -1196,7 +1216,9 @@ You swing your tail at the Storm Giant, but its large size makes it difficult to
 &lt;&lt;if $stormGiantHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The Storm Giant falls onto its knees. Perhaps that was the blow you needed. [[Finish it|Storm Giant Defeat]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="Hunt hunt" position="5406,943">The human battlements have already been severely damaged. Humans and orcs alike cower as you fly by. The clamor and roar of battle drown out all your inhibitions. 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Storm Giant Victory]]&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;tailWhipSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Begin War Attack" tags="Hunt hunt" position="5406,943">The human battlements have already been severely damaged. Humans and orcs alike cower as you fly by. The clamor and roar of battle drown out all your inhibitions. 
 
 Let the [[fighting|War Attack]] begin!
 
@@ -1236,10 +1258,7 @@ A wizard...wizards are formidable opponents, perhaps this will provide a nice ch
 
 &lt;&lt;audio &quot;bgm_wizardPreparation&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Tell Me More" tags="Wizard wizard" position="4719,1808">The $princeprincess: &quot;The wizard&#x27;s name is Stratavarious Kane. His origin is a mystery, even to the king and queen. He has been a master of the Academy for over two generations of kings and queens. I once met him playing Dragonchess. Have you ever played Dragonchess? The game requires you to think five steps ahead of your opponent, and he is a champion. Do not take him to be a kindly man, his old age has made him haggard and cruel. He forces his students to play Dragonchess, just to see the look of dissapointment when they lose. Do not fight him, for him you are just another opponent to dissapoint.&quot;
 
-
 $playerName: &quot;Hah! Five turns ahead you say? He will fall into the same trap every other human I have encountered. You all have the same expectations when you see a dragon. I will prepare for him in such a manner that he will not be able to predict my next thirty moves!&quot;
-
-
 
 [[Release Prisoner]]
 [[I fear no wizard|I Fear No Wizard]]
@@ -1372,15 +1391,24 @@ You recover $recoveredHP points of health.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="Victory victory" position="5498,1850">You descend down onto a small village. Already, you can see various little figures running around. You swiftly and mercilessly assert your dominance. You enslave the &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt; without any real resistance.
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
+
+&lt;&lt;audio &quot;dragonSleepSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Enslave Village" tags="Victory victory" position="5498,1850">You descend down onto a small village. Already, you can see various little figures running around. You swiftly and mercilessly assert your dominance. You enslave the &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt; without any real resistance.
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
+&lt;&lt;set $damageTaken to random(5, 10)&gt;&gt;
+You take $damage points of damage!
 
+&lt;&lt;if $playerHP &gt; 0&gt;&gt;\
 [[Continue|Preparation]]
+&lt;&lt;else&gt;&gt;\
+[[Your injuries are too severe...|Preparation Death]]
+&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="Home home" position="5697,2083">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
+&lt;&lt;set $playerHP to $playerHP - $damageTaken&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Simple Trap" tags="Home home" position="5697,2083">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
 &lt;&lt;if $trapSet is 1&gt;&gt;\
 You set up a boulder trap! The idea is simple. Big rock falls, everyone dies.
 
@@ -1472,75 +1500,75 @@ What shall you do?
 &lt;&lt;set $wizardMode to 4&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;set $wizardMode to random(1, 3)&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="Wizard wizard" position="5992,2397">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Bite Wizard" tags="Wizard wizard" position="5966,2397">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
 The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
-You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
+You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;\
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment and to you!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt; &lt;&lt;audio &quot;fireballSFX&quot; play&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-You bite the wizard. Your teeth easily sink into him before he teleports a short distance away.
+You bite the wizard. Your teeth easily sink into him before he teleports a short distance away. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $wizardHP to $wizardHP - 20&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="Wizard wizard" position="6076,2446">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Claw Wizard" tags="Wizard wizard" position="6041,2541">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;\
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment and to you!
 &lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
-You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
+You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt; &lt;&lt;audio &quot;fireballSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-You claw at the wizard, but his cloak seems to be made of a special cloth. You claws leave scratches on his cloak as though you had scratched stone, but the wizard seems to have been rather unphased.
+You claw at the wizard, but his cloak seems to be made of a special cloth. You claws leave scratches on his cloak as though you had scratched stone, but the wizard seems to have been rather unphased. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $wizardHP to $wizardHP - 10&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="Wizard wizard" position="6070,2674">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Breath Wizard" tags="Wizard wizard" position="6070,2674">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;\
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;\
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment and to you!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt; &lt;&lt;audio &quot;fireballSFX&quot; play&gt;&gt;
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-You breath $breathAttack at the wizard. A shimmering shield appears in front of him, absorbing a large amount of your attack.  
+You breath $breathAttack at the wizard. A shimmering shield appears in front of him, absorbing a large amount of your attack. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $wizardHP to $wizardHP - 5&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 
@@ -1550,25 +1578,25 @@ You breath $breathAttack at the wizard. A shimmering shield appears in front of 
 &lt;&lt;if $wizardHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="Wizard wizard" position="6062,2817">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Tail Wizard" tags="Wizard wizard" position="6062,2818.6666666666665">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;\
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;\
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment and to you!
-&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
+&lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt; &lt;&lt;audio &quot;fireballSFX&quot; play&gt;.
 You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-You swing your masssive tail at him, catching him off guard. He manages to cast a spell absorbing some of the impact, but still you can see after he gets up, he is no longer smirking, but rather a hint of fear has now crept into his green eyes.
+You swing your masssive tail at him, catching him off guard. He manages to cast a spell absorbing some of the impact, but still you can see after he gets up, he is no longer smirking, but rather a hint of fear has now crept into his green eyes. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;tailWhipSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $wizardHP to $wizardHP - 25&gt;&gt;
 &lt;&lt;if $wizardHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;\
@@ -1579,23 +1607,23 @@ The wizard looks weakened. [[Finish him|Wizard Loses]]
 &lt;&lt;set $wizardMode to 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt;
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to random(15,30) - $protection&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;
 The wizard looks like he&#x27;s charging up some sort of attack!
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a charged spell!
 &lt;&lt;set $wizardDamage to random(50,80) - $protection&gt;&gt;
-You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
+You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt; &lt;&lt;audio &quot;fireballSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 You drink a healing potion.
 You recover 30 hitpoints!
-&lt;&lt;set $playerHP to $playerHP + 30&gt;&gt;
+&lt;&lt;set $playerHP to $playerHP + 30&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;img src=&quot;assets/image/HealingPotion.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;Healing Potion&quot;/&gt;
 
@@ -1619,7 +1647,9 @@ With that final word, you lift your tail up and bring it down with all the force
 
 As the first morning light pierced the dark entrance of your cave, you realized that adventure would not always come to your doorstep. If you wanted to go down as the greatest dragon that ever lived, you would have to seek out adventure. Taking one last look at your home, you take off, flying towards the rising sun.
 
-Game Complete! Conside checking out the other endings!</tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="Wizard wizard" position="5379,2508">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 6*$trapsSet&gt;&gt;\
+Game Complete! Conside checking out the other endings
+
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="Wizard wizard" position="5379,2508">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 6*$trapsSet&gt;&gt;\
 You are pleased to hear reports from your kobold scouts that the traps do slow down the wizard. 
 
 The wizard gets hurt by the traps! He takes $damage points of damage!
@@ -1631,7 +1661,7 @@ Too bad you don&#x27;t have any traps set up. He easily navigates to you. Severa
 &lt;&lt;/if&gt;&gt;
 [[Wizard Fight]]
 
-&lt;&lt;set $wizardSeen to false&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Enslaving Tier 1" tags="" position="2608,1719">Enslaving other races would expand your power. This would be an open invitation for other dragons to come challenge you. If they don&#x27;t come to you, then you would come to them. Either way, your competition will be eliminated. 
+&lt;&lt;set $wizardSeen to false&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Enslaving Tier 1" tags="" position="2609,1719">Enslaving other races would expand your power. This would be an open invitation for other dragons to come challenge you. If they don&#x27;t come to you, then you would come to them. Either way, your competition will be eliminated. A strength of at least 2.5 million would do.
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
@@ -1674,13 +1704,17 @@ You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;if playerForces &gt; 75000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1712,13 +1746,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2166,1997">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
+&lt;&lt;if playerForces &gt; 15000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2167,1995">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
 Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
@@ -1754,13 +1792,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2350,1625">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
+&lt;&lt;if playerForces &gt; 2500&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2348,1625">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1771,13 +1813,7 @@ Your forces increase by $playerForcesIncrease!
 
 &lt;img src=&quot;assets/image/kobolds.gif&quot; width =&quot;990&quot; height =&quot;712&quot; alt=&quot;PoisonStatue&quot;/&gt;
 
-&lt;&lt;set $random to random(1,2)&gt;&gt;
-&lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="2353,1755">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Goblin and Bugbear Strongholds" tags="" position="2353,1755">&lt;&lt;if $playerForces &gt; 1000&gt;&gt;Your forces overrun the goblin and bugbear defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly pledge their allegiance to your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 3000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1802,13 +1838,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
+&lt;&lt;if playerForces &gt; 750&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1842,13 +1882,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2473,1606">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
+&lt;&lt;if playerForces &gt; 2000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2474,1606">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
 &lt;&lt;set $playerForcesIncrease to random(200, 300)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1874,13 +1918,17 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
+&lt;&lt;if playerForces &gt; 30&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1907,20 +1955,24 @@ You attack the fortifications but are warded off immediately by a hail of arrows
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/HumanCity.jpg&quot; width =&quot;500&quot; height =&quot;350&quot; alt=&quot;Human City&quot;/&gt;
+&lt;img src=&quot;assets/image/HumanCity.jfif&quot; width =&quot;500&quot; height =&quot;350&quot; alt=&quot;Human City&quot;/&gt;
 
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
+&lt;&lt;if playerForces &gt; 40000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
 You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
 &lt;&lt;set $playerForcesIncrease to random(1000000, 1500000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1951,20 +2003,24 @@ You gain no forces.
 
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/LizardFolkEmpire.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;Lizardfolk&quot;/&gt;
+&lt;img src=&quot;assets/image/LizardfolkEmpire.jfif&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;Lizardfolk&quot;/&gt;
 
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="Dwarf dwarf" position="2237,2128">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
+&lt;&lt;if playerForces &gt; 800000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="Dwarf dwarf" position="2237,2128">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1998,13 +2054,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2578,2521">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+&lt;&lt;if playerForces &gt; 7500&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2579,2519">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
 Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -2034,20 +2094,24 @@ You attack the fortifications but are warded off immediately by a dragons. Not a
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/DragonsInMountains.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;DragonsInMountains&quot;/&gt;
+&lt;img src=&quot;assets/image/DragonsInMountains.jpg&quot; width =&quot;640&quot; height =&quot;330&quot; alt=&quot;DragonsInMountains&quot;/&gt;
 
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
 &lt;&lt;set $random to random(1,2)&gt;&gt;
 &lt;&lt;if $random is 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX1&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;clashOfBladesSFX2&quot; play&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="2739,2823">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel.  
+&lt;&lt;if playerForces &gt; 200000&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="2739,2823">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel.  
 
 [[Accept the Challenge|Ancient Dragon Fight]]
 [[No Way|Power Overwhelming]]
@@ -2059,33 +2123,32 @@ You gain no forces.
 
 [[Age of Dragons]]
 &lt;&lt;set $playerName to $playerName + &quot;, The Ruthless&quot;&gt;&gt;
-(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Age of Dragons" tags="Victory victory" position="2629,3242">Game Complete!
+(Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Age of Dragons" tags="Victory victory" position="2630,3242">Game Complete!
 
 Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
 
-&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1390&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="6050,2992">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
+&lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1290&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;
+
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Evade Wizard" tags="Wizard wizard" position="6050,2992">&lt;&lt;if $wizardHP &gt;= 120 and $wizardMode == 2&gt;&gt;\
 &lt;&lt;set $wizardMode to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $wizardMode == 1&gt;&gt;\
-The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to Math.round((random(15,30) - $protection)/4)&gt;&gt;
+The wizard attacks with &lt;&lt;print either(&quot;a fireball spell&quot;, &quot;a ray of frost&quot;, &quot;a series of magic missiles&quot;)&gt;&gt;!  &lt;&lt;set $wizardDamage to Math.round((random(15,30) - $protection)/4)&gt;&gt; &lt;&lt;audio &quot;magicMissSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 You take $wizardDamage damage. &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;else&gt;&gt;The magic spell is unable to make contact with you!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $wizardMode == 2&gt;&gt;\
-The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt;
+The wizard casts a spell and his wounds begin to mend quickly! He recovers some health! &lt;&lt;if $wizardHP &lt;= 100&gt;&gt;&lt;&lt;set $wizardHP to $wizardHP + random(10, 20)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $wizardHP to 120&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;
 &lt;&lt;elseif $wizardMode == 3&gt;&gt;\
-The wizard looks like he&#x27;s charging up some sort of attack!
-&lt;&lt;audio &quot;healSFX&quot; play&gt;&gt;/
+The wizard looks like he&#x27;s charging up some sort of attack!/
 &lt;&lt;else&gt;&gt;
 The wizard unleashes a powerful charged spell! Fireworks seem to explode from his fingertips, expanding into streaming meteors that crash all around the room, doing terrible damage to the environment. You evade the majority of it!
 &lt;&lt;set $wizardDamage to Math.round((random(50,80) - $protection)/4)&gt;&gt;
-You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;
+You take $wizardDamage damage! &lt;&lt;set $playerHP to $playerHP - $wizardDamage&gt;&gt;&lt;&lt;audio &quot;fireballSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="2820,2035">Your host grows larger with every passing week. However, these little rats will not be enough, it is time to look for larger prey... 
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Wizard Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Wizard Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Enslaving Tier 2" tags="" position="2820,2035">Your host grows larger with every passing week. However, these little rats will not be enough, it is time to look for larger prey... 
 
 Forces: $playerForces minions, servants, soldiers of $playerName
 
@@ -2236,29 +2299,30 @@ What shall you do?
 [[Claws|Claw Dragon]] (Slashing)
 [[Breath attack|Breath Dragon]] 
 [[Tail attack|Tail Dragon]] (Bludgeoning)
-[[Evade|Evade Dragon]]</tw-passagedata><tw-passagedata pid="144" name="Bite Dragon" tags="" position="3243,2445">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+[[Evade|Evade Dragon]]</tw-passagedata><tw-passagedata pid="144" name="Bite Dragon" tags="" position="3244.6666666666665,2445">&lt;&lt;if $dragonStance == 1&gt;&gt;\
 Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
-
+&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
 Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
-
+&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;\
 &lt;&lt;elseif $dragonStance == 3&gt;&gt;\
-Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\ &lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;\ 
 
 &lt;&lt;else&gt;&gt;\
-Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $dragonStance == 3&gt;&gt;\
-You leap onto Ancalagon, latching onto him with your fangs. Shortly afterwards, you are thrown off, doing massive damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+You leap onto Ancalagon, latching onto him with your fangs. Shortly afterwards, you are thrown off, doing massive damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 You attempt to bite Ancalagon. Your attack is not very effective.
-&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
@@ -2266,28 +2330,28 @@ You attempt to bite Ancalagon. Your attack is not very effective.
 Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Claw Dragon" tags="" position="3222,2617">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
-Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\ &lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;
 
 &lt;&lt;elseif $dragonStance == 3&gt;&gt;\
-Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;\
 
 &lt;&lt;else&gt;&gt;\
-Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt; &lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $dragonStance == 2&gt;&gt;\
-You dash towards Ancalagon, catching him with your razor like claws, doing massive damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+You dash towards Ancalagon, catching him with your razor like claws, doing massive damage. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 2&gt;&gt;\
+&lt;&lt;elseif $dragonStance == 2&gt;&gt;&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;\ 
 &lt;&lt;else&gt;&gt;\
 You attempt to claw Ancalagon. Your attack is not very effective.
-&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
+&lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
 [[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;\
@@ -2295,27 +2359,27 @@ You attempt to claw Ancalagon. Your attack is not very effective.
 Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Breath Dragon" tags="" position="3199,2793">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
-Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 3&gt;&gt;\
-Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;\
 
 &lt;&lt;else&gt;&gt;\
-Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt; &lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $dragonStance == 3&gt;&gt;\
-You breathe $breathAttack, destroying the ground around Ancalagon. The sheer magnitude of your $breathAttack breath destroys some of his scales. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+You breathe $breathAttack, destroying the ground around Ancalagon. The sheer magnitude of your $breathAttack breath destroys some of his scales. &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;breathSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;elseif $dragonStance == 1&gt;&gt;&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
-You attempt use your $breathAttack on Ancalagon. Your attack is not very effective as it avoids most of it.
+You attempt use your $breathAttack on Ancalagon. Your attack is not very effective as it avoids most of it. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2323,28 +2387,28 @@ You attempt use your $breathAttack on Ancalagon. Your attack is not very effecti
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Tail Dragon" tags="" position="3218,2959">&lt;&lt;if $dragonStance == 1&gt;&gt;\
-Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Tail Dragon" tags="" position="3216.3333333333335,2959">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
-Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon pounces onto you, sinking his fangs past your scaly armor to bite into you. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 3&gt;&gt;\
-Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;\
+Ancalagon spews forth a torrent of fire.  &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;\
 
 &lt;&lt;else&gt;&gt;\
-Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;
+Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes behind. &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 Ouch. You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\&lt;&lt;else&gt;&gt;The dragon is unable to harm you!\&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $dragonStance == 3&gt;&gt;\
-You swing your tail at Ancalagon. The sheer force sends a shockwave across the plain, sending some of your troops sprawling on the ground.  &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt;
+You swing your tail at Ancalagon. The sheer force sends a shockwave across the plain, sending some of your troops sprawling on the ground.  &lt;&lt;set $dragonHP to $dragonHP - 25&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;tailWhipSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;elseif $dragonStance == 1&gt;&gt;\
+&lt;&lt;elseif $dragonStance == 1&gt;&gt;&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;missSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
-You attempt to swing your tail at Ancalagon. Your attack is not very effective.
+You attempt to swing your tail at Ancalagon. Your attack is not very effective. &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;tailWhipSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $dragonHP to $dragonHP - 15&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $dragonHP &gt; 0 &amp;&amp; $playerHP &gt; 0 &gt;&gt;\
@@ -2356,17 +2420,17 @@ Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 You and Ancalagon stare at each other for a moment, no one daring to make a move.\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
-Ancalagon lunges at you, baring his fangs!  &lt;&lt;set $dragonDamage to Math.round(random(15,30)/4)&gt;&gt;
+Ancalagon lunges at you, baring his fangs!  &lt;&lt;set $dragonDamage to Math.round(random(15,30)/4)&gt;&gt; &lt;&lt;audio &quot;biteSFX&quot; play&gt;&gt;
 &lt;&lt;set $hit to random(1, 20)+6&gt;&gt;\
 &lt;&lt;if $hit &gt;= 14&gt;&gt;
 Ouch. You take $dragonDamage damage.&lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;&lt;&lt;else&gt;&gt;The dragon is unable to make contact with you!&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 3&gt;&gt;\
-Ancalagon spews forth flames so hot that the grass downwind is set ablaze, but you swiftly move out of the way!
+Ancalagon spews forth flames so hot that the grass downwind is set ablaze, but you swiftly move out of the way! &lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 Ancalagon swipes at you with his mighty claws. You avoid most of the slashes.
 &lt;&lt;set $dragonDamage to Math.round((random(30,50))/4)&gt;&gt;
-You take $dragonDamage damage! &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;
+You take $dragonDamage damage! &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt; &lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[Ancient Dragon Wins]]&lt;&lt;else&gt;&gt;[[Attack Again|Ancient Dragon Fight]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Ancient Dragon Wins" tags="" position="3677,2408">Ancalagon&#x27;s might was unmatched for a millenia, and so it remained. His breath melted the scales off your body, and his each blow sent chunks of viscera and blood flying through the air. His mighty maw is the last thing you see, before he rends your head from your body. 
@@ -2376,7 +2440,9 @@ Game Over
 
 Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
-Game Complete!</tw-passagedata><tw-passagedata pid="151" name="Foxglove&#x27;s Suggestion" tags="" position="3850,598">You and Foxglove sit in the cave, chewing on some mutton. The humid air lulling you into a dazed state.
+Game Complete!
+
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Foxglove&#x27;s Suggestion" tags="" position="3850,598">You and Foxglove sit in the cave, chewing on some mutton. The humid air lulling you into a dazed state.
 
 Foxglove: &quot;You know $playerName, you should really look for a dragon to spend the rest of your life with.&quot;
 
@@ -2391,7 +2457,7 @@ $playerName: &quot;Hmmm, maybe your right...&quot;
 
 $playerName: &quot;I don&#x27;t need a mate! My greatness needs no hindrance. A mate would be an anchor, and a weakness.&quot;
 
-Foxglove: &quot;Well if your&#x27;re so great, why don&#x27;t you take on that wizard I have been hearing stories about? They say he is in the area, and that he has never been beaten by any creature.&quot;
+Foxglove: &quot;Well if you&#x27;re so great, why don&#x27;t you take on that wizard I have been hearing stories about? They say he is in the area, and that he has never been beaten by any creature.&quot;
 
 $playerName: &quot;Hah, watch as I immortalize the name $playerName in history. All I need to beat him is a bit of preparation.&quot;
 
@@ -2412,63 +2478,63 @@ Talk to:
 [[Purple Scales]]
 
 Or if you&#x27;ve decided, select a mate:
-[[Selecting Mate]]</tw-passagedata><tw-passagedata pid="154" name="Silver Scales" tags="" position="4248,290">You approach the dragon with gleaming silver scales. (He/She) glances over at you.
+[[Selecting Mate]]</tw-passagedata><tw-passagedata pid="154" name="Silver Scales" tags="" position="4249.666666666667,290">You approach the dragon with gleaming silver scales. She glances over at you.
 
 $playerName: &quot;Hello, I am $playerName! I have come a long way to see the lake, and let me tell you it isn&#x27;t the most beautiful thing I see right now.&quot;
 
-Fradret: &quot;Well aren&#x27;t you a charmer. You have quite the wingspan. Your parents must have been enormous!&quot;
+Fradret: &quot;Well aren&#x27;t you a charmer. I am knkown as Fradret You have quite the wingspan. Your parents must have been enormous!&quot;
 
 $playerName: &quot;My parents are quite large and fearsome, and let me tell you, I am no different!&quot;
 
 Fradret: &quot;I hope not, with those formidable claws and teeth, you make for quite the imposing figure!&quot;
 
-You continue talking to Fradret, you notice that (he/she) is quite taken with you. You lose track of time conversing with (him/her), and before you know it the sun is already setting.
+You continue talking to Fradret, you notice that she is quite taken with you. You lose track of time conversing with her, and before you know it the sun is already setting.
 
-[[Search For Mate]]</tw-passagedata><tw-passagedata pid="155" name="Purple Scales" tags="" position="4320,675">You approach the dragon with gleaming silver scales. (He/She) glances over at you.
+[[Search For Mate]]</tw-passagedata><tw-passagedata pid="155" name="Purple Scales" tags="" position="4321.666666666667,675">You approach the dragon with the dark purple scales. She glances over at you.
 
 $playerName: &quot;Hello, I am $playerName! Whoa! Was that an earthquake or did you just rock my world?&quot;
 
-Frayloi: &quot;Hahahahaha! That was hiliarious, you should really go the court of some pathetic human king and work as his jester! &quot;
+Frayloi: &quot;Hahahahaha! That was hiliarious, you should really go the court of some pathetic human king and work as his jester! By the way, I&#x27;m Frayloi.&quot;
 
 $playerName: &quot;Wow, I realize that was bad, but you don&#x27;t have to be so rude!&quot;
 
 Frayloi: &quot;Hah! Did my words prick you? One would think you have a tougher personality behind those massive claws and teeth.&quot;
 
-You continue talking to Frayloi, you notice that (he/she) is quite candid. You have trouble talking to (him/her) without being put in your place. While (his/her) rough attitude is off putting, you also find it to be refreshing. It&#x27;s hard to find someone who can be so forward. Perhaps getting to know (him/her) over a more intimate setting would warm (him/her) up to you.
+You continue talking to Frayloi, you notice that she is quite candid. You have trouble talking to her without being put in your place. While her rough attitude is off putting, you also find it to be refreshing. It&#x27;s hard to find someone who can be so forward. Perhaps getting to know her over a more intimate setting would warm her up to you.
 
-[[Search For Mate]] </tw-passagedata><tw-passagedata pid="156" name="Red Scales" tags="" position="4316,431">You approach the dragon with gleaming silver scales. (He/She) glances over at you.
+[[Search For Mate]] </tw-passagedata><tw-passagedata pid="156" name="Red Scales" tags="" position="4316,431">You approach the dragon with gleaming red scales. He glances over at you.
 
 $playerName: &quot;Hello, I am $playerName! And I have to ask, are you a magician? Because whenever I look at you everyone else disappears!&quot;
 
-Xeni: &quot;Well aren&#x27;t you clever. I suppose that line has worked on a dozen others before hasn&#x27;t it? Why else would you use such a tired line on me?&quot;
+Xeni: &quot;Well aren&#x27;t you clever. They call me Xeni. I suppose that line has worked on a dozen others before hasn&#x27;t it? Why else would you use such a tired line on me?&quot;
 
-$playerName: &quot;I apologize for being so forward. I get nervous when meeting new people.&quot;
+$playerName: &quot;I apologize for being so forward. I get nervous when meeting new dragons.&quot;
 
 Xeni: &quot;That&#x27;s odd, with those formidable claws and teeth you make for quite the imposing figure. What would make you nervous?&quot;
 
-You continue talking to Xeni, you notice that (he/she) is quite guarded and you have a hard time keeping a conversation going. Each passing minute seems to be an eternity with (him/her), as awkward pauses become all to frequent. Perhaps if you could get to know (him/her) in a more intimate setting.
+You continue talking to Xeni, you notice that he is quite guarded and you have a hard time keeping a conversation going. Each passing minute seems to be an eternity with him, as awkward pauses become all to frequent. Perhaps if you could get to know him in a more intimate setting.
 
-[[Search For Mate]] </tw-passagedata><tw-passagedata pid="157" name="Golden Scales" tags="" position="4330,550">You approach the dragon with gleaming silver scales. (He/She) glances over at you.
+[[Search For Mate]] </tw-passagedata><tw-passagedata pid="157" name="Golden Scales" tags="" position="4331.666666666667,550">You approach the dragon with golden scales. He glances over at you.
 
 $playerName: &quot;Hello, I am $playerName! And I have to ask, what time do you have to be back in heaven?&quot;
 
-Ayllon: &quot;Oh my! I do enjoy such a confident deameanor. You have quite the silver tongue! &quot;
+Ayllon: &quot;Oh my! I do enjoy such a confident deameanor. You have quite the silver tongue! You may address me as Ayllon.&quot;
 
 $playerName: &quot;Yes, my quick wit is often lost on beings. These large cumbersome wings often frighten them away I&#x27;m afraid.&quot;
 
 Ayllon: &quot;Quite right! With those formidable claws and teeth you make for quite the imposing figure, but I&#x27;m not too scared to get to know you better.&quot;
 
-You continue talking to Ayllon, you notice that (he/she) is quite taken with you. You lose track of time conversing with (him/her), and before you know it the sun is already setting. Your laughter echoes through the mountains, as you both crack numerous jokes and discuss all sorts of embarassing and humorous stories.
+You continue talking to Ayllon, you notice that he is quite taken with you. You lose track of time conversing with him, and before you know it the sun is already setting. Your laughter echoes through the mountains, as you both crack numerous jokes and discuss all sorts of embarassing and humorous stories.
 
 
-[[Search For Mate]] </tw-passagedata><tw-passagedata pid="158" name="Selecting Mate" tags="" position="4482,291">Hmmm...WHich one would you like to take on a date? It would be a perfect opportunity to impress.
+[[Search For Mate]] </tw-passagedata><tw-passagedata pid="158" name="Selecting Mate" tags="" position="4483.666666666667,289.3333333333333">Hmmm...Which one would you like to take on a date? It would be a perfect opportunity to impress.
 
-&lt;&lt;link &quot;Silver Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Silver&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Red Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Red&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Golden Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Golden&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Purple Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Purple&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Silver Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Fradret&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Red Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Xeni&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Golden Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Ayllon&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Purple Scales&quot; &quot;Mate Chosen&quot;&gt;&gt;&lt;&lt;set $mate to &quot;Frayloi&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Wait, let me reconsider|Search For Mate]] </tw-passagedata><tw-passagedata pid="159" name="Mate Chosen" tags="" position="4657,282">This date is a big deal. You remember what your parents said. Thay had only gone on one date before becoming mates. It is important that you don&#x27;t mess this up!
+[[Wait, let me reconsider|Search For Mate]] </tw-passagedata><tw-passagedata pid="159" name="Mate Chosen" tags="" position="4658.666666666667,282">This date is a big deal. You remember what your parents said. Thay had only gone on one date before becoming mates. It is important that you don&#x27;t mess this up!
 
 You talk to $mate and agree to meet up in two weeks time.
 
@@ -2481,7 +2547,7 @@ This gives you ample time to get your act together, and woo them.
 &lt;&lt;set $daysLeft to 14&gt;&gt;
 &lt;&lt;set $playerTidiness to 100&gt;&gt;
 &lt;&lt;set $maxPlayerTidiness to 100&gt;&gt;
-&lt;&lt;set $giftStrength to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Date Preparation" tags="" position="4867,424">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If you&#x27;re gonna impress $mate, then you must prepare.
+&lt;&lt;set $giftStrength to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Date Preparation" tags="" position="4867,424">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If you&#x27;re gonna impress $mate, then you must prepare. You&#x27;ll want to bring the very best!
 Tidiness: $playerTidiness/$maxPlayerTidiness
 Gold: $gold (+$goldProduction per day)
 Days till the date: $daysLeft
@@ -2550,12 +2616,19 @@ You lost $damageTaken points of tidiness.
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Enslave Village for Mate" tags="" position="5145,286">You descend down onto a small village. Already, you can see various little figures running around. You swiftly and mercilessly assert your dominance. You enslave the &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt; without any real resistance.
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
-
+&lt;&lt;set $damageTaken to random(3, 10)&gt;&gt;
+You lost $damageTaken points of tidiness.
+&lt;&lt;set $playerTidiness to $playerTidiness - $damageTaken&gt;&gt;\
+&lt;&lt;if $playerTidiness &gt; 0&gt;&gt;
 [[Continue|Date Preparation]]
-
+&lt;&lt;else&gt;&gt;
+[[Your Tidiness is too low...|Date Preparation Failure]]
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $goldProduction to $goldProduction + $newGoldProduction&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Gift Trade" tags="" position="5105,549">What level of gift would you like to trade for?
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Gift Trade" tags="" position="5105,549">You can trade with some of the nearby dragons, exchanging some of your treasures and wealth for something of theirs.
+
+What kind of gift would you like to trade for?
 Current Gold: $gold
 &lt;&lt;if $gold &gt;= 1000&gt;&gt;
 [[Simple Gift]] (Costs 1000 gold)
@@ -2584,14 +2657,14 @@ You recover $recoveredHP points of tidiness.
 &lt;&lt;set $playerTidiness to $maxPlayerTidiness&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Finish Date Preparation" tags="" position="5435,212">$mate comes.
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Finish Date Preparation" tags="" position="5436,213">$mate comes.
 
 &lt;&lt;if $giftStrength &gt; 20&gt;&gt;
 The look on $mate says everything. You effort has been well placed. The night is perfect, the soft glow of the moon shines over the both of you, as you both realize how perfect you are for one another.
 [[Date Success]]
 &lt;&lt;else&gt;&gt;
 Your effort seems wasted, as $mate expression spells diasaster. What would have been a lovely night, is instead a bumbling mess that leaves you embarrased and alone.
-[[Oh well...|Date Preparation Failure]]
+[[Oh well...|Date Failure]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Simple Gift" tags="" position="5286,519">&lt;&lt;set $gift to random(1, 3)&gt;&gt;\
 &lt;&lt;if $gift is 1&gt;&gt;\
 You got a potion of healing. Simple, but useful.
@@ -2622,7 +2695,7 @@ You acquire an animated shield. The thing levitates by itself and understands si
 
 &lt;&lt;set $giftStrength to $giftStrength + 6&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
-&lt;&lt;set $gold to $gold - 1000&gt;&gt;
+&lt;&lt;set $gold to $gold - 5000&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Legendary Gift" tags="" position="5226,769">&lt;&lt;set $gift to random(1, 3)&gt;&gt;\
 &lt;&lt;if $gift is 1&gt;&gt;\
 You obtain a set of gem encrusted golden claws. These would be perfect for a dragon who likes to fight in style! They seem to do more damage, then if the user were to just use their claws.
@@ -2641,7 +2714,7 @@ Now that&#x27;s a treasure.
 
 &lt;&lt;set $giftStrength to $giftStrength + 13&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
-&lt;&lt;set $gold to $gold - 1000&gt;&gt;
+&lt;&lt;set $gold to $gold - 10000&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Date Success" tags="" position="5626,257">The date went off without a hitch, and what&#x27;s more, you and $mate seem to madly in love! You and $mate begin flying back to the forest. You realize that over the course of getting to know $mate, you have become more than just mates. You have become friends. The rest of your life will be just adventorous as these last two weeks with $mate in your life.
 
 Game Complete!</tw-passagedata><tw-passagedata pid="172" name="Hang Out" tags="" position="3706,206">You and Foxglove join with Nasial and (his/her) friends and converse and hangot for the next few months. It&#x27;s nice to have more people to talk to. You get particularly close with Nasial, and realize that you both have a lot in common. Both of you left behind mighty parents to make a name for yourselves, but realized in the process how important friendship it. While the others messed about, you and Naisal had more intimate conversations, and took solace in each other&#x27;s company. One particular day you meet Naisal at a rocky outcrop near the river.
@@ -2691,7 +2764,10 @@ You watch as the dragon in its death throes gestures to a gleaming obsidian like
 ***Write short story of $playerName and [dragon chosen by player] hiding behind the rocky covering and watching them fight to the death. Neither of you can interfere because the dragons fighting are massive, strong dragons like the earlier ancient dragon. They will just die if they interfere.  Describe the fight. One of them dies, and it is not until you inspect and wait for the other dragon to go away you find dragon eggs.***
 
 [[Take eggs and raise dragon babies as their own]]
-[[Leave the eggs]]</tw-passagedata><tw-passagedata pid="176" name="Leave the eggs" tags="" position="4085,238">You and Naisal always wonder why you left the egg. Perhaps it was because you were afraid of being bad parents. Perhaps it would force you and Naisal into a commitment you were not ready for. In your fear you had condemned the tiny little egg to death. A choice that will haunt you for the rest of your lives.</tw-passagedata></tw-storydata></div>
+[[Leave the eggs]]</tw-passagedata><tw-passagedata pid="176" name="Leave the eggs" tags="" position="4085,238">You and Naisal always wonder why you left the egg. Perhaps it was because you were afraid of being bad parents. Perhaps it would force you and Naisal into a commitment you were not ready for. In your fear you had condemned the tiny little egg to death. A choice that will haunt you for the rest of your lives.</tw-passagedata><tw-passagedata pid="177" name="Date Failure" tags="" position="5645,101">Your date preparation was obviously lacking, as you now wallow in your self-pity. Perhaps cleaning up your act instead of lazing about may have helped in wooing $mate. But alas, you have failed...&#x27;
+
+Game Over
+(Hint: One big treasure is worth more than several smaller treasures)</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){if(0===arguments.length)throw new Error("_random called with insufficient parameters");var e=void 0,t=void 0;if(1===arguments.length?(e=0,t=arguments[0]):(e=arguments[0],t=arguments[1]),e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e,t,r){var n=t,a=r;return 2===arguments.length&&(a=n,n=0),Array.isArray(e)?e.random(n,a):e.hasOwnProperty("length")?[].concat(_toConsumableArray(e)).random(n,a):void 0}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),Array.prototype.splice.call(this,_random(n,a),1)[0]}}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),this[_random(n,a)]}}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0!==e){for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1)),n=[this[r],this[t]];this[t]=n[0],this[r]=n[1]}return this}}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e={userAgent:navigator.userAgent.toLowerCase()};return e.isGecko=navigator&&"Gecko"===navigator.product&&!/webkit|trident/.test(e.userAgent),e.isIE=/msie|trident/.test(e.userAgent)&&!e.userAgent.includes("opera"),e.ieVersion=function(){var t=/(?:msie\s+|rv:)(\d{1,2}\.\d)/.exec(e.userAgent);return t?Number([1]):0}(),e.isOpera=e.userAgent.includes("opera")||e.userAgent.includes(" opr/"),e.operaVersion=function(){var t=new RegExp((/applewebkit|chrome/.test(e.userAgent)?"opr":"version")+"\\/(\\d{1,2}\\.\\d+)"),r=t.exec(e.userAgent);return r?Number(r[1]):0}(),e.isMobile=Object.freeze({Android:/android/.test(e.userAgent),BlackBerry:/blackberry/.test(e.userAgent),iOS:/ip(?:hone|ad|od)/.test(e.userAgent),Windows:/iemobile/.test(e.userAgent),any:function(){var t=e.isMobile;return t.Android||t.BlackBerry||t.iOS||t.Windows}}),Object.freeze(e)}(),Has=function(){function e(e){try{if(null!=e&&e.length>=0){var t="SugarCube.WebStorage.Test",r="1701 Guilty Scott";if(e.setItem(t,r),e.getItem(t)===r)return e.removeItem(t),!0}}catch(e){}return!1}return Object.freeze({audio:"function"==typeof document.createElement("audio").canPlayType,fileAPI:"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15),geolocation:"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition,localStorage:"localStorage"in window&&e(window.localStorage),sessionStorage:"sessionStorage"in window&&e(window.sessionStorage)})}(),_ref4=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e)||e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return i(e,t)}).join(", ");if(e instanceof Map){var r=function(){var r=i,n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return{v:"( "+n+" )"}}();if("object"===("undefined"==typeof r?"undefined":_typeof(r)))return r.v}else{if(e instanceof Date)return e.toLocaleString();if("function"==typeof e.toString)return e.toString()}return Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref4.clone,convertBreaks=_ref4.convertBreaks,safeActiveElement=_ref4.safeActiveElement,setPageElement=_ref4.setPageElement,throwError=_ref4.throwError,toStringOrDefault=_ref4.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function r(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function a(e){if(null==e)return"";var t=String(e);return t&&p.test(t)?t.replace(f,function(e){return h[e]}):t}function i(e){if(null==e)return"";var t=String(e);return t&&m.test(t)?t.replace(g,function(e){return v[e]}):t}function o(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function s(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function u(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function l(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}function c(e,t){for(var r=Object.prototype.toString,n=Array.isArray(e),a=[].concat(Object.keys(e),Object.keys(t)).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}),i={},o=void 0,s=function(e){return e===o},u=0,l=a.length;u<l;++u){var c=a[u],d=e[c],f=t[c];if(e.hasOwnProperty(c))if(t.hasOwnProperty(c)){if(d===f)continue;if(("undefined"==typeof d?"undefined":_typeof(d))===("undefined"==typeof f?"undefined":_typeof(f)))if("function"==typeof d)d.toString()!==f.toString()&&(i[c]=[y.Copy,f]);else if("object"!==("undefined"==typeof d?"undefined":_typeof(d))||null===d)i[c]=[y.Copy,f];else{var p=r.call(d),h=r.call(f);if(p===h)if("[object Date]"===p){var g=Number(f);Number(d)!==g&&(i[c]=[y.CopyDate,g])}else if("[object RegExp]"===p)d.toString()!==f.toString()&&(i[c]=[y.Copy,clone(f)]);else{var m=Util.diff(d,f);null!==m&&(i[c]=m)}else i[c]=[y.Copy,clone(f)]}else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}else if(n&&Util.isNumeric(c)){var v=Number(c);if(!o){o="";do o+="~";while(a.some(s));i[o]=[y.SpliceArray,v,v]}v<i[o][1]&&(i[o][1]=v),v>i[o][2]&&(i[o][2]=v)}else i[c]=y.Delete;else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}return Object.keys(i).length>0?i:null}function d(e,t){for(var r=Object.keys(t||{}),n=clone(e),a=0,i=r.length;a<i;++a){var o=r[a],s=t[o];if(s===y.Delete)delete n[o];else if(Array.isArray(s))switch(s[0]){case y.SpliceArray:n.splice(s[1],1+(s[2]-s[1]));break;case y.Copy:n[o]=clone(s[1]);break;case y.CopyDate:n[o]=new Date(s[1])}else n[o]=Util.patch(n[o],s)}return n}var f=/[&<>"'`]/g,p=new RegExp(f.source),h=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),g=/&(?:amp|lt|gt|quot|apos|#39|#x27|#96|#x60);/g,m=new RegExp(g.source),v=Object.freeze({"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"}),y=e({Delete:0,SpliceArray:1,Copy:2,CopyDate:3});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},isNumeric:{value:t},isBoolean:{value:r},slugify:{value:n},escape:{value:a},unescape:{value:i},fromCssTime:{value:o},toCssTime:{value:s},fromCssProperty:{value:u},parseUrl:{value:l},DiffOp:{value:y},diff:{value:c},patch:{value:d},random:{value:Math.random},entityEncode:{value:a},entityDecode:{value:i},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(v,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');if(!e.hasOwnProperty("format"))throw new Error('source object missing required "format" property');var l=a(e.format);null!==l&&(t={src:e.src,type:l});break;default:throw new Error("invalid source value (type: "+("undefined"==typeof e?"undefined":_typeof(e))+")")}if(null!==t){var c=document.createElement("source");c.src=t.src,c.type=t.type,o.appendChild(c),i.push(t)}}),!o.hasChildNodes())if(Browser.isIE)o.src=undefined;else{var s=document.createElement("source");s.src=undefined,s.type=undefined,o.appendChild(s)}this._finalize(o,i,clone(t))}},{key:"_copy",value:function(t){if(!(t instanceof e))throw new Error("original parameter must be an instance of AudioWrapper");this._finalize(t.audio.cloneNode(!0),clone(t.sources),clone(t.originalSources))}},{key:"_finalize",value:function(e,t,r){var n=this;Object.defineProperties(this,{audio:{configurable:!0,value:e},sources:{configurable:!0,value:Object.freeze(t)},originalSources:{configurable:!0,value:Object.freeze(r)},_error:{writable:!0,value:!1},_faderId:{writable:!0,value:null},_mute:{writable:!0,value:!1},_rate:{writable:!0,value:1},_volume:{writable:!0,value:1}}),jQuery(this.audio).on("loadstart",function(){return n._error=!1}).on("error",function(){return n._error=!0}).find("source:last-of-type").on("error",function(){return n._trigger("error")}),SimpleAudio.subscribe(this,function(e){if(!n.audio)return void SimpleAudio.unsubscribe(n);switch(e){case"mute":n._updateAudioMute();break;case"rate":n._updateAudioRate();break;case"stop":n.stop();break;case"volume":n._updateAudioVolume()}}),this.load()}},{key:"_trigger",value:function(e){jQuery(this.audio).triggerHandler(e)}},{key:"clone",value:function(){return new e(this)}},{key:"destroy",value:function(){SimpleAudio.unsubscribe(this),this.fadeStop(),this.stop();
