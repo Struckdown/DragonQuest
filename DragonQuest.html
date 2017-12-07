@@ -859,9 +859,10 @@ Your remaining health: $playerHP
 [[Continue|Poison Puzzle]]
 
 &lt;img src=&quot;assets/image/RedGem.png&quot; width =&quot;240&quot; height =&quot;240&quot; alt=&quot;PoisonStatue&quot;/&gt;</tw-passagedata><tw-passagedata pid="57" name="Collapsed Cave Entrance" tags="Cave cave" position="3125,736">&lt;&lt;if $treasureGot is false&gt;&gt;The entrance is still blocked. Any attempts to move it are unsuccessful. You&#x27;ll have to wait till someone moves it aside or find an alternative way out.
-[[Return to main area|Hub Room]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $treasureGot&gt;&gt;As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
-&lt;&lt;/if&gt;&gt;
+[[Return to main area|Hub Room]]
+&lt;&lt;else&gt;&gt;\
+As you begin to contemplate how to move the rubble, you hear an earth shattering thud. The stones in front of you are flung away, and what you see in front of you is the head of a black dragon. Lava drips from his maw, and his teeth are the size of stalagmites. His eyes are fiery red embers, and his skin looks as though it were made from obsidian. The smell of brimstone fills the cave, and his mighty maw opens as he says,
+
 &lt;&lt;audio &quot;bgm_cave&quot; volume 1.0 fadeoverto 5 0.0&gt;&gt;\
 &lt;&lt;if visited(&quot;Taunt&quot;)&gt;&gt;\
 Ancalagon: “You mewling wyrm...I have found you again. Snooping around one of my stashes? Should have set me free, perhaps you would have been rewarded. Any clever last words, before I turn you to ash?&quot;
@@ -883,7 +884,7 @@ Ancalagon: “What do we have here? A little dragon such as yourself so far from
 	[[Taunt him|Taunt Again]]
 	[[Ask for forgiveness|Forgiveness]]
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="Gem puzzle" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Insert Gem" tags="Gem puzzle" position="2885,624">You insert the gem into the socket. All four of the gems begin glowing brightly. You hear a loud rumbling in the distance, the earth itself rumbling slightly as though a great mechanism has moved.
 &lt;&lt;set $puzzleComplete to true&gt;&gt;
 [[Continue|Gem Puzzle]]
 
