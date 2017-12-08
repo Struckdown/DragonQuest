@@ -102,9 +102,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="DragonQuest" startnode="1" creator="Twine" creator-version="2.1.3" ifid="3FD75EA6-C2DB-4817-9601-88209BC71C16" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body.credits{
-  		color: #000000;
-  		background-image: url(assets/image/background/credits.jpg);
+	<div id="store-area" hidden><tw-storydata name="DragonQuest" startnode="1" creator="Twine" creator-version="2.1.3" ifid="3FD75EA6-C2DB-4817-9601-88209BC71C16" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body{
+  		background-image: url(assets/image/background/main.jpg);
 		background-repeat: no-repeat;
   		background-size: cover;
 		background-attachment: fixed;
@@ -200,7 +199,9 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -661,7 +662,7 @@ $playerName: “Very well…”
 The dead body of your friend lies by the tree in which he lived, surrounded by the burnt corpses of the humans. You decided too...
 	
 [[Cremeate]]
-[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="Forest" position="1729,273.3333333333333">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
+[[Bury]]</tw-passagedata><tw-passagedata pid="41" name="Found Faerie Dragon" tags="Forest" position="1729,273">You know as your Father’s voice rings out, that there would be no mercy to be found back home if you were to disobey them once more. You head towards the forest once more, in desperate need of your friend Foxglove, the Nimble. You come to a giant Sequoia tree, and see your friend poke his head out. 
 	
 Foxglove: “Hey...$playerName, ...lookin good buddy…”
 	
@@ -949,7 +950,7 @@ Ancalagon surges towards you with stunning speed and you are helpless as he thro
 
 You will never be able to fly again.\
  &lt;&lt;set $hasWings to false&gt;&gt;&lt;&lt;/if&gt;&gt;\
-[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="Years years" position="3782,749.6666666666666">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.
+[[Exit Cave]]</tw-passagedata><tw-passagedata pid="64" name="Save Foxglove" tags="Years years" position="3782,749">The years pass by and you and your friend Foxglove eventually leave the forest. You grow larger and larger as the years go on, looking for a new cave every five years or so. Your size and strength are becoming formidable. You sit with your buddy Foxglove, wondering how the world would treat you in light of your growing power.
 
 &lt;&lt;set $playerName to $playerName + &quot;, The Saviour&quot;&gt;&gt;\
 (Title unlocked! You are now known as $playerName)
@@ -1207,7 +1208,7 @@ The Storm Giant looks bloodied and its actions are slowing. [[Finish it|Storm Gi
 
 &lt;&lt;audio &quot;lightningSFX&quot; volume 1&gt;&gt;
 &lt;&lt;audio &quot;lightningSFX&quot; volume fadeout&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="Defeat defeat" position="6089.333333333333,534">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Storm Giant Victory" tags="Defeat defeat" position="6089,534">You try to manuever around, but your movement is sluggish and your head is starting to spin. You watch as the giant charges at you, unable to move he collides with you. You are launched through three siege towers, crushing hundreds of orcs. Unable to move you watch as the giant strides towards you. He reaches down and grasps your body with his hands. As you open your mouth to breathe your fire upon his face, you feel his hands grasp your upper and lower jaw, finding purchase in your gaping maw. Before your flame can escape your mouth, you see him rip your jaw apart. The pain you experience blinds you, and the world slips into black.
 
 GAME OVER.
 
@@ -1261,7 +1262,7 @@ Let the [[fighting|War Attack]] begin!
 &lt;img src=&quot;assets/image/OrcSiegeEngine.jpg&quot; width =&quot;300&quot; height =&quot;250&quot; alt=&quot;OrcSiegeEngine&quot;/&gt;
 
 &lt;&lt;audio &quot;bgm_empireBuilding&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
-&lt;&lt;audio &quot;bgm_orcAttack&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Growing Up" tags="Night night" position="3602,533.3333333333334">You are still with Foxglove at this point, but no longer in the forest. You went to the far east of the forest. The surroundings outside of the forest, in this area, are pretty dusty and dry. You and Foxglove find a cave with ample size to fit both of you.
+&lt;&lt;audio &quot;bgm_orcAttack&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Growing Up" tags="Night night" position="3602,533">You are still with Foxglove at this point, but no longer in the forest. You went to the far east of the forest. The surroundings outside of the forest, in this area, are pretty dusty and dry. You and Foxglove find a cave with ample size to fit both of you.
 
 It&#x27;s a normal evening as you collect water from the river just north of the cave. The typical noises of the wilderness echoes out around you. As you continue to fill up on water, you hear a distinct rustle of wings. You quickly whip around to defend yourself...
 
@@ -1498,7 +1499,7 @@ You set up a fake floor over a pit of vipers. With some of your servants, you&#x
 &lt;&lt;set $trapsSet to $trapsSet + 6&gt;&gt;
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold - 5000&gt;&gt;
-&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="Home home" position="5681.666666666667,2352">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
+&lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Deadly Trap" tags="Home home" position="5681,2352">&lt;&lt;set $trapSet to random(1, 3)&gt;&gt;\
 &lt;&lt;if $trapSet is 1&gt;&gt;\
 You set up a trap where a Sphere of Annihilation sits in the mouth of a dragon statue and place an enchantment spell upon it that makes any nearby trespassers feel a desire to approach the statue and try to crawl into the statue&#x27;s mouth. Sounds devastating, even for a wizard!
 
@@ -2427,7 +2428,7 @@ You attempt to claw Ancalagon. Your attack is not very effective as you attempt 
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Breath Dragon" tags="" position="3199,2794.6666666666665">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Breath Dragon" tags="" position="3199,2794">&lt;&lt;if $dragonStance == 1&gt;&gt;\
 Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
@@ -2513,7 +2514,7 @@ Under your rule, a new era dawned on the world. The age of $playerName saw all m
 
 Game Complete!
 
-&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Foxglove&#x27;s Suggestion" tags="" position="3850,599.6666666666666">You and Foxglove wander through the forest and sit in your cave, chewing on some mutton. The humid air lulling you into a dazed state.
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Foxglove&#x27;s Suggestion" tags="" position="3850,599">You and Foxglove wander through the forest and sit in your cave, chewing on some mutton. The humid air lulling you into a dazed state.
 
 Foxglove: &quot;You know $playerName, you should really look for a dragon to spend the rest of your life with.&quot;
 
@@ -2524,7 +2525,7 @@ Foxglove: &quot;No, of course not! But we are just friends, you need someone who
 $playerName: &quot;Hmmm, maybe your right...&quot;
 
 [[No Mate Needed]]
-[[Search For Mate]]</tw-passagedata><tw-passagedata pid="152" name="No Mate Needed" tags="" position="4216.666666666667,805.6666666666666">You contemplate for a bit, before addressing Foxglove.
+[[Search For Mate]]</tw-passagedata><tw-passagedata pid="152" name="No Mate Needed" tags="" position="4216,805">You contemplate for a bit, before addressing Foxglove.
 
 $playerName: &quot;I don&#x27;t need a mate! My greatness needs no hindrance. A mate would be an anchor, and a weakness.&quot;
 
@@ -2621,7 +2622,7 @@ This gives you ample time to get your act together, and woo them.
 &lt;&lt;set $daysLeft to 14&gt;&gt;
 &lt;&lt;set $playerTidiness to 100&gt;&gt;
 &lt;&lt;set $maxPlayerTidiness to 100&gt;&gt;
-&lt;&lt;set $giftStrength to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Date Preparation" tags="" position="4865.333333333333,424">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If you&#x27;re gonna impress $mate, then you must prepare. You&#x27;ll want to bring the very best and be as ready as you can!
+&lt;&lt;set $giftStrength to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Date Preparation" tags="" position="4865,424">&lt;&lt;if $daysLeft &gt; 0&gt;&gt;If you&#x27;re gonna impress $mate, then you must prepare. You&#x27;ll want to bring the very best and be as ready as you can!
 Tidiness: $playerTidiness/$maxPlayerTidiness
 Gold: $gold (+$goldProduction per day)
 Days till the date: $daysLeft
@@ -2670,7 +2671,7 @@ You lose $damageTaken points of tidiness!
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;
-&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Date Preparation Failure" tags="" position="4849.333333333333,107">Your date preparation was obviously lacking, as you now wallow in your self-pity. Perhaps cleaning up your act instead of lazing about may have helped in wooing $mate. But alas, you have failed. $mate left for another dragon, and you grew old and grouchy by yourself. You destroyed many villages, amassed a reasonable hoard of treasure and had many kobold servants, but it just wasn&#x27;t the same. You lived the rest of your days out and eventually succumbed to a form of Wing Rot, forgotten by the rest of society.
+&lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Date Preparation Failure" tags="" position="4849,107">Your date preparation was obviously lacking, as you now wallow in your self-pity. Perhaps cleaning up your act instead of lazing about may have helped in wooing $mate. But alas, you have failed. $mate left for another dragon, and you grew old and grouchy by yourself. You destroyed many villages, amassed a reasonable hoard of treasure and had many kobold servants, but it just wasn&#x27;t the same. You lived the rest of your days out and eventually succumbed to a form of Wing Rot, forgotten by the rest of society.
 
 Game Over
 (Hint: One big treasure is worth more than several smaller treasures and make sure your tidiness isn&#x27;t too low when you go for your date)
@@ -2802,7 +2803,7 @@ Now that&#x27;s a treasure.
 
 Game Complete! See if you can find the other three major endings!
 
-&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Hang Out" tags="" position="3706,199.33333333333334">You and Foxglove join with Nasial and (his/her) friends and converse and hangout for the next few months. It&#x27;s nice to have more dragons to talk to. You get particularly close with Nasial, and realize that you both have a lot in common. Both of you left behind mighty parents to make a name for yourselves, but realized in the process how important friendship it. While the others messed about, you and Naisal had more intimate conversations, and took solace in each other&#x27;s company. One particular day you meet Naisal at a rocky outcrop near the river.
+&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Hang Out" tags="" position="3706,199">You and Foxglove join with Nasial and (his/her) friends and converse and hangout for the next few months. It&#x27;s nice to have more dragons to talk to. You get particularly close with Nasial, and realize that you both have a lot in common. Both of you left behind mighty parents to make a name for yourselves, but realized in the process how important friendship it. While the others messed about, you and Naisal had more intimate conversations, and took solace in each other&#x27;s company. One particular day you meet Naisal at a rocky outcrop near the river.
 
 $playerName: &quot;You know, the more I talk to you, the more I am falling in love with you.&quot;
 
@@ -2849,7 +2850,7 @@ You watch as the dragon in its death throes gestures to a gleaming obsidian like
 ***Write short story of $playerName and [dragon chosen by player] hiding behind the rocky covering and watching them fight to the death. Neither of you can interfere because the dragons fighting are massive, strong dragons like the earlier ancient dragon. They will just die if they interfere.  Describe the fight. One of them dies, and it is not until you inspect and wait for the other dragon to go away you find dragon eggs.***
 
 [[Take eggs and raise dragon babies as their own]]
-[[Leave the eggs]]</tw-passagedata><tw-passagedata pid="176" name="Leave the eggs" tags="" position="4085,238">You and Naisal always wonder why you left the egg. Perhaps it was because you were afraid of being bad parents. Perhaps it would force you and Naisal into a commitment you were not ready for. In your fear you had condemned the tiny little egg to death. A choice that will haunt you for the rest of your lives.</tw-passagedata><tw-passagedata pid="177" name="Date Failure" tags="" position="5438.333333333333,81">Your date preparation was obviously lacking, as you now wallow in your self-pity. Perhaps cleaning up your act instead of lazing about may have helped in wooing $mate. But alas, you have failed. $mate left for another dragon, and you grew old and grouchy by yourself. You destroyed many villages, amassed a reasonable hoard of treasure and had many kobold servants, but it just wasn&#x27;t the same. You lived the rest of your days out and eventually succumbed to a form of Wing Rot, forgotten by the rest of society.
+[[Leave the eggs]]</tw-passagedata><tw-passagedata pid="176" name="Leave the eggs" tags="" position="4085,238">You and Naisal always wonder why you left the egg. Perhaps it was because you were afraid of being bad parents. Perhaps it would force you and Naisal into a commitment you were not ready for. In your fear you had condemned the tiny little egg to death. A choice that will haunt you for the rest of your lives.</tw-passagedata><tw-passagedata pid="177" name="Date Failure" tags="" position="5438,81">Your date preparation was obviously lacking, as you now wallow in your self-pity. Perhaps cleaning up your act instead of lazing about may have helped in wooing $mate. But alas, you have failed. $mate left for another dragon, and you grew old and grouchy by yourself. You destroyed many villages, amassed a reasonable hoard of treasure and had many kobold servants, but it just wasn&#x27;t the same. You lived the rest of your days out and eventually succumbed to a form of Wing Rot, forgotten by the rest of society.
 
 Game Over
 (Hint: One big treasure is worth more than several smaller treasures and make sure your tidiness isn&#x27;t too low when you go for your date)
