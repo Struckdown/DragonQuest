@@ -200,7 +200,9 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -368,7 +370,7 @@ How do you feel about this?
 &lt;&lt;endif&gt;&gt;\
 [[Run Away]]
 
-&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="main" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="main" position="429,144">The colour of $playerName&#x27;s scales were:
+&lt;&lt;audio &quot;bgm_gameStartMusic&quot; volume 0.8 fadeoverto 15 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Character Creation" tags="main" position="312,137">The young &lt;&lt;link &quot;male&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;m&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;female&quot; &quot;Character Colour&quot;&gt;&gt;&lt;&lt;set $gender to &quot;f&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; dragon was born.</tw-passagedata><tw-passagedata pid="11" name="Character Colour" tags="main" position="430.6666666666667,145.66666666666666">The colour of $playerName&#x27;s scales were:
 &lt;&lt;link &quot;Azure Blue&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;blue&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;ice shards&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;img src=&quot;assets/image/blue/blue_2.jpg&quot; width =&quot;225&quot; height =&quot;225&quot; alt=&quot;blueDragon&quot;/&gt;
 &lt;&lt;link &quot;Fiery Red&quot; &quot;Parents Instructions&quot;&gt;&gt;&lt;&lt;set $playerColour to &quot;red&quot;&gt;&gt;&lt;&lt;set $breathAttack to &quot;flames&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -381,27 +383,27 @@ How do you feel about this?
 &lt;img src=&quot;assets/image/green/green_1.jpg&quot; width =&quot;294&quot; height =&quot;171&quot; alt=&quot;greenDragon&quot;/&gt;
 
 &lt;&lt;if $gender is &quot;m&quot;&gt;&gt;
-  &lt;&lt;set $heshe to &quot;he&quot;&gt;&gt;
-  &lt;&lt;set $HeShe to &quot;He&quot;&gt;&gt;
-  &lt;&lt;set $himher to &quot;him&quot;&gt;&gt;
-  &lt;&lt;set $hisher to &quot;his&quot;&gt;&gt;
-  &lt;&lt;set $HisHer to &quot;His&quot;&gt;&gt;
-  &lt;&lt;set $sondaughter to &quot;son&quot;&gt;&gt;
-  &lt;&lt;set $mastermistress to &quot;master&quot;&gt;&gt;
-  &lt;&lt;set $princeprincess to &quot;prince&quot;&gt;&gt;
+  &lt;&lt;set $heshe to &quot;he&quot;&gt;&gt;\
+  &lt;&lt;set $HeShe to &quot;He&quot;&gt;&gt;\
+  &lt;&lt;set $himher to &quot;him&quot;&gt;&gt;\
+  &lt;&lt;set $hisher to &quot;his&quot;&gt;&gt;\
+  &lt;&lt;set $HisHer to &quot;His&quot;&gt;&gt;\
+  &lt;&lt;set $sondaughter to &quot;son&quot;&gt;&gt;\
+  &lt;&lt;set $mastermistress to &quot;master&quot;&gt;&gt;\
+  &lt;&lt;set $princeprincess to &quot;prince&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $gender is &quot;f&quot;&gt;&gt;
-  &lt;&lt;set $heshe to &quot;she&quot;&gt;&gt;
-  &lt;&lt;set $HeShe to &quot;She&quot;&gt;&gt;
-  &lt;&lt;set $himher to &quot;her&quot;&gt;&gt;
-  &lt;&lt;set $HimHer to &quot;Her&quot;&gt;&gt;
-  &lt;&lt;set $hisher to &quot;her&quot;&gt;&gt;
-  &lt;&lt;set $HisHer to &quot;Her&quot;&gt;&gt;
-  &lt;&lt;set $sondaughter to &quot;daughter&quot;&gt;&gt;
-  &lt;&lt;set $mastermistress to &quot;mistress&quot;&gt;&gt;
-  &lt;&lt;set $princeprincess to &quot;princess&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="Hunt hunt" position="1045,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons.
+  &lt;&lt;set $heshe to &quot;she&quot;&gt;&gt;\
+  &lt;&lt;set $HeShe to &quot;She&quot;&gt;&gt;\
+  &lt;&lt;set $himher to &quot;her&quot;&gt;&gt;\
+  &lt;&lt;set $HimHer to &quot;Her&quot;&gt;&gt;\
+  &lt;&lt;set $hisher to &quot;her&quot;&gt;&gt;\
+  &lt;&lt;set $HisHer to &quot;Her&quot;&gt;&gt;\
+  &lt;&lt;set $sondaughter to &quot;daughter&quot;&gt;&gt;\
+  &lt;&lt;set $mastermistress to &quot;mistress&quot;&gt;&gt;\
+  &lt;&lt;set $princeprincess to &quot;princess&quot;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Attack Village" tags="Hunt hunt" position="1046.6666666666667,507">&lt;&lt;if not visited(&quot;Farms&quot;)&gt;&gt;Peasants run around, gathering what little they can save from their farms. A few carry weapons.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Guard House&quot;)&gt;&gt; Pitiful looking guards from the Guard House fire arrows and bolts at you, trying to break your dragonhide.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited(&quot;Granary&quot;)&gt;&gt;Some peasants gather food from the granary, holding onto whatever they can. At least one is holding a crossbow though.
 &lt;&lt;endif&gt;&gt;&lt;&lt;if not visited (&quot;Blacksmith&quot;)&gt;&gt;The blacksmith is handing out weapons to various peasants which in turn are turning around trying to fire at you.
@@ -889,7 +891,7 @@ Ancalagon: “What do we have here? A little dragon such as yourself so far from
 &lt;&lt;set $puzzleComplete to true&gt;&gt;
 [[Continue|Gem Puzzle]]
 
-&lt;&lt;audio &quot;mechanismMoving&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="Defeat defeat" position="502,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
+&lt;&lt;audio &quot;mechanismMoving&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Village Defeat" tags="Defeat defeat" position="548.6666666666666,552">You&#x27;re wings are covered in the blood of your foes, but also your own blood. Holes have been torn in your wings. The villagers continue to fire crossbow bolts at you and several hit their mark. They spare no quarter, shouting curses at you as the volley of weapons continues. You are struck again and again. You lose the strength to fly, and plummet into a nearby ruined building. The world spirals out of control.
 
 Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, with an incredible urge to sleep forever. Yes, that would be good. Unending sleep... You barely open your eyes briefly and see silhouettes in front of you, not entirely sure what they are. It doesn&#x27;t matter now... Sleep sounds good. Eternal sleep sounds better. You close your eyes one last time. Never to open them again.
 
@@ -1777,7 +1779,7 @@ You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 75000&gt;&gt;
+&lt;&lt;if $playerForces &gt; 75000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
@@ -1819,9 +1821,9 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 15000&gt;&gt;
+&lt;&lt;if $playerForces &gt; 15000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2167,1995">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2167,1995">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;\
 Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
@@ -1865,7 +1867,7 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 2500&gt;&gt;
+&lt;&lt;if $playerForces &gt; 2500&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Kobold Encampments" tags="" position="2348,1625">The kobolds look to you and seeing a mighty dragon pledge their undying allegiance to you. To them you were a draconic God, and their lives are yours to play with.
 &lt;&lt;set $playerForcesIncrease to random(50, 100)&gt;&gt;
@@ -1896,7 +1898,7 @@ Your forces decrease by $playerForcesIncrease!
 You gain no forces.
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/GoblinBugbearStronghold.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;GoblinsBugbearsStronghold&quot;/&gt;
+&lt;img src=&quot;assets/image/GoblinBugbearStronghold.jpg&quot; width =&quot;500&quot; height =&quot;350&quot; alt=&quot;GoblinsBugbearsStronghold&quot;/&gt;
 
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
@@ -1911,7 +1913,7 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 750&gt;&gt;
+&lt;&lt;if $playerForces &gt; 750&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
@@ -1947,17 +1949,17 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;[[Continue|Enslaving Tier 3]]
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;
-&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;
-&lt;&lt;set $random to random(1,2)&gt;&gt;
+&lt;&lt;audio &quot;clashOfBlades1&quot; volume 1&gt;&gt;\
+&lt;&lt;audio &quot;clashOfBlades2&quot; volume 1&gt;&gt;\
+&lt;&lt;set $random to random(1,2)&gt;&gt;\
 &lt;&lt;if $random is 1&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades1&quot; fadeout&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 2000&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2474,1606">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
+&lt;&lt;if $playerForces &gt; 2000&gt;&gt;\
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Ogre Cave" tags="" position="2474,1607.6666666666667">&lt;&lt;if $playerForces &gt; 100&gt;&gt;Your forces invade the ogre cave. The ogres bash through a few of your troops before seeing you and even with their poor intelligence, recognize that they are smaller and weaker. They agree to serve you.
 &lt;&lt;set $playerForcesIncrease to random(200, 300)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1991,7 +1993,7 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 30&gt;&gt;
+&lt;&lt;if $playerForces &gt; 30&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
@@ -2035,7 +2037,7 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 40000&gt;&gt;
+&lt;&lt;if $playerForces &gt; 40000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
 You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
@@ -2068,7 +2070,7 @@ You gain no forces.
 
 &lt;&lt;/if&gt;&gt;
 
-&lt;img src=&quot;assets/image/LizardfolkEmpire.jfif&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;Lizardfolk&quot;/&gt;
+&lt;img src=&quot;assets/image/LizardfolkEmpire.jfif&quot; width =&quot;600&quot; height =&quot;350&quot; alt=&quot;Lizardfolk&quot;/&gt;
 
 &lt;&lt;if $playerForces &lt; 5000&gt;&gt;[[Continue|Enslaving Tier 1]]
 &lt;&lt;elseif $playerForces &lt; 40000&gt;&gt;[[Continue|Enslaving Tier 2]]
@@ -2083,7 +2085,7 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 800000&gt;&gt;
+&lt;&lt;if $playerForces &gt; 800000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Dwarven Armory" tags="Dwarf dwarf" position="2237,2128">&lt;&lt;if $playerForces &gt; 10000&gt;&gt;Your forces overrun the underground dwarven armory without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the toughest dwarven survivors quickly join your ranks. The dwarven ingenuity will come in handy as they will be able to provide your army with superior weapons. A wise victory.
 &lt;&lt;set $playerForcesIncrease to random(3000, 6000)&gt;&gt;
@@ -2127,9 +2129,9 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 7500&gt;&gt;
+&lt;&lt;if $playerForces &gt; 7500&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2579,2519">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2580.6666666666665,2519">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
 Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -2174,7 +2176,7 @@ You gain no forces.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;clashOfBlades2&quot; fadeout&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if playerForces &gt; 200000&gt;&gt;
+&lt;&lt;if $playerForces &gt; 200000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Return of the Ancient Dragon" tags="Ancient ancient" position="2739,2823">Your army has carved out much of the world for your empire. Many dragons have fled your ever growing power. There is one dragon that stands in defiance to your rule, a true challenger. Ancalagon, the Apocalypse as an ancient dragon will not stand idly by as you subjagate the known world. He has sent an emissary challenging you to a duel. That would be also mean no minion interference. A pity, considering the forces you command.  
 
@@ -2270,10 +2272,10 @@ Gemstone Caves and Murky Swamp by Derek Fiechter
 Protectors of the Earth - Two Steps from Hell
 Tabletop Audio
 Skyrim
+and more
 
 Pictures:
-Mostly from Google, too many to accurately list, but some include
-Deviant Art
+Mostly from Google, too many to accurately list, but some are from Deviant Art
 
 [[Back To Main Menu|Main Menu]]</tw-passagedata><tw-passagedata pid="138" name="Header" tags="" position="163,9">{
 (print: &quot;&lt;script&gt;$(&#x27;html&#x27;).removeClass(\)&lt;/script&gt;&quot;)
