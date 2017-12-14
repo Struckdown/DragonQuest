@@ -202,7 +202,9 @@ Credits, Hunt, Home, Vocano, Ancient, Forest, Cave, Ogre, Tresure, Puzzle, Poiso
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -420,10 +422,10 @@ Attack:
 	[[Attack Fleeing Villagers]]
 	&lt;&lt;endif&gt;&gt;
 	[[Flee from the Battle|Run Away]]
-</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="Run run" position="1477,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, you Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
+</tw-passagedata><tw-passagedata pid="13" name="Run Away" tags="Run run" position="1478,198">&lt;&lt;if not visited (&quot;Begin Village Attack&quot;)&gt;&gt;You begin flying towards the village, your Father’s voice still ringing in your ear. You begin your descent into the center of the village. The villagers stop what they are doing and look up, relieved no doubt that it was you, and not one of your parents.
 	Old Man: “Greetings, young $mastermistress $playerName! What brings you to our humble village, nothing bad I hope?”
 	$playerName: “Hello, Kaecilius. My parents have instructed me to burn the village down, as the find no more use in keeping you alive. I come to warn you of their approach, I cannot take your lives. I am going to flee, and I urge you all to do the same.”
-	Old Man: “By the Gods! This is truly devastating news. We will begin evacuation at once. If you are fleeing you parents wrath, then perhaps the Misthollow Swamps to the South would be a suitable hiding place. You could also go to Mt. Etna, a smouldering volcano slightly east of the Misthollow Swamps.”
+	Old Man: “By the Gods! This is truly devastating news. We will begin evacuation at once. If you are fleeing your parents wrath, then perhaps the Misthollow Swamps to the South would be a suitable hiding place. You could also go to Mt. Etna, a smouldering volcano slightly east of the Misthollow Swamps.”
 	With this information you take off and head to….
 &lt;&lt;else&gt;&gt;
 You think to yourself of the various places you go to run away. Mt. Etna, the volcano not too far away from here could be of interest. Misthollow Swamp can be found nearby as well and could be a suitable place to build a lair, or even just vent off some steam.
@@ -518,7 +520,7 @@ The villagers cried out in horror as you took off laughing and smacking your lip
 
 &lt;&lt;set $prisonerHeld to false&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Ransom" tags="" position="1216,917">Your ransom attempts are unsuccessful unfortuntately. 
 
-Hmm... what to do with the prisoner? You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] If you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="Victory victory" position="923,1263">As you fly over the town you see a few old men and women who had not been fast enough to escape your initial attack, but through sheer dumb luck had somehow survived. They wander around aimlessly, gazing at their once beloved town. Many of them wail as you fly over knocking down any remaining buildings. You leave the decrepid old bats to their frigid fate, and fly home. 
+Hmm... what to do with the prisoner? You could [[slay your prisoner|Kill important person and retreat]] to make an example of those that would defy you and then leave. You could [[continue destroying the village|Continue Destroying village]] to let out your rage. You could also [[leave with your prisoner|Retreat with important person]] If you think enough damage has already been done. Or if you&#x27;re feeling really generous, you could [[leave your prisoner behind and go home|Retreat by yourself]].</tw-passagedata><tw-passagedata pid="23" name="Continue Destroying village" tags="Victory victory" position="923,1263">As you fly over the town you see a few old men and women who had not been fast enough to escape your initial attack, but through sheer dumb luck had somehow survived. They wander around aimlessly, gazing at their once beloved town. Many of them wail as you fly over knocking down any remaining buildings. You leave the decrepit old bats to their frigid fate, and fly home. 
 
 &lt;span id=&quot;OldBuilding&quot;&gt;Old Building&lt;/span&gt;
 &lt;&lt;link &quot;Destroy&quot;&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;replace &quot;#OldBuilding&quot;&gt;&gt;Crumbled Ruins&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -903,7 +905,7 @@ Slowly... the unending pain dissipates, and you feel overwhelmingly exhausted, w
 &lt;&lt;audio &quot;defeatSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="Return Home(Victory)" tags="Home home" position="1960,944">&lt;&lt;if visited(&quot;Kill important person and retreat&quot;) or visited(&quot;Fight Village&quot;) or visited(&quot;Retreat with important person&quot;) or visited(&quot;Finish Attack&quot;) or visited(&quot;Ransom&quot;)&gt;&gt;\
 Jörmungandr, Dwarf&#x27;s Bane: &quot;Greetings child! I see you have done even better than expected! Although I should have known the spawn of Titania and Jörmungandr would do nothing short of impress.&quot;
 
-$playerName: &quot;Thank you father! I always strive to better!&quot;
+$playerName: &quot;Thank you father! I always strive to be better!&quot;
 
 Titania, the Deceiver: &quot;I am oh so proud of you! You should go investigate a cave down in the forest, for I fear that you have outgrown your parents home!&quot;
 
@@ -959,7 +961,7 @@ You will never be able to fly again.\
 &lt;&lt;set $playerName to $playerName + &quot;, The Saviour&quot;&gt;&gt;\
 (Title unlocked! You are now known as $playerName)
 
-You and Foxglove discussing and Foxglove asks if he can suggest something to you as you are wandering through the forest. You can hear something  large in the distance...
+You and Foxglove are discussing various topics when Foxglove asks if he can suggest something to you as you are wandering through the forest. You can hear something large in the distance...
 
 [[Foxglove&#x27;s Suggestion]]
 
@@ -1020,9 +1022,9 @@ Do you let the prisoner befriend you?
 [[Certainly, it is only a matter of time|Prisoner Befriends You]]
 [[Dragons can never be friends with lesser creatures|Hold Onto Prisoner]]
 
-&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="Years years" position="4556,916">--20 years later--
+&lt;&lt;audio &quot;bgm_empireBuilding&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Prisoner Befriends You" tags="Years years" position="4560,916">--20 years later--
 
-As the years pass by, you grow more trusting of your prisoner. $HeShe had several opportunities to try and run, but $heshe never took them, in a way they seemed to be happy with you. You would make each other laugh, and despite your gruff demeanor, you had grown fond of them. There had been countless attempts made by valient knights to rescue $himher. All had been easily dispatched, lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The past twenty years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
+As the years pass by, you grow more trusting of your prisoner. $HeShe had several opportunities to try and run, but $heshe never took them, in a way they seemed to be happy with you. You would make each other laugh, and despite your gruff demeanor, you had grown fond of them. There had been countless attempts made by valiant knights to rescue $himher. All had been easily dispatched, lambs to the slaughter if anything. Your talons have only grown sharper as have your wits. Your tail is now long enough to send scores of men flying. The past twenty years have been good to you and you have grown well.&lt;&lt;if $hasWings is false&gt;&gt; Shame about your wings though. The wounds have healed, but you still cannot fly.&lt;&lt;/if&gt;&gt;
 
 Over the years, the $princeprincess has asked for freedom, and you have refused $himher everytime. You don&#x27;t wish to be lonely afterall. $HeShe is your only friend, as you have pushed away all the others. You have not seen your family in years. Not that they matter anyways.
 
@@ -1716,7 +1718,7 @@ With that final word, you lift your tail up and bring it down with all the force
 
 As the first morning light pierced the dark entrance of your cave, you realized that adventure would not always come to your doorstep. If you wanted to go down as the greatest dragon that ever lived, you would have to seek out adventure. Taking one last look at your home, you take off, flying towards the rising sun.
 
-Game Complete! Conside checking out the other endings
+Game Complete! Consider checking out the other endings!
 
 &lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Wizard Traps" tags="Wizard wizard" position="5379,2508">&lt;&lt;if $trapsSet &gt; 0&gt;&gt; &lt;&lt;set $damage to 6*$trapsSet&gt;&gt;\
 You are pleased to hear reports from your kobold scouts that the traps do slow down the wizard. 
@@ -1738,7 +1740,9 @@ Choose your next target:
 
 [[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
 [[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
-[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="Dwarf dwarf" position="2411,2566">&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
+[[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="120" name="Dwarven Underground Fortress" tags="Dwarf dwarf" position="2411,2566">Your forces attack &lt;&lt;print either(&quot;the Dwarven Fortress, Hammerhold&quot;, &quot;the Crystal Citadel&quot;, &quot;Bronzehold&#x27;s Sanctuary&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 100000&gt;&gt;
 Your forces overrun the defenses without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(100000, 150000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -1783,7 +1787,9 @@ You attack the fortifications, destroying everything. No one joins you.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 75000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Elven City" tags="" position="2286,1979">Your forces attack &lt;&lt;print either(&quot;the Elven Silver City of Ayonor&quot;, &quot;the Elven City of Shava Taesi&quot;, &quot;the City of Elves, Uyherius&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 20000&gt;&gt;Your forces overrun the city without any troubles. You can see goblins, kobolds and bugbears rampaging through the city. Many of the elves drop down their weapons and beg for mercy. With a loud roar, the cries for aid are all silenced as you descend down onto the city and state your demands, that all survivors pledge their undying support to you. Your numbers are heavily bolstered as the survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(10000, 15000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1825,7 +1831,9 @@ You gain no forces.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 15000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2167,1995">&lt;&lt;if $playerForces &gt; 5000&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Human Outpost" tags="" position="2167,1993.3333333333333">Your forces attack &lt;&lt;print either(&quot;Falcon&#x27;s Enclave&quot;, &quot;Moonwharf Fortress&quot;, &quot;Rivertalon Hold&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 5000&gt;&gt;\
 Your forces overrun the small pitiful outpost without any troubles. The humans call this an outpost? This is hardly anything. Your numbers are heavily bolstered as the human survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(1000, 4000)&gt;&gt;
 The strength of your forces increases by $playerForcesIncrease!
@@ -1917,7 +1925,9 @@ You gain no forces.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 750&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Elven Forest" tags="Forest forest" position="2114,2119">Your forces attack &lt;&lt;print either(&quot;the Elven forest Qraph&quot;, &quot;the Ysurs Forest&quot;, &quot;the Forbidden Grove&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 7500&gt;&gt;Your forces overrun the forest without any troubles, the sheer numbers surging like a river of death. Your numbers are heavily bolstered as the elven survivors quickly join your ranks.
 &lt;&lt;set $playerForcesIncrease to random(3000, 4000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -1997,7 +2007,9 @@ Your forces decrease by $playerForcesIncrease!
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 30&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Human City" tags="City city" position="2263,2363">Your forces attack the city of &lt;&lt;print either(&quot;Claxtone&quot;, &quot;Flembury&quot;, &quot;Vloufore&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 50000&gt;&gt;Your forces overrun the city without any troubles. Sure, there are many defenses, including the city walls, various siege weaponry, and even a few spellcasters in the ranks, but that pales in comparison to the size of your armies. Surging forward, you overwhelm the defenses. Your numbers are heavily bolstered as the survivors quickly join your ranks, including a few spellcasters.
 &lt;&lt;set $playerForcesIncrease to random(20000, 30000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
 &lt;&lt;set $playerForces to $playerForces + $playerForcesIncrease&gt;&gt;
@@ -2041,7 +2053,7 @@ You gain no forces.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 40000&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Lizardfolk Empire" tags="Forest forest" position="2301,2473">&lt;&lt;if $playerForces &gt; 1000000&gt;&gt;\
 You turn your attention to the Lizardfolk Empire of &lt;&lt;print either(&quot;Zarza&quot;, &quot;Dratrauquzk&quot;, &quot;Drashk&quot;)&gt;&gt;. The Empire is mighty and well spread out. WIth your forces, you advance on several key cities, crippling their reinforcements, destroying supply convoys, and hampering various other systems. Before long, the Lizardfolk empire is forced to surrender to you, agreeing to serve $playerName, the one true dragon.
 &lt;&lt;set $playerForcesIncrease to random(1000000, 1500000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -2133,7 +2145,9 @@ You gain no forces.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $playerForces &gt; 7500&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;winSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2580,2519">&lt;&lt;if $playerForces &gt; 250000&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Dragons in Mountains" tags="Mountain mountain" position="2580,2519">Your forces invade &lt;&lt;print either(&quot;the Hollow Mountains&quot;, &quot;Gnamell Peaks&quot;, &quot;Eekx Volcanos&quot;)&gt;&gt;.
+
+&lt;&lt;if $playerForces &gt; 250000&gt;&gt;\
 Your forces invade into the mountains, prepared to do battle with the dragons. However, they see their deaths coming and instead agree to serve you. How wise of them.
 &lt;&lt;set $playerForcesIncrease to random(100000, 200000)&gt;&gt;
 Your forces increase by $playerForcesIncrease!
@@ -2194,7 +2208,7 @@ You gain no forces.
 &lt;&lt;set $playerName to $playerName + &quot;, The Ruthless&quot;&gt;&gt;
 (Title unlocked! You are now known as $playerName)</tw-passagedata><tw-passagedata pid="133" name="Age of Dragons" tags="Victory victory" position="2630,3242">Game Complete!
 
-Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
+Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were equally weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of more than a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
 
 &lt;img src=&quot;assets/image/GiantArmy.jpg&quot; width =&quot;1290&quot; height =&quot;602&quot; alt=&quot;PoisonStatue&quot;/&gt;
@@ -2226,10 +2240,10 @@ Choose your next target:
 [[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
 [[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
 [[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;
-[[Elven Silver City of Ayonor|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
-[[Elven Forest of Qraph|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
+[[Elven City|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
+[[Elven Forest|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
 [[Dwarven Armory]] &lt;span style=&quot;color:yellow&quot;&gt;(Horde)&lt;/span&gt;
-[[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="136" name="Enslaving Tier 3" tags="" position="2864,2260">&lt;&lt;if $playerForces &lt;= 2500000&gt;&gt;
+[[Human Outpost|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;</tw-passagedata><tw-passagedata pid="136" name="Enslaving Tier 3" tags="" position="2864,2260">&lt;&lt;if $playerForces &lt;= 2500000&gt;&gt;\
 Your army&#x27;s ranks have swollen with followers, it&#x27;s time to begin marching on their final strongholds...
 Forces: $playerForces minions, servants, soldiers of $playerName
 
@@ -2238,14 +2252,14 @@ Choose your next target:
 [[Kobold Encampments]] &lt;span style=&quot;color:limegreen&quot;&gt;(Few)&lt;/span&gt;
 [[Goblin and Bugbear Strongholds]] &lt;span style=&quot;color:yellowgreen&quot;&gt;(Lots)&lt;/span&gt;
 [[Cave filled with Ogres|Ogre Cave]] &lt;span style=&quot;color:yellowgreen&quot;&gt; (Several)&lt;/span&gt;
-[[Elven Silver City of Ayonor|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
-[[Elven Forest of Qraph|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
+[[Elven City|Elven City]] &lt;span style=&quot;color:orange&quot;&gt;(Zounds)&lt;/span&gt;
+[[Elven Forest|Elven Forest]] &lt;span style=&quot;color:yellow&quot;&gt; (Throng)&lt;/span&gt;
 [[Dwarven Armory]] &lt;span style=&quot;color:yellow&quot;&gt;(Horde)&lt;/span&gt;
-[[Human Outpost, Falcon&#x27;s Enclave|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;
-[[Dwarf Underground Fortress of Hammerhold|Dwarven Underground Fortress]] &lt;span style=&quot;color:red&quot;&gt;(Swarm)&lt;/span&gt;
-[[Dragons of The Hollow Mountains|Dragons in Mountains]] &lt;span style=&quot;color:red&quot;&gt; (Few)&lt;/span&gt;
+[[Human Outpost|Human Outpost]] &lt;span style=&quot;color:yellow&quot;&gt;(Pack)&lt;/span&gt;
+[[Dwarf Underground Fortress|Dwarven Underground Fortress]] &lt;span style=&quot;color:red&quot;&gt;(Swarm)&lt;/span&gt;
+[[Dragons of the nearby Mountains|Dragons in Mountains]] &lt;span style=&quot;color:red&quot;&gt; (Few)&lt;/span&gt;
 [[Lizardfolk Empire]] &lt;span style=&quot;color:gray&quot;&gt;(Countless)&lt;/span&gt;
-[[Human City of Claxtone|Human City]] &lt;span style=&quot;color:red&quot;&gt; (Legion)&lt;/span&gt;
+[[Human City|Human City]] &lt;span style=&quot;color:red&quot;&gt; (Legion)&lt;/span&gt;
 &lt;&lt;else&gt;&gt;
 Now that you have enough forces, it is only a matter of time before either the dragons come to you, or you come to them.
 
@@ -2432,7 +2446,7 @@ You attempt to claw Ancalagon. Your attack is not very effective as you attempt 
 &lt;&lt;if $dragonHP &lt;= 0  &amp;&amp; $playerHP &gt; 0&gt;&gt;\
 Ancalagon looks weakened. [[Finish it|Ancient Dragon Loses]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Breath Dragon" tags="" position="3199,2794">&lt;&lt;if $dragonStance == 1&gt;&gt;\
+&lt;&lt;if $playerHP &lt;= 0&gt;&gt;\You are struggling to hold your own. [[You don&#x27;t feel so good...|Ancient Dragon Wins]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Breath Dragon" tags="" position="3200.6666666666665,2794">&lt;&lt;if $dragonStance == 1&gt;&gt;\
 Ancalagon predicts your next move, and claws at you before you&#x27;re able to react! You are unable to hit him! &lt;&lt;set $dragonDamage to random(15,30)&gt;&gt;&lt;&lt;audio &quot;clawSFX&quot; play&gt;&gt;\
 
 &lt;&lt;elseif $dragonStance == 2&gt;&gt;\
@@ -2448,7 +2462,7 @@ Ancalagon swipes your bristling chest with his claws, leaving some ugly gashes b
 You take $dragonDamage damage. &lt;&lt;set $playerHP to $playerHP - $dragonDamage&gt;&gt;\
 
 &lt;&lt;if $dragonStance == 2 or 3&gt;&gt;\
-You breathe $breathAttack, destroying the ground around Ancalagon. The sheer magnitude of your $breathAttack breath destroys some of his scales. &lt;&lt;set $dragonHP to $dragonHP - 40&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;breathSFX&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
+You breathe $breathAttack, destroying the ground around Ancalagon. The sheer magnitude of your $breathAttack breath destroys some of his scales. &lt;&lt;set $dragonHP to $dragonHP - 40&gt;&gt; &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;dragonBreath&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;elseif $dragonStance == 1&gt;&gt;&lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;breathAttack&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
@@ -2514,7 +2528,7 @@ Game Over
 &lt;&lt;set $maxPlayerHP to 120&gt;&gt;
 &lt;&lt;set $dragonHP to 150&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Ancient Dragon Loses" tags="" position="3600,2773">Ancalagon lay before you slain. Your power in the world was now unquestioned. Any thought the other races had of conspiring against you now lay dead at your feet.
 
-Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were eqaully weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
+Under your rule, a new era dawned on the world. The age of $playerName saw all manner of races bring tribute to your fortress on top of Mt. Etna. The Kobolds and Goblins worshipped you unconditionally, for them you had brought equality and relevance. All races to you were equally weak. They would all pay the same price for the privilege to live. Humans, Elves, Dwarfs, or Lizardfolk all knew your power was law without question. You now stand in front of more than a million troops, as their voices all cry out in unison. They all swear fealty to the one true ruler of the land, $playerName.
 
 Game Complete!
 
@@ -2529,7 +2543,7 @@ Foxglove: &quot;No, of course not! But we are just friends, you need someone who
 $playerName: &quot;Hmmm, maybe your right...&quot;
 
 [[No Mate Needed]]
-[[Search For Mate]]</tw-passagedata><tw-passagedata pid="152" name="No Mate Needed" tags="" position="4216,805">You contemplate for a bit, before addressing Foxglove.
+[[Search For Mate]]</tw-passagedata><tw-passagedata pid="152" name="No Mate Needed" tags="" position="4167.666666666667,760">You contemplate for a bit, before addressing Foxglove.
 
 $playerName: &quot;I don&#x27;t need a mate! My greatness needs no hindrance. A mate would be an anchor, and a weakness.&quot;
 
@@ -2540,7 +2554,19 @@ $playerName: &quot;Hah, watch as I immortalize the name $playerName in history. 
 [[Preparation]]
 
 &lt;&lt;audio &quot;bgm_faerieDragon&quot; volume 1.0 fadeoverto 10 0.0&gt;&gt;
-&lt;&lt;audio &quot;bgm_wizardPreparation&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Search For Mate" tags="" position="4157,485">$playerName: &quot;You know you are right! I could use a little romance in my life. But where would I even begin to look for one?&quot;
+&lt;&lt;audio &quot;bgm_wizardPreparation&quot; loop play&gt;&gt;
+
+&lt;&lt;set $gold to 1000&gt;&gt;
+&lt;&lt;set $goldProduction to 0&gt;&gt;
+&lt;&lt;set $daysLeft to 14&gt;&gt;
+&lt;&lt;set $playerHP to 120&gt;&gt;
+&lt;&lt;set $maxPlayerHP to 120&gt;&gt;
+&lt;&lt;set $trapsSet to 0&gt;&gt;
+&lt;&lt;set $greaterHealthPotions to 0&gt;&gt;
+&lt;&lt;set $protection to 0&gt;&gt;
+
+&lt;&lt;set $wizardHP to 120&gt;&gt;
+&lt;&lt;set $wizardMode to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Search For Mate" tags="" position="4157,485">$playerName: &quot;You know you are right! I could use a little romance in my life. But where would I even begin to look for one?&quot;
 
 Foxglove: &quot;Ahh heeding the voice of reason. You should try your luck over by the mountain Materhorne. They say there is a lake near the peak that never freezes. I hear a lot of dragons go there to drink from the waters.&quot;
 
@@ -2643,7 +2669,7 @@ Select an action (costs 1 day):
 &lt;&lt;else&gt;&gt;
 The day has come, prepare yourself!
 [[Finish Date Preparation]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Explore Dungeon for Mate" tags="" position="5111,419">You explore &lt;&lt;print either(&quot;the ruins of an ancient lich&#x27;s dungeon&quot;, &quot;an abandoned castle filled with simple monsters&quot;, &quot;a long forgotten stronghold of a powerful necromancer&quot;)&gt;&gt;. Without much difficulty, you scour the place, seeking any sort of possible treasure. Some of your kobold scouts join you and before long, your search is rewarded, but not before you are injured by some traps.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Explore Dungeon for Mate" tags="" position="5114.333333333334,419">You explore &lt;&lt;print either(&quot;the ruins of an ancient lich&#x27;s dungeon&quot;, &quot;an abandoned castle filled with simple monsters&quot;, &quot;a long forgotten stronghold of a powerful necromancer&quot;)&gt;&gt;. Without much difficulty, you scour the place, seeking any sort of possible treasure. Some of your kobold scouts join you and before long, your search is rewarded, but not before you are injured by some traps.
 
 &lt;&lt;set $dungeonReward to random (1, 3)&gt;&gt;\
 &lt;&lt;if $dungeonReward is 1&gt;&gt;\
@@ -2655,19 +2681,19 @@ Your maximum Tidiness increases by $increaseTidiness!
 
 &lt;&lt;elseif $dungeonReward is 2&gt;&gt;
 You find &lt;&lt;print either(&quot;an Amulet of Protection&quot;, &quot;a Ring of Protection&quot;)&gt;&gt;
-Oooh, this will help swoo your mate.
+Oooh, this will help.
 &lt;&lt;set $giftStrength to $giftStrength + 3&gt;&gt;
 &lt;&lt;else&gt;&gt;
 You find a hoard of treasure! You found 3000 gold!
 &lt;&lt;set $gold to $gold + 3000&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $damageTaken to random(20, 30)&gt;&gt;
+&lt;&lt;set $damageTaken to random(10, 20)&gt;&gt;
 You lose $damageTaken points of tidiness!
 &lt;&lt;set $playerTidiness to $playerTidiness - $damageTaken&gt;&gt;
 
 &lt;img src=&quot;assets/image/ExploringDungeon.jpg&quot; width =&quot;300&quot; height =&quot;350&quot; alt=&quot;Dungeon&quot;/&gt;
 
-&lt;&lt;if $playerHP &gt; 0&gt;&gt;
+&lt;&lt;if $playerTidiness &gt; 0&gt;&gt;
 [[Continue|Date Preparation]]
 &lt;&lt;else&gt;&gt;
 [[Date Preparation Failure]]
@@ -2688,7 +2714,7 @@ Game Over
 &lt;&lt;set $giftStrength to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="Raid Village for Mate" tags="" position="5106,162">You raid the village. Almost without effort, the simple fortifications collapse, smoke rising into the air. You extract the wealth from the villagers and leave. You can always come back again to squeeze more wealth out of them.
 &lt;&lt;set $goldGained to 500*random(2, 4)&gt;&gt;
 You gain $goldGained pieces of gold!
-&lt;&lt;set $damageTaken to random(20, 30)&gt;&gt;
+&lt;&lt;set $damageTaken to random(10, 15)&gt;&gt;
 You lose $damageTaken points of tidiness.
 &lt;&lt;set $playerTidiness to $playerTidiness - $damageTaken&gt;&gt;\
 &lt;&lt;if $playerTidiness &gt; 0&gt;&gt;
@@ -2702,7 +2728,7 @@ You lose $damageTaken points of tidiness.
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Enslave Village for Mate" tags="" position="5145,286">You descend down onto a small village. Already, you can see various little figures running around. You swiftly and mercilessly assert your dominance. You enslave the &lt;&lt;print either(&quot;humans&quot;, &quot;dwarves&quot;, &quot;elves&quot;)&gt;&gt; without any real resistance.
 &lt;&lt;set $newGoldProduction to 100*random(1, 3)&gt;&gt;
 They will produce $newGoldProduction gold per day.
-&lt;&lt;set $damageTaken to random(20, 30)&gt;&gt;
+&lt;&lt;set $damageTaken to random(10, 20)&gt;&gt;
 You lose $damageTaken points of tidiness.
 &lt;&lt;set $playerTidiness to $playerTidiness - $damageTaken&gt;&gt;\
 &lt;&lt;if $playerTidiness &gt; 0&gt;&gt;
@@ -2734,7 +2760,7 @@ Current Gold: $gold
 
 [[I changed my mind|Date Preparation]]</tw-passagedata><tw-passagedata pid="166" name="Tidying Up" tags="" position="5003,712">You realize that you look like a mess. Living in a forest cave with Foxglove has led to you acruing quite the grimey exterior. You bathe in the lake for a day. Upon leaving it you realize that not only do you look cleaner, but you also feel more rejuvenated! Perhaps the lake is magical.
 
-&lt;&lt;set $recoveredHP to random(40, 60)&gt;&gt;
+&lt;&lt;set $recoveredHP to random(60, 80)&gt;&gt;
 You recover $recoveredHP points of tidiness.
 &lt;&lt;set $playerTidiness to $playerTidiness + $recoveredHP&gt;&gt;
 [[Continue|Date Preparation]]
@@ -2745,11 +2771,10 @@ You recover $recoveredHP points of tidiness.
 &lt;&lt;set $daysLeft to $daysLeft - 1&gt;&gt;
 &lt;&lt;set $gold to $gold + $goldProduction&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Finish Date Preparation" tags="" position="5436,215">$mate comes.
 
-&lt;&lt;if $giftStrength &gt;= 20 &amp; $playerTidiness &gt; 25&gt;&gt;
-&gt;&gt;
+&lt;&lt;if $giftStrength &gt;= 15 &amp; $playerTidiness &gt; 25&gt;&gt;\
 The look on $mate says everything. You effort has been well placed. The night is perfect, the soft glow of the moon shines over the both of you, as you both realize how perfect you are for one another.
 [[Date Success]]
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Your effort seems wasted, as $mate expression spells diasaster. What would have been a lovely night, is instead a bumbling mess that leaves you embarrased and alone.
 [[Oh well...|Date Failure]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Simple Gift" tags="" position="5286,519">&lt;&lt;set $gift to random(1, 3)&gt;&gt;\
@@ -2790,8 +2815,8 @@ You obtain a set of gem encrusted golden claws. These would be perfect for a dra
 &lt;&lt;elseif $trapSet is 2&gt;&gt;\
 With your wealth, you are able to trade for a Horn of Valhalla, an old artifact that has the power to summon a legion of spectral vikings to one&#x27;s aid. Such a powerful item is sure to impress!
 \
-&lt;&lt;else&gt;&gt;/
-You are astonished as you are able to get your claws on the Mask of The Dragon Queen, a legendary item that long ago released Tiamat herself from the Nine Hells. Money can&#x27;t by happiness, this mask might.
+&lt;&lt;else&gt;&gt;\
+You are astonished as you are able to get your claws on the Mask of The Dragon Queen, a legendary item that long ago released Tiamat herself from the Nine Hells. Money can&#x27;t buy happiness, this mask might.
 \
 &lt;&lt;/if&gt;&gt;\
 
